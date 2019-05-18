@@ -16,7 +16,6 @@ local.properties
 .recommenders
 *.xmi
 *.png
-about.*
 metamodel/
 
 # External tool builders
