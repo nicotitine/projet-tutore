@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.uml2.uml.CallEvent;
 import org.eclipse.uml2.uml.FinalState;
 import org.eclipse.uml2.uml.Model;
 import org.eclipse.uml2.uml.Region;
@@ -42,7 +43,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 public class SCXMLInterpretor {
-	private Set<State> states = new HashSet<State>();
+    private Set<State> states = new HashSet<State>();
     private XPath path;
     private UMLFactory umlFactory;
     private Model model;
@@ -79,8 +80,8 @@ public class SCXMLInterpretor {
 	        this.umlFactory = new UMLFactoryImpl();
 	        this.model = umlFactory.createModel();
 	        this.stateMachine = umlFactory.createStateMachine();
-	        
 	        this.mainRegion = umlFactory.createRegion();
+	              
 
 	        // Create all states
 	        this.createStates(this.root, this.mainRegion);
@@ -144,6 +145,12 @@ public class SCXMLInterpretor {
     			} else {
     				source = el.getParentNode().getAttributes().getNamedItem("id").getNodeValue();
     				tr.setSource(this.getStateByName(source));
+    			}
+    			
+    			// Event attribute
+    			String event = el.getAttribute("event");
+    			if(!event.equals("")) {
+    				tr.createTrigger(event);
     			}
 
     			umlRegion.getTransitions().add(tr);
