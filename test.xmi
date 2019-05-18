@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ASCII"?>
+<uml:Model xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <packagedElement xsi:type="uml:StateMachine">
+    <region>
+      <subvertex xsi:type="uml:State" name="Init">
+        <region/>
+      </subvertex>
+      <subvertex xsi:type="uml:State" name="FSC_connected">
+        <region/>
+      </subvertex>
+      <subvertex xsi:type="uml:State" name="PSC_connected">
+        <region/>
+      </subvertex>
+      <subvertex xsi:type="uml:State" name="Crisis_details_exchange">
+        <region/>
+      </subvertex>
+      <subvertex xsi:type="uml:State" name="Step_3_Coordination">
+        <region>
+          <subvertex xsi:type="uml:State" name="Number_of_fire_truck_defined">
+            <region/>
+          </subvertex>
+          <subvertex xsi:type="uml:State" name="Number_of_police_vehicle_defined">
+            <region/>
+          </subvertex>
+          <subvertex xsi:type="uml:State" name="Route_plan_development">
+            <region/>
+          </subvertex>
+          <subvertex xsi:type="uml:State" name="Steps_33a1_33a2_Negotiation">
+            <region>
+              <subvertex xsi:type="uml:State" name="Route_for_fire_trucks_development">
+                <region>
+                  <subvertex xsi:type="uml:State" name="Route_for_fire_trucks_approved"/>
+                  <subvertex xsi:type="uml:State" name="Route_for_fire_trucks_to_be_proposed">
+                    <region/>
+                  </subvertex>
+                  <subvertex xsi:type="uml:State" name="Route_for_fire_trucks_fixed">
+                    <region/>
+                  </subvertex>
+                </region>
+              </subvertex>
+              <subvertex xsi:type="uml:State" name="Route_for_police_vehicles_development">
+                <region>
+                  <subvertex xsi:type="uml:State" name="Route_for_police_vehicles_approved"/>
+                  <subvertex xsi:type="uml:State" name="Route_for_police_vehicles_to_be_proposed">
+                    <region/>
+                  </subvertex>
+                  <subvertex xsi:type="uml:State" name="Route_for_police_vehicles_fixed">
+                    <region/>
+                  </subvertex>
+                </region>
+              </subvertex>
+            </region>
+          </subvertex>
+        </region>
+      </subvertex>
+      <subvertex xsi:type="uml:State" name="Step_4_Dispatching">
+        <region/>
+      </subvertex>
+      <subvertex xsi:type="uml:State" name="All_fire_trucks_dispatched">
+        <region/>
+      </subvertex>
+      <subvertex xsi:type="uml:State" name="All_police_vehicles_dispatched">
+        <region/>
+      </subvertex>
+      <subvertex xsi:type="uml:State" name="Step_5_Arrival">
+        <region>
+          <subvertex xsi:type="uml:State" name="Fire_trucks_arrival">
+            <region>
+              <subvertex xsi:type="uml:State" name="Fire_trucks_arriving">
+                <region/>
+              </subvertex>
+              <subvertex xsi:type="uml:State" name="All_fire_trucks_arrived"/>
+            </region>
+          </subvertex>
+          <subvertex xsi:type="uml:State" name="Police_vehicles_arrival">
+            <region>
+              <subvertex xsi:type="uml:State" name="Police_vehicles_arriving">
+                <region/>
+              </subvertex>
+              <subvertex xsi:type="uml:State" name="All_police_vehicles_arrived"/>
+            </region>
+          </subvertex>
+        </region>
+      </subvertex>
+      <subvertex xsi:type="uml:State" name="Completion_of_objectives">
+        <region/>
+      </subvertex>
+    </region>
+  </packagedElement>
+</uml:Model>

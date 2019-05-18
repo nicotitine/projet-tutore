@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" datamodel="ecmascript" name="BCMS" initial="Init">
+    <!-- BCMS case study: http://cserg0.site.uottawa.ca/cma2013models/CaseStudy.pdf -->
+    <!-- General note: this SCXML specification matches the PauWare engine implementation that used PauWare view.
+    Due to limitations when drawing with PauWare view (these result from PlantUML limitations), the solution below is a bit complicated.
+    A more concise solution may be found within the PauWare engine/Web enterprise implementation of the BCMS case study. -->
+    <datamodel>
+        <data expr="&#039;&#039;" id="FSC_credentials"></data>
+        <data expr="&#039;&#039;" id="PSC_credentials"></data>
+        <data expr="0" id="number_of_fire_truck_required"></data>
+        <data expr="0" id="number_of_police_vehicle_required"></data>
+        <data id="fire_trucks_dispatched"></data>
+        <data id="police_vehicle_dispatched"></data>
+        <data id="fire_trucks_arrived"></data>
+        <data id="police_vehicle_arrived"></data>
+        <data expr="&#039;180s&#039;" id="negotiation_limit"></data>
+        <data id="timeout_reason"></data>
+    </datamodel>
+    <!-- 1. PSC and FSC establish communication and identification of coordinators. -->
+    <state id="Init">
+        <transition event="FSC_connection_request" target="FSC_connected"></transition>
+        <transition event="PSC_connection_request" target="PSC_connected"></transition>
+    </state>
+    <state id="FSC_connected">
+        <transition event="PSC_connection_request" target="Crisis_details_exchange"></transition>
+    </state>
+    <!-- PauWare_invariant exp="FSC_credentials not empty" when_violated=""/ -->
+    <state id="PSC_connected">
+        <transition event="FSC_connection_request" target="Crisis_details_exchange"></transition>
+    </state>
+    <!-- PauWare_invariant exp="PSC_credentials not empty" when_violated=""/ -->
+    <state id="Crisis_details_exchange">
+        <onentry id="test">
+            <!-- One may re-enter into "Crisis_details_exchange" while the timer is not canceled: -->
+            <cancel sendid="negotiation_limit_timer"/>
+            <send id="negotiation_limit_timer" event="timeout" delay="negotiation_limit"/>
+        </onentry>
+        <transition event="state_fire_truck_number" target="Number_of_fire_truck_defined">
+            <assign expr="_event.data.number_of_fire_truck_required" location="number_of_fire_truck_required"/>
+        </transition>
+        <transition event="state_police_vehicle_number" target="Number_of_police_vehicle_defined">
+            <assign expr="_event.data.number_of_police_vehicle_required" location="number_of_police_vehicle_required"/>
+        </transition>
+    </state>
+    <state id="Step_3_Coordination"><!-- 3.1. PSC and FSC state their respective number of fire trucks and police vehicle to deploy. -->
+        <transition event="timeout">
+            <assign expr="_event.data.context" location="timeout_reason"/>
+        </transition>
+        <onexit>
+            <cancel sendid="negotiation_limit_timer"/>
+        </onexit>
+        <state id="Number_of_fire_truck_defined">
+            <transition event="state_police_vehicle_number" target="Route_plan_development">
+                <assign expr="_event.data.number_of_police_vehicle_required" location="number_of_police_vehicle_required"/>
+            </transition>
+        </state>
+        <state id="Number_of_police_vehicle_defined">
+            <transition event="state_fire_truck_number" target="Route_plan_development">
+                <assign expr="_event.data.number_of_fire_truck_required" location="number_of_fire_truck_required"/>
+            </transition>
+        </state>
+        <!-- Steps 3.2 and 3.3 -->
+        <state id="Route_plan_development">
+            <transition event="route_for_fire_trucks" target="Steps_33a1_33a2_Negotiation">
+                <raise event="route_for_fire_trucks"/>
+            </transition>
+            <transition event="route_for_police_vehicles" target="Steps_33a1_33a2_Negotiation">
+                <raise event="route_for_police_vehicles"/>
+            </transition>
+        </state>
+        <parallel id="Steps_33a1_33a2_Negotiation">
+            <state id="Route_for_fire_trucks_development" initial="Route_for_fire_trucks_to_be_proposed">
+                <final id="End_of_route_for_fire_trucks_development"/>
+                <state id="Route_for_fire_trucks_approved"/>
+                <state id="Route_for_fire_trucks_to_be_proposed">
+                    <transition event="route_for_fire_trucks" target="Route_for_fire_trucks_fixed"/> 
+                </state>
+                <state id="Route_for_fire_trucks_fixed">
+                    <transition event="FSC_agrees_about_fire_truck_route" cond="In(&#039;Route_for_police_vehicles_approved&#039;)" target="End_of_route_for_fire_trucks_development"/>
+                    <transition event="FSC_agrees_about_fire_truck_route" cond="! In(&#039;Route_for_police_vehicles_approved&#039;)" target="Route_for_fire_trucks_approved"/> 
+                    <transition event="FSC_disagrees_about_fire_truck_route" target="Route_for_fire_trucks_to_be_proposed"/> 
+                </state>
+            </state>
+            <state id="Route_for_police_vehicles_development" initial="Route_for_police_vehicles_to_be_proposed">
+                <final id="End_of_route_for_police_vehicles_development"/>
+                <state id="Route_for_police_vehicles_approved"/>
+                <state id="Route_for_police_vehicles_to_be_proposed">
+                    <transition event="route_for_police_vehicles" target="Route_for_police_vehicles_fixed"></transition>
+                </state>
+                <state id="Route_for_police_vehicles_fixed">
+                    <transition event="FSC_agrees_about_police_vehicle_route" cond="In(&#039;Route_for_fire_trucks_approved&#039;)" target="End_of_route_for_police_vehicles_development"></transition>
+                    <transition event="FSC_agrees_about_police_vehicle_route" cond="! In(&#039;Route_for_fire_trucks_approved&#039;)" target="Route_for_police_vehicles_approved"></transition>
+                    <transition event="FSC_disagrees_about_police_vehicle_route" target="Route_for_police_vehicles_to_be_proposed"></transition>
+                </state>
+            </state>
+            <!-- To be discussed. Regarding the req. doc., "no_more_route_left" might also have (instead of "Steps_33a1_33a2_Negotiation") "Step_3_Coordination" as origin state -->
+            <transition event="no_more_route_left" target="Step_4_Dispatching"/>
+        </parallel>
+        <transition target="Step_4_Dispatching"/>
+    </state>
+    <!-- 4. PSC and FSC communicate to each other that their respective vehicles have been dispatched according to plan (per vehicle). -->
+    <state id="Step_4_Dispatching">
+        <transition event="fire_truck_dispatched" cond="fire_trucks_dispatched.length &lt; number_of_fire_truck_required" target="Step_4_Dispatching">
+            <script>fire_trucks_dispatched.add(_event.data.fire_truck)</script>
+            <raise event="enough_fire_trucks_dispatched"/>
+        </transition>
+        <transition event="enough_fire_trucks_dispatched" cond="fire_trucks_dispatched.length &gt;= number_of_fire_truck_required" target="All_fire_trucks_dispatched"/>
+        <transition event="police_vehicle_dispatched" cond="police_vehicles_dispatched.length &lt; number_of_police_vehicle_required" target="Step_4_Dispatching">
+            <script>police_vehicles_dispatched.add(_event.data.police_vehicle)</script>
+            <raise event="enough_police_vehicles_dispatched"/>
+        </transition>
+        <transition event="enough_police_vehicles_dispatched" cond="police_vehicles_dispatched.length &gt;= number_of_police_vehicle_required" target="All_police_vehicles_dispatched"/>
+    </state>
+    <state id="All_fire_trucks_dispatched">
+        <transition cond="police_vehicles_dispatched.length &lt; number_of_police_vehicle_required" event="police_vehicle_dispatched" target="All_fire_trucks_dispatched">
+            <script>police_vehicles_dispatched.add(_event.data.police_vehicle)</script>
+            <raise event="enough_police_vehicles_dispatched"/>
+        </transition>
+        <transition event="enough_police_vehicles_dispatched" cond="police_vehicles_dispatched.length &gt;= number_of_police_vehicle_required" target="Step_5_Arrival"/>
+    </state>
+    <state id="All_police_vehicles_dispatched">
+        <transition cond="fire_trucks_dispatched &lt; number_of_fire_truck_required" event="fire_truck_dispatched" target="All_police_vehicles_dispatched">
+            <script>fire_trucks_dispatched.add(_event.data.fire_truck)</script>
+            <raise event="enough_fire_trucks_dispatched"/>
+        </transition>
+        <transition event="enough_fire_trucks_dispatched" cond="fire_trucks_dispatched.length &gt;= number_of_fire_truck_required" target="Step_5_Arrival"/>
+    </state>
+    <!-- 5. PSC and FSC communicate to each other their arrival (per vehicle) at targeted locations. -->
+    <parallel id="Step_5_Arrival">
+        <datamodel>
+            <data id="fire_truck" expr="null"/>
+            <data id="replacement_fire_truck" expr="null"/>
+            <data id="police_vehicle" expr="null"/>
+            <data id="replacement_police_vehicle" expr="null"/>
+        </datamodel>
+        <transition event="fire_truck_breakdown">
+            <assign expr="_event.data.fire_truck" location="fire_truck"/>
+            <assign expr="_event.data.replacement_fire_truck" location="replacement_fire_truck"/>
+            <script>fire_trucks_dispatched.remove(fire_truck)</script>
+            <if cond="replacement_fire_truck != &#039;null&#039;">
+                <script>fire_trucks_dispatched.add(replacement_fire_truck)</script>
+            </if>
+        </transition>
+        <transition event="police_vehicle_breakdown">
+            <assign expr="_event.data.police_vehicle" location="police_vehicle"/>
+            <assign expr="_event.data.replacement_police_vehicle" location="replacement_police_vehicle"/>
+            <script>police_vehicles_dispatched.remove(police_vehicle)</script>
+            <if cond="replacement_police_vehicle != &#039;null&#039;">
+                <script>police_vehicles_dispatched.add(replacement_police_vehicle)</script>
+            </if>
+        </transition>
+        <!-- 5.b1 -->
+        <transition event="fire_truck_blocked" target="Crisis_details_exchange">
+            <script>fire_trucks_dispatched.remove(_event.data.fire_truck)</script>
+        </transition>
+        <transition event="police_vehicle_blocked" target="Crisis_details_exchange">
+            <script>police_vehicles_dispatched.remove(_event.data.police_vehicle)</script>
+        </transition>
+        <!-- 5.c1 -->
+        <transition event="crisis_is_more_severe" target="Crisis_details_exchange"/>
+        <!-- 5.d1 and 5.d2 -->
+        <transition event="crisis_is_less_severe">
+            <invoke id="fire_truck_recalled"/>
+            <invoke id="police_vehicle_recalled"/>
+            <raise event="enough_fire_trucks_arrived"/>
+            <raise event="enough_police_vehicles_arrived"/>
+        </transition>
+        <state id="Fire_trucks_arrival" initial="Fire_trucks_arriving">
+            <state id="Fire_trucks_arriving">
+                <transition event="fire_truck_arrived" cond="fire_trucks_arrived.length &lt; fire_trucks_dispatched.length" target="Fire_trucks_arriving">
+                    <script>fire_trucks_arrived.add(_event.data.fire_truck)</script>
+                    <raise event="enough_fire_trucks_arrived"/>
+                </transition>
+                <transition event="enough_fire_trucks_arrived" cond="fire_trucks_arrived.length &gt;= fire_trucks_dispatched.length &amp;&amp; ! In(&#039;All_police_vehicles_arrived&#039;)" target="All_fire_trucks_arrived"/>
+                <transition event="enough_fire_trucks_arrived" cond="fire_trucks_arrived.length &gt;= fire_trucks_dispatched.length &amp;&amp; In(&#039;All_police_vehicles_arrived&#039;)" target="End_of_fire_trucks_arrival"/>
+            </state>
+            <state id="All_fire_trucks_arrived"/>
+            <final id="End_of_fire_trucks_arrival"/>
+        </state>
+        <state id="Police_vehicles_arrival" initial="Police_vehicles_arriving">
+            <state id="Police_vehicles_arriving">
+                <transition event="police_vehicle_arrived" cond="police_vehicle_arrived.length &lt; police_vehicle_dispatched.length" target="Police_vehicles_arriving">
+                    <script>police_vehicle_arrived.add(_event.data.police_vehicle)</script>
+                    <raise event="enough_police_vehicles_arrived"/>
+                </transition>
+                <transition event="enough_police_vehicles_arrived" cond="police_vehicle_arrived.length &gt;= police_vehicle_dispatched.length &amp;&amp; ! In(&#039;All_fire_trucks_arrived&#039;)" target="All_police_vehicles_arrived"/>
+                <transition event="enough_police_vehicles_arrived" cond="police_vehicle_arrived.length &gt;= police_vehicle_dispatched.length &amp;&amp; In(&#039;All_fire_trucks_arrived&#039;)" target="End_of_police_vehicles_arrival"/>
+            </state>
+            <state id="All_police_vehicles_arrived"/>
+            <final id="End_of_police_vehicles_arrival"/>
+        </state>
+        <transition target="Completion_of_objectives"/>
+    </parallel>
+    <state id="Completion_of_objectives">
+        <transition event="close" target="End_of_crisis"/>
+    </state>
+    <final id="End_of_crisis"/>
+</scxml>
