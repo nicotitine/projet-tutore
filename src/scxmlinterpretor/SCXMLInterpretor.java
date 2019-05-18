@@ -43,7 +43,6 @@ import org.xml.sax.SAXException;
 
 public class SCXMLInterpretor {
 	private Set<State> states = new HashSet<State>();
-	//private Set<State> finalStates = new HashSet<State>();
     private XPath path;
     private UMLFactory umlFactory;
     private Model model;
@@ -224,7 +223,7 @@ public class SCXMLInterpretor {
     		String inputFilePath = cmd.getOptionValue("path");
             String outputFilePath = cmd.getOptionValue("output");
 
-            //TO DO : Gérer le cas ou l'utilisateur donne un output autre que .xmi
+            //TO DO : Gï¿½rer le cas ou l'utilisateur donne un output autre que .xmi
             if(outputFilePath == null) {
             	outputFilePath = inputFilePath.substring(0, inputFilePath.indexOf(".xml")) + ".xmi";
             }
