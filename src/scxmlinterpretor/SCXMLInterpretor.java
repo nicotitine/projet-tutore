@@ -2,8 +2,10 @@ package scxmlinterpretor;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -26,9 +28,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.eclipse.uml2.uml.CallEvent;
 import org.eclipse.uml2.uml.FinalState;
 import org.eclipse.uml2.uml.Model;
+import org.eclipse.uml2.uml.Pseudostate;
 import org.eclipse.uml2.uml.Region;
 import org.eclipse.uml2.uml.State;
 import org.eclipse.uml2.uml.StateMachine;
@@ -44,6 +46,7 @@ import org.xml.sax.SAXException;
 
 public class SCXMLInterpretor {
     private Set<State> states = new HashSet<State>();
+    private List<String> nameOfInitialStates = new ArrayList<String>();
     private XPath path;
     private UMLFactory umlFactory;
     private Model model;
@@ -60,6 +63,31 @@ public class SCXMLInterpretor {
     		}
     	}
     	return null;
+    }
+    
+    public void getInitialStates(Node n, Region mainRegion) {
+    	if(n instanceof Element) {
+    		Element element = (Element)n;
+
+    		if(element.getTagName().equals("scxml")) {
+    			this.nameOfInitialStates.add(element.getAttribute("initial"));
+    		}
+    		else if(element.getTagName().equals("state")){
+    			if(!element.getAttribute("initial").equals("")) {
+    				this.nameOfInitialStates.add(element.getAttribute("initial"));
+    			}
+    		}
+
+    		NodeList list = n.getChildNodes();
+			if(list.getLength() > 0 ) {
+				for(int i = 0; i < list.getLength(); i++) {
+					Node n2 = list.item(i);
+					if(n2 instanceof Element) {
+						getInitialStates(n2, mainRegion);
+					}
+				}
+			}
+    	}
     }
 
     public SCXMLInterpretor(String input, String output) {
@@ -81,7 +109,9 @@ public class SCXMLInterpretor {
 	        this.model = umlFactory.createModel();
 	        this.stateMachine = umlFactory.createStateMachine();
 	        this.mainRegion = umlFactory.createRegion();
-	              
+	        
+	        //Get Initial States Names
+	        this.getInitialStates(this.root, this.mainRegion);
 
 	        // Create all states
 	        this.createStates(this.root, this.mainRegion);
@@ -159,28 +189,61 @@ public class SCXMLInterpretor {
     }
 
     public void createStates(Node n, Region mainRegion){
+    	Boolean isInitial = false;
     	if(n instanceof Element){
     		Element element = (Element)n;
     		if(element.getTagName().equals("state") || element.getTagName().equals("parallel")) {
-
-    			State newState = umlFactory.createState();
-    			newState.setName(element.getAttribute("id"));
-    			newState.setContainer(mainRegion); 
-    			this.states.add(newState);
-
-    			// Look if there is any child
-    			int nbChild = n.getChildNodes().getLength();
-    			NodeList list = n.getChildNodes();
-    			if(nbChild > 0) {
-    				Region localRegion = this.umlFactory.createRegion();
-    				localRegion.setState(newState);
-    				for(int i = 0; i < nbChild; i++){
-    					Node n2 = list.item(i);
-    					if (n2 instanceof Element){
-    						createStates(n2, localRegion);
-    					}
+    			
+    			//Check if this element is an initial state
+    			for(int i = 0; i < this.nameOfInitialStates.size(); i++) {
+    				if(element.getAttribute("id").equals(this.nameOfInitialStates.get(i))) {
+    					isInitial = true;
     				}
+				}
+    			
+    			if(isInitial) {
+    				Pseudostate newPseudoState = umlFactory.createPseudostate();
+    				newPseudoState.setName(element.getAttribute("id"));
+    				newPseudoState.setContainer(mainRegion);
+
+            		// Look if there is any child
+            		int nbChild = n.getChildNodes().getLength();
+            		NodeList list = n.getChildNodes();
+            		if(nbChild > 0) {
+            			Region localRegion = this.umlFactory.createRegion();
+            			localRegion.createSubvertex(newPseudoState.getName(), newPseudoState.eClass());
+            			//How to add pseudoState into a region ???
+            			//localRegion.setState(newState);
+            			for(int i = 0; i < nbChild; i++){
+            				Node n2 = list.item(i);
+            				if (n2 instanceof Element){
+            					createStates(n2, localRegion);
+            				}
+            			}
+            		}
     			}
+    			else {
+    				State newState = umlFactory.createState();
+            		newState.setName(element.getAttribute("id"));
+            		newState.setContainer(mainRegion);
+            		this.states.add(newState);
+
+            		// Look if there is any child
+            		int nbChild = n.getChildNodes().getLength();
+            		NodeList list = n.getChildNodes();
+            		if(nbChild > 0) {
+            			Region localRegion = this.umlFactory.createRegion();
+            			localRegion.setState(newState);
+            			for(int i = 0; i < nbChild; i++){
+            				Node n2 = list.item(i);
+            				if (n2 instanceof Element){
+            					createStates(n2, localRegion);
+            				}
+            			}
+            		}
+    			}
+
+    			
     		} else if(element.getTagName().equals("scxml")) {
     			//String idInitialState = element.getAttribute("initial");
     			NodeList list = n.getChildNodes();
@@ -230,7 +293,7 @@ public class SCXMLInterpretor {
     		String inputFilePath = cmd.getOptionValue("path");
             String outputFilePath = cmd.getOptionValue("output");
 
-            //TO DO : G�rer le cas ou l'utilisateur donne un output autre que .xmi
+            //TO DO : Gï¿½rer le cas ou l'utilisateur donne un output autre que .xmi
             if(outputFilePath == null) {
             	outputFilePath = inputFilePath.substring(0, inputFilePath.indexOf(".xml")) + ".xmi";
             }
