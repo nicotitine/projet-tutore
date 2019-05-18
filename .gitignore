@@ -16,6 +16,7 @@ local.properties
 .recommenders
 *.xmi
 *.png
+about.*
 
 # External tool builders
 .externalToolBuilders/
