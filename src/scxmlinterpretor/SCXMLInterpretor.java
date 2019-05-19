@@ -133,6 +133,12 @@ public class SCXMLInterpretor {
 	    }
 	}
 
+    /**
+     * 
+     * @param root
+     * @param uri
+     * @return true if successfully saved, false if an exception is throwed
+     */
     public Boolean saveXMI(EObject root, String uri) {
     	Resource resource = null;
 		try {
