@@ -94,6 +94,7 @@ public class ConsiderIgnoreFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<NamedElement> getMessages() {
 		if (messages == null) {
 			messages = new EObjectResolvingEList<NamedElement>(
@@ -108,6 +109,7 @@ public class ConsiderIgnoreFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getMessage(String name) {
 		return getMessage(name, false, null);
 	}
@@ -117,6 +119,7 @@ public class ConsiderIgnoreFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getMessage(String name, boolean ignoreCase,
 			EClass eClass) {
 		messageLoop : for (NamedElement message : getMessages()) {
@@ -136,6 +139,7 @@ public class ConsiderIgnoreFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateConsiderOrIgnore(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ConsiderIgnoreFragmentOperations.validateConsiderOrIgnore(this,
@@ -147,6 +151,7 @@ public class ConsiderIgnoreFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateType(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ConsiderIgnoreFragmentOperations.validateType(this, diagnostics,

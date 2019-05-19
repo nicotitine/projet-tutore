@@ -67,6 +67,7 @@ public class DestructionOccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoOccurrenceSpecificationsBelow(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return DestructionOccurrenceSpecificationOperations

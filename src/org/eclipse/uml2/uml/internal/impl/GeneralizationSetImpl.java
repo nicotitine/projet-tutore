@@ -153,6 +153,7 @@ public class GeneralizationSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isCovering() {
 		return (eFlags & IS_COVERING_EFLAG) != 0;
 	}
@@ -162,6 +163,7 @@ public class GeneralizationSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsCovering(boolean newIsCovering) {
 		boolean oldIsCovering = (eFlags & IS_COVERING_EFLAG) != 0;
 		if (newIsCovering)
@@ -179,6 +181,7 @@ public class GeneralizationSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDisjoint() {
 		return (eFlags & IS_DISJOINT_EFLAG) != 0;
 	}
@@ -188,6 +191,7 @@ public class GeneralizationSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsDisjoint(boolean newIsDisjoint) {
 		boolean oldIsDisjoint = (eFlags & IS_DISJOINT_EFLAG) != 0;
 		if (newIsDisjoint)
@@ -205,6 +209,7 @@ public class GeneralizationSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getPowertype() {
 		if (powertype != null && powertype.eIsProxy()) {
 			InternalEObject oldPowertype = (InternalEObject) powertype;
@@ -254,6 +259,7 @@ public class GeneralizationSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPowertype(Classifier newPowertype) {
 		if (newPowertype != powertype) {
 			NotificationChain msgs = null;
@@ -279,6 +285,7 @@ public class GeneralizationSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Generalization> getGeneralizations() {
 		if (generalizations == null) {
 			generalizations = new EObjectWithInverseResolvingEList.ManyInverse<Generalization>(
@@ -294,6 +301,7 @@ public class GeneralizationSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Generalization getGeneralization(Classifier general) {
 		generalizationLoop : for (Generalization generalization : getGeneralizations()) {
 			if (general != null && !general.equals(generalization.getGeneral()))
@@ -308,6 +316,7 @@ public class GeneralizationSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateGeneralizationSameClassifier(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return GeneralizationSetOperations
@@ -319,6 +328,7 @@ public class GeneralizationSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMapsToGeneralizationSet(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return GeneralizationSetOperations.validateMapsToGeneralizationSet(

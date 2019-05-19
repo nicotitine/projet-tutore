@@ -206,6 +206,7 @@ public class PackageImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VisibilityKind getVisibility() {
 		return VISIBILITY_EFLAG_VALUES[(eFlags & VISIBILITY_EFLAG) >>> VISIBILITY_EFLAG_OFFSET];
 	}
@@ -215,6 +216,7 @@ public class PackageImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVisibility(VisibilityKind newVisibility) {
 		VisibilityKind oldVisibility = VISIBILITY_EFLAG_VALUES[(eFlags & VISIBILITY_EFLAG) >>> VISIBILITY_EFLAG_OFFSET];
 		if (newVisibility == null)
@@ -232,6 +234,7 @@ public class PackageImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Package getImportedPackage() {
 		if (importedPackage != null && importedPackage.eIsProxy()) {
 			InternalEObject oldImportedPackage = (InternalEObject) importedPackage;
@@ -260,6 +263,7 @@ public class PackageImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImportedPackage(
 			org.eclipse.uml2.uml.Package newImportedPackage) {
 		org.eclipse.uml2.uml.Package oldImportedPackage = importedPackage;
@@ -275,6 +279,7 @@ public class PackageImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Namespace getImportingNamespace() {
 		if (eContainerFeatureID() != UMLPackage.PACKAGE_IMPORT__IMPORTING_NAMESPACE)
 			return null;
@@ -309,6 +314,7 @@ public class PackageImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImportingNamespace(Namespace newImportingNamespace) {
 		if (newImportingNamespace != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.PACKAGE_IMPORT__IMPORTING_NAMESPACE && newImportingNamespace != null)) {
@@ -336,6 +342,7 @@ public class PackageImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validatePublicOrPrivate(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PackageImportOperations.validatePublicOrPrivate(this,

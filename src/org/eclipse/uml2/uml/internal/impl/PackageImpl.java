@@ -222,6 +222,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameter getTemplateParameter() {
 		if (templateParameter != null && templateParameter.eIsProxy()) {
 			InternalEObject oldTemplateParameter = (InternalEObject) templateParameter;
@@ -279,6 +280,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTemplateParameter(TemplateParameter newTemplateParameter) {
 		if (newTemplateParameter != templateParameter) {
 			NotificationChain msgs = null;
@@ -304,6 +306,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameter getOwningTemplateParameter() {
 		if (eContainerFeatureID() != UMLPackage.PACKAGE__OWNING_TEMPLATE_PARAMETER)
 			return null;
@@ -346,6 +349,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwningTemplateParameter(
 			TemplateParameter newOwningTemplateParameter) {
 		if (newOwningTemplateParameter != eInternalContainer()
@@ -404,6 +408,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetVisibility() {
 		return (eFlags & VISIBILITY_EFLAG) != VISIBILITY_EFLAG_DEFAULT;
 	}
@@ -439,6 +444,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TemplateBinding> getTemplateBindings() {
 		if (templateBindings == null) {
 			templateBindings = new EObjectContainmentWithInverseEList.Resolving<TemplateBinding>(
@@ -454,6 +460,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateBinding createTemplateBinding(TemplateSignature signature) {
 		TemplateBinding newTemplateBinding = (TemplateBinding) create(UMLPackage.Literals.TEMPLATE_BINDING);
 		getTemplateBindings().add(newTemplateBinding);
@@ -467,6 +474,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateBinding getTemplateBinding(TemplateSignature signature) {
 		return getTemplateBinding(signature, false);
 	}
@@ -476,6 +484,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateBinding getTemplateBinding(TemplateSignature signature,
 			boolean createOnDemand) {
 		templateBindingLoop : for (TemplateBinding templateBinding : getTemplateBindings()) {
@@ -521,6 +530,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateSignature getOwnedTemplateSignature() {
 		if (ownedTemplateSignature != null && ownedTemplateSignature.eIsProxy()) {
 			InternalEObject oldOwnedTemplateSignature = (InternalEObject) ownedTemplateSignature;
@@ -582,6 +592,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwnedTemplateSignature(
 			TemplateSignature newOwnedTemplateSignature) {
 		if (newOwnedTemplateSignature != ownedTemplateSignature) {
@@ -610,6 +621,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateSignature createOwnedTemplateSignature(EClass eClass) {
 		TemplateSignature newOwnedTemplateSignature = (TemplateSignature) create(eClass);
 		setOwnedTemplateSignature(newOwnedTemplateSignature);
@@ -621,6 +633,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateSignature createOwnedTemplateSignature() {
 		return createOwnedTemplateSignature(UMLPackage.Literals.TEMPLATE_SIGNATURE);
 	}
@@ -660,6 +673,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageableElement> getPackagedElements() {
 		if (packagedElements == null) {
 			packagedElements = new EObjectContainmentEList.Resolving<PackageableElement>(
@@ -674,6 +688,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageableElement createPackagedElement(String name, EClass eClass) {
 		PackageableElement newPackagedElement = (PackageableElement) create(eClass);
 		getPackagedElements().add(newPackagedElement);
@@ -687,6 +702,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageableElement getPackagedElement(String name) {
 		return getPackagedElement(name, false, null, false);
 	}
@@ -696,6 +712,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageableElement getPackagedElement(String name,
 			boolean ignoreCase, EClass eClass, boolean createOnDemand) {
 		packagedElementLoop : for (PackageableElement packagedElement : getPackagedElements()) {
@@ -717,6 +734,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getURI() {
 		return uri;
 	}
@@ -726,6 +744,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setURI(String newURI) {
 		String oldURI = uri;
 		uri = newURI;
@@ -739,6 +758,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageMerge> getPackageMerges() {
 		if (packageMerges == null) {
 			packageMerges = new EObjectContainmentWithInverseEList.Resolving<PackageMerge>(
@@ -753,6 +773,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageMerge createPackageMerge(
 			org.eclipse.uml2.uml.Package mergedPackage) {
 		PackageMerge newPackageMerge = (PackageMerge) create(UMLPackage.Literals.PACKAGE_MERGE);
@@ -767,6 +788,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageMerge getPackageMerge(
 			org.eclipse.uml2.uml.Package mergedPackage) {
 		return getPackageMerge(mergedPackage, false);
@@ -777,6 +799,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageMerge getPackageMerge(
 			org.eclipse.uml2.uml.Package mergedPackage, boolean createOnDemand) {
 		packageMergeLoop : for (PackageMerge packageMerge : getPackageMerges()) {
@@ -795,6 +818,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public EList<Type> getOwnedTypes() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -820,6 +844,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public EList<org.eclipse.uml2.uml.Package> getNestedPackages() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -851,6 +876,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Package getNestingPackage() {
 		org.eclipse.uml2.uml.Package nestingPackage = basicGetNestingPackage();
 		return nestingPackage != null && nestingPackage.eIsProxy()
@@ -875,6 +901,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public void setNestingPackage(org.eclipse.uml2.uml.Package newNestingPackage) {
 		if (newNestingPackage != eInternalContainer()) {
 			if (EcoreUtil.isAncestor(this, newNestingPackage))
@@ -902,6 +929,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public EList<Stereotype> getOwnedStereotypes() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -932,6 +960,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ProfileApplication> getProfileApplications() {
 		if (profileApplications == null) {
 			profileApplications = new EObjectContainmentWithInverseEList.Resolving<ProfileApplication>(
@@ -947,6 +976,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProfileApplication createProfileApplication() {
 		ProfileApplication newProfileApplication = (ProfileApplication) create(UMLPackage.Literals.PROFILE_APPLICATION);
 		getProfileApplications().add(newProfileApplication);
@@ -958,6 +988,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isCompatibleWith(ParameterableElement p) {
 		return ParameterableElementOperations.isCompatibleWith(this, p);
 	}
@@ -967,6 +998,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTemplateParameter() {
 		return ParameterableElementOperations.isTemplateParameter(this);
 	}
@@ -976,6 +1008,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNamespaceNeedsVisibility(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return PackageableElementOperations.validateNamespaceNeedsVisibility(
@@ -987,6 +1020,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ParameterableElement> parameterableElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1013,6 +1047,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTemplate() {
 		return TemplateableElementOperations.isTemplate(this);
 	}
@@ -1022,6 +1057,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateElementsPublicOrPrivate(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PackageOperations.validateElementsPublicOrPrivate(this,
@@ -1033,6 +1069,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Class createOwnedClass(String name,
 			boolean isAbstract) {
 		return PackageOperations.createOwnedClass(this, name, isAbstract);
@@ -1043,6 +1080,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Enumeration createOwnedEnumeration(String name) {
 		return PackageOperations.createOwnedEnumeration(this, name);
 	}
@@ -1052,6 +1090,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PrimitiveType createOwnedPrimitiveType(String name) {
 		return PackageOperations.createOwnedPrimitiveType(this, name);
 	}
@@ -1061,6 +1100,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Stereotype createOwnedStereotype(String name, boolean isAbstract) {
 		return PackageOperations.createOwnedStereotype(this, name, isAbstract);
 	}
@@ -1070,6 +1110,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isProfileApplied(Profile profile) {
 		return PackageOperations.isProfileApplied(this, profile);
 	}
@@ -1079,6 +1120,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<EObject> applyProfile(Profile profile) {
 		return PackageOperations.applyProfile(this, profile);
 	}
@@ -1088,6 +1130,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<EObject> unapplyProfile(Profile profile) {
 		return PackageOperations.unapplyProfile(this, profile);
 	}
@@ -1097,6 +1140,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Stereotype> allApplicableStereotypes() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1118,6 +1162,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Profile containingProfile() {
 		return PackageOperations.containingProfile(this);
 	}
@@ -1127,6 +1172,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Profile> getAppliedProfiles() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1148,6 +1194,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Profile getAppliedProfile(String qualifiedName) {
 		return PackageOperations.getAppliedProfile(this, qualifiedName);
 	}
@@ -1157,6 +1204,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Profile getAppliedProfile(String qualifiedName, boolean recurse) {
 		return PackageOperations
 			.getAppliedProfile(this, qualifiedName, recurse);
@@ -1167,6 +1215,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ProfileApplication> getAllProfileApplications() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1189,6 +1238,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProfileApplication getProfileApplication(Profile profile) {
 		return PackageOperations.getProfileApplication(this, profile);
 	}
@@ -1198,6 +1248,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProfileApplication getProfileApplication(Profile profile,
 			boolean recurse) {
 		return PackageOperations.getProfileApplication(this, profile, recurse);
@@ -1208,6 +1259,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interface createOwnedInterface(String name) {
 		return PackageOperations.createOwnedInterface(this, name);
 	}
@@ -1217,6 +1269,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isModelLibrary() {
 		return PackageOperations.isModelLibrary(this);
 	}
@@ -1226,6 +1279,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Profile> getAllAppliedProfiles() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1247,6 +1301,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageableElement> visibleMembers() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1267,6 +1322,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean makesVisible(NamedElement el) {
 		return PackageOperations.makesVisible(this, el);
 	}
@@ -2172,6 +2228,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Package createNestedPackage(String name,
 			EClass eClass) {
 		org.eclipse.uml2.uml.Package newNestedPackage = (org.eclipse.uml2.uml.Package) create(eClass);
@@ -2186,6 +2243,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Package createNestedPackage(String name) {
 		return createNestedPackage(name, UMLPackage.Literals.PACKAGE);
 	}
@@ -2195,6 +2253,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Package getNestedPackage(String name) {
 		return getNestedPackage(name, false, null, false);
 	}
@@ -2204,6 +2263,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Package getNestedPackage(String name,
 			boolean ignoreCase, EClass eClass, boolean createOnDemand) {
 		nestedPackageLoop : for (org.eclipse.uml2.uml.Package nestedPackage : getNestedPackages()) {
@@ -2235,6 +2295,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Stereotype getOwnedStereotype(String name) {
 		return getOwnedStereotype(name, false);
 	}
@@ -2244,6 +2305,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Stereotype getOwnedStereotype(String name, boolean ignoreCase) {
 		ownedStereotypeLoop : for (Stereotype ownedStereotype : getOwnedStereotypes()) {
 			if (name != null && !(ignoreCase
@@ -2270,6 +2332,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type createOwnedType(String name, EClass eClass) {
 		Type newOwnedType = (Type) create(eClass);
 		getOwnedTypes().add(newOwnedType);
@@ -2283,6 +2346,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getOwnedType(String name) {
 		return getOwnedType(name, false, null, false);
 	}
@@ -2292,6 +2356,7 @@ public class PackageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getOwnedType(String name, boolean ignoreCase, EClass eClass,
 			boolean createOnDemand) {
 		ownedTypeLoop : for (Type ownedType : getOwnedTypes()) {

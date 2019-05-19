@@ -239,6 +239,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return name;
 	}
@@ -248,6 +249,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setName(String newName) {
 		String oldName = name;
 		name = newName;
@@ -263,6 +265,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetName() {
 		String oldName = name;
 		boolean oldNameESet = (eFlags & NAME_ESETFLAG) != 0;
@@ -279,6 +282,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetName() {
 		return (eFlags & NAME_ESETFLAG) != 0;
 	}
@@ -288,6 +292,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VisibilityKind getVisibility() {
 		return VISIBILITY_EFLAG_VALUES[(eFlags & VISIBILITY_EFLAG) >>> VISIBILITY_EFLAG_OFFSET];
 	}
@@ -297,6 +302,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVisibility(VisibilityKind newVisibility) {
 		VisibilityKind oldVisibility = VISIBILITY_EFLAG_VALUES[(eFlags & VISIBILITY_EFLAG) >>> VISIBILITY_EFLAG_OFFSET];
 		if (newVisibility == null)
@@ -316,6 +322,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetVisibility() {
 		VisibilityKind oldVisibility = VISIBILITY_EFLAG_VALUES[(eFlags & VISIBILITY_EFLAG) >>> VISIBILITY_EFLAG_OFFSET];
 		boolean oldVisibilityESet = (eFlags & VISIBILITY_ESETFLAG) != 0;
@@ -332,6 +339,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetVisibility() {
 		return (eFlags & VISIBILITY_ESETFLAG) != 0;
 	}
@@ -341,6 +349,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getQualifiedName() {
 		return NamedElementOperations.getQualifiedName(this);
 	}
@@ -350,6 +359,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Dependency> getClientDependencies() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -374,6 +384,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Dependency getClientDependency(String name) {
 		return getClientDependency(name, false, null);
 	}
@@ -383,6 +394,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Dependency getClientDependency(String name, boolean ignoreCase,
 			EClass eClass) {
 		clientDependencyLoop : for (Dependency clientDependency : getClientDependencies()) {
@@ -402,6 +414,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StringExpression getNameExpression() {
 		if (nameExpression != null && nameExpression.eIsProxy()) {
 			InternalEObject oldNameExpression = (InternalEObject) nameExpression;
@@ -463,6 +476,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNameExpression(StringExpression newNameExpression) {
 		if (newNameExpression != nameExpression) {
 			NotificationChain msgs = null;
@@ -488,6 +502,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StringExpression createNameExpression(String name, Type type) {
 		StringExpression newNameExpression = (StringExpression) create(UMLPackage.Literals.STRING_EXPRESSION);
 		setNameExpression(newNameExpression);
@@ -503,6 +518,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateHasNoQualifiedName(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return NamedElementOperations.validateHasNoQualifiedName(this,
@@ -514,6 +530,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateHasQualifiedName(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return NamedElementOperations.validateHasQualifiedName(this,
@@ -525,6 +542,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateVisibilityNeedsOwnership(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return NamedElementOperations.validateVisibilityNeedsOwnership(this,
@@ -536,6 +554,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Dependency createDependency(NamedElement supplier) {
 		return NamedElementOperations.createDependency(this, supplier);
 	}
@@ -545,6 +564,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLabel() {
 		return NamedElementOperations.getLabel(this);
 	}
@@ -554,6 +574,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLabel(boolean localize) {
 		return NamedElementOperations.getLabel(this, localize);
 	}
@@ -564,6 +585,7 @@ public abstract class NamedElementImpl
 	 * @generated
 	 */
 
+	@Override
 	public Usage createUsage(NamedElement supplier) {
 		return NamedElementOperations.createUsage(this, supplier);
 	}
@@ -573,6 +595,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Namespace> allNamespaces() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -594,6 +617,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDistinguishableFrom(NamedElement n, Namespace ns) {
 		return NamedElementOperations.isDistinguishableFrom(this, n, ns);
 	}
@@ -603,6 +627,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String separator() {
 		return NamedElementOperations.separator(this);
 	}
@@ -612,6 +637,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.eclipse.uml2.uml.Package> allOwningPackages() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -965,6 +991,7 @@ public abstract class NamedElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Namespace getNamespace() {
 		Namespace namespace = basicGetNamespace();
 		return namespace != null && namespace.eIsProxy()

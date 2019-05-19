@@ -104,6 +104,7 @@ public class TimeObservationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getEvent() {
 		if (event != null && event.eIsProxy()) {
 			InternalEObject oldEvent = (InternalEObject) event;
@@ -131,6 +132,7 @@ public class TimeObservationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEvent(NamedElement newEvent) {
 		NamedElement oldEvent = event;
 		event = newEvent;
@@ -144,6 +146,7 @@ public class TimeObservationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isFirstEvent() {
 		return (eFlags & FIRST_EVENT_EFLAG) != 0;
 	}
@@ -153,6 +156,7 @@ public class TimeObservationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFirstEvent(boolean newFirstEvent) {
 		boolean oldFirstEvent = (eFlags & FIRST_EVENT_EFLAG) != 0;
 		if (newFirstEvent)

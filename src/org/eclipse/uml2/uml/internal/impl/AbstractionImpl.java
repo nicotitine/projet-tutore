@@ -121,6 +121,7 @@ public class AbstractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OpaqueExpression getMapping() {
 		if (mapping != null && mapping.eIsProxy()) {
 			InternalEObject oldMapping = (InternalEObject) mapping;
@@ -179,6 +180,7 @@ public class AbstractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMapping(OpaqueExpression newMapping) {
 		if (newMapping != mapping) {
 			NotificationChain msgs = null;
@@ -203,6 +205,7 @@ public class AbstractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OpaqueExpression createMapping(String name, Type type) {
 		OpaqueExpression newMapping = (OpaqueExpression) create(UMLPackage.Literals.OPAQUE_EXPRESSION);
 		setMapping(newMapping);

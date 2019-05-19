@@ -124,6 +124,7 @@ public class StateInvariantImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getInvariant() {
 		if (invariant != null && invariant.eIsProxy()) {
 			InternalEObject oldInvariant = (InternalEObject) invariant;
@@ -184,6 +185,7 @@ public class StateInvariantImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInvariant(Constraint newInvariant) {
 		if (newInvariant != invariant) {
 			NotificationChain msgs = null;
@@ -209,6 +211,7 @@ public class StateInvariantImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createInvariant(String name, EClass eClass) {
 		Constraint newInvariant = (Constraint) create(eClass);
 		setInvariant(newInvariant);
@@ -222,6 +225,7 @@ public class StateInvariantImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createInvariant(String name) {
 		return createInvariant(name, UMLPackage.Literals.CONSTRAINT);
 	}
@@ -246,6 +250,7 @@ public class StateInvariantImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Lifeline getCovered(String name) {
 		return getCovered(name, false);
 	}
@@ -255,6 +260,7 @@ public class StateInvariantImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Lifeline getCovered(String name, boolean ignoreCase) {
 		coveredLoop : for (Lifeline covered : getCovereds()) {
 			if (name != null && !(ignoreCase

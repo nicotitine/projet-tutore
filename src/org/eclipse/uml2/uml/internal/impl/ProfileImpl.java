@@ -197,6 +197,7 @@ public class ProfileImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ElementImport> getMetaclassReferences() {
 		if (metaclassReferences == null) {
 			metaclassReferences = new SubsetSupersetEObjectResolvingEList<ElementImport>(
@@ -212,6 +213,7 @@ public class ProfileImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementImport createMetaclassReference(
 			PackageableElement importedElement) {
 		ElementImport newMetaclassReference = (ElementImport) create(UMLPackage.Literals.ELEMENT_IMPORT);
@@ -226,6 +228,7 @@ public class ProfileImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementImport getMetaclassReference(
 			PackageableElement importedElement) {
 		return getMetaclassReference(importedElement, false);
@@ -236,6 +239,7 @@ public class ProfileImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementImport getMetaclassReference(
 			PackageableElement importedElement, boolean createOnDemand) {
 		metaclassReferenceLoop : for (ElementImport metaclassReference : getMetaclassReferences()) {
@@ -255,6 +259,7 @@ public class ProfileImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageImport> getMetamodelReferences() {
 		if (metamodelReferences == null) {
 			metamodelReferences = new SubsetSupersetEObjectResolvingEList<PackageImport>(
@@ -270,6 +275,7 @@ public class ProfileImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageImport createMetamodelReference(
 			org.eclipse.uml2.uml.Package importedPackage) {
 		PackageImport newMetamodelReference = (PackageImport) create(UMLPackage.Literals.PACKAGE_IMPORT);
@@ -284,6 +290,7 @@ public class ProfileImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageImport getMetamodelReference(
 			org.eclipse.uml2.uml.Package importedPackage) {
 		return getMetamodelReference(importedPackage, false);
@@ -294,6 +301,7 @@ public class ProfileImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageImport getMetamodelReference(
 			org.eclipse.uml2.uml.Package importedPackage, boolean createOnDemand) {
 		metamodelReferenceLoop : for (PackageImport metamodelReference : getMetamodelReferences()) {
@@ -313,6 +321,7 @@ public class ProfileImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMetaclassReferenceNotSpecialized(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return ProfileOperations.validateMetaclassReferenceNotSpecialized(this,
@@ -324,6 +333,7 @@ public class ProfileImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateReferencesSameMetamodel(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ProfileOperations.validateReferencesSameMetamodel(this,
@@ -335,6 +345,7 @@ public class ProfileImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EObject create(Classifier classifier) {
 		return ProfileOperations.create(this, classifier);
 	}
@@ -344,6 +355,7 @@ public class ProfileImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDefined() {
 		return ProfileOperations.isDefined(this);
 	}
@@ -353,6 +365,7 @@ public class ProfileImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EPackage define() {
 		return ProfileOperations.define(this);
 	}
@@ -363,6 +376,7 @@ public class ProfileImpl
 	 * @generated
 	 */
 
+	@Override
 	public EPackage define(Map<String, String> options,
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return ProfileOperations.define(this, options, diagnostics, context);
@@ -373,6 +387,7 @@ public class ProfileImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EPackage getDefinition() {
 		return ProfileOperations.getDefinition(this);
 	}
@@ -382,6 +397,7 @@ public class ProfileImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ENamedElement getDefinition(NamedElement namedElement) {
 		return ProfileOperations.getDefinition(this, namedElement);
 	}
@@ -391,6 +407,7 @@ public class ProfileImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.eclipse.uml2.uml.Class> getReferencedMetaclasses() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -413,6 +430,7 @@ public class ProfileImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Model> getReferencedMetamodels() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -434,6 +452,7 @@ public class ProfileImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Extension> getOwnedExtensions(boolean requiredOnly) {
 		return ProfileOperations.getOwnedExtensions(this, requiredOnly);
 	}

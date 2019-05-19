@@ -211,6 +211,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isBehavior() {
 		return (eFlags & IS_BEHAVIOR_EFLAG) != 0;
 	}
@@ -220,6 +221,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsBehavior(boolean newIsBehavior) {
 		boolean oldIsBehavior = (eFlags & IS_BEHAVIOR_EFLAG) != 0;
 		if (newIsBehavior)
@@ -236,6 +238,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isConjugated() {
 		return (eFlags & IS_CONJUGATED_EFLAG) != 0;
 	}
@@ -245,6 +248,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsConjugated(boolean newIsConjugated) {
 		boolean oldIsConjugated = (eFlags & IS_CONJUGATED_EFLAG) != 0;
 		if (newIsConjugated)
@@ -262,6 +266,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isService() {
 		return (eFlags & IS_SERVICE_EFLAG) != 0;
 	}
@@ -271,6 +276,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsService(boolean newIsService) {
 		boolean oldIsService = (eFlags & IS_SERVICE_EFLAG) != 0;
 		if (newIsService)
@@ -287,6 +293,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> getRequireds() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -307,6 +314,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interface getRequired(String name) {
 		return getRequired(name, false);
 	}
@@ -316,6 +324,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interface getRequired(String name, boolean ignoreCase) {
 		requiredLoop : for (Interface required : getRequireds()) {
 			if (name != null && !(ignoreCase
@@ -332,6 +341,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Port> getRedefinedPorts() {
 		if (redefinedPorts == null) {
 			redefinedPorts = new SubsetSupersetEObjectResolvingEList<Port>(
@@ -356,6 +366,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Port getRedefinedPort(String name, Type type) {
 		return getRedefinedPort(name, type, false);
 	}
@@ -365,6 +376,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Port getRedefinedPort(String name, Type type, boolean ignoreCase) {
 		redefinedPortLoop : for (Port redefinedPort : getRedefinedPorts()) {
 			if (name != null && !(ignoreCase
@@ -383,6 +395,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> getProvideds() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -403,6 +416,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interface getProvided(String name) {
 		return getProvided(name, false);
 	}
@@ -412,6 +426,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interface getProvided(String name, boolean ignoreCase) {
 		providedLoop : for (Interface provided : getProvideds()) {
 			if (name != null && !(ignoreCase
@@ -428,6 +443,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProtocolStateMachine getProtocol() {
 		if (protocol != null && protocol.eIsProxy()) {
 			InternalEObject oldProtocol = (InternalEObject) protocol;
@@ -455,6 +471,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProtocol(ProtocolStateMachine newProtocol) {
 		ProtocolStateMachine oldProtocol = protocol;
 		protocol = newProtocol;
@@ -468,6 +485,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validatePortAggregation(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PortOperations.validatePortAggregation(this, diagnostics,
@@ -479,6 +497,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDefaultValue(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PortOperations.validateDefaultValue(this, diagnostics, context);
@@ -489,6 +508,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateEncapsulatedOwner(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PortOperations.validateEncapsulatedOwner(this, diagnostics,
@@ -500,6 +520,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> basicProvided() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -520,6 +541,7 @@ public class PortImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> basicRequired() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {

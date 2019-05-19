@@ -160,6 +160,7 @@ public class ReplyActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Trigger getReplyToCall() {
 		if (replyToCall != null && replyToCall.eIsProxy()) {
 			InternalEObject oldReplyToCall = (InternalEObject) replyToCall;
@@ -188,6 +189,7 @@ public class ReplyActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReplyToCall(Trigger newReplyToCall) {
 		Trigger oldReplyToCall = replyToCall;
 		replyToCall = newReplyToCall;
@@ -202,6 +204,7 @@ public class ReplyActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getReturnInformation() {
 		if (returnInformation != null && returnInformation.eIsProxy()) {
 			InternalEObject oldReturnInformation = (InternalEObject) returnInformation;
@@ -264,6 +267,7 @@ public class ReplyActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReturnInformation(InputPin newReturnInformation) {
 		if (newReturnInformation != returnInformation) {
 			NotificationChain msgs = null;
@@ -291,6 +295,7 @@ public class ReplyActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createReturnInformation(String name, Type type,
 			EClass eClass) {
 		InputPin newReturnInformation = (InputPin) create(eClass);
@@ -307,6 +312,7 @@ public class ReplyActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createReturnInformation(String name, Type type) {
 		return createReturnInformation(name, type,
 			UMLPackage.Literals.INPUT_PIN);
@@ -317,6 +323,7 @@ public class ReplyActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InputPin> getReplyValues() {
 		if (replyValues == null) {
 			replyValues = new EObjectContainmentEList.Resolving<InputPin>(
@@ -330,6 +337,7 @@ public class ReplyActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createReplyValue(String name, Type type, EClass eClass) {
 		InputPin newReplyValue = (InputPin) create(eClass);
 		getReplyValues().add(newReplyValue);
@@ -345,6 +353,7 @@ public class ReplyActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createReplyValue(String name, Type type) {
 		return createReplyValue(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -354,6 +363,7 @@ public class ReplyActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getReplyValue(String name, Type type) {
 		return getReplyValue(name, type, false, null, false);
 	}
@@ -363,6 +373,7 @@ public class ReplyActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getReplyValue(String name, Type type, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		replyValueLoop : for (InputPin replyValue : getReplyValues()) {
@@ -386,6 +397,7 @@ public class ReplyActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validatePinsMatchParameter(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReplyActionOperations.validatePinsMatchParameter(this,
@@ -397,6 +409,7 @@ public class ReplyActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateEventOnReplyToCallTrigger(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return ReplyActionOperations.validateEventOnReplyToCallTrigger(this,

@@ -152,6 +152,7 @@ public class ExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getSymbol() {
 		return symbol;
 	}
@@ -161,6 +162,7 @@ public class ExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSymbol(String newSymbol) {
 		String oldSymbol = symbol;
 		symbol = newSymbol;
@@ -177,6 +179,7 @@ public class ExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetSymbol() {
 		String oldSymbol = symbol;
 		boolean oldSymbolESet = (eFlags & SYMBOL_ESETFLAG) != 0;
@@ -193,6 +196,7 @@ public class ExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetSymbol() {
 		return (eFlags & SYMBOL_ESETFLAG) != 0;
 	}
@@ -202,6 +206,7 @@ public class ExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ValueSpecification> getOperands() {
 		if (operands == null) {
 			operands = new EObjectContainmentEList.Resolving<ValueSpecification>(
@@ -215,6 +220,7 @@ public class ExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createOperand(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newOperand = (ValueSpecification) create(eClass);
@@ -231,6 +237,7 @@ public class ExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getOperand(String name, Type type) {
 		return getOperand(name, type, false, null, false);
 	}
@@ -240,6 +247,7 @@ public class ExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getOperand(String name, Type type,
 			boolean ignoreCase, EClass eClass, boolean createOnDemand) {
 		operandLoop : for (ValueSpecification operand : getOperands()) {

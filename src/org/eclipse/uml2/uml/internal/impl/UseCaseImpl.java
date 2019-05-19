@@ -180,6 +180,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Include> getIncludes() {
 		if (includes == null) {
 			includes = new EObjectContainmentWithInverseEList.Resolving<Include>(
@@ -194,6 +195,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Include createInclude(String name, UseCase addition) {
 		Include newInclude = (Include) create(UMLPackage.Literals.INCLUDE);
 		getIncludes().add(newInclude);
@@ -209,6 +211,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Include getInclude(String name, UseCase addition) {
 		return getInclude(name, addition, false, false);
 	}
@@ -218,6 +221,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Include getInclude(String name, UseCase addition,
 			boolean ignoreCase, boolean createOnDemand) {
 		includeLoop : for (Include include : getIncludes()) {
@@ -239,6 +243,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Extend> getExtends() {
 		if (extends_ == null) {
 			extends_ = new EObjectContainmentWithInverseEList.Resolving<Extend>(
@@ -253,6 +258,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Extend createExtend(String name, UseCase extendedCase) {
 		Extend newExtend = (Extend) create(UMLPackage.Literals.EXTEND);
 		getExtends().add(newExtend);
@@ -268,6 +274,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Extend getExtend(String name, UseCase extendedCase) {
 		return getExtend(name, extendedCase, false, false);
 	}
@@ -277,6 +284,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Extend getExtend(String name, UseCase extendedCase,
 			boolean ignoreCase, boolean createOnDemand) {
 		extendLoop : for (Extend extend : getExtends()) {
@@ -299,6 +307,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExtensionPoint> getExtensionPoints() {
 		if (extensionPoints == null) {
 			extensionPoints = new EObjectContainmentWithInverseEList.Resolving<ExtensionPoint>(
@@ -314,6 +323,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExtensionPoint createExtensionPoint(String name) {
 		ExtensionPoint newExtensionPoint = (ExtensionPoint) create(UMLPackage.Literals.EXTENSION_POINT);
 		getExtensionPoints().add(newExtensionPoint);
@@ -327,6 +337,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExtensionPoint getExtensionPoint(String name) {
 		return getExtensionPoint(name, false, false);
 	}
@@ -336,6 +347,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExtensionPoint getExtensionPoint(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		extensionPointLoop : for (ExtensionPoint extensionPoint : getExtensionPoints()) {
@@ -355,6 +367,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Classifier> getSubjects() {
 		if (subjects == null) {
 			subjects = new EObjectWithInverseResolvingEList.ManyInverse<Classifier>(
@@ -369,6 +382,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getSubject(String name) {
 		return getSubject(name, false, null);
 	}
@@ -378,6 +392,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getSubject(String name, boolean ignoreCase, EClass eClass) {
 		subjectLoop : for (Classifier subject : getSubjects()) {
 			if (eClass != null && !eClass.isInstance(subject))
@@ -396,6 +411,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMustHaveName(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return UseCaseOperations.validateMustHaveName(this, diagnostics,
@@ -407,6 +423,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateBinaryAssociations(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return UseCaseOperations.validateBinaryAssociations(this, diagnostics,
@@ -418,6 +435,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoAssociationToUseCase(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return UseCaseOperations.validateNoAssociationToUseCase(this,
@@ -429,6 +447,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateCannotIncludeSelf(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return UseCaseOperations.validateCannotIncludeSelf(this, diagnostics,
@@ -440,6 +459,7 @@ public class UseCaseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UseCase> allIncludedUseCases() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {

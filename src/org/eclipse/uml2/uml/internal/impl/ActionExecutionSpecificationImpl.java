@@ -96,6 +96,7 @@ public class ActionExecutionSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Action getAction() {
 		if (action != null && action.eIsProxy()) {
 			InternalEObject oldAction = (InternalEObject) action;
@@ -124,6 +125,7 @@ public class ActionExecutionSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAction(Action newAction) {
 		Action oldAction = action;
 		action = newAction;
@@ -138,6 +140,7 @@ public class ActionExecutionSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateActionReferenced(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActionExecutionSpecificationOperations.validateActionReferenced(

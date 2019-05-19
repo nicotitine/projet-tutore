@@ -104,6 +104,7 @@ public class OccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<GeneralOrdering> getToBefores() {
 		if (toBefores == null) {
 			toBefores = new EObjectWithInverseResolvingEList<GeneralOrdering>(
@@ -119,6 +120,7 @@ public class OccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralOrdering getToBefore(String name) {
 		return getToBefore(name, false);
 	}
@@ -128,6 +130,7 @@ public class OccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralOrdering getToBefore(String name, boolean ignoreCase) {
 		toBeforeLoop : for (GeneralOrdering toBefore : getToBefores()) {
 			if (name != null && !(ignoreCase
@@ -144,6 +147,7 @@ public class OccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<GeneralOrdering> getToAfters() {
 		if (toAfters == null) {
 			toAfters = new EObjectWithInverseResolvingEList<GeneralOrdering>(
@@ -159,6 +163,7 @@ public class OccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralOrdering getToAfter(String name) {
 		return getToAfter(name, false);
 	}
@@ -168,6 +173,7 @@ public class OccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralOrdering getToAfter(String name, boolean ignoreCase) {
 		toAfterLoop : for (GeneralOrdering toAfter : getToAfters()) {
 			if (name != null && !(ignoreCase
@@ -200,6 +206,7 @@ public class OccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Lifeline getCovered(String name) {
 		return getCovered(name, false);
 	}
@@ -209,6 +216,7 @@ public class OccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Lifeline getCovered(String name, boolean ignoreCase) {
 		coveredLoop : for (Lifeline covered : getCovereds()) {
 			if (name != null && !(ignoreCase
@@ -234,6 +242,7 @@ public class OccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Lifeline getCovered() {
 		return OccurrenceSpecificationOperations.getCovered(this);
 	}
@@ -243,6 +252,7 @@ public class OccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCovered(Lifeline value) {
 		OccurrenceSpecificationOperations.setCovered(this, value);
 	}

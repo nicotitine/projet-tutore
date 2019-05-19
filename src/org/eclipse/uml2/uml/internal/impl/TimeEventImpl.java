@@ -154,6 +154,7 @@ public class TimeEventImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isRelative() {
 		return (eFlags & IS_RELATIVE_EFLAG) != 0;
 	}
@@ -163,6 +164,7 @@ public class TimeEventImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsRelative(boolean newIsRelative) {
 		boolean oldIsRelative = (eFlags & IS_RELATIVE_EFLAG) != 0;
 		if (newIsRelative)
@@ -180,6 +182,7 @@ public class TimeEventImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TimeExpression getWhen() {
 		if (when != null && when.eIsProxy()) {
 			InternalEObject oldWhen = (InternalEObject) when;
@@ -237,6 +240,7 @@ public class TimeEventImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWhen(TimeExpression newWhen) {
 		if (newWhen != when) {
 			NotificationChain msgs = null;
@@ -261,6 +265,7 @@ public class TimeEventImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TimeExpression createWhen(String name, Type type) {
 		TimeExpression newWhen = (TimeExpression) create(UMLPackage.Literals.TIME_EXPRESSION);
 		setWhen(newWhen);
@@ -276,6 +281,7 @@ public class TimeEventImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateWhenNonNegative(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TimeEventOperations.validateWhenNonNegative(this, diagnostics,

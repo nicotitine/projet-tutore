@@ -257,6 +257,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageKind getMessageKind() {
 		return MessageOperations.getMessageKind(this);
 	}
@@ -266,6 +267,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageSort getMessageSort() {
 		return MESSAGE_SORT_EFLAG_VALUES[(eFlags & MESSAGE_SORT_EFLAG) >>> MESSAGE_SORT_EFLAG_OFFSET];
 	}
@@ -275,6 +277,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMessageSort(MessageSort newMessageSort) {
 		MessageSort oldMessageSort = MESSAGE_SORT_EFLAG_VALUES[(eFlags & MESSAGE_SORT_EFLAG) >>> MESSAGE_SORT_EFLAG_OFFSET];
 		if (newMessageSort == null)
@@ -292,6 +295,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageEnd getReceiveEvent() {
 		if (receiveEvent != null && receiveEvent.eIsProxy()) {
 			InternalEObject oldReceiveEvent = (InternalEObject) receiveEvent;
@@ -320,6 +324,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReceiveEvent(MessageEnd newReceiveEvent) {
 		MessageEnd oldReceiveEvent = receiveEvent;
 		receiveEvent = newReceiveEvent;
@@ -334,6 +339,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageEnd getSendEvent() {
 		if (sendEvent != null && sendEvent.eIsProxy()) {
 			InternalEObject oldSendEvent = (InternalEObject) sendEvent;
@@ -361,6 +367,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSendEvent(MessageEnd newSendEvent) {
 		MessageEnd oldSendEvent = sendEvent;
 		sendEvent = newSendEvent;
@@ -374,6 +381,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Connector getConnector() {
 		if (connector != null && connector.eIsProxy()) {
 			InternalEObject oldConnector = (InternalEObject) connector;
@@ -401,6 +409,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConnector(Connector newConnector) {
 		Connector oldConnector = connector;
 		connector = newConnector;
@@ -414,6 +423,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interaction getInteraction() {
 		if (eContainerFeatureID() != UMLPackage.MESSAGE__INTERACTION)
 			return null;
@@ -448,6 +458,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInteraction(Interaction newInteraction) {
 		if (newInteraction != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.MESSAGE__INTERACTION && newInteraction != null)) {
@@ -473,6 +484,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ValueSpecification> getArguments() {
 		if (arguments == null) {
 			arguments = new EObjectContainmentEList.Resolving<ValueSpecification>(
@@ -486,6 +498,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createArgument(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newArgument = (ValueSpecification) create(eClass);
@@ -502,6 +515,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getArgument(String name, Type type) {
 		return getArgument(name, type, false, null, false);
 	}
@@ -511,6 +525,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getArgument(String name, Type type,
 			boolean ignoreCase, EClass eClass, boolean createOnDemand) {
 		argumentLoop : for (ValueSpecification argument : getArguments()) {
@@ -534,6 +549,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getSignature() {
 		if (signature != null && signature.eIsProxy()) {
 			InternalEObject oldSignature = (InternalEObject) signature;
@@ -561,6 +577,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSignature(NamedElement newSignature) {
 		NamedElement oldSignature = signature;
 		signature = newSignature;
@@ -574,6 +591,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSendingReceivingMessageEvent(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return MessageOperations.validateSendingReceivingMessageEvent(this,
@@ -585,6 +603,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSignatureReferTo(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return MessageOperations.validateSignatureReferTo(this, diagnostics,
@@ -596,6 +615,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSignatureIsOperationRequest(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return MessageOperations.validateSignatureIsOperationRequest(this,
@@ -607,6 +627,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSignatureIsOperationReply(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return MessageOperations.validateSignatureIsOperationReply(this,
@@ -628,6 +649,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSignatureIsSignal(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return MessageOperations.validateSignatureIsSignal(this, diagnostics,
@@ -639,6 +661,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateArguments(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return MessageOperations.validateArguments(this, diagnostics, context);
@@ -649,6 +672,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateCannotCrossBoundaries(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return MessageOperations.validateCannotCrossBoundaries(this,
@@ -660,6 +684,7 @@ public class MessageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOccurrenceSpecifications(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return MessageOperations.validateOccurrenceSpecifications(this,

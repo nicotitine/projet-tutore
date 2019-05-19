@@ -80,6 +80,7 @@ public class CallEventImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation getOperation() {
 		if (operation != null && operation.eIsProxy()) {
 			InternalEObject oldOperation = (InternalEObject) operation;
@@ -108,6 +109,7 @@ public class CallEventImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperation(Operation newOperation) {
 		Operation oldOperation = operation;
 		operation = newOperation;

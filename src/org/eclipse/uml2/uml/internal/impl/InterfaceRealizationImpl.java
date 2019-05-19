@@ -176,6 +176,7 @@ public class InterfaceRealizationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interface getContract() {
 		if (contract != null && contract.eIsProxy()) {
 			InternalEObject oldContract = (InternalEObject) contract;
@@ -204,6 +205,7 @@ public class InterfaceRealizationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContract(Interface newContract) {
 		Interface oldContract = contract;
 		contract = newContract;
@@ -227,6 +229,7 @@ public class InterfaceRealizationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BehavioredClassifier getImplementingClassifier() {
 		if (eContainerFeatureID() != UMLPackage.INTERFACE_REALIZATION__IMPLEMENTING_CLASSIFIER)
 			return null;
@@ -271,6 +274,7 @@ public class InterfaceRealizationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImplementingClassifier(
 			BehavioredClassifier newImplementingClassifier) {
 		if (newImplementingClassifier != eInternalContainer()

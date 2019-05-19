@@ -125,6 +125,7 @@ public class RaiseExceptionActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getException() {
 		if (exception != null && exception.eIsProxy()) {
 			InternalEObject oldException = (InternalEObject) exception;
@@ -187,6 +188,7 @@ public class RaiseExceptionActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setException(InputPin newException) {
 		if (newException != exception) {
 			NotificationChain msgs = null;
@@ -214,6 +216,7 @@ public class RaiseExceptionActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createException(String name, Type type, EClass eClass) {
 		InputPin newException = (InputPin) create(eClass);
 		setException(newException);
@@ -229,6 +232,7 @@ public class RaiseExceptionActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createException(String name, Type type) {
 		return createException(name, type, UMLPackage.Literals.INPUT_PIN);
 	}

@@ -763,6 +763,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Comment createComment() {
 		CommentImpl comment = new CommentImpl();
 		return comment;
@@ -773,6 +774,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Dependency createDependency() {
 		DependencyImpl dependency = new DependencyImpl();
 		return dependency;
@@ -783,6 +785,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameter createTemplateParameter() {
 		TemplateParameterImpl templateParameter = new TemplateParameterImpl();
 		return templateParameter;
@@ -793,6 +796,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateSignature createTemplateSignature() {
 		TemplateSignatureImpl templateSignature = new TemplateSignatureImpl();
 		return templateSignature;
@@ -803,6 +807,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateBinding createTemplateBinding() {
 		TemplateBindingImpl templateBinding = new TemplateBindingImpl();
 		return templateBinding;
@@ -813,6 +818,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameterSubstitution createTemplateParameterSubstitution() {
 		TemplateParameterSubstitutionImpl templateParameterSubstitution = new TemplateParameterSubstitutionImpl();
 		return templateParameterSubstitution;
@@ -823,6 +829,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementImport createElementImport() {
 		ElementImportImpl elementImport = new ElementImportImpl();
 		return elementImport;
@@ -833,6 +840,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageImport createPackageImport() {
 		PackageImportImpl packageImport = new PackageImportImpl();
 		return packageImport;
@@ -843,6 +851,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Package createPackage() {
 		PackageImpl package_ = new PackageImpl();
 		return package_;
@@ -853,6 +862,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageMerge createPackageMerge() {
 		PackageMergeImpl packageMerge = new PackageMergeImpl();
 		return packageMerge;
@@ -863,6 +873,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProfileApplication createProfileApplication() {
 		ProfileApplicationImpl profileApplication = new ProfileApplicationImpl();
 		return profileApplication;
@@ -873,6 +884,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Profile createProfile() {
 		ProfileImpl profile = new ProfileImpl();
 		return profile;
@@ -883,6 +895,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Stereotype createStereotype() {
 		StereotypeImpl stereotype = new StereotypeImpl();
 		return stereotype;
@@ -893,6 +906,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Image createImage() {
 		ImageImpl image = new ImageImpl();
 		return image;
@@ -903,6 +917,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Class createClass() {
 		ClassImpl class_ = new ClassImpl();
 		return class_;
@@ -913,6 +928,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Generalization createGeneralization() {
 		GeneralizationImpl generalization = new GeneralizationImpl();
 		return generalization;
@@ -923,6 +939,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralizationSet createGeneralizationSet() {
 		GeneralizationSetImpl generalizationSet = new GeneralizationSetImpl();
 		return generalizationSet;
@@ -933,6 +950,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UseCase createUseCase() {
 		UseCaseImpl useCase = new UseCaseImpl();
 		return useCase;
@@ -943,6 +961,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Include createInclude() {
 		IncludeImpl include = new IncludeImpl();
 		return include;
@@ -953,6 +972,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Extend createExtend() {
 		ExtendImpl extend = new ExtendImpl();
 		return extend;
@@ -963,6 +983,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createConstraint() {
 		ConstraintImpl constraint = new ConstraintImpl();
 		return constraint;
@@ -973,6 +994,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExtensionPoint createExtensionPoint() {
 		ExtensionPointImpl extensionPoint = new ExtensionPointImpl();
 		return extensionPoint;
@@ -983,6 +1005,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Substitution createSubstitution() {
 		SubstitutionImpl substitution = new SubstitutionImpl();
 		return substitution;
@@ -993,6 +1016,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Realization createRealization() {
 		RealizationImpl realization = new RealizationImpl();
 		return realization;
@@ -1003,6 +1027,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Abstraction createAbstraction() {
 		AbstractionImpl abstraction = new AbstractionImpl();
 		return abstraction;
@@ -1013,6 +1038,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OpaqueExpression createOpaqueExpression() {
 		OpaqueExpressionImpl opaqueExpression = new OpaqueExpressionImpl();
 		return opaqueExpression;
@@ -1023,6 +1049,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter createParameter() {
 		ParameterImpl parameter = new ParameterImpl();
 		return parameter;
@@ -1033,6 +1060,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConnectorEnd createConnectorEnd() {
 		ConnectorEndImpl connectorEnd = new ConnectorEndImpl();
 		return connectorEnd;
@@ -1043,6 +1071,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createProperty() {
 		PropertyImpl property = new PropertyImpl();
 		return property;
@@ -1053,6 +1082,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Deployment createDeployment() {
 		DeploymentImpl deployment = new DeploymentImpl();
 		return deployment;
@@ -1063,6 +1093,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeploymentSpecification createDeploymentSpecification() {
 		DeploymentSpecificationImpl deploymentSpecification = new DeploymentSpecificationImpl();
 		return deploymentSpecification;
@@ -1073,6 +1104,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Artifact createArtifact() {
 		ArtifactImpl artifact = new ArtifactImpl();
 		return artifact;
@@ -1083,6 +1115,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Manifestation createManifestation() {
 		ManifestationImpl manifestation = new ManifestationImpl();
 		return manifestation;
@@ -1093,6 +1126,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation createOperation() {
 		OperationImpl operation = new OperationImpl();
 		return operation;
@@ -1103,6 +1137,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterSet createParameterSet() {
 		ParameterSetImpl parameterSet = new ParameterSetImpl();
 		return parameterSet;
@@ -1113,6 +1148,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataType createDataType() {
 		DataTypeImpl dataType = new DataTypeImpl();
 		return dataType;
@@ -1123,6 +1159,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interface createInterface() {
 		InterfaceImpl interface_ = new InterfaceImpl();
 		return interface_;
@@ -1133,6 +1170,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reception createReception() {
 		ReceptionImpl reception = new ReceptionImpl();
 		return reception;
@@ -1143,6 +1181,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Signal createSignal() {
 		SignalImpl signal = new SignalImpl();
 		return signal;
@@ -1153,6 +1192,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProtocolStateMachine createProtocolStateMachine() {
 		ProtocolStateMachineImpl protocolStateMachine = new ProtocolStateMachineImpl();
 		return protocolStateMachine;
@@ -1163,6 +1203,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StateMachine createStateMachine() {
 		StateMachineImpl stateMachine = new StateMachineImpl();
 		return stateMachine;
@@ -1173,6 +1214,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Region createRegion() {
 		RegionImpl region = new RegionImpl();
 		return region;
@@ -1183,6 +1225,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transition createTransition() {
 		TransitionImpl transition = new TransitionImpl();
 		return transition;
@@ -1193,6 +1236,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Trigger createTrigger() {
 		TriggerImpl trigger = new TriggerImpl();
 		return trigger;
@@ -1203,6 +1247,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Port createPort() {
 		PortImpl port = new PortImpl();
 		return port;
@@ -1213,6 +1258,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public State createState() {
 		StateImpl state = new StateImpl();
 		return state;
@@ -1223,6 +1269,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConnectionPointReference createConnectionPointReference() {
 		ConnectionPointReferenceImpl connectionPointReference = new ConnectionPointReferenceImpl();
 		return connectionPointReference;
@@ -1233,6 +1280,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pseudostate createPseudostate() {
 		PseudostateImpl pseudostate = new PseudostateImpl();
 		return pseudostate;
@@ -1243,6 +1291,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProtocolConformance createProtocolConformance() {
 		ProtocolConformanceImpl protocolConformance = new ProtocolConformanceImpl();
 		return protocolConformance;
@@ -1253,6 +1302,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OperationTemplateParameter createOperationTemplateParameter() {
 		OperationTemplateParameterImpl operationTemplateParameter = new OperationTemplateParameterImpl();
 		return operationTemplateParameter;
@@ -1263,6 +1313,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Association createAssociation() {
 		AssociationImpl association = new AssociationImpl();
 		return association;
@@ -1273,6 +1324,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConnectableElementTemplateParameter createConnectableElementTemplateParameter() {
 		ConnectableElementTemplateParameterImpl connectableElementTemplateParameter = new ConnectableElementTemplateParameterImpl();
 		return connectableElementTemplateParameter;
@@ -1283,6 +1335,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CollaborationUse createCollaborationUse() {
 		CollaborationUseImpl collaborationUse = new CollaborationUseImpl();
 		return collaborationUse;
@@ -1293,6 +1346,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Collaboration createCollaboration() {
 		CollaborationImpl collaboration = new CollaborationImpl();
 		return collaboration;
@@ -1303,6 +1357,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Connector createConnector() {
 		ConnectorImpl connector = new ConnectorImpl();
 		return connector;
@@ -1313,6 +1368,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RedefinableTemplateSignature createRedefinableTemplateSignature() {
 		RedefinableTemplateSignatureImpl redefinableTemplateSignature = new RedefinableTemplateSignatureImpl();
 		return redefinableTemplateSignature;
@@ -1323,6 +1379,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClassifierTemplateParameter createClassifierTemplateParameter() {
 		ClassifierTemplateParameterImpl classifierTemplateParameter = new ClassifierTemplateParameterImpl();
 		return classifierTemplateParameter;
@@ -1333,6 +1390,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceRealization createInterfaceRealization() {
 		InterfaceRealizationImpl interfaceRealization = new InterfaceRealizationImpl();
 		return interfaceRealization;
@@ -1343,6 +1401,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Extension createExtension() {
 		ExtensionImpl extension = new ExtensionImpl();
 		return extension;
@@ -1353,6 +1412,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExtensionEnd createExtensionEnd() {
 		ExtensionEndImpl extensionEnd = new ExtensionEndImpl();
 		return extensionEnd;
@@ -1363,6 +1423,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StringExpression createStringExpression() {
 		StringExpressionImpl stringExpression = new StringExpressionImpl();
 		return stringExpression;
@@ -1373,6 +1434,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Expression createExpression() {
 		ExpressionImpl expression = new ExpressionImpl();
 		return expression;
@@ -1383,6 +1445,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LiteralInteger createLiteralInteger() {
 		LiteralIntegerImpl literalInteger = new LiteralIntegerImpl();
 		return literalInteger;
@@ -1393,6 +1456,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LiteralString createLiteralString() {
 		LiteralStringImpl literalString = new LiteralStringImpl();
 		return literalString;
@@ -1403,6 +1467,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LiteralBoolean createLiteralBoolean() {
 		LiteralBooleanImpl literalBoolean = new LiteralBooleanImpl();
 		return literalBoolean;
@@ -1413,6 +1478,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LiteralNull createLiteralNull() {
 		LiteralNullImpl literalNull = new LiteralNullImpl();
 		return literalNull;
@@ -1423,6 +1489,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LiteralReal createLiteralReal() {
 		LiteralRealImpl literalReal = new LiteralRealImpl();
 		return literalReal;
@@ -1433,6 +1500,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Slot createSlot() {
 		SlotImpl slot = new SlotImpl();
 		return slot;
@@ -1443,6 +1511,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InstanceSpecification createInstanceSpecification() {
 		InstanceSpecificationImpl instanceSpecification = new InstanceSpecificationImpl();
 		return instanceSpecification;
@@ -1453,6 +1522,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Enumeration createEnumeration() {
 		EnumerationImpl enumeration = new EnumerationImpl();
 		return enumeration;
@@ -1463,6 +1533,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EnumerationLiteral createEnumerationLiteral() {
 		EnumerationLiteralImpl enumerationLiteral = new EnumerationLiteralImpl();
 		return enumerationLiteral;
@@ -1473,6 +1544,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PrimitiveType createPrimitiveType() {
 		PrimitiveTypeImpl primitiveType = new PrimitiveTypeImpl();
 		return primitiveType;
@@ -1483,6 +1555,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InstanceValue createInstanceValue() {
 		InstanceValueImpl instanceValue = new InstanceValueImpl();
 		return instanceValue;
@@ -1493,6 +1566,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LiteralUnlimitedNatural createLiteralUnlimitedNatural() {
 		LiteralUnlimitedNaturalImpl literalUnlimitedNatural = new LiteralUnlimitedNaturalImpl();
 		return literalUnlimitedNatural;
@@ -1503,6 +1577,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OpaqueBehavior createOpaqueBehavior() {
 		OpaqueBehaviorImpl opaqueBehavior = new OpaqueBehaviorImpl();
 		return opaqueBehavior;
@@ -1513,6 +1588,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FunctionBehavior createFunctionBehavior() {
 		FunctionBehaviorImpl functionBehavior = new FunctionBehaviorImpl();
 		return functionBehavior;
@@ -1523,6 +1599,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Actor createActor() {
 		ActorImpl actor = new ActorImpl();
 		return actor;
@@ -1533,6 +1610,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Usage createUsage() {
 		UsageImpl usage = new UsageImpl();
 		return usage;
@@ -1543,6 +1621,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Message createMessage() {
 		MessageImpl message = new MessageImpl();
 		return message;
@@ -1553,6 +1632,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interaction createInteraction() {
 		InteractionImpl interaction = new InteractionImpl();
 		return interaction;
@@ -1563,6 +1643,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Lifeline createLifeline() {
 		LifelineImpl lifeline = new LifelineImpl();
 		return lifeline;
@@ -1573,6 +1654,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PartDecomposition createPartDecomposition() {
 		PartDecompositionImpl partDecomposition = new PartDecompositionImpl();
 		return partDecomposition;
@@ -1583,6 +1665,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionUse createInteractionUse() {
 		InteractionUseImpl interactionUse = new InteractionUseImpl();
 		return interactionUse;
@@ -1593,6 +1676,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Gate createGate() {
 		GateImpl gate = new GateImpl();
 		return gate;
@@ -1603,6 +1687,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Activity createActivity() {
 		ActivityImpl activity = new ActivityImpl();
 		return activity;
@@ -1613,6 +1698,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityPartition createActivityPartition() {
 		ActivityPartitionImpl activityPartition = new ActivityPartitionImpl();
 		return activityPartition;
@@ -1623,6 +1709,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructuredActivityNode createStructuredActivityNode() {
 		StructuredActivityNodeImpl structuredActivityNode = new StructuredActivityNodeImpl();
 		return structuredActivityNode;
@@ -1633,6 +1720,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Variable createVariable() {
 		VariableImpl variable = new VariableImpl();
 		return variable;
@@ -1643,6 +1731,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterruptibleActivityRegion createInterruptibleActivityRegion() {
 		InterruptibleActivityRegionImpl interruptibleActivityRegion = new InterruptibleActivityRegionImpl();
 		return interruptibleActivityRegion;
@@ -1653,6 +1742,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExceptionHandler createExceptionHandler() {
 		ExceptionHandlerImpl exceptionHandler = new ExceptionHandlerImpl();
 		return exceptionHandler;
@@ -1663,6 +1753,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createOutputPin() {
 		OutputPinImpl outputPin = new OutputPinImpl();
 		return outputPin;
@@ -1673,6 +1764,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createInputPin() {
 		InputPinImpl inputPin = new InputPinImpl();
 		return inputPin;
@@ -1683,6 +1775,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralOrdering createGeneralOrdering() {
 		GeneralOrderingImpl generalOrdering = new GeneralOrderingImpl();
 		return generalOrdering;
@@ -1693,6 +1786,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OccurrenceSpecification createOccurrenceSpecification() {
 		OccurrenceSpecificationImpl occurrenceSpecification = new OccurrenceSpecificationImpl();
 		return occurrenceSpecification;
@@ -1703,6 +1797,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionOperand createInteractionOperand() {
 		InteractionOperandImpl interactionOperand = new InteractionOperandImpl();
 		return interactionOperand;
@@ -1713,6 +1808,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionConstraint createInteractionConstraint() {
 		InteractionConstraintImpl interactionConstraint = new InteractionConstraintImpl();
 		return interactionConstraint;
@@ -1723,6 +1819,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExecutionOccurrenceSpecification createExecutionOccurrenceSpecification() {
 		ExecutionOccurrenceSpecificationImpl executionOccurrenceSpecification = new ExecutionOccurrenceSpecificationImpl();
 		return executionOccurrenceSpecification;
@@ -1733,6 +1830,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StateInvariant createStateInvariant() {
 		StateInvariantImpl stateInvariant = new StateInvariantImpl();
 		return stateInvariant;
@@ -1743,6 +1841,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActionExecutionSpecification createActionExecutionSpecification() {
 		ActionExecutionSpecificationImpl actionExecutionSpecification = new ActionExecutionSpecificationImpl();
 		return actionExecutionSpecification;
@@ -1753,6 +1852,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BehaviorExecutionSpecification createBehaviorExecutionSpecification() {
 		BehaviorExecutionSpecificationImpl behaviorExecutionSpecification = new BehaviorExecutionSpecificationImpl();
 		return behaviorExecutionSpecification;
@@ -1763,6 +1863,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MessageOccurrenceSpecification createMessageOccurrenceSpecification() {
 		MessageOccurrenceSpecificationImpl messageOccurrenceSpecification = new MessageOccurrenceSpecificationImpl();
 		return messageOccurrenceSpecification;
@@ -1773,6 +1874,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CombinedFragment createCombinedFragment() {
 		CombinedFragmentImpl combinedFragment = new CombinedFragmentImpl();
 		return combinedFragment;
@@ -1783,6 +1885,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Continuation createContinuation() {
 		ContinuationImpl continuation = new ContinuationImpl();
 		return continuation;
@@ -1793,6 +1896,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConsiderIgnoreFragment createConsiderIgnoreFragment() {
 		ConsiderIgnoreFragmentImpl considerIgnoreFragment = new ConsiderIgnoreFragmentImpl();
 		return considerIgnoreFragment;
@@ -1803,6 +1907,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CallEvent createCallEvent() {
 		CallEventImpl callEvent = new CallEventImpl();
 		return callEvent;
@@ -1813,6 +1918,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ChangeEvent createChangeEvent() {
 		ChangeEventImpl changeEvent = new ChangeEventImpl();
 		return changeEvent;
@@ -1823,6 +1929,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SignalEvent createSignalEvent() {
 		SignalEventImpl signalEvent = new SignalEventImpl();
 		return signalEvent;
@@ -1833,6 +1940,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AnyReceiveEvent createAnyReceiveEvent() {
 		AnyReceiveEventImpl anyReceiveEvent = new AnyReceiveEventImpl();
 		return anyReceiveEvent;
@@ -1843,6 +1951,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CreateObjectAction createCreateObjectAction() {
 		CreateObjectActionImpl createObjectAction = new CreateObjectActionImpl();
 		return createObjectAction;
@@ -1853,6 +1962,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DestroyObjectAction createDestroyObjectAction() {
 		DestroyObjectActionImpl destroyObjectAction = new DestroyObjectActionImpl();
 		return destroyObjectAction;
@@ -1863,6 +1973,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DestructionOccurrenceSpecification createDestructionOccurrenceSpecification() {
 		DestructionOccurrenceSpecificationImpl destructionOccurrenceSpecification = new DestructionOccurrenceSpecificationImpl();
 		return destructionOccurrenceSpecification;
@@ -1873,6 +1984,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TestIdentityAction createTestIdentityAction() {
 		TestIdentityActionImpl testIdentityAction = new TestIdentityActionImpl();
 		return testIdentityAction;
@@ -1883,6 +1995,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ReadSelfAction createReadSelfAction() {
 		ReadSelfActionImpl readSelfAction = new ReadSelfActionImpl();
 		return readSelfAction;
@@ -1893,6 +2006,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ReadStructuralFeatureAction createReadStructuralFeatureAction() {
 		ReadStructuralFeatureActionImpl readStructuralFeatureAction = new ReadStructuralFeatureActionImpl();
 		return readStructuralFeatureAction;
@@ -1903,6 +2017,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClearStructuralFeatureAction createClearStructuralFeatureAction() {
 		ClearStructuralFeatureActionImpl clearStructuralFeatureAction = new ClearStructuralFeatureActionImpl();
 		return clearStructuralFeatureAction;
@@ -1913,6 +2028,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RemoveStructuralFeatureValueAction createRemoveStructuralFeatureValueAction() {
 		RemoveStructuralFeatureValueActionImpl removeStructuralFeatureValueAction = new RemoveStructuralFeatureValueActionImpl();
 		return removeStructuralFeatureValueAction;
@@ -1923,6 +2039,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AddStructuralFeatureValueAction createAddStructuralFeatureValueAction() {
 		AddStructuralFeatureValueActionImpl addStructuralFeatureValueAction = new AddStructuralFeatureValueActionImpl();
 		return addStructuralFeatureValueAction;
@@ -1933,6 +2050,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LinkEndData createLinkEndData() {
 		LinkEndDataImpl linkEndData = new LinkEndDataImpl();
 		return linkEndData;
@@ -1943,6 +2061,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QualifierValue createQualifierValue() {
 		QualifierValueImpl qualifierValue = new QualifierValueImpl();
 		return qualifierValue;
@@ -1953,6 +2072,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ReadLinkAction createReadLinkAction() {
 		ReadLinkActionImpl readLinkAction = new ReadLinkActionImpl();
 		return readLinkAction;
@@ -1963,6 +2083,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LinkEndCreationData createLinkEndCreationData() {
 		LinkEndCreationDataImpl linkEndCreationData = new LinkEndCreationDataImpl();
 		return linkEndCreationData;
@@ -1973,6 +2094,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CreateLinkAction createCreateLinkAction() {
 		CreateLinkActionImpl createLinkAction = new CreateLinkActionImpl();
 		return createLinkAction;
@@ -1983,6 +2105,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DestroyLinkAction createDestroyLinkAction() {
 		DestroyLinkActionImpl destroyLinkAction = new DestroyLinkActionImpl();
 		return destroyLinkAction;
@@ -1993,6 +2116,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LinkEndDestructionData createLinkEndDestructionData() {
 		LinkEndDestructionDataImpl linkEndDestructionData = new LinkEndDestructionDataImpl();
 		return linkEndDestructionData;
@@ -2003,6 +2127,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClearAssociationAction createClearAssociationAction() {
 		ClearAssociationActionImpl clearAssociationAction = new ClearAssociationActionImpl();
 		return clearAssociationAction;
@@ -2013,6 +2138,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BroadcastSignalAction createBroadcastSignalAction() {
 		BroadcastSignalActionImpl broadcastSignalAction = new BroadcastSignalActionImpl();
 		return broadcastSignalAction;
@@ -2023,6 +2149,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SendObjectAction createSendObjectAction() {
 		SendObjectActionImpl sendObjectAction = new SendObjectActionImpl();
 		return sendObjectAction;
@@ -2033,6 +2160,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecificationAction createValueSpecificationAction() {
 		ValueSpecificationActionImpl valueSpecificationAction = new ValueSpecificationActionImpl();
 		return valueSpecificationAction;
@@ -2043,6 +2171,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TimeExpression createTimeExpression() {
 		TimeExpressionImpl timeExpression = new TimeExpressionImpl();
 		return timeExpression;
@@ -2053,6 +2182,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Duration createDuration() {
 		DurationImpl duration = new DurationImpl();
 		return duration;
@@ -2063,6 +2193,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValuePin createValuePin() {
 		ValuePinImpl valuePin = new ValuePinImpl();
 		return valuePin;
@@ -2073,6 +2204,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DurationInterval createDurationInterval() {
 		DurationIntervalImpl durationInterval = new DurationIntervalImpl();
 		return durationInterval;
@@ -2083,6 +2215,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interval createInterval() {
 		IntervalImpl interval = new IntervalImpl();
 		return interval;
@@ -2093,6 +2226,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TimeConstraint createTimeConstraint() {
 		TimeConstraintImpl timeConstraint = new TimeConstraintImpl();
 		return timeConstraint;
@@ -2103,6 +2237,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public IntervalConstraint createIntervalConstraint() {
 		IntervalConstraintImpl intervalConstraint = new IntervalConstraintImpl();
 		return intervalConstraint;
@@ -2113,6 +2248,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TimeInterval createTimeInterval() {
 		TimeIntervalImpl timeInterval = new TimeIntervalImpl();
 		return timeInterval;
@@ -2123,6 +2259,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DurationConstraint createDurationConstraint() {
 		DurationConstraintImpl durationConstraint = new DurationConstraintImpl();
 		return durationConstraint;
@@ -2133,6 +2270,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TimeObservation createTimeObservation() {
 		TimeObservationImpl timeObservation = new TimeObservationImpl();
 		return timeObservation;
@@ -2143,6 +2281,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DurationObservation createDurationObservation() {
 		DurationObservationImpl durationObservation = new DurationObservationImpl();
 		return durationObservation;
@@ -2153,6 +2292,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OpaqueAction createOpaqueAction() {
 		OpaqueActionImpl opaqueAction = new OpaqueActionImpl();
 		return opaqueAction;
@@ -2163,6 +2303,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SendSignalAction createSendSignalAction() {
 		SendSignalActionImpl sendSignalAction = new SendSignalActionImpl();
 		return sendSignalAction;
@@ -2173,6 +2314,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CallOperationAction createCallOperationAction() {
 		CallOperationActionImpl callOperationAction = new CallOperationActionImpl();
 		return callOperationAction;
@@ -2183,6 +2325,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CallBehaviorAction createCallBehaviorAction() {
 		CallBehaviorActionImpl callBehaviorAction = new CallBehaviorActionImpl();
 		return callBehaviorAction;
@@ -2193,6 +2336,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InformationItem createInformationItem() {
 		InformationItemImpl informationItem = new InformationItemImpl();
 		return informationItem;
@@ -2203,6 +2347,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InformationFlow createInformationFlow() {
 		InformationFlowImpl informationFlow = new InformationFlowImpl();
 		return informationFlow;
@@ -2213,6 +2358,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Model createModel() {
 		ModelImpl model = new ModelImpl();
 		return model;
@@ -2223,6 +2369,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ReadVariableAction createReadVariableAction() {
 		ReadVariableActionImpl readVariableAction = new ReadVariableActionImpl();
 		return readVariableAction;
@@ -2233,6 +2380,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ClearVariableAction createClearVariableAction() {
 		ClearVariableActionImpl clearVariableAction = new ClearVariableActionImpl();
 		return clearVariableAction;
@@ -2243,6 +2391,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AddVariableValueAction createAddVariableValueAction() {
 		AddVariableValueActionImpl addVariableValueAction = new AddVariableValueActionImpl();
 		return addVariableValueAction;
@@ -2253,6 +2402,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RemoveVariableValueAction createRemoveVariableValueAction() {
 		RemoveVariableValueActionImpl removeVariableValueAction = new RemoveVariableValueActionImpl();
 		return removeVariableValueAction;
@@ -2263,6 +2413,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RaiseExceptionAction createRaiseExceptionAction() {
 		RaiseExceptionActionImpl raiseExceptionAction = new RaiseExceptionActionImpl();
 		return raiseExceptionAction;
@@ -2273,6 +2424,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActionInputPin createActionInputPin() {
 		ActionInputPinImpl actionInputPin = new ActionInputPinImpl();
 		return actionInputPin;
@@ -2283,6 +2435,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ReadExtentAction createReadExtentAction() {
 		ReadExtentActionImpl readExtentAction = new ReadExtentActionImpl();
 		return readExtentAction;
@@ -2293,6 +2446,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ReclassifyObjectAction createReclassifyObjectAction() {
 		ReclassifyObjectActionImpl reclassifyObjectAction = new ReclassifyObjectActionImpl();
 		return reclassifyObjectAction;
@@ -2303,6 +2457,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ReadIsClassifiedObjectAction createReadIsClassifiedObjectAction() {
 		ReadIsClassifiedObjectActionImpl readIsClassifiedObjectAction = new ReadIsClassifiedObjectActionImpl();
 		return readIsClassifiedObjectAction;
@@ -2313,6 +2468,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StartClassifierBehaviorAction createStartClassifierBehaviorAction() {
 		StartClassifierBehaviorActionImpl startClassifierBehaviorAction = new StartClassifierBehaviorActionImpl();
 		return startClassifierBehaviorAction;
@@ -2323,6 +2479,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ReadLinkObjectEndAction createReadLinkObjectEndAction() {
 		ReadLinkObjectEndActionImpl readLinkObjectEndAction = new ReadLinkObjectEndActionImpl();
 		return readLinkObjectEndAction;
@@ -2333,6 +2490,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ReadLinkObjectEndQualifierAction createReadLinkObjectEndQualifierAction() {
 		ReadLinkObjectEndQualifierActionImpl readLinkObjectEndQualifierAction = new ReadLinkObjectEndQualifierActionImpl();
 		return readLinkObjectEndQualifierAction;
@@ -2343,6 +2501,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CreateLinkObjectAction createCreateLinkObjectAction() {
 		CreateLinkObjectActionImpl createLinkObjectAction = new CreateLinkObjectActionImpl();
 		return createLinkObjectAction;
@@ -2353,6 +2512,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AcceptEventAction createAcceptEventAction() {
 		AcceptEventActionImpl acceptEventAction = new AcceptEventActionImpl();
 		return acceptEventAction;
@@ -2363,6 +2523,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AcceptCallAction createAcceptCallAction() {
 		AcceptCallActionImpl acceptCallAction = new AcceptCallActionImpl();
 		return acceptCallAction;
@@ -2373,6 +2534,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ReplyAction createReplyAction() {
 		ReplyActionImpl replyAction = new ReplyActionImpl();
 		return replyAction;
@@ -2383,6 +2545,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UnmarshallAction createUnmarshallAction() {
 		UnmarshallActionImpl unmarshallAction = new UnmarshallActionImpl();
 		return unmarshallAction;
@@ -2393,6 +2556,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ReduceAction createReduceAction() {
 		ReduceActionImpl reduceAction = new ReduceActionImpl();
 		return reduceAction;
@@ -2403,6 +2567,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StartObjectBehaviorAction createStartObjectBehaviorAction() {
 		StartObjectBehaviorActionImpl startObjectBehaviorAction = new StartObjectBehaviorActionImpl();
 		return startObjectBehaviorAction;
@@ -2413,6 +2578,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ControlFlow createControlFlow() {
 		ControlFlowImpl controlFlow = new ControlFlowImpl();
 		return controlFlow;
@@ -2423,6 +2589,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InitialNode createInitialNode() {
 		InitialNodeImpl initialNode = new InitialNodeImpl();
 		return initialNode;
@@ -2433,6 +2600,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityParameterNode createActivityParameterNode() {
 		ActivityParameterNodeImpl activityParameterNode = new ActivityParameterNodeImpl();
 		return activityParameterNode;
@@ -2443,6 +2611,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ForkNode createForkNode() {
 		ForkNodeImpl forkNode = new ForkNodeImpl();
 		return forkNode;
@@ -2453,6 +2622,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FlowFinalNode createFlowFinalNode() {
 		FlowFinalNodeImpl flowFinalNode = new FlowFinalNodeImpl();
 		return flowFinalNode;
@@ -2463,6 +2633,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CentralBufferNode createCentralBufferNode() {
 		CentralBufferNodeImpl centralBufferNode = new CentralBufferNodeImpl();
 		return centralBufferNode;
@@ -2473,6 +2644,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public MergeNode createMergeNode() {
 		MergeNodeImpl mergeNode = new MergeNodeImpl();
 		return mergeNode;
@@ -2483,6 +2655,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DecisionNode createDecisionNode() {
 		DecisionNodeImpl decisionNode = new DecisionNodeImpl();
 		return decisionNode;
@@ -2493,6 +2666,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityFinalNode createActivityFinalNode() {
 		ActivityFinalNodeImpl activityFinalNode = new ActivityFinalNodeImpl();
 		return activityFinalNode;
@@ -2503,6 +2677,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public JoinNode createJoinNode() {
 		JoinNodeImpl joinNode = new JoinNodeImpl();
 		return joinNode;
@@ -2513,6 +2688,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataStoreNode createDataStoreNode() {
 		DataStoreNodeImpl dataStoreNode = new DataStoreNodeImpl();
 		return dataStoreNode;
@@ -2523,6 +2699,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObjectFlow createObjectFlow() {
 		ObjectFlowImpl objectFlow = new ObjectFlowImpl();
 		return objectFlow;
@@ -2533,6 +2710,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public SequenceNode createSequenceNode() {
 		SequenceNodeImpl sequenceNode = new SequenceNodeImpl();
 		return sequenceNode;
@@ -2543,6 +2721,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConditionalNode createConditionalNode() {
 		ConditionalNodeImpl conditionalNode = new ConditionalNodeImpl();
 		return conditionalNode;
@@ -2553,6 +2732,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Clause createClause() {
 		ClauseImpl clause = new ClauseImpl();
 		return clause;
@@ -2563,6 +2743,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LoopNode createLoopNode() {
 		LoopNodeImpl loopNode = new LoopNodeImpl();
 		return loopNode;
@@ -2573,6 +2754,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpansionNode createExpansionNode() {
 		ExpansionNodeImpl expansionNode = new ExpansionNodeImpl();
 		return expansionNode;
@@ -2583,6 +2765,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpansionRegion createExpansionRegion() {
 		ExpansionRegionImpl expansionRegion = new ExpansionRegionImpl();
 		return expansionRegion;
@@ -2593,6 +2776,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ComponentRealization createComponentRealization() {
 		ComponentRealizationImpl componentRealization = new ComponentRealizationImpl();
 		return componentRealization;
@@ -2603,6 +2787,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Component createComponent() {
 		ComponentImpl component = new ComponentImpl();
 		return component;
@@ -2613,6 +2798,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Node createNode() {
 		NodeImpl node = new NodeImpl();
 		return node;
@@ -2623,6 +2809,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Device createDevice() {
 		DeviceImpl device = new DeviceImpl();
 		return device;
@@ -2633,6 +2820,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExecutionEnvironment createExecutionEnvironment() {
 		ExecutionEnvironmentImpl executionEnvironment = new ExecutionEnvironmentImpl();
 		return executionEnvironment;
@@ -2643,6 +2831,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CommunicationPath createCommunicationPath() {
 		CommunicationPathImpl communicationPath = new CommunicationPathImpl();
 		return communicationPath;
@@ -2653,6 +2842,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public FinalState createFinalState() {
 		FinalStateImpl finalState = new FinalStateImpl();
 		return finalState;
@@ -2663,6 +2853,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TimeEvent createTimeEvent() {
 		TimeEventImpl timeEvent = new TimeEventImpl();
 		return timeEvent;
@@ -2673,6 +2864,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProtocolTransition createProtocolTransition() {
 		ProtocolTransitionImpl protocolTransition = new ProtocolTransitionImpl();
 		return protocolTransition;
@@ -2683,6 +2875,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AssociationClass createAssociationClass() {
 		AssociationClassImpl associationClass = new AssociationClassImpl();
 		return associationClass;
@@ -3034,6 +3227,7 @@ public class UMLFactoryImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UMLPackage getUMLPackage() {
 		return (UMLPackage) getEPackage();
 	}

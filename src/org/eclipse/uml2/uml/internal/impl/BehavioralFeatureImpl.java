@@ -266,6 +266,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RedefinableElement> getRedefinedElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -297,6 +298,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RedefinableElement getRedefinedElement(String name) {
 		return getRedefinedElement(name, false, null);
 	}
@@ -306,6 +308,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RedefinableElement getRedefinedElement(String name,
 			boolean ignoreCase, EClass eClass) {
 		redefinedElementLoop : for (RedefinableElement redefinedElement : getRedefinedElements()) {
@@ -359,6 +362,7 @@ public abstract class BehavioralFeatureImpl
 	 */
 	protected static final int[] REDEFINITION_CONTEXT_ESUBSETS = new int[]{UMLPackage.BEHAVIORAL_FEATURE__NAMESPACE};
 
+	@Override
 	public EList<Classifier> getRedefinitionContexts() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -393,6 +397,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getRedefinitionContext(String name) {
 		return getRedefinitionContext(name, false, null);
 	}
@@ -402,6 +407,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getRedefinitionContext(String name, boolean ignoreCase,
 			EClass eClass) {
 		redefinitionContextLoop : for (Classifier redefinitionContext : getRedefinitionContexts()) {
@@ -421,6 +427,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isLeaf() {
 		return (eFlags & IS_LEAF_EFLAG) != 0;
 	}
@@ -430,6 +437,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsLeaf(boolean newIsLeaf) {
 		boolean oldIsLeaf = (eFlags & IS_LEAF_EFLAG) != 0;
 		if (newIsLeaf)
@@ -478,6 +486,7 @@ public abstract class BehavioralFeatureImpl
 	 */
 	protected static final int[] FEATURING_CLASSIFIER_ESUBSETS = new int[]{UMLPackage.BEHAVIORAL_FEATURE__NAMESPACE};
 
+	@Override
 	public EList<Classifier> getFeaturingClassifiers() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -510,6 +519,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getFeaturingClassifier(String name) {
 		return getFeaturingClassifier(name, false, null);
 	}
@@ -519,6 +529,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getFeaturingClassifier(String name, boolean ignoreCase,
 			EClass eClass) {
 		featuringClassifierLoop : for (Classifier featuringClassifier : getFeaturingClassifiers()) {
@@ -551,6 +562,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isStatic() {
 		return (eFlags & IS_STATIC_EFLAG) != 0;
 	}
@@ -560,6 +572,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsStatic(boolean newIsStatic) {
 		boolean oldIsStatic = (eFlags & IS_STATIC_EFLAG) != 0;
 		if (newIsStatic)
@@ -605,6 +618,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Parameter> getOwnedParameters() {
 		if (ownedParameters == null) {
 			ownedParameters = new EObjectContainmentEList.Resolving<Parameter>(
@@ -619,6 +633,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter createOwnedParameter(String name, Type type) {
 		Parameter newOwnedParameter = (Parameter) create(UMLPackage.Literals.PARAMETER);
 		getOwnedParameters().add(newOwnedParameter);
@@ -634,6 +649,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter getOwnedParameter(String name, Type type) {
 		return getOwnedParameter(name, type, false, false);
 	}
@@ -643,6 +659,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter getOwnedParameter(String name, Type type,
 			boolean ignoreCase, boolean createOnDemand) {
 		ownedParameterLoop : for (Parameter ownedParameter : getOwnedParameters()) {
@@ -664,6 +681,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isAbstract() {
 		return (eFlags & IS_ABSTRACT_EFLAG) != 0;
 	}
@@ -673,6 +691,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsAbstract(boolean newIsAbstract) {
 		boolean oldIsAbstract = (eFlags & IS_ABSTRACT_EFLAG) != 0;
 		if (newIsAbstract)
@@ -690,6 +709,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Behavior> getMethods() {
 		if (methods == null) {
 			methods = new EObjectWithInverseResolvingEList<Behavior>(
@@ -704,6 +724,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getMethod(String name) {
 		return getMethod(name, false, null);
 	}
@@ -713,6 +734,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getMethod(String name, boolean ignoreCase, EClass eClass) {
 		methodLoop : for (Behavior method : getMethods()) {
 			if (eClass != null && !eClass.isInstance(method))
@@ -731,6 +753,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CallConcurrencyKind getConcurrency() {
 		return CONCURRENCY_EFLAG_VALUES[(eFlags & CONCURRENCY_EFLAG) >>> CONCURRENCY_EFLAG_OFFSET];
 	}
@@ -740,6 +763,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setConcurrency(CallConcurrencyKind newConcurrency) {
 		CallConcurrencyKind oldConcurrency = CONCURRENCY_EFLAG_VALUES[(eFlags & CONCURRENCY_EFLAG) >>> CONCURRENCY_EFLAG_OFFSET];
 		if (newConcurrency == null)
@@ -757,6 +781,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Type> getRaisedExceptions() {
 		if (raisedExceptions == null) {
 			raisedExceptions = new EObjectResolvingEList<Type>(Type.class,
@@ -770,6 +795,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getRaisedException(String name) {
 		return getRaisedException(name, false, null);
 	}
@@ -779,6 +805,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getRaisedException(String name, boolean ignoreCase,
 			EClass eClass) {
 		raisedExceptionLoop : for (Type raisedException : getRaisedExceptions()) {
@@ -798,6 +825,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ParameterSet> getOwnedParameterSets() {
 		if (ownedParameterSets == null) {
 			ownedParameterSets = new EObjectContainmentEList.Resolving<ParameterSet>(
@@ -812,6 +840,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterSet createOwnedParameterSet(String name) {
 		ParameterSet newOwnedParameterSet = (ParameterSet) create(UMLPackage.Literals.PARAMETER_SET);
 		getOwnedParameterSets().add(newOwnedParameterSet);
@@ -825,6 +854,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterSet getOwnedParameterSet(String name) {
 		return getOwnedParameterSet(name, false, false);
 	}
@@ -834,6 +864,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterSet getOwnedParameterSet(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		ownedParameterSetLoop : for (ParameterSet ownedParameterSet : getOwnedParameterSets()) {
@@ -853,6 +884,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRedefinitionContextValid(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return RedefinableElementOperations.validateRedefinitionContextValid(
@@ -864,6 +896,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRedefinitionConsistent(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return RedefinableElementOperations.validateRedefinitionConsistent(
@@ -875,6 +908,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNonLeafRedefinition(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return RedefinableElementOperations.validateNonLeafRedefinition(this,
@@ -886,6 +920,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isRedefinitionContextValid(
 			RedefinableElement redefinedElement) {
 		return RedefinableElementOperations.isRedefinitionContextValid(this,
@@ -897,6 +932,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateAbstractNoMethod(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return BehavioralFeatureOperations.validateAbstractNoMethod(this,
@@ -908,6 +944,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter createReturnResult(String name, Type type) {
 		return BehavioralFeatureOperations.createReturnResult(this, name, type);
 	}
@@ -917,6 +954,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Parameter> inputParameters() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -938,6 +976,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Parameter> outputParameters() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -962,6 +1001,7 @@ public abstract class BehavioralFeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isConsistentWith(RedefinableElement redefiningElement) {
 		return RedefinableElementOperations.isConsistentWith(this,
 			redefiningElement);

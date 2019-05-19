@@ -105,6 +105,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> getOwnedElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -130,6 +131,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Comment> getOwnedComments() {
 		if (ownedComments == null) {
 			ownedComments = new EObjectContainmentEList.Resolving<Comment>(
@@ -143,6 +145,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Comment createOwnedComment() {
 		Comment newOwnedComment = (Comment) create(UMLPackage.Literals.COMMENT);
 		getOwnedComments().add(newOwnedComment);
@@ -154,6 +157,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNotOwnSelf(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ElementOperations.validateNotOwnSelf(this, diagnostics, context);
@@ -164,6 +168,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateHasOwner(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ElementOperations.validateHasOwner(this, diagnostics, context);
@@ -174,6 +179,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<EObject> getStereotypeApplications() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -195,6 +201,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EObject getStereotypeApplication(Stereotype stereotype) {
 		return ElementOperations.getStereotypeApplication(this, stereotype);
 	}
@@ -204,6 +211,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Stereotype> getRequiredStereotypes() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -225,6 +233,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Stereotype getRequiredStereotype(String qualifiedName) {
 		return ElementOperations.getRequiredStereotype(this, qualifiedName);
 	}
@@ -234,6 +243,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Stereotype> getAppliedStereotypes() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -255,6 +265,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Stereotype getAppliedStereotype(String qualifiedName) {
 		return ElementOperations.getAppliedStereotype(this, qualifiedName);
 	}
@@ -264,6 +275,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Stereotype> getAppliedSubstereotypes(Stereotype stereotype) {
 		return ElementOperations.getAppliedSubstereotypes(this, stereotype);
 	}
@@ -273,6 +285,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Stereotype getAppliedSubstereotype(Stereotype stereotype,
 			String qualifiedName) {
 		return ElementOperations.getAppliedSubstereotype(this, stereotype,
@@ -284,6 +297,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean hasValue(Stereotype stereotype, String propertyName) {
 		return ElementOperations.hasValue(this, stereotype, propertyName);
 	}
@@ -293,6 +307,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Object getValue(Stereotype stereotype, String propertyName) {
 		return ElementOperations.getValue(this, stereotype, propertyName);
 	}
@@ -302,6 +317,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(Stereotype stereotype, String propertyName,
 			Object newValue) {
 		ElementOperations.setValue(this, stereotype, propertyName, newValue);
@@ -312,6 +328,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EAnnotation createEAnnotation(String source) {
 		return ElementOperations.createEAnnotation(this, source);
 	}
@@ -321,6 +338,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Relationship> getRelationships() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -342,6 +360,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Relationship> getRelationships(EClass eClass) {
 		return ElementOperations.getRelationships(this, eClass);
 	}
@@ -351,6 +370,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DirectedRelationship> getSourceDirectedRelationships() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -377,6 +397,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DirectedRelationship> getSourceDirectedRelationships(
 			EClass eClass) {
 		return ElementOperations.getSourceDirectedRelationships(this, eClass);
@@ -387,6 +408,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DirectedRelationship> getTargetDirectedRelationships() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -413,6 +435,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DirectedRelationship> getTargetDirectedRelationships(
 			EClass eClass) {
 		return ElementOperations.getTargetDirectedRelationships(this, eClass);
@@ -423,6 +446,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getKeywords() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -444,6 +468,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean addKeyword(String keyword) {
 		return ElementOperations.addKeyword(this, keyword);
 	}
@@ -453,6 +478,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean removeKeyword(String keyword) {
 		return ElementOperations.removeKeyword(this, keyword);
 	}
@@ -462,6 +488,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Package getNearestPackage() {
 		return ElementOperations.getNearestPackage(this);
 	}
@@ -471,6 +498,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Model getModel() {
 		return ElementOperations.getModel(this);
 	}
@@ -480,6 +508,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isStereotypeApplicable(Stereotype stereotype) {
 		return ElementOperations.isStereotypeApplicable(this, stereotype);
 	}
@@ -489,6 +518,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isStereotypeRequired(Stereotype stereotype) {
 		return ElementOperations.isStereotypeRequired(this, stereotype);
 	}
@@ -498,6 +528,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isStereotypeApplied(Stereotype stereotype) {
 		return ElementOperations.isStereotypeApplied(this, stereotype);
 	}
@@ -507,6 +538,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EObject applyStereotype(Stereotype stereotype) {
 		return ElementOperations.applyStereotype(this, stereotype);
 	}
@@ -516,6 +548,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EObject unapplyStereotype(Stereotype stereotype) {
 		return ElementOperations.unapplyStereotype(this, stereotype);
 	}
@@ -525,6 +558,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Stereotype> getApplicableStereotypes() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -546,6 +580,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Stereotype getApplicableStereotype(String qualifiedName) {
 		return ElementOperations.getApplicableStereotype(this, qualifiedName);
 	}
@@ -555,6 +590,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean hasKeyword(String keyword) {
 		return ElementOperations.hasKeyword(this, keyword);
 	}
@@ -564,6 +600,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void destroy() {
 		ElementOperations.destroy(this);
 	}
@@ -573,6 +610,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> allOwnedElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -594,6 +632,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean mustBeOwned() {
 		return ElementOperations.mustBeOwned(this);
 	}
@@ -859,6 +898,7 @@ public abstract class ElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Element getOwner() {
 		Element owner = basicGetOwner();
 		return owner != null && owner.eIsProxy()

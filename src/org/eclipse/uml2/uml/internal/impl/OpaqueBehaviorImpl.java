@@ -110,6 +110,7 @@ public class OpaqueBehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getBodies() {
 		if (bodies == null) {
 			bodies = new EDataTypeEList.Unsettable<String>(String.class, this,
@@ -123,6 +124,7 @@ public class OpaqueBehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetBodies() {
 		if (bodies != null)
 			((InternalEList.Unsettable<?>) bodies).unset();
@@ -133,6 +135,7 @@ public class OpaqueBehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetBodies() {
 		return bodies != null && ((InternalEList.Unsettable<?>) bodies).isSet();
 	}
@@ -142,6 +145,7 @@ public class OpaqueBehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getLanguages() {
 		if (languages == null) {
 			languages = new EDataTypeUniqueEList.Unsettable<String>(
@@ -155,6 +159,7 @@ public class OpaqueBehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetLanguages() {
 		if (languages != null)
 			((InternalEList.Unsettable<?>) languages).unset();
@@ -165,6 +170,7 @@ public class OpaqueBehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetLanguages() {
 		return languages != null
 			&& ((InternalEList.Unsettable<?>) languages).isSet();

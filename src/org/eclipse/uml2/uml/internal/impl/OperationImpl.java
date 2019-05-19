@@ -286,6 +286,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameter getTemplateParameter() {
 		if (templateParameter != null && templateParameter.eIsProxy()) {
 			InternalEObject oldTemplateParameter = (InternalEObject) templateParameter;
@@ -359,6 +360,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTemplateParameter(TemplateParameter newTemplateParameter) {
 		if (newTemplateParameter != null
 			&& !(newTemplateParameter instanceof OperationTemplateParameter)) {
@@ -398,6 +400,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameter getOwningTemplateParameter() {
 		if (eContainerFeatureID() != UMLPackage.OPERATION__OWNING_TEMPLATE_PARAMETER)
 			return null;
@@ -440,6 +443,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwningTemplateParameter(
 			TemplateParameter newOwningTemplateParameter) {
 		if (newOwningTemplateParameter != eInternalContainer()
@@ -498,6 +502,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TemplateBinding> getTemplateBindings() {
 		if (templateBindings == null) {
 			templateBindings = new EObjectContainmentWithInverseEList.Resolving<TemplateBinding>(
@@ -513,6 +518,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateBinding createTemplateBinding(TemplateSignature signature) {
 		TemplateBinding newTemplateBinding = (TemplateBinding) create(UMLPackage.Literals.TEMPLATE_BINDING);
 		getTemplateBindings().add(newTemplateBinding);
@@ -526,6 +532,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateBinding getTemplateBinding(TemplateSignature signature) {
 		return getTemplateBinding(signature, false);
 	}
@@ -535,6 +542,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateBinding getTemplateBinding(TemplateSignature signature,
 			boolean createOnDemand) {
 		templateBindingLoop : for (TemplateBinding templateBinding : getTemplateBindings()) {
@@ -553,6 +561,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateSignature getOwnedTemplateSignature() {
 		if (ownedTemplateSignature != null && ownedTemplateSignature.eIsProxy()) {
 			InternalEObject oldOwnedTemplateSignature = (InternalEObject) ownedTemplateSignature;
@@ -615,6 +624,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwnedTemplateSignature(
 			TemplateSignature newOwnedTemplateSignature) {
 		if (newOwnedTemplateSignature != ownedTemplateSignature) {
@@ -643,6 +653,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateSignature createOwnedTemplateSignature(EClass eClass) {
 		TemplateSignature newOwnedTemplateSignature = (TemplateSignature) create(eClass);
 		setOwnedTemplateSignature(newOwnedTemplateSignature);
@@ -654,6 +665,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateSignature createOwnedTemplateSignature() {
 		return createOwnedTemplateSignature(UMLPackage.Literals.TEMPLATE_SIGNATURE);
 	}
@@ -776,6 +788,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isQuery() {
 		return (eFlags & IS_QUERY_EFLAG) != 0;
 	}
@@ -785,6 +798,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsQuery(boolean newIsQuery) {
 		boolean oldIsQuery = (eFlags & IS_QUERY_EFLAG) != 0;
 		if (newIsQuery)
@@ -801,6 +815,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOrdered() {
 		return OperationOperations.isOrdered(this);
 	}
@@ -810,6 +825,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isUnique() {
 		return OperationOperations.isUnique(this);
 	}
@@ -819,6 +835,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getLower() {
 		return OperationOperations.getLower(this);
 	}
@@ -828,6 +845,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getUpper() {
 		return OperationOperations.getUpper(this);
 	}
@@ -837,6 +855,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Class getClass_() {
 		if (eContainerFeatureID() != UMLPackage.OPERATION__CLASS)
 			return null;
@@ -871,6 +890,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClass_(org.eclipse.uml2.uml.Class newClass) {
 		if (newClass != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.OPERATION__CLASS && newClass != null)) {
@@ -897,6 +917,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Constraint> getPreconditions() {
 		if (preconditions == null) {
 			preconditions = new SubsetSupersetEObjectResolvingEList<Constraint>(
@@ -911,6 +932,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Constraint> getPostconditions() {
 		if (postconditions == null) {
 			postconditions = new SubsetSupersetEObjectResolvingEList<Constraint>(
@@ -925,6 +947,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Operation> getRedefinedOperations() {
 		if (redefinedOperations == null) {
 			redefinedOperations = new EObjectResolvingEList<Operation>(
@@ -939,6 +962,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation getRedefinedOperation(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes) {
 		return getRedefinedOperation(name, ownedParameterNames,
@@ -950,6 +974,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation getRedefinedOperation(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes,
 			boolean ignoreCase) {
@@ -989,6 +1014,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataType getDatatype() {
 		if (eContainerFeatureID() != UMLPackage.OPERATION__DATATYPE)
 			return null;
@@ -1023,6 +1049,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDatatype(DataType newDatatype) {
 		if (newDatatype != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.OPERATION__DATATYPE && newDatatype != null)) {
@@ -1049,6 +1076,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getBodyCondition() {
 		if (bodyCondition != null && bodyCondition.eIsProxy()) {
 			InternalEObject oldBodyCondition = (InternalEObject) bodyCondition;
@@ -1077,6 +1105,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBodyCondition(Constraint newBodyCondition) {
 		Constraint oldBodyCondition = bodyCondition;
 		bodyCondition = newBodyCondition;
@@ -1100,6 +1129,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createBodyCondition(String name, EClass eClass) {
 		Constraint newBodyCondition = (Constraint) create(eClass);
 		setBodyCondition(newBodyCondition);
@@ -1113,6 +1143,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createBodyCondition(String name) {
 		return createBodyCondition(name, UMLPackage.Literals.CONSTRAINT);
 	}
@@ -1122,6 +1153,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getType() {
 		Type type = basicGetType();
 		return type != null && type.eIsProxy()
@@ -1143,6 +1175,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interface getInterface() {
 		if (eContainerFeatureID() != UMLPackage.OPERATION__INTERFACE)
 			return null;
@@ -1177,6 +1210,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInterface(Interface newInterface) {
 		if (newInterface != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.OPERATION__INTERFACE && newInterface != null)) {
@@ -1217,6 +1251,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter createOwnedParameter(String name, Type type) {
 		Parameter newOwnedParameter = (Parameter) create(UMLPackage.Literals.PARAMETER);
 		getOwnedParameters().add(newOwnedParameter);
@@ -1232,6 +1267,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter getOwnedParameter(String name, Type type) {
 		return getOwnedParameter(name, type, false, false);
 	}
@@ -1241,6 +1277,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter getOwnedParameter(String name, Type type,
 			boolean ignoreCase, boolean createOnDemand) {
 		ownedParameterLoop : for (Parameter ownedParameter : getOwnedParameters()) {
@@ -1285,6 +1322,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getRaisedException(String name) {
 		return getRaisedException(name, false, null);
 	}
@@ -1294,6 +1332,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getRaisedException(String name, boolean ignoreCase,
 			EClass eClass) {
 		raisedExceptionLoop : for (Type raisedException : getRaisedExceptions()) {
@@ -1322,6 +1361,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isCompatibleWith(ParameterableElement p) {
 		return ParameterableElementOperations.isCompatibleWith(this, p);
 	}
@@ -1331,6 +1371,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTemplateParameter() {
 		return ParameterableElementOperations.isTemplateParameter(this);
 	}
@@ -1340,6 +1381,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ParameterableElement> parameterableElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1366,6 +1408,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTemplate() {
 		return TemplateableElementOperations.isTemplate(this);
 	}
@@ -1375,6 +1418,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateAtMostOneReturn(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return OperationOperations.validateAtMostOneReturn(this, diagnostics,
@@ -1386,6 +1430,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOnlyBodyForQuery(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return OperationOperations.validateOnlyBodyForQuery(this, diagnostics,
@@ -1397,6 +1442,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter getReturnResult() {
 		return OperationOperations.getReturnResult(this);
 	}
@@ -1406,6 +1452,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsOrdered(boolean newIsOrdered) {
 		OperationOperations.setIsOrdered(this, newIsOrdered);
 	}
@@ -1415,6 +1462,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsUnique(boolean newIsUnique) {
 		OperationOperations.setIsUnique(this, newIsUnique);
 	}
@@ -1424,6 +1472,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLower(int newLower) {
 		OperationOperations.setLower(this, newLower);
 	}
@@ -1433,6 +1482,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(Type newType) {
 		OperationOperations.setType(this, newType);
 	}
@@ -1442,6 +1492,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUpper(int newUpper) {
 		OperationOperations.setUpper(this, newUpper);
 	}
@@ -1451,6 +1502,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Parameter> returnResult() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -2607,6 +2659,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createPostcondition(String name, EClass eClass) {
 		Constraint newPostcondition = (Constraint) create(eClass);
 		getPostconditions().add(newPostcondition);
@@ -2620,6 +2673,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createPostcondition(String name) {
 		return createPostcondition(name, UMLPackage.Literals.CONSTRAINT);
 	}
@@ -2629,6 +2683,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getPostcondition(String name) {
 		return getPostcondition(name, false, null, false);
 	}
@@ -2638,6 +2693,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getPostcondition(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		postconditionLoop : for (Constraint postcondition : getPostconditions()) {
@@ -2669,6 +2725,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createPrecondition(String name, EClass eClass) {
 		Constraint newPrecondition = (Constraint) create(eClass);
 		getPreconditions().add(newPrecondition);
@@ -2682,6 +2739,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createPrecondition(String name) {
 		return createPrecondition(name, UMLPackage.Literals.CONSTRAINT);
 	}
@@ -2691,6 +2749,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getPrecondition(String name) {
 		return getPrecondition(name, false, null, false);
 	}
@@ -2700,6 +2759,7 @@ public class OperationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getPrecondition(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		preconditionLoop : for (Constraint precondition : getPreconditions()) {

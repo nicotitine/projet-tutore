@@ -120,6 +120,7 @@ public class ChangeEventImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getChangeExpression() {
 		if (changeExpression != null && changeExpression.eIsProxy()) {
 			InternalEObject oldChangeExpression = (InternalEObject) changeExpression;
@@ -182,6 +183,7 @@ public class ChangeEventImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setChangeExpression(ValueSpecification newChangeExpression) {
 		if (newChangeExpression != changeExpression) {
 			NotificationChain msgs = null;
@@ -209,6 +211,7 @@ public class ChangeEventImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createChangeExpression(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newChangeExpression = (ValueSpecification) create(eClass);

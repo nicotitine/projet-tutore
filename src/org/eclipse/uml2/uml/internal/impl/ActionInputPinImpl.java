@@ -143,6 +143,7 @@ public class ActionInputPinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Action getFromAction() {
 		if (fromAction != null && fromAction.eIsProxy()) {
 			InternalEObject oldFromAction = (InternalEObject) fromAction;
@@ -204,6 +205,7 @@ public class ActionInputPinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFromAction(Action newFromAction) {
 		if (newFromAction != fromAction) {
 			NotificationChain msgs = null;
@@ -229,6 +231,7 @@ public class ActionInputPinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Action createFromAction(String name, EClass eClass) {
 		Action newFromAction = (Action) create(eClass);
 		setFromAction(newFromAction);
@@ -242,6 +245,7 @@ public class ActionInputPinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOneOutputPin(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActionInputPinOperations.validateOneOutputPin(this, diagnostics,
@@ -253,6 +257,7 @@ public class ActionInputPinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoControlOrObjectFlow(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActionInputPinOperations.validateNoControlOrObjectFlow(this,
@@ -264,6 +269,7 @@ public class ActionInputPinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInputPin(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActionInputPinOperations.validateInputPin(this, diagnostics,

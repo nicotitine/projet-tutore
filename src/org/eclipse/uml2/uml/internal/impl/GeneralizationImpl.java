@@ -182,6 +182,7 @@ public class GeneralizationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSubstitutable() {
 		return (eFlags & IS_SUBSTITUTABLE_EFLAG) != 0;
 	}
@@ -191,6 +192,7 @@ public class GeneralizationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsSubstitutable(boolean newIsSubstitutable) {
 		boolean oldIsSubstitutable = (eFlags & IS_SUBSTITUTABLE_EFLAG) != 0;
 		if (newIsSubstitutable)
@@ -208,6 +210,7 @@ public class GeneralizationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getGeneral() {
 		if (general != null && general.eIsProxy()) {
 			InternalEObject oldGeneral = (InternalEObject) general;
@@ -235,6 +238,7 @@ public class GeneralizationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGeneral(Classifier newGeneral) {
 		Classifier oldGeneral = general;
 		general = newGeneral;
@@ -248,6 +252,7 @@ public class GeneralizationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<GeneralizationSet> getGeneralizationSets() {
 		if (generalizationSets == null) {
 			generalizationSets = new EObjectWithInverseResolvingEList.ManyInverse<GeneralizationSet>(
@@ -263,6 +268,7 @@ public class GeneralizationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralizationSet getGeneralizationSet(String name) {
 		return getGeneralizationSet(name, false);
 	}
@@ -272,6 +278,7 @@ public class GeneralizationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralizationSet getGeneralizationSet(String name,
 			boolean ignoreCase) {
 		generalizationSetLoop : for (GeneralizationSet generalizationSet : getGeneralizationSets()) {
@@ -289,6 +296,7 @@ public class GeneralizationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getSpecific() {
 		if (eContainerFeatureID() != UMLPackage.GENERALIZATION__SPECIFIC)
 			return null;
@@ -323,6 +331,7 @@ public class GeneralizationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSpecific(Classifier newSpecific) {
 		if (newSpecific != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.GENERALIZATION__SPECIFIC && newSpecific != null)) {

@@ -175,6 +175,7 @@ public class AcceptEventActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isUnmarshall() {
 		return (eFlags & IS_UNMARSHALL_EFLAG) != 0;
 	}
@@ -184,6 +185,7 @@ public class AcceptEventActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsUnmarshall(boolean newIsUnmarshall) {
 		boolean oldIsUnmarshall = (eFlags & IS_UNMARSHALL_EFLAG) != 0;
 		if (newIsUnmarshall)
@@ -201,6 +203,7 @@ public class AcceptEventActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<OutputPin> getResults() {
 		if (results == null) {
 			results = new EObjectContainmentEList.Resolving<OutputPin>(
@@ -214,6 +217,7 @@ public class AcceptEventActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createResult(String name, Type type) {
 		OutputPin newResult = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		getResults().add(newResult);
@@ -229,6 +233,7 @@ public class AcceptEventActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult(String name, Type type) {
 		return getResult(name, type, false, false);
 	}
@@ -238,6 +243,7 @@ public class AcceptEventActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult(String name, Type type, boolean ignoreCase,
 			boolean createOnDemand) {
 		resultLoop : for (OutputPin result : getResults()) {
@@ -259,6 +265,7 @@ public class AcceptEventActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public OutputPin getResult(String name, Type type, boolean ignoreCase) {
 		return getResult(name, type, ignoreCase, false);
 	}
@@ -268,6 +275,7 @@ public class AcceptEventActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Trigger> getTriggers() {
 		if (triggers == null) {
 			triggers = new EObjectContainmentEList.Resolving<Trigger>(
@@ -281,6 +289,7 @@ public class AcceptEventActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Trigger createTrigger(String name) {
 		Trigger newTrigger = (Trigger) create(UMLPackage.Literals.TRIGGER);
 		getTriggers().add(newTrigger);
@@ -294,6 +303,7 @@ public class AcceptEventActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Trigger getTrigger(String name) {
 		return getTrigger(name, false, false);
 	}
@@ -303,6 +313,7 @@ public class AcceptEventActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Trigger getTrigger(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		triggerLoop : for (Trigger trigger : getTriggers()) {
@@ -322,6 +333,7 @@ public class AcceptEventActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOneOutputPin(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return AcceptEventActionOperations.validateOneOutputPin(this,
@@ -333,6 +345,7 @@ public class AcceptEventActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoInputPins(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return AcceptEventActionOperations.validateNoInputPins(this,
@@ -344,6 +357,7 @@ public class AcceptEventActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoOutputPins(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return AcceptEventActionOperations.validateNoOutputPins(this,
@@ -355,6 +369,7 @@ public class AcceptEventActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateUnmarshallSignalEvents(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return AcceptEventActionOperations.validateUnmarshallSignalEvents(this,
@@ -366,6 +381,7 @@ public class AcceptEventActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateConformingType(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return AcceptEventActionOperations.validateConformingType(this,

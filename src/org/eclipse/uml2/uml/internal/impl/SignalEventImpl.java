@@ -80,6 +80,7 @@ public class SignalEventImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Signal getSignal() {
 		if (signal != null && signal.eIsProxy()) {
 			InternalEObject oldSignal = (InternalEObject) signal;
@@ -107,6 +108,7 @@ public class SignalEventImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSignal(Signal newSignal) {
 		Signal oldSignal = signal;
 		signal = newSignal;

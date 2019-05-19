@@ -188,6 +188,7 @@ public class TestIdentityActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getFirst() {
 		if (first != null && first.eIsProxy()) {
 			InternalEObject oldFirst = (InternalEObject) first;
@@ -246,6 +247,7 @@ public class TestIdentityActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFirst(InputPin newFirst) {
 		if (newFirst != first) {
 			NotificationChain msgs = null;
@@ -270,6 +272,7 @@ public class TestIdentityActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createFirst(String name, Type type, EClass eClass) {
 		InputPin newFirst = (InputPin) create(eClass);
 		setFirst(newFirst);
@@ -285,6 +288,7 @@ public class TestIdentityActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createFirst(String name, Type type) {
 		return createFirst(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -294,6 +298,7 @@ public class TestIdentityActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getSecond() {
 		if (second != null && second.eIsProxy()) {
 			InternalEObject oldSecond = (InternalEObject) second;
@@ -353,6 +358,7 @@ public class TestIdentityActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSecond(InputPin newSecond) {
 		if (newSecond != second) {
 			NotificationChain msgs = null;
@@ -377,6 +383,7 @@ public class TestIdentityActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createSecond(String name, Type type, EClass eClass) {
 		InputPin newSecond = (InputPin) create(eClass);
 		setSecond(newSecond);
@@ -392,6 +399,7 @@ public class TestIdentityActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createSecond(String name, Type type) {
 		return createSecond(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -401,6 +409,7 @@ public class TestIdentityActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult() {
 		if (result != null && result.eIsProxy()) {
 			InternalEObject oldResult = (InternalEObject) result;
@@ -460,6 +469,7 @@ public class TestIdentityActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResult(OutputPin newResult) {
 		if (newResult != result) {
 			NotificationChain msgs = null;
@@ -484,6 +494,7 @@ public class TestIdentityActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createResult(String name, Type type) {
 		OutputPin newResult = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		setResult(newResult);
@@ -499,6 +510,7 @@ public class TestIdentityActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoType(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TestIdentityActionOperations.validateNoType(this, diagnostics,
@@ -510,6 +522,7 @@ public class TestIdentityActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TestIdentityActionOperations.validateMultiplicity(this,
@@ -521,6 +534,7 @@ public class TestIdentityActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateResultIsBoolean(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TestIdentityActionOperations.validateResultIsBoolean(this,

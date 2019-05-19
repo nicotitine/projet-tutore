@@ -149,6 +149,7 @@ public class ClearAssociationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getObject() {
 		if (object != null && object.eIsProxy()) {
 			InternalEObject oldObject = (InternalEObject) object;
@@ -210,6 +211,7 @@ public class ClearAssociationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setObject(InputPin newObject) {
 		if (newObject != object) {
 			NotificationChain msgs = null;
@@ -237,6 +239,7 @@ public class ClearAssociationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createObject(String name, Type type, EClass eClass) {
 		InputPin newObject = (InputPin) create(eClass);
 		setObject(newObject);
@@ -252,6 +255,7 @@ public class ClearAssociationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createObject(String name, Type type) {
 		return createObject(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -261,6 +265,7 @@ public class ClearAssociationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Association getAssociation() {
 		if (association != null && association.eIsProxy()) {
 			InternalEObject oldAssociation = (InternalEObject) association;
@@ -289,6 +294,7 @@ public class ClearAssociationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAssociation(Association newAssociation) {
 		Association oldAssociation = association;
 		association = newAssociation;
@@ -303,6 +309,7 @@ public class ClearAssociationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSameType(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ClearAssociationActionOperations.validateSameType(this,
@@ -314,6 +321,7 @@ public class ClearAssociationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ClearAssociationActionOperations.validateMultiplicity(this,

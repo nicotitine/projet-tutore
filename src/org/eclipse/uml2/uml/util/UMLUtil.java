@@ -1955,7 +1955,7 @@ public class UMLUtil
 						if (!reference.isMany()) {
 							// get the object, if any, that the next referenced
 							// element was merged into
-							EObject mergeResult = get((EObject) next
+							EObject mergeResult = get(next
 								.eGet(reference));
 
 							if (mergeResult != null) {
@@ -2695,7 +2695,7 @@ public class UMLUtil
 
 				if (receivingElement != null) {
 					for (EObject mergedEObject : entry.getValue()) {
-						NamedElement capabilityElement = getCapability((Element) mergedEObject);
+						NamedElement capabilityElement = getCapability(mergedEObject);
 
 						if (OPTION__PROCESS.equals(options
 							.get(OPTION__CAPABILITIES))) {
@@ -3199,7 +3199,7 @@ public class UMLUtil
 
 					if (result == null) {
 						result = TemplateExpander.super
-							.createCopy((EObject) element);
+							.createCopy(element);
 					}
 
 					return result;
@@ -7144,6 +7144,7 @@ public class UMLUtil
 				DiagnosticChain diagnostics, Map<Object, Object> context) {
 			Comparator<EClass> eClassComparator = new Comparator<EClass>() {
 
+				@Override
 				public int compare(EClass eClass, EClass otherEClass) {
 					int eAllStructuralFeaturesSize = eClass
 						.getEAllStructuralFeatures().size();
@@ -8011,6 +8012,7 @@ public class UMLUtil
 			}
 		}
 
+		@Override
 		public Collection<? extends EObject> convert(
 				Collection<? extends EObject> eObjects,
 				Map<String, String> options, DiagnosticChain diagnostics,
@@ -10664,6 +10666,7 @@ public class UMLUtil
 			}
 		}
 
+		@Override
 		public Collection<? extends EObject> convert(
 				Collection<? extends EObject> eObjects,
 				Map<String, String> options, DiagnosticChain diagnostics,
@@ -11710,6 +11713,7 @@ public class UMLUtil
 		return (Property) findEObject(stereotype.getAllAttributes(),
 			new EObjectMatcher() {
 
+				@Override
 				public boolean matches(EObject eObject) {
 					return safeEquals(((Property) eObject).getName(),
 						propertyName);
@@ -12844,16 +12848,16 @@ public class UMLUtil
 				.getResourceFactoryRegistry().getContentTypeToFactoryMap();
 
 			contentTypeToFactoryMap.put(
-				UML402UMLResource.UML_4_0_0_CONTENT_TYPE_IDENTIFIER,
+				UMLResource.UML_4_0_0_CONTENT_TYPE_IDENTIFIER,
 				UML402UMLResource.Factory.INSTANCE);
 			contentTypeToFactoryMap.put(
-				UML302UMLResource.UML_3_0_0_CONTENT_TYPE_IDENTIFIER,
+				UMLResource.UML_3_0_0_CONTENT_TYPE_IDENTIFIER,
 				UML302UMLResource.Factory.INSTANCE);
 			contentTypeToFactoryMap.put(
-				UML212UMLResource.UML_2_1_0_CONTENT_TYPE_IDENTIFIER,
+				UMLResource.UML_2_1_0_CONTENT_TYPE_IDENTIFIER,
 				UML212UMLResource.Factory.INSTANCE);
 			contentTypeToFactoryMap.put(
-				UML212UMLResource.UML_2_0_0_CONTENT_TYPE_IDENTIFIER,
+				UMLResource.UML_2_0_0_CONTENT_TYPE_IDENTIFIER,
 				UML212UMLResource.Factory.INSTANCE);
 			contentTypeToFactoryMap.put(
 				UML22UMLResource.UML2_CONTENT_TYPE_IDENTIFIER,
@@ -12862,31 +12866,31 @@ public class UMLUtil
 				XMI2UMLResource.UML_CONTENT_TYPE_IDENTIFIER,
 				XMI2UMLResource.Factory.INSTANCE);
 			contentTypeToFactoryMap.put(
-				XMI242UMLResource.UML_2_4_1_CONTENT_TYPE_IDENTIFIER,
+				XMI2UMLResource.UML_2_4_1_CONTENT_TYPE_IDENTIFIER,
 				XMI242UMLResource.Factory.INSTANCE);
 			contentTypeToFactoryMap.put(
-				XMI242UMLResource.UML_2_4_CONTENT_TYPE_IDENTIFIER,
+				XMI2UMLResource.UML_2_4_CONTENT_TYPE_IDENTIFIER,
 				XMI242UMLResource.Factory.INSTANCE);
 			contentTypeToFactoryMap.put(
-				XMI222UMLResource.UML_2_2_CONTENT_TYPE_IDENTIFIER,
+				XMI2UMLResource.UML_2_2_CONTENT_TYPE_IDENTIFIER,
 				XMI222UMLResource.Factory.INSTANCE);
 			contentTypeToFactoryMap.put(
-				XMI212UMLResource.UML_2_1_1_CONTENT_TYPE_IDENTIFIER,
+				XMI2UMLResource.UML_2_1_1_CONTENT_TYPE_IDENTIFIER,
 				XMI212UMLResource.Factory.INSTANCE);
 			contentTypeToFactoryMap.put(
-				XMI212UMLResource.UML_2_1_CONTENT_TYPE_IDENTIFIER,
+				XMI2UMLResource.UML_2_1_CONTENT_TYPE_IDENTIFIER,
 				XMI212UMLResource.Factory.INSTANCE);
 			contentTypeToFactoryMap.put(
 				CMOF2UMLResource.CMOF_CONTENT_TYPE_IDENTIFIER,
 				CMOF2UMLResource.Factory.INSTANCE);
 			contentTypeToFactoryMap.put(
-				CMOF242UMLResource.CMOF_2_4_1_CONTENT_TYPE_IDENTIFIER,
+				CMOF2UMLResource.CMOF_2_4_1_CONTENT_TYPE_IDENTIFIER,
 				CMOF242UMLResource.Factory.INSTANCE);
 			contentTypeToFactoryMap.put(
-				CMOF242UMLResource.CMOF_2_4_CONTENT_TYPE_IDENTIFIER,
+				CMOF2UMLResource.CMOF_2_4_CONTENT_TYPE_IDENTIFIER,
 				CMOF242UMLResource.Factory.INSTANCE);
 			contentTypeToFactoryMap.put(
-				CMOF202UMLResource.CMOF_2_0_CONTENT_TYPE_IDENTIFIER,
+				CMOF2UMLResource.CMOF_2_0_CONTENT_TYPE_IDENTIFIER,
 				CMOF202UMLResource.Factory.INSTANCE);
 
 			Map<URI, URI> uriMap = resourceSet.getURIConverter().getURIMap();

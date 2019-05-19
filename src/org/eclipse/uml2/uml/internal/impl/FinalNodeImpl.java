@@ -67,6 +67,7 @@ public abstract class FinalNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoOutgoingEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return FinalNodeOperations.validateNoOutgoingEdges(this, diagnostics,

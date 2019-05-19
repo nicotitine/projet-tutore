@@ -138,6 +138,7 @@ public class ReadVariableActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult() {
 		if (result != null && result.eIsProxy()) {
 			InternalEObject oldResult = (InternalEObject) result;
@@ -197,6 +198,7 @@ public class ReadVariableActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResult(OutputPin newResult) {
 		if (newResult != result) {
 			NotificationChain msgs = null;
@@ -221,6 +223,7 @@ public class ReadVariableActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createResult(String name, Type type) {
 		OutputPin newResult = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		setResult(newResult);
@@ -236,6 +239,7 @@ public class ReadVariableActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeAndOrdering(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadVariableActionOperations.validateTypeAndOrdering(this,
@@ -247,6 +251,7 @@ public class ReadVariableActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateCompatibleMultiplicity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadVariableActionOperations.validateCompatibleMultiplicity(

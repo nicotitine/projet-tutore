@@ -126,6 +126,7 @@ public abstract class FeatureImpl
 	 */
 	protected static final int[] FEATURING_CLASSIFIER_ESUBSETS = new int[]{UMLPackage.FEATURE__NAMESPACE};
 
+	@Override
 	public EList<Classifier> getFeaturingClassifiers() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -157,6 +158,7 @@ public abstract class FeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getFeaturingClassifier(String name) {
 		return getFeaturingClassifier(name, false, null);
 	}
@@ -166,6 +168,7 @@ public abstract class FeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getFeaturingClassifier(String name, boolean ignoreCase,
 			EClass eClass) {
 		featuringClassifierLoop : for (Classifier featuringClassifier : getFeaturingClassifiers()) {
@@ -185,6 +188,7 @@ public abstract class FeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isStatic() {
 		return (eFlags & IS_STATIC_EFLAG) != 0;
 	}
@@ -194,6 +198,7 @@ public abstract class FeatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsStatic(boolean newIsStatic) {
 		boolean oldIsStatic = (eFlags & IS_STATIC_EFLAG) != 0;
 		if (newIsStatic)

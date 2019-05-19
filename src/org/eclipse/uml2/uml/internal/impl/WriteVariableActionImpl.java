@@ -139,6 +139,7 @@ public abstract class WriteVariableActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getValue() {
 		if (value != null && value.eIsProxy()) {
 			InternalEObject oldValue = (InternalEObject) value;
@@ -198,6 +199,7 @@ public abstract class WriteVariableActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(InputPin newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
@@ -222,6 +224,7 @@ public abstract class WriteVariableActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createValue(String name, Type type, EClass eClass) {
 		InputPin newValue = (InputPin) create(eClass);
 		setValue(newValue);
@@ -237,6 +240,7 @@ public abstract class WriteVariableActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createValue(String name, Type type) {
 		return createValue(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -246,6 +250,7 @@ public abstract class WriteVariableActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateValueType(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return WriteVariableActionOperations.validateValueType(this,
@@ -257,6 +262,7 @@ public abstract class WriteVariableActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return WriteVariableActionOperations.validateMultiplicity(this,

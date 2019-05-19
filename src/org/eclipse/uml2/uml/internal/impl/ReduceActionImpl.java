@@ -207,6 +207,7 @@ public class ReduceActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getReducer() {
 		if (reducer != null && reducer.eIsProxy()) {
 			InternalEObject oldReducer = (InternalEObject) reducer;
@@ -234,6 +235,7 @@ public class ReduceActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReducer(Behavior newReducer) {
 		Behavior oldReducer = reducer;
 		reducer = newReducer;
@@ -247,6 +249,7 @@ public class ReduceActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult() {
 		if (result != null && result.eIsProxy()) {
 			InternalEObject oldResult = (InternalEObject) result;
@@ -305,6 +308,7 @@ public class ReduceActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResult(OutputPin newResult) {
 		if (newResult != result) {
 			NotificationChain msgs = null;
@@ -329,6 +333,7 @@ public class ReduceActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createResult(String name, Type type) {
 		OutputPin newResult = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		setResult(newResult);
@@ -344,6 +349,7 @@ public class ReduceActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getCollection() {
 		if (collection != null && collection.eIsProxy()) {
 			InternalEObject oldCollection = (InternalEObject) collection;
@@ -404,6 +410,7 @@ public class ReduceActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCollection(InputPin newCollection) {
 		if (newCollection != collection) {
 			NotificationChain msgs = null;
@@ -429,6 +436,7 @@ public class ReduceActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createCollection(String name, Type type, EClass eClass) {
 		InputPin newCollection = (InputPin) create(eClass);
 		setCollection(newCollection);
@@ -444,6 +452,7 @@ public class ReduceActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createCollection(String name, Type type) {
 		return createCollection(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -453,6 +462,7 @@ public class ReduceActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOrdered() {
 		return (eFlags & IS_ORDERED_EFLAG) != 0;
 	}
@@ -462,6 +472,7 @@ public class ReduceActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsOrdered(boolean newIsOrdered) {
 		boolean oldIsOrdered = (eFlags & IS_ORDERED_EFLAG) != 0;
 		if (newIsOrdered)
@@ -479,6 +490,7 @@ public class ReduceActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInputTypeIsCollection(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReduceActionOperations.validateInputTypeIsCollection(this,
@@ -490,6 +502,7 @@ public class ReduceActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOutputTypesAreCompatible(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return ReduceActionOperations.validateOutputTypesAreCompatible(this,
@@ -501,6 +514,7 @@ public class ReduceActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateReducerInputsOutput(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReduceActionOperations.validateReducerInputsOutput(this,

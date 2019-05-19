@@ -213,6 +213,7 @@ public class ConnectorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Association getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject) type;
@@ -240,6 +241,7 @@ public class ConnectorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(Association newType) {
 		Association oldType = type;
 		type = newType;
@@ -253,6 +255,7 @@ public class ConnectorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Connector> getRedefinedConnectors() {
 		if (redefinedConnectors == null) {
 			redefinedConnectors = new EObjectResolvingEList<Connector>(
@@ -267,6 +270,7 @@ public class ConnectorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Connector getRedefinedConnector(String name) {
 		return getRedefinedConnector(name, false);
 	}
@@ -276,6 +280,7 @@ public class ConnectorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Connector getRedefinedConnector(String name, boolean ignoreCase) {
 		redefinedConnectorLoop : for (Connector redefinedConnector : getRedefinedConnectors()) {
 			if (name != null && !(ignoreCase
@@ -292,6 +297,7 @@ public class ConnectorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ConnectorEnd> getEnds() {
 		if (ends == null) {
 			ends = new EObjectContainmentEList.Resolving<ConnectorEnd>(
@@ -305,6 +311,7 @@ public class ConnectorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConnectorEnd createEnd() {
 		ConnectorEnd newEnd = (ConnectorEnd) create(UMLPackage.Literals.CONNECTOR_END);
 		getEnds().add(newEnd);
@@ -316,6 +323,7 @@ public class ConnectorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConnectorKind getKind() {
 		return ConnectorOperations.getKind(this);
 	}
@@ -325,6 +333,7 @@ public class ConnectorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Behavior> getContracts() {
 		if (contracts == null) {
 			contracts = new EObjectResolvingEList<Behavior>(Behavior.class,
@@ -338,6 +347,7 @@ public class ConnectorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getContract(String name) {
 		return getContract(name, false, null);
 	}
@@ -347,6 +357,7 @@ public class ConnectorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getContract(String name, boolean ignoreCase, EClass eClass) {
 		contractLoop : for (Behavior contract : getContracts()) {
 			if (eClass != null && !eClass.isInstance(contract))
@@ -365,6 +376,7 @@ public class ConnectorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypes(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ConnectorOperations.validateTypes(this, diagnostics, context);
@@ -375,6 +387,7 @@ public class ConnectorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRoles(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ConnectorOperations.validateRoles(this, diagnostics, context);

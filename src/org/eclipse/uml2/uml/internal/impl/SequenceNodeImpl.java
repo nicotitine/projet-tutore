@@ -95,6 +95,7 @@ public class SequenceNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExecutableNode> getExecutableNodes() {
 		if (executableNodes == null) {
 			executableNodes = new EObjectContainmentEList.Resolving<ExecutableNode>(
@@ -109,6 +110,7 @@ public class SequenceNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExecutableNode createExecutableNode(String name, EClass eClass) {
 		ExecutableNode newExecutableNode = (ExecutableNode) create(eClass);
 		getExecutableNodes().add(newExecutableNode);
@@ -122,6 +124,7 @@ public class SequenceNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExecutableNode getExecutableNode(String name) {
 		return getExecutableNode(name, false, null, false);
 	}
@@ -131,6 +134,7 @@ public class SequenceNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExecutableNode getExecutableNode(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		executableNodeLoop : for (ExecutableNode executableNode : getExecutableNodes()) {

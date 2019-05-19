@@ -181,6 +181,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interaction getRefersTo() {
 		if (refersTo != null && refersTo.eIsProxy()) {
 			InternalEObject oldRefersTo = (InternalEObject) refersTo;
@@ -209,6 +210,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRefersTo(Interaction newRefersTo) {
 		Interaction oldRefersTo = refersTo;
 		refersTo = newRefersTo;
@@ -222,6 +224,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getReturnValue() {
 		if (returnValue != null && returnValue.eIsProxy()) {
 			InternalEObject oldReturnValue = (InternalEObject) returnValue;
@@ -283,6 +286,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReturnValue(ValueSpecification newReturnValue) {
 		if (newReturnValue != returnValue) {
 			NotificationChain msgs = null;
@@ -308,6 +312,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createReturnValue(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newReturnValue = (ValueSpecification) create(eClass);
@@ -324,6 +329,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getReturnValueRecipient() {
 		if (returnValueRecipient != null && returnValueRecipient.eIsProxy()) {
 			InternalEObject oldReturnValueRecipient = (InternalEObject) returnValueRecipient;
@@ -352,6 +358,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReturnValueRecipient(Property newReturnValueRecipient) {
 		Property oldReturnValueRecipient = returnValueRecipient;
 		returnValueRecipient = newReturnValueRecipient;
@@ -366,6 +373,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Gate> getActualGates() {
 		if (actualGates == null) {
 			actualGates = new EObjectContainmentEList.Resolving<Gate>(
@@ -379,6 +387,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Gate createActualGate(String name) {
 		Gate newActualGate = (Gate) create(UMLPackage.Literals.GATE);
 		getActualGates().add(newActualGate);
@@ -392,6 +401,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Gate getActualGate(String name) {
 		return getActualGate(name, false, false);
 	}
@@ -401,6 +411,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Gate getActualGate(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		actualGateLoop : for (Gate actualGate : getActualGates()) {
@@ -420,6 +431,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ValueSpecification> getArguments() {
 		if (arguments == null) {
 			arguments = new EObjectContainmentEList.Resolving<ValueSpecification>(
@@ -434,6 +446,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createArgument(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newArgument = (ValueSpecification) create(eClass);
@@ -450,6 +463,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getArgument(String name, Type type) {
 		return getArgument(name, type, false, null, false);
 	}
@@ -459,6 +473,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getArgument(String name, Type type,
 			boolean ignoreCase, EClass eClass, boolean createOnDemand) {
 		argumentLoop : for (ValueSpecification argument : getArguments()) {
@@ -482,6 +497,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateGatesMatch(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InteractionUseOperations.validateGatesMatch(this, diagnostics,
@@ -493,6 +509,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateAllLifelines(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InteractionUseOperations.validateAllLifelines(this, diagnostics,
@@ -504,6 +521,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateArgumentsCorrespondToParameters(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return InteractionUseOperations
@@ -515,6 +533,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateReturnValueTypeRecipientCorrespondence(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return InteractionUseOperations
@@ -527,6 +546,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateArgumentsAreConstants(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InteractionUseOperations.validateArgumentsAreConstants(this,
@@ -538,6 +558,7 @@ public class InteractionUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateReturnValueRecipientCoverage(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return InteractionUseOperations.validateReturnValueRecipientCoverage(

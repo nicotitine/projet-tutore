@@ -137,6 +137,7 @@ public class StartClassifierBehaviorActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getObject() {
 		if (object != null && object.eIsProxy()) {
 			InternalEObject oldObject = (InternalEObject) object;
@@ -199,6 +200,7 @@ public class StartClassifierBehaviorActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setObject(InputPin newObject) {
 		if (newObject != object) {
 			NotificationChain msgs = null;
@@ -226,6 +228,7 @@ public class StartClassifierBehaviorActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createObject(String name, Type type, EClass eClass) {
 		InputPin newObject = (InputPin) create(eClass);
 		setObject(newObject);
@@ -241,6 +244,7 @@ public class StartClassifierBehaviorActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createObject(String name, Type type) {
 		return createObject(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -250,6 +254,7 @@ public class StartClassifierBehaviorActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StartClassifierBehaviorActionOperations.validateMultiplicity(
@@ -261,6 +266,7 @@ public class StartClassifierBehaviorActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeHasClassifier(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StartClassifierBehaviorActionOperations

@@ -160,6 +160,7 @@ public class RemoveVariableValueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isRemoveDuplicates() {
 		return (eFlags & IS_REMOVE_DUPLICATES_EFLAG) != 0;
 	}
@@ -169,6 +170,7 @@ public class RemoveVariableValueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsRemoveDuplicates(boolean newIsRemoveDuplicates) {
 		boolean oldIsRemoveDuplicates = (eFlags & IS_REMOVE_DUPLICATES_EFLAG) != 0;
 		if (newIsRemoveDuplicates)
@@ -186,6 +188,7 @@ public class RemoveVariableValueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getRemoveAt() {
 		if (removeAt != null && removeAt.eIsProxy()) {
 			InternalEObject oldRemoveAt = (InternalEObject) removeAt;
@@ -248,6 +251,7 @@ public class RemoveVariableValueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRemoveAt(InputPin newRemoveAt) {
 		if (newRemoveAt != removeAt) {
 			NotificationChain msgs = null;
@@ -275,6 +279,7 @@ public class RemoveVariableValueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createRemoveAt(String name, Type type, EClass eClass) {
 		InputPin newRemoveAt = (InputPin) create(eClass);
 		setRemoveAt(newRemoveAt);
@@ -290,6 +295,7 @@ public class RemoveVariableValueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createRemoveAt(String name, Type type) {
 		return createRemoveAt(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -299,6 +305,7 @@ public class RemoveVariableValueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRemoveAtAndValue(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return RemoveVariableValueActionOperations.validateRemoveAtAndValue(

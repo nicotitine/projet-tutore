@@ -92,6 +92,7 @@ public class IntervalImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getMin() {
 		if (min != null && min.eIsProxy()) {
 			InternalEObject oldMin = (InternalEObject) min;
@@ -119,6 +120,7 @@ public class IntervalImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMin(ValueSpecification newMin) {
 		ValueSpecification oldMin = min;
 		min = newMin;
@@ -132,6 +134,7 @@ public class IntervalImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getMax() {
 		if (max != null && max.eIsProxy()) {
 			InternalEObject oldMax = (InternalEObject) max;
@@ -159,6 +162,7 @@ public class IntervalImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMax(ValueSpecification newMax) {
 		ValueSpecification oldMax = max;
 		max = newMax;

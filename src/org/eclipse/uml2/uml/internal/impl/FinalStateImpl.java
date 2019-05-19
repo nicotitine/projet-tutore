@@ -71,6 +71,7 @@ public class FinalStateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoOutgoingTransitions(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return FinalStateOperations.validateNoOutgoingTransitions(this,
@@ -82,6 +83,7 @@ public class FinalStateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoRegions(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return FinalStateOperations.validateNoRegions(this, diagnostics,
@@ -93,6 +95,7 @@ public class FinalStateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateCannotReferenceSubmachine(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return FinalStateOperations.validateCannotReferenceSubmachine(this,
@@ -104,6 +107,7 @@ public class FinalStateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoEntryBehavior(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return FinalStateOperations.validateNoEntryBehavior(this, diagnostics,
@@ -115,6 +119,7 @@ public class FinalStateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoExitBehavior(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return FinalStateOperations.validateNoExitBehavior(this, diagnostics,
@@ -126,6 +131,7 @@ public class FinalStateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoStateBehavior(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return FinalStateOperations.validateNoStateBehavior(this, diagnostics,

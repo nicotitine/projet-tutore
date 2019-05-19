@@ -417,7 +417,7 @@ public class UML22UMLResourceHandler
 	}
 
 	protected Profile getUML2Profile(Element element) {
-		return getProfile(element, UML22UMLResource.UML2_PROFILE_URI);
+		return getProfile(element, UMLResource.UML2_PROFILE_URI);
 	}
 
 	protected Stereotype getUML2Stereotype(Element element, String name) {
@@ -521,7 +521,7 @@ public class UML22UMLResourceHandler
 				for (ListIterator<ActivityGroup> ownedGroups = activity
 					.getOwnedGroups().listIterator(); ownedGroups.hasNext();) {
 
-					ActivityGroup group = (ActivityGroup) ownedGroups.next();
+					ActivityGroup group = ownedGroups.next();
 
 					if (group instanceof StructuredActivityNode) {
 						ownedGroups.remove();
@@ -536,7 +536,7 @@ public class UML22UMLResourceHandler
 				for (ListIterator<ActivityNode> ownedNodes = activity
 					.getOwnedNodes().listIterator(); ownedNodes.hasNext();) {
 
-					ActivityNode node = (ActivityNode) ownedNodes.next();
+					ActivityNode node = ownedNodes.next();
 
 					if (node instanceof StructuredActivityNode) {
 						ownedNodes.remove();
@@ -1828,7 +1828,7 @@ public class UML22UMLResourceHandler
 											getUML2Stereotype(event,
 												STEREOTYPE__TIME_EVENT),
 											TAG_DEFINITION__WHEN,
-											(TimeExpression) eObject);
+											eObject);
 									}
 								}
 							}

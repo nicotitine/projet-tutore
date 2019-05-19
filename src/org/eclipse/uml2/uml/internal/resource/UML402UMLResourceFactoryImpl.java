@@ -45,7 +45,7 @@ public class UML402UMLResourceFactoryImpl
 	@Override
 	public Resource createResourceGen(URI uri) {
 		UML402UMLResource result = new UML402UMLResourceImpl(uri);
-		result.setEncoding(UML402UMLResource.DEFAULT_ENCODING);
+		result.setEncoding(UMLResource.DEFAULT_ENCODING);
 		return result;
 	}
 

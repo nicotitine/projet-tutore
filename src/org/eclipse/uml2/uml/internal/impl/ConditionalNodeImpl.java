@@ -201,6 +201,7 @@ public class ConditionalNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDeterminate() {
 		return (eFlags & IS_DETERMINATE_EFLAG) != 0;
 	}
@@ -210,6 +211,7 @@ public class ConditionalNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsDeterminate(boolean newIsDeterminate) {
 		boolean oldIsDeterminate = (eFlags & IS_DETERMINATE_EFLAG) != 0;
 		if (newIsDeterminate)
@@ -227,6 +229,7 @@ public class ConditionalNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isAssured() {
 		return (eFlags & IS_ASSURED_EFLAG) != 0;
 	}
@@ -236,6 +239,7 @@ public class ConditionalNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsAssured(boolean newIsAssured) {
 		boolean oldIsAssured = (eFlags & IS_ASSURED_EFLAG) != 0;
 		if (newIsAssured)
@@ -253,6 +257,7 @@ public class ConditionalNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Clause> getClauses() {
 		if (clauses == null) {
 			clauses = new EObjectContainmentEList.Resolving<Clause>(
@@ -266,6 +271,7 @@ public class ConditionalNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Clause createClause() {
 		Clause newClause = (Clause) create(UMLPackage.Literals.CLAUSE);
 		getClauses().add(newClause);
@@ -277,6 +283,7 @@ public class ConditionalNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<OutputPin> getResults() {
 		if (results == null) {
 			results = new EObjectContainmentEList.Resolving<OutputPin>(
@@ -290,6 +297,7 @@ public class ConditionalNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createResult(String name, Type type) {
 		OutputPin newResult = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		getResults().add(newResult);
@@ -305,6 +313,7 @@ public class ConditionalNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult(String name, Type type) {
 		return getResult(name, type, false, false);
 	}
@@ -314,6 +323,7 @@ public class ConditionalNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult(String name, Type type, boolean ignoreCase,
 			boolean createOnDemand) {
 		resultLoop : for (OutputPin result : getResults()) {
@@ -344,6 +354,7 @@ public class ConditionalNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateResultNoIncoming(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ConditionalNodeOperations.validateResultNoIncoming(this,
@@ -355,6 +366,7 @@ public class ConditionalNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoInputPins(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ConditionalNodeOperations.validateNoInputPins(this, diagnostics,
@@ -366,6 +378,7 @@ public class ConditionalNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOneClauseWithExecutableNode(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return ConditionalNodeOperations.validateOneClauseWithExecutableNode(
@@ -377,6 +390,7 @@ public class ConditionalNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMatchingOutputPins(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ConditionalNodeOperations.validateMatchingOutputPins(this,
@@ -388,6 +402,7 @@ public class ConditionalNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateExecutableNodes(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ConditionalNodeOperations.validateExecutableNodes(this,
@@ -399,6 +414,7 @@ public class ConditionalNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateClauseNoPredecessor(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ConditionalNodeOperations.validateClauseNoPredecessor(this,

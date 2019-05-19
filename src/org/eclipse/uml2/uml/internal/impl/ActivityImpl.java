@@ -312,6 +312,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public EList<ActivityGroup> getGroups() {
 		if (groups == null) {
 			groups = new SubsetSupersetEObjectResolvingEList<ActivityGroup>(
@@ -326,6 +327,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public EList<ActivityNode> getNodes() {
 		if (nodes == null) {
 			nodes = new SubsetSupersetEObjectResolvingEList<ActivityNode>(
@@ -340,6 +342,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode getNode(String name) {
 		return getNode(name, false, null);
 	}
@@ -349,6 +352,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public ActivityNode getNode(String name, boolean ignoreCase, EClass eClass) {
 		nodeLoop : for (ActivityNode node : getNodes()) {
 			if (eClass != null && !eClass.isInstance(node))
@@ -367,6 +371,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isReadOnly() {
 		return (eFlags & IS_READ_ONLY_EFLAG) != 0;
 	}
@@ -376,6 +381,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsReadOnly(boolean newIsReadOnly) {
 		boolean oldIsReadOnly = (eFlags & IS_READ_ONLY_EFLAG) != 0;
 		if (newIsReadOnly)
@@ -392,6 +398,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSingleExecution() {
 		return (eFlags & IS_SINGLE_EXECUTION_EFLAG) != 0;
 	}
@@ -401,6 +408,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsSingleExecution(boolean newIsSingleExecution) {
 		boolean oldIsSingleExecution = (eFlags & IS_SINGLE_EXECUTION_EFLAG) != 0;
 		if (newIsSingleExecution)
@@ -418,6 +426,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public EList<StructuredActivityNode> getStructuredNodes() {
 		if (structuredNodes == null) {
 			structuredNodes = new SubsetSupersetEObjectContainmentEList.Resolving<StructuredActivityNode>(
@@ -433,6 +442,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructuredActivityNode createStructuredNode(String name,
 			EClass eClass) {
 		StructuredActivityNode newStructuredNode = (StructuredActivityNode) create(eClass);
@@ -447,6 +457,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructuredActivityNode createStructuredNode(String name) {
 		return createStructuredNode(name,
 			UMLPackage.Literals.STRUCTURED_ACTIVITY_NODE);
@@ -457,6 +468,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Variable> getVariables() {
 		if (variables == null) {
 			variables = new EObjectContainmentWithInverseEList.Resolving<Variable>(
@@ -471,6 +483,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Variable createVariable(String name, Type type) {
 		Variable newVariable = (Variable) create(UMLPackage.Literals.VARIABLE);
 		getVariables().add(newVariable);
@@ -486,6 +499,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Variable getVariable(String name, Type type) {
 		return getVariable(name, type, false, false);
 	}
@@ -495,6 +509,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Variable getVariable(String name, Type type, boolean ignoreCase,
 			boolean createOnDemand) {
 		variableLoop : for (Variable variable : getVariables()) {
@@ -516,6 +531,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityEdge> getEdges() {
 		if (edges == null) {
 			edges = new EObjectContainmentWithInverseEList.Resolving<ActivityEdge>(
@@ -530,6 +546,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge createEdge(String name, EClass eClass) {
 		ActivityEdge newEdge = (ActivityEdge) create(eClass);
 		getEdges().add(newEdge);
@@ -543,6 +560,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getEdge(String name) {
 		return getEdge(name, false, null, false);
 	}
@@ -552,6 +570,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getEdge(String name, boolean ignoreCase, EClass eClass,
 			boolean createOnDemand) {
 		edgeLoop : for (ActivityEdge edge : getEdges()) {
@@ -573,6 +592,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityPartition> getPartitions() {
 		if (partitions == null) {
 			partitions = new SubsetSupersetEObjectResolvingEList<ActivityPartition>(
@@ -1926,6 +1946,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public EList<ActivityGroup> getOwnedGroups() {
 		if (ownedGroups == null) {
 			ownedGroups = new SubsetSupersetEObjectContainmentEList.Resolving<ActivityGroup>(
@@ -1952,6 +1973,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityGroup createOwnedGroup(String name, EClass eClass) {
 		ActivityGroup newOwnedGroup = (ActivityGroup) create(eClass);
 		getOwnedGroups().add(newOwnedGroup);
@@ -1965,6 +1987,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityGroup getOwnedGroup(String name) {
 		return getOwnedGroup(name, false, null, false);
 	}
@@ -1974,6 +1997,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityGroup getOwnedGroup(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		ownedGroupLoop : for (ActivityGroup ownedGroup : getOwnedGroups()) {
@@ -1995,6 +2019,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityGroup getGroup(String name) {
 		return getGroup(name, false, null);
 	}
@@ -2004,6 +2029,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public ActivityGroup getGroup(String name, boolean ignoreCase, EClass eClass) {
 		groupLoop : for (ActivityGroup group : getGroups()) {
 			if (eClass != null && !eClass.isInstance(group))
@@ -2033,6 +2059,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public EList<ActivityNode> getOwnedNodes() {
 		if (ownedNodes == null) {
 			ownedNodes = new SubsetSupersetEObjectContainmentEList.Resolving<ActivityNode>(
@@ -2049,6 +2076,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode createOwnedNode(String name, EClass eClass) {
 		ActivityNode newOwnedNode = (ActivityNode) create(eClass);
 		getOwnedNodes().add(newOwnedNode);
@@ -2062,6 +2090,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode getOwnedNode(String name) {
 		return getOwnedNode(name, false, null, false);
 	}
@@ -2071,6 +2100,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode getOwnedNode(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		ownedNodeLoop : for (ActivityNode ownedNode : getOwnedNodes()) {
@@ -2092,6 +2122,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructuredActivityNode getStructuredNode(String name) {
 		return getStructuredNode(name, false, null, false);
 	}
@@ -2101,6 +2132,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public StructuredActivityNode getStructuredNode(String name,
 			boolean ignoreCase, EClass eClass) {
 		return getStructuredNode(name, ignoreCase, eClass, false);
@@ -2111,6 +2143,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructuredActivityNode getStructuredNode(String name,
 			boolean ignoreCase, EClass eClass, boolean createOnDemand) {
 		structuredNodeLoop : for (StructuredActivityNode structuredNode : getStructuredNodes()) {
@@ -2132,6 +2165,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMaximumOneParameterNode(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActivityOperations.validateMaximumOneParameterNode(this,
@@ -2143,6 +2177,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMaximumTwoParameterNodes(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return ActivityOperations.validateMaximumTwoParameterNodes(this,
@@ -2186,6 +2221,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityPartition createPartition(String name) {
 		ActivityPartition newPartition = (ActivityPartition) create(UMLPackage.Literals.ACTIVITY_PARTITION);
 		getPartitions().add(newPartition);
@@ -2199,6 +2235,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityPartition getPartition(String name) {
 		return getPartition(name, false, false);
 	}
@@ -2208,6 +2245,7 @@ public class ActivityImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityPartition getPartition(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		partitionLoop : for (ActivityPartition partition : getPartitions()) {

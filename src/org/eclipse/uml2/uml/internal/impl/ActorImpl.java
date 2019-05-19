@@ -73,6 +73,7 @@ public class ActorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateAssociations(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActorOperations.validateAssociations(this, diagnostics, context);
@@ -83,6 +84,7 @@ public class ActorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMustHaveName(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActorOperations.validateMustHaveName(this, diagnostics, context);

@@ -101,6 +101,7 @@ public class GeneralOrderingImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OccurrenceSpecification getBefore() {
 		if (before != null && before.eIsProxy()) {
 			InternalEObject oldBefore = (InternalEObject) before;
@@ -149,6 +150,7 @@ public class GeneralOrderingImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBefore(OccurrenceSpecification newBefore) {
 		if (newBefore != before) {
 			NotificationChain msgs = null;
@@ -173,6 +175,7 @@ public class GeneralOrderingImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateIrreflexiveTransitiveClosure(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return GeneralOrderingOperations.validateIrreflexiveTransitiveClosure(
@@ -184,6 +187,7 @@ public class GeneralOrderingImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OccurrenceSpecification getAfter() {
 		if (after != null && after.eIsProxy()) {
 			InternalEObject oldAfter = (InternalEObject) after;
@@ -232,6 +236,7 @@ public class GeneralOrderingImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAfter(OccurrenceSpecification newAfter) {
 		if (newAfter != after) {
 			NotificationChain msgs = null;

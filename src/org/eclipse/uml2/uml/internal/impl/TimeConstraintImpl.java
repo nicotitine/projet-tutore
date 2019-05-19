@@ -109,6 +109,7 @@ public class TimeConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isFirstEvent() {
 		return (eFlags & FIRST_EVENT_EFLAG) != 0;
 	}
@@ -118,6 +119,7 @@ public class TimeConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFirstEvent(boolean newFirstEvent) {
 		boolean oldFirstEvent = (eFlags & FIRST_EVENT_EFLAG) != 0;
 		if (newFirstEvent)
@@ -235,6 +237,7 @@ public class TimeConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createSpecification(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newSpecification = (ValueSpecification) create(eClass);
@@ -261,6 +264,7 @@ public class TimeConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateHasOneConstrainedElement(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return TimeConstraintOperations.validateHasOneConstrainedElement(this,

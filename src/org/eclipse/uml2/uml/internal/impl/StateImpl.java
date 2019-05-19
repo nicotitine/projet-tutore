@@ -296,6 +296,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RedefinableElement> getRedefinedElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -327,6 +328,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public EList<Classifier> getRedefinitionContexts() {
 		CacheAdapter cache = getCacheAdapter();
 
@@ -368,6 +370,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getRedefinitionContext(String name) {
 		return getRedefinitionContext(name, false, null);
 	}
@@ -377,6 +380,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getRedefinitionContext(String name, boolean ignoreCase,
 			EClass eClass) {
 		redefinitionContextLoop : for (Classifier redefinitionContext : getRedefinitionContexts()) {
@@ -405,6 +409,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isLeaf() {
 		return (eFlags & IS_LEAF_EFLAG) != 0;
 	}
@@ -414,6 +419,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsLeaf(boolean newIsLeaf) {
 		boolean oldIsLeaf = (eFlags & IS_LEAF_EFLAG) != 0;
 		if (newIsLeaf)
@@ -443,6 +449,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Transition> getOutgoings() {
 		return VertexOperations.getOutgoings(this);
 	}
@@ -452,6 +459,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transition getOutgoing(String name) {
 		return getOutgoing(name, false, null);
 	}
@@ -461,6 +469,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transition getOutgoing(String name, boolean ignoreCase, EClass eClass) {
 		outgoingLoop : for (Transition outgoing : getOutgoings()) {
 			if (eClass != null && !eClass.isInstance(outgoing))
@@ -479,6 +488,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Transition> getIncomings() {
 		return VertexOperations.getIncomings(this);
 	}
@@ -488,6 +498,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transition getIncoming(String name) {
 		return getIncoming(name, false, null);
 	}
@@ -497,6 +508,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transition getIncoming(String name, boolean ignoreCase, EClass eClass) {
 		incomingLoop : for (Transition incoming : getIncomings()) {
 			if (eClass != null && !eClass.isInstance(incoming))
@@ -515,6 +527,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Region getContainer() {
 		if (eContainerFeatureID() != UMLPackage.STATE__CONTAINER)
 			return null;
@@ -549,6 +562,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContainer(Region newContainer) {
 		if (newContainer != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.STATE__CONTAINER && newContainer != null)) {
@@ -626,6 +640,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isComposite() {
 		return StateOperations.isComposite(this);
 	}
@@ -635,6 +650,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOrthogonal() {
 		return StateOperations.isOrthogonal(this);
 	}
@@ -644,6 +660,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSimple() {
 		return StateOperations.isSimple(this);
 	}
@@ -653,6 +670,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSubmachineState() {
 		return StateOperations.isSubmachineState(this);
 	}
@@ -662,6 +680,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StateMachine getSubmachine() {
 		if (submachine != null && submachine.eIsProxy()) {
 			InternalEObject oldSubmachine = (InternalEObject) submachine;
@@ -710,6 +729,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubmachine(StateMachine newSubmachine) {
 		if (newSubmachine != submachine) {
 			NotificationChain msgs = null;
@@ -734,6 +754,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ConnectionPointReference> getConnections() {
 		if (connections == null) {
 			connections = new EObjectContainmentWithInverseEList.Resolving<ConnectionPointReference>(
@@ -749,6 +770,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConnectionPointReference createConnection(String name) {
 		ConnectionPointReference newConnection = (ConnectionPointReference) create(UMLPackage.Literals.CONNECTION_POINT_REFERENCE);
 		getConnections().add(newConnection);
@@ -762,6 +784,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConnectionPointReference getConnection(String name) {
 		return getConnection(name, false, false);
 	}
@@ -771,6 +794,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConnectionPointReference getConnection(String name,
 			boolean ignoreCase, boolean createOnDemand) {
 		connectionLoop : for (ConnectionPointReference connection : getConnections()) {
@@ -790,6 +814,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Pseudostate> getConnectionPoints() {
 		if (connectionPoints == null) {
 			connectionPoints = new EObjectContainmentWithInverseEList.Resolving<Pseudostate>(
@@ -804,6 +829,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pseudostate createConnectionPoint(String name) {
 		Pseudostate newConnectionPoint = (Pseudostate) create(UMLPackage.Literals.PSEUDOSTATE);
 		getConnectionPoints().add(newConnectionPoint);
@@ -817,6 +843,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pseudostate getConnectionPoint(String name) {
 		return getConnectionPoint(name, false, false);
 	}
@@ -826,6 +853,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pseudostate getConnectionPoint(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		connectionPointLoop : for (Pseudostate connectionPoint : getConnectionPoints()) {
@@ -845,6 +873,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public State getRedefinedState() {
 		if (redefinedState != null && redefinedState.eIsProxy()) {
 			InternalEObject oldRedefinedState = (InternalEObject) redefinedState;
@@ -873,6 +902,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRedefinedState(State newRedefinedState) {
 		State oldRedefinedState = redefinedState;
 		redefinedState = newRedefinedState;
@@ -887,6 +917,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getStateInvariant() {
 		if (stateInvariant != null && stateInvariant.eIsProxy()) {
 			InternalEObject oldStateInvariant = (InternalEObject) stateInvariant;
@@ -915,6 +946,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStateInvariant(Constraint newStateInvariant) {
 		Constraint oldStateInvariant = stateInvariant;
 		stateInvariant = newStateInvariant;
@@ -938,6 +970,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createStateInvariant(String name, EClass eClass) {
 		Constraint newStateInvariant = (Constraint) create(eClass);
 		setStateInvariant(newStateInvariant);
@@ -951,6 +984,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createStateInvariant(String name) {
 		return createStateInvariant(name, UMLPackage.Literals.CONSTRAINT);
 	}
@@ -960,6 +994,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getEntry() {
 		if (entry != null && entry.eIsProxy()) {
 			InternalEObject oldEntry = (InternalEObject) entry;
@@ -1017,6 +1052,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEntry(Behavior newEntry) {
 		if (newEntry != entry) {
 			NotificationChain msgs = null;
@@ -1041,6 +1077,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior createEntry(String name, EClass eClass) {
 		Behavior newEntry = (Behavior) create(eClass);
 		setEntry(newEntry);
@@ -1054,6 +1091,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getExit() {
 		if (exit != null && exit.eIsProxy()) {
 			InternalEObject oldExit = (InternalEObject) exit;
@@ -1111,6 +1149,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExit(Behavior newExit) {
 		if (newExit != exit) {
 			NotificationChain msgs = null;
@@ -1135,6 +1174,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior createExit(String name, EClass eClass) {
 		Behavior newExit = (Behavior) create(eClass);
 		setExit(newExit);
@@ -1148,6 +1188,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getDoActivity() {
 		if (doActivity != null && doActivity.eIsProxy()) {
 			InternalEObject oldDoActivity = (InternalEObject) doActivity;
@@ -1208,6 +1249,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDoActivity(Behavior newDoActivity) {
 		if (newDoActivity != doActivity) {
 			NotificationChain msgs = null;
@@ -1232,6 +1274,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior createDoActivity(String name, EClass eClass) {
 		Behavior newDoActivity = (Behavior) create(eClass);
 		setDoActivity(newDoActivity);
@@ -1245,6 +1288,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Trigger> getDeferrableTriggers() {
 		if (deferrableTriggers == null) {
 			deferrableTriggers = new EObjectContainmentEList.Resolving<Trigger>(
@@ -1258,6 +1302,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Trigger createDeferrableTrigger(String name) {
 		Trigger newDeferrableTrigger = (Trigger) create(UMLPackage.Literals.TRIGGER);
 		getDeferrableTriggers().add(newDeferrableTrigger);
@@ -1271,6 +1316,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Trigger getDeferrableTrigger(String name) {
 		return getDeferrableTrigger(name, false, false);
 	}
@@ -1280,6 +1326,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Trigger getDeferrableTrigger(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		deferrableTriggerLoop : for (Trigger deferrableTrigger : getDeferrableTriggers()) {
@@ -1299,6 +1346,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Region> getRegions() {
 		if (regions == null) {
 			regions = new EObjectContainmentWithInverseEList.Resolving<Region>(
@@ -1313,6 +1361,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Region createRegion(String name) {
 		Region newRegion = (Region) create(UMLPackage.Literals.REGION);
 		getRegions().add(newRegion);
@@ -1326,6 +1375,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Region getRegion(String name) {
 		return getRegion(name, false, false);
 	}
@@ -1335,6 +1385,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Region getRegion(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		regionLoop : for (Region region : getRegions()) {
@@ -1354,6 +1405,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRedefinitionContextValid(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return RedefinableElementOperations.validateRedefinitionContextValid(
@@ -1365,6 +1417,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRedefinitionConsistent(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return RedefinableElementOperations.validateRedefinitionConsistent(
@@ -1376,6 +1429,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNonLeafRedefinition(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return RedefinableElementOperations.validateNonLeafRedefinition(this,
@@ -1387,6 +1441,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isRedefinitionContextValid(
 			RedefinableElement redefinedElement) {
 		return StateOperations.isRedefinitionContextValid(this,
@@ -1398,6 +1453,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isConsistentWith(RedefinableElement redefiningElement) {
 		return StateOperations.isConsistentWith(this, redefiningElement);
 	}
@@ -1407,6 +1463,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSubmachineStates(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StateOperations.validateSubmachineStates(this, diagnostics,
@@ -1418,6 +1475,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDestinationsOrSourcesOfTransitions(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return StateOperations.validateDestinationsOrSourcesOfTransitions(this,
@@ -1429,6 +1487,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSubmachineOrRegions(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StateOperations.validateSubmachineOrRegions(this, diagnostics,
@@ -1440,6 +1499,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateCompositeStates(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StateOperations.validateCompositeStates(this, diagnostics,
@@ -1451,6 +1511,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateEntryOrExit(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StateOperations.validateEntryOrExit(this, diagnostics, context);
@@ -1461,6 +1522,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier redefinitionContext() {
 		return StateOperations.redefinitionContext(this);
 	}
@@ -1470,6 +1532,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StateMachine containingStateMachine() {
 		return StateOperations.containingStateMachine(this);
 	}
@@ -1479,6 +1542,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isContainedInState(State s) {
 		return VertexOperations.isContainedInState(this, s);
 	}
@@ -1488,6 +1552,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isContainedInRegion(Region r) {
 		return VertexOperations.isContainedInRegion(this, r);
 	}
@@ -2325,6 +2390,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RedefinableElement getRedefinedElement(String name) {
 		return getRedefinedElement(name, false, null);
 	}
@@ -2334,6 +2400,7 @@ public class StateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RedefinableElement getRedefinedElement(String name,
 			boolean ignoreCase, EClass eClass) {
 		redefinedElementLoop : for (RedefinableElement redefinedElement : getRedefinedElements()) {

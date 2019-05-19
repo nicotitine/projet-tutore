@@ -118,6 +118,7 @@ public abstract class ConnectableElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameter getTemplateParameter() {
 		if (templateParameter != null && templateParameter.eIsProxy()) {
 			InternalEObject oldTemplateParameter = (InternalEObject) templateParameter;
@@ -192,6 +193,7 @@ public abstract class ConnectableElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTemplateParameter(TemplateParameter newTemplateParameter) {
 		if (newTemplateParameter != null
 			&& !(newTemplateParameter instanceof ConnectableElementTemplateParameter)) {
@@ -231,6 +233,7 @@ public abstract class ConnectableElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameter getOwningTemplateParameter() {
 		if (eContainerFeatureID() != UMLPackage.CONNECTABLE_ELEMENT__OWNING_TEMPLATE_PARAMETER)
 			return null;
@@ -273,6 +276,7 @@ public abstract class ConnectableElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwningTemplateParameter(
 			TemplateParameter newOwningTemplateParameter) {
 		if (newOwningTemplateParameter != eInternalContainer()
@@ -304,6 +308,7 @@ public abstract class ConnectableElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ConnectorEnd> getEnds() {
 		return ConnectableElementOperations.getEnds(this);
 	}
@@ -313,6 +318,7 @@ public abstract class ConnectableElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isCompatibleWith(ParameterableElement p) {
 		return ParameterableElementOperations.isCompatibleWith(this, p);
 	}
@@ -322,6 +328,7 @@ public abstract class ConnectableElementImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTemplateParameter() {
 		return ParameterableElementOperations.isTemplateParameter(this);
 	}

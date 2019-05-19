@@ -188,6 +188,7 @@ public class ReadLinkObjectEndActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getObject() {
 		if (object != null && object.eIsProxy()) {
 			InternalEObject oldObject = (InternalEObject) object;
@@ -250,6 +251,7 @@ public class ReadLinkObjectEndActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setObject(InputPin newObject) {
 		if (newObject != object) {
 			NotificationChain msgs = null;
@@ -277,6 +279,7 @@ public class ReadLinkObjectEndActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createObject(String name, Type type, EClass eClass) {
 		InputPin newObject = (InputPin) create(eClass);
 		setObject(newObject);
@@ -292,6 +295,7 @@ public class ReadLinkObjectEndActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createObject(String name, Type type) {
 		return createObject(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -301,6 +305,7 @@ public class ReadLinkObjectEndActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getEnd() {
 		if (end != null && end.eIsProxy()) {
 			InternalEObject oldEnd = (InternalEObject) end;
@@ -329,6 +334,7 @@ public class ReadLinkObjectEndActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnd(Property newEnd) {
 		Property oldEnd = end;
 		end = newEnd;
@@ -342,6 +348,7 @@ public class ReadLinkObjectEndActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult() {
 		if (result != null && result.eIsProxy()) {
 			InternalEObject oldResult = (InternalEObject) result;
@@ -404,6 +411,7 @@ public class ReadLinkObjectEndActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResult(OutputPin newResult) {
 		if (newResult != result) {
 			NotificationChain msgs = null;
@@ -431,6 +439,7 @@ public class ReadLinkObjectEndActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createResult(String name, Type type) {
 		OutputPin newResult = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		setResult(newResult);
@@ -446,6 +455,7 @@ public class ReadLinkObjectEndActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateProperty(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadLinkObjectEndActionOperations.validateProperty(this,
@@ -457,6 +467,7 @@ public class ReadLinkObjectEndActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateAssociationOfAssociation(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return ReadLinkObjectEndActionOperations
@@ -468,6 +479,7 @@ public class ReadLinkObjectEndActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateEndsOfAssociation(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadLinkObjectEndActionOperations.validateEndsOfAssociation(
@@ -479,6 +491,7 @@ public class ReadLinkObjectEndActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeOfObject(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadLinkObjectEndActionOperations.validateTypeOfObject(this,
@@ -490,6 +503,7 @@ public class ReadLinkObjectEndActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicityOfObject(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadLinkObjectEndActionOperations.validateMultiplicityOfObject(
@@ -501,6 +515,7 @@ public class ReadLinkObjectEndActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeOfResult(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadLinkObjectEndActionOperations.validateTypeOfResult(this,
@@ -512,6 +527,7 @@ public class ReadLinkObjectEndActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicityOfResult(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadLinkObjectEndActionOperations.validateMultiplicityOfResult(

@@ -237,6 +237,7 @@ public class ElementImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public VisibilityKind getVisibility() {
 		return VISIBILITY_EFLAG_VALUES[(eFlags & VISIBILITY_EFLAG) >>> VISIBILITY_EFLAG_OFFSET];
 	}
@@ -246,6 +247,7 @@ public class ElementImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVisibility(VisibilityKind newVisibility) {
 		VisibilityKind oldVisibility = VISIBILITY_EFLAG_VALUES[(eFlags & VISIBILITY_EFLAG) >>> VISIBILITY_EFLAG_OFFSET];
 		if (newVisibility == null)
@@ -263,6 +265,7 @@ public class ElementImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getAlias() {
 		return alias;
 	}
@@ -272,6 +275,7 @@ public class ElementImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAlias(String newAlias) {
 		String oldAlias = alias;
 		alias = newAlias;
@@ -288,6 +292,7 @@ public class ElementImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetAlias() {
 		String oldAlias = alias;
 		boolean oldAliasESet = (eFlags & ALIAS_ESETFLAG) != 0;
@@ -304,6 +309,7 @@ public class ElementImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetAlias() {
 		return (eFlags & ALIAS_ESETFLAG) != 0;
 	}
@@ -313,6 +319,7 @@ public class ElementImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageableElement getImportedElement() {
 		if (importedElement != null && importedElement.eIsProxy()) {
 			InternalEObject oldImportedElement = (InternalEObject) importedElement;
@@ -341,6 +348,7 @@ public class ElementImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImportedElement(PackageableElement newImportedElement) {
 		PackageableElement oldImportedElement = importedElement;
 		importedElement = newImportedElement;
@@ -355,6 +363,7 @@ public class ElementImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Namespace getImportingNamespace() {
 		if (eContainerFeatureID() != UMLPackage.ELEMENT_IMPORT__IMPORTING_NAMESPACE)
 			return null;
@@ -389,6 +398,7 @@ public class ElementImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setImportingNamespace(Namespace newImportingNamespace) {
 		if (newImportingNamespace != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.ELEMENT_IMPORT__IMPORTING_NAMESPACE && newImportingNamespace != null)) {
@@ -416,6 +426,7 @@ public class ElementImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateVisibilityPublicOrPrivate(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return ElementImportOperations.validateVisibilityPublicOrPrivate(this,
@@ -427,6 +438,7 @@ public class ElementImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateImportedElementIsPublic(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ElementImportOperations.validateImportedElementIsPublic(this,
@@ -438,6 +450,7 @@ public class ElementImportImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getName() {
 		return ElementImportOperations.getName(this);
 	}

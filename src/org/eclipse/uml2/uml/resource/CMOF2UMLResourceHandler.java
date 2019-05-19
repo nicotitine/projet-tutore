@@ -219,6 +219,7 @@ public class CMOF2UMLResourceHandler
 			: null;
 	}
 
+	@Override
 	public void preLoad(XMLResource resource, InputStream inputStream,
 			Map<?, ?> options) {
 
@@ -525,6 +526,7 @@ public class CMOF2UMLResourceHandler
 		}
 	}
 
+	@Override
 	public void preSave(XMLResource resource, OutputStream outputStream,
 			Map<?, ?> options) {
 		
@@ -533,6 +535,7 @@ public class CMOF2UMLResourceHandler
 		}
 	}
 
+	@Override
 	public void postSave(XMLResource resource, OutputStream outputStream,
 			Map<?, ?> options) {
 		

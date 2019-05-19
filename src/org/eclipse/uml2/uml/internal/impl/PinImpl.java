@@ -240,6 +240,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOrdered() {
 		return (eFlags & IS_ORDERED_EFLAG) != 0;
 	}
@@ -249,6 +250,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsOrdered(boolean newIsOrdered) {
 		boolean oldIsOrdered = (eFlags & IS_ORDERED_EFLAG) != 0;
 		if (newIsOrdered)
@@ -265,6 +267,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isUnique() {
 		return (eFlags & IS_UNIQUE_EFLAG) != 0;
 	}
@@ -274,6 +277,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsUnique(boolean newIsUnique) {
 		boolean oldIsUnique = (eFlags & IS_UNIQUE_EFLAG) != 0;
 		if (newIsUnique)
@@ -290,6 +294,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getUpper() {
 		return MultiplicityElementOperations.getUpper(this);
 	}
@@ -299,6 +304,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUpper(int newUpper) {
 		MultiplicityElementOperations.setUpper(this, newUpper);
 	}
@@ -308,6 +314,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getLower() {
 		return MultiplicityElementOperations.getLower(this);
 	}
@@ -317,6 +324,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLower(int newLower) {
 		MultiplicityElementOperations.setLower(this, newLower);
 	}
@@ -326,6 +334,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getUpperValue() {
 		if (upperValue != null && upperValue.eIsProxy()) {
 			InternalEObject oldUpperValue = (InternalEObject) upperValue;
@@ -385,6 +394,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUpperValue(ValueSpecification newUpperValue) {
 		if (newUpperValue != upperValue) {
 			NotificationChain msgs = null;
@@ -409,6 +419,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createUpperValue(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newUpperValue = (ValueSpecification) create(eClass);
@@ -425,6 +436,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getLowerValue() {
 		if (lowerValue != null && lowerValue.eIsProxy()) {
 			InternalEObject oldLowerValue = (InternalEObject) lowerValue;
@@ -484,6 +496,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLowerValue(ValueSpecification newLowerValue) {
 		if (newLowerValue != lowerValue) {
 			NotificationChain msgs = null;
@@ -508,6 +521,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createLowerValue(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newLowerValue = (ValueSpecification) create(eClass);
@@ -524,6 +538,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isControl() {
 		return (eFlags & IS_CONTROL_EFLAG) != 0;
 	}
@@ -533,6 +548,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsControl(boolean newIsControl) {
 		boolean oldIsControl = (eFlags & IS_CONTROL_EFLAG) != 0;
 		if (newIsControl)
@@ -549,6 +565,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateLowerGe0(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return MultiplicityElementOperations.validateLowerGe0(this,
@@ -560,6 +577,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateUpperGeLower(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return MultiplicityElementOperations.validateUpperGeLower(this,
@@ -571,6 +589,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateValueSpecificationNoSideEffects(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return MultiplicityElementOperations
@@ -582,6 +601,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateValueSpecificationConstant(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return MultiplicityElementOperations
@@ -593,6 +613,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateLowerIsInteger(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return MultiplicityElementOperations.validateLowerIsInteger(this,
@@ -604,6 +625,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateUpperIsUnlimitedNatural(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return MultiplicityElementOperations.validateUpperIsUnlimitedNatural(
@@ -615,6 +637,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isMultivalued() {
 		return MultiplicityElementOperations.isMultivalued(this);
 	}
@@ -624,6 +647,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean includesMultiplicity(MultiplicityElement M) {
 		return MultiplicityElementOperations.includesMultiplicity(this, M);
 	}
@@ -633,6 +657,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int lowerBound() {
 		return MultiplicityElementOperations.lowerBound(this);
 	}
@@ -642,6 +667,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int upperBound() {
 		return MultiplicityElementOperations.upperBound(this);
 	}
@@ -651,6 +677,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean compatibleWith(MultiplicityElement other) {
 		return MultiplicityElementOperations.compatibleWith(this, other);
 	}
@@ -660,6 +687,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean is(int lowerbound, int upperbound) {
 		return MultiplicityElementOperations.is(this, lowerbound, upperbound);
 	}
@@ -669,6 +697,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateControlPins(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PinOperations.validateControlPins(this, diagnostics, context);
@@ -679,6 +708,7 @@ public abstract class PinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNotUnique(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PinOperations.validateNotUnique(this, diagnostics, context);

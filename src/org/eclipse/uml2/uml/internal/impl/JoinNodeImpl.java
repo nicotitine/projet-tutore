@@ -160,6 +160,7 @@ public class JoinNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isCombineDuplicate() {
 		return (eFlags & IS_COMBINE_DUPLICATE_EFLAG) != 0;
 	}
@@ -169,6 +170,7 @@ public class JoinNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsCombineDuplicate(boolean newIsCombineDuplicate) {
 		boolean oldIsCombineDuplicate = (eFlags & IS_COMBINE_DUPLICATE_EFLAG) != 0;
 		if (newIsCombineDuplicate)
@@ -186,6 +188,7 @@ public class JoinNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getJoinSpec() {
 		if (joinSpec != null && joinSpec.eIsProxy()) {
 			InternalEObject oldJoinSpec = (InternalEObject) joinSpec;
@@ -244,6 +247,7 @@ public class JoinNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setJoinSpec(ValueSpecification newJoinSpec) {
 		if (newJoinSpec != joinSpec) {
 			NotificationChain msgs = null;
@@ -268,6 +272,7 @@ public class JoinNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createJoinSpec(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newJoinSpec = (ValueSpecification) create(eClass);
@@ -284,6 +289,7 @@ public class JoinNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOneOutgoingEdge(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return JoinNodeOperations.validateOneOutgoingEdge(this, diagnostics,
@@ -295,6 +301,7 @@ public class JoinNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateIncomingObjectFlow(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return JoinNodeOperations.validateIncomingObjectFlow(this, diagnostics,

@@ -66,6 +66,7 @@ public interface DataType
 	 * @model opposite="datatype" containment="true" resolveProxies="true"
 	 * @generated
 	 */
+	@Override
 	EList<Property> getOwnedAttributes();
 
 	/**
@@ -79,6 +80,7 @@ public interface DataType
 	 * @see #getOwnedAttributes()
 	 * @generated
 	 */
+	@Override
 	Property createOwnedAttribute(String name, Type type, EClass eClass);
 
 	/**
@@ -91,6 +93,7 @@ public interface DataType
 	 * @see #getOwnedAttributes()
 	 * @generated
 	 */
+	@Override
 	Property createOwnedAttribute(String name, Type type);
 
 	/**
@@ -103,6 +106,7 @@ public interface DataType
 	 * @see #getOwnedAttributes()
 	 * @generated
 	 */
+	@Override
 	Property getOwnedAttribute(String name, Type type);
 
 	/**
@@ -118,6 +122,7 @@ public interface DataType
 	 * @see #getOwnedAttributes()
 	 * @generated
 	 */
+	@Override
 	Property getOwnedAttribute(String name, Type type, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand);
 
@@ -144,6 +149,7 @@ public interface DataType
 	 * @model opposite="datatype" containment="true" resolveProxies="true"
 	 * @generated
 	 */
+	@Override
 	EList<Operation> getOwnedOperations();
 
 	/**
@@ -157,6 +163,7 @@ public interface DataType
 	 * @see #getOwnedOperations()
 	 * @generated
 	 */
+	@Override
 	Operation createOwnedOperation(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes);
 
@@ -171,6 +178,7 @@ public interface DataType
 	 * @see #getOwnedOperations()
 	 * @generated
 	 */
+	@Override
 	Operation getOwnedOperation(String name, EList<String> ownedParameterNames,
 			EList<Type> ownedParameterTypes);
 
@@ -187,6 +195,7 @@ public interface DataType
 	 * @see #getOwnedOperations()
 	 * @generated
 	 */
+	@Override
 	Operation getOwnedOperation(String name, EList<String> ownedParameterNames,
 			EList<Type> ownedParameterTypes, boolean ignoreCase,
 			boolean createOnDemand);
@@ -204,6 +213,7 @@ public interface DataType
 	 * @model required="true" ordered="false" nameDataType="org.eclipse.uml2.types.String" nameOrdered="false" parameterNamesDataType="org.eclipse.uml2.types.String" parameterNamesMany="true" parameterNamesOrdered="false" parameterTypesMany="true" parameterTypesOrdered="false" returnTypeOrdered="false"
 	 * @generated
 	 */
+	@Override
 	Operation createOwnedOperation(String name, EList<String> parameterNames,
 			EList<Type> parameterTypes, Type returnType);
 

@@ -144,6 +144,7 @@ public class PackageMergeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Package getMergedPackage() {
 		if (mergedPackage != null && mergedPackage.eIsProxy()) {
 			InternalEObject oldMergedPackage = (InternalEObject) mergedPackage;
@@ -172,6 +173,7 @@ public class PackageMergeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMergedPackage(org.eclipse.uml2.uml.Package newMergedPackage) {
 		org.eclipse.uml2.uml.Package oldMergedPackage = mergedPackage;
 		mergedPackage = newMergedPackage;
@@ -186,6 +188,7 @@ public class PackageMergeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Package getReceivingPackage() {
 		if (eContainerFeatureID() != UMLPackage.PACKAGE_MERGE__RECEIVING_PACKAGE)
 			return null;
@@ -221,6 +224,7 @@ public class PackageMergeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReceivingPackage(
 			org.eclipse.uml2.uml.Package newReceivingPackage) {
 		if (newReceivingPackage != eInternalContainer()

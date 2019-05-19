@@ -99,6 +99,7 @@ public class IncludeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> getRelatedElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -126,6 +127,7 @@ public class IncludeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> getSources() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -151,6 +153,7 @@ public class IncludeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> getTargets() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -176,6 +179,7 @@ public class IncludeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UseCase getAddition() {
 		if (addition != null && addition.eIsProxy()) {
 			InternalEObject oldAddition = (InternalEObject) addition;
@@ -203,6 +207,7 @@ public class IncludeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAddition(UseCase newAddition) {
 		UseCase oldAddition = addition;
 		addition = newAddition;
@@ -216,6 +221,7 @@ public class IncludeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UseCase getIncludingCase() {
 		if (eContainerFeatureID() != UMLPackage.INCLUDE__INCLUDING_CASE)
 			return null;
@@ -250,6 +256,7 @@ public class IncludeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIncludingCase(UseCase newIncludingCase) {
 		if (newIncludingCase != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.INCLUDE__INCLUDING_CASE && newIncludingCase != null)) {

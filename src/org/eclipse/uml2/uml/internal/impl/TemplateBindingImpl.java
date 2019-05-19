@@ -196,6 +196,7 @@ public class TemplateBindingImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateSignature getSignature() {
 		if (signature != null && signature.eIsProxy()) {
 			InternalEObject oldSignature = (InternalEObject) signature;
@@ -224,6 +225,7 @@ public class TemplateBindingImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSignature(TemplateSignature newSignature) {
 		TemplateSignature oldSignature = signature;
 		signature = newSignature;
@@ -237,6 +239,7 @@ public class TemplateBindingImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TemplateParameterSubstitution> getParameterSubstitutions() {
 		if (parameterSubstitutions == null) {
 			parameterSubstitutions = new EObjectContainmentWithInverseEList.Resolving<TemplateParameterSubstitution>(
@@ -252,6 +255,7 @@ public class TemplateBindingImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameterSubstitution createParameterSubstitution() {
 		TemplateParameterSubstitution newParameterSubstitution = (TemplateParameterSubstitution) create(UMLPackage.Literals.TEMPLATE_PARAMETER_SUBSTITUTION);
 		getParameterSubstitutions().add(newParameterSubstitution);
@@ -263,6 +267,7 @@ public class TemplateBindingImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateableElement getBoundElement() {
 		if (eContainerFeatureID() != UMLPackage.TEMPLATE_BINDING__BOUND_ELEMENT)
 			return null;
@@ -297,6 +302,7 @@ public class TemplateBindingImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBoundElement(TemplateableElement newBoundElement) {
 		if (newBoundElement != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.TEMPLATE_BINDING__BOUND_ELEMENT && newBoundElement != null)) {
@@ -324,6 +330,7 @@ public class TemplateBindingImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateParameterSubstitutionFormal(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return TemplateBindingOperations.validateParameterSubstitutionFormal(
@@ -335,6 +342,7 @@ public class TemplateBindingImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOneParameterSubstitution(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return TemplateBindingOperations.validateOneParameterSubstitution(this,

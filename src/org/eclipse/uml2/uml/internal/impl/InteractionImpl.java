@@ -231,6 +231,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Lifeline> getCovereds() {
 		if (covereds == null) {
 			covereds = new EObjectWithInverseResolvingEList.ManyInverse<Lifeline>(
@@ -245,6 +246,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Lifeline getCovered(String name) {
 		return getCovered(name, false);
 	}
@@ -254,6 +256,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Lifeline getCovered(String name, boolean ignoreCase) {
 		coveredLoop : for (Lifeline covered : getCovereds()) {
 			if (name != null && !(ignoreCase
@@ -270,6 +273,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<GeneralOrdering> getGeneralOrderings() {
 		if (generalOrderings == null) {
 			generalOrderings = new EObjectContainmentEList.Resolving<GeneralOrdering>(
@@ -284,6 +288,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralOrdering createGeneralOrdering(String name) {
 		GeneralOrdering newGeneralOrdering = (GeneralOrdering) create(UMLPackage.Literals.GENERAL_ORDERING);
 		getGeneralOrderings().add(newGeneralOrdering);
@@ -297,6 +302,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralOrdering getGeneralOrdering(String name) {
 		return getGeneralOrdering(name, false, false);
 	}
@@ -306,6 +312,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralOrdering getGeneralOrdering(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		generalOrderingLoop : for (GeneralOrdering generalOrdering : getGeneralOrderings()) {
@@ -325,6 +332,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interaction getEnclosingInteraction() {
 		if (eContainerFeatureID() != UMLPackage.INTERACTION__ENCLOSING_INTERACTION)
 			return null;
@@ -359,6 +367,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnclosingInteraction(Interaction newEnclosingInteraction) {
 		if (newEnclosingInteraction != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.INTERACTION__ENCLOSING_INTERACTION && newEnclosingInteraction != null)) {
@@ -386,6 +395,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionOperand getEnclosingOperand() {
 		if (eContainerFeatureID() != UMLPackage.INTERACTION__ENCLOSING_OPERAND)
 			return null;
@@ -420,6 +430,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnclosingOperand(InteractionOperand newEnclosingOperand) {
 		if (newEnclosingOperand != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.INTERACTION__ENCLOSING_OPERAND && newEnclosingOperand != null)) {
@@ -474,6 +485,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Lifeline> getLifelines() {
 		if (lifelines == null) {
 			lifelines = new EObjectContainmentWithInverseEList.Resolving<Lifeline>(
@@ -488,6 +500,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Lifeline createLifeline(String name) {
 		Lifeline newLifeline = (Lifeline) create(UMLPackage.Literals.LIFELINE);
 		getLifelines().add(newLifeline);
@@ -501,6 +514,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Lifeline getLifeline(String name) {
 		return getLifeline(name, false, false);
 	}
@@ -510,6 +524,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Lifeline getLifeline(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		lifelineLoop : for (Lifeline lifeline : getLifelines()) {
@@ -529,6 +544,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InteractionFragment> getFragments() {
 		if (fragments == null) {
 			fragments = new EObjectContainmentWithInverseEList.Resolving<InteractionFragment>(
@@ -544,6 +560,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionFragment createFragment(String name, EClass eClass) {
 		InteractionFragment newFragment = (InteractionFragment) create(eClass);
 		getFragments().add(newFragment);
@@ -557,6 +574,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionFragment getFragment(String name) {
 		return getFragment(name, false, null, false);
 	}
@@ -566,6 +584,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionFragment getFragment(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		fragmentLoop : for (InteractionFragment fragment : getFragments()) {
@@ -587,6 +606,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Action> getActions() {
 		if (actions == null) {
 			actions = new EObjectContainmentEList.Resolving<Action>(
@@ -600,6 +620,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Action createAction(String name, EClass eClass) {
 		Action newAction = (Action) create(eClass);
 		getActions().add(newAction);
@@ -613,6 +634,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Action getAction(String name) {
 		return getAction(name, false, null, false);
 	}
@@ -622,6 +644,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Action getAction(String name, boolean ignoreCase, EClass eClass,
 			boolean createOnDemand) {
 		actionLoop : for (Action action : getActions()) {
@@ -643,6 +666,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Gate> getFormalGates() {
 		if (formalGates == null) {
 			formalGates = new EObjectContainmentEList.Resolving<Gate>(
@@ -656,6 +680,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Gate createFormalGate(String name) {
 		Gate newFormalGate = (Gate) create(UMLPackage.Literals.GATE);
 		getFormalGates().add(newFormalGate);
@@ -669,6 +694,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Gate getFormalGate(String name) {
 		return getFormalGate(name, false, false);
 	}
@@ -678,6 +704,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Gate getFormalGate(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		formalGateLoop : for (Gate formalGate : getFormalGates()) {
@@ -697,6 +724,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Message> getMessages() {
 		if (messages == null) {
 			messages = new EObjectContainmentWithInverseEList.Resolving<Message>(
@@ -711,6 +739,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Message createMessage(String name) {
 		Message newMessage = (Message) create(UMLPackage.Literals.MESSAGE);
 		getMessages().add(newMessage);
@@ -724,6 +753,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Message getMessage(String name) {
 		return getMessage(name, false, false);
 	}
@@ -733,6 +763,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Message getMessage(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		messageLoop : for (Message message : getMessages()) {
@@ -752,6 +783,7 @@ public class InteractionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNotContained(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InteractionOperations.validateNotContained(this, diagnostics,

@@ -327,6 +327,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RedefinableElement> getRedefinedElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -391,6 +392,7 @@ public abstract class ClassifierImpl
 	 */
 	protected static final int[] REDEFINITION_CONTEXT_ESUBSETS = new int[]{UMLPackage.CLASSIFIER__NAMESPACE};
 
+	@Override
 	public EList<Classifier> getRedefinitionContexts() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -424,6 +426,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getRedefinitionContext(String name) {
 		return getRedefinitionContext(name, false, null);
 	}
@@ -433,6 +436,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getRedefinitionContext(String name, boolean ignoreCase,
 			EClass eClass) {
 		redefinitionContextLoop : for (Classifier redefinitionContext : getRedefinitionContexts()) {
@@ -452,6 +456,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isLeaf() {
 		return (eFlags & IS_LEAF_EFLAG) != 0;
 	}
@@ -461,6 +466,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsLeaf(boolean newIsLeaf) {
 		boolean oldIsLeaf = (eFlags & IS_LEAF_EFLAG) != 0;
 		if (newIsLeaf)
@@ -490,6 +496,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameter getTemplateParameter() {
 		if (templateParameter != null && templateParameter.eIsProxy()) {
 			InternalEObject oldTemplateParameter = (InternalEObject) templateParameter;
@@ -563,6 +570,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTemplateParameter(TemplateParameter newTemplateParameter) {
 		if (newTemplateParameter != null
 			&& !(newTemplateParameter instanceof ClassifierTemplateParameter)) {
@@ -602,6 +610,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameter getOwningTemplateParameter() {
 		if (eContainerFeatureID() != UMLPackage.CLASSIFIER__OWNING_TEMPLATE_PARAMETER)
 			return null;
@@ -644,6 +653,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwningTemplateParameter(
 			TemplateParameter newOwningTemplateParameter) {
 		if (newOwningTemplateParameter != eInternalContainer()
@@ -702,6 +712,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetVisibility() {
 		return (eFlags & VISIBILITY_EFLAG) != VISIBILITY_EFLAG_DEFAULT;
 	}
@@ -738,6 +749,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Package getPackage() {
 		org.eclipse.uml2.uml.Package package_ = basicGetPackage();
 		return package_ != null && package_.eIsProxy()
@@ -762,6 +774,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public void setPackage(org.eclipse.uml2.uml.Package newPackage) {
 		if (newPackage != eInternalContainer()) {
 			if (EcoreUtil.isAncestor(this, newPackage))
@@ -815,6 +828,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TemplateBinding> getTemplateBindings() {
 		if (templateBindings == null) {
 			templateBindings = new EObjectContainmentWithInverseEList.Resolving<TemplateBinding>(
@@ -830,6 +844,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateBinding createTemplateBinding(TemplateSignature signature) {
 		TemplateBinding newTemplateBinding = (TemplateBinding) create(UMLPackage.Literals.TEMPLATE_BINDING);
 		getTemplateBindings().add(newTemplateBinding);
@@ -843,6 +858,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateBinding getTemplateBinding(TemplateSignature signature) {
 		return getTemplateBinding(signature, false);
 	}
@@ -852,6 +868,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateBinding getTemplateBinding(TemplateSignature signature,
 			boolean createOnDemand) {
 		templateBindingLoop : for (TemplateBinding templateBinding : getTemplateBindings()) {
@@ -870,6 +887,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateSignature getOwnedTemplateSignature() {
 		if (ownedTemplateSignature != null && ownedTemplateSignature.eIsProxy()) {
 			InternalEObject oldOwnedTemplateSignature = (InternalEObject) ownedTemplateSignature;
@@ -937,6 +955,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwnedTemplateSignature(
 			TemplateSignature newOwnedTemplateSignature) {
 		if (newOwnedTemplateSignature != null
@@ -970,6 +989,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateSignature createOwnedTemplateSignature(EClass eClass) {
 		TemplateSignature newOwnedTemplateSignature = (TemplateSignature) create(eClass);
 		setOwnedTemplateSignature(newOwnedTemplateSignature);
@@ -981,6 +1001,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public TemplateSignature createOwnedTemplateSignature() {
 		TemplateSignature newOwnedTemplateSignature = UMLFactory.eINSTANCE
 			.createRedefinableTemplateSignature();
@@ -1002,6 +1023,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Feature> getFeatures() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1080,6 +1102,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getAttributes() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1105,6 +1128,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getAttribute(String name, Type type) {
 		return getAttribute(name, type, false, null);
 	}
@@ -1114,6 +1138,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getAttribute(String name, Type type, boolean ignoreCase,
 			EClass eClass) {
 		attributeLoop : for (Property attribute : getAttributes()) {
@@ -1135,6 +1160,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CollaborationUse> getCollaborationUses() {
 		if (collaborationUses == null) {
 			collaborationUses = new SubsetSupersetEObjectContainmentEList.Resolving<CollaborationUse>(
@@ -1150,6 +1176,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isAbstract() {
 		return (eFlags & IS_ABSTRACT_EFLAG) != 0;
 	}
@@ -1159,6 +1186,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsAbstract(boolean newIsAbstract) {
 		boolean oldIsAbstract = (eFlags & IS_ABSTRACT_EFLAG) != 0;
 		if (newIsAbstract)
@@ -1176,6 +1204,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isFinalSpecialization() {
 		return (eFlags & IS_FINAL_SPECIALIZATION_EFLAG) != 0;
 	}
@@ -1185,6 +1214,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsFinalSpecialization(boolean newIsFinalSpecialization) {
 		boolean oldIsFinalSpecialization = (eFlags & IS_FINAL_SPECIALIZATION_EFLAG) != 0;
 		if (newIsFinalSpecialization)
@@ -1202,6 +1232,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Generalization> getGeneralizations() {
 		if (generalizations == null) {
 			generalizations = new EObjectContainmentWithInverseEList.Resolving<Generalization>(
@@ -1217,6 +1248,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<GeneralizationSet> getPowertypeExtents() {
 		if (powertypeExtents == null) {
 			powertypeExtents = new EObjectWithInverseResolvingEList<GeneralizationSet>(
@@ -1232,6 +1264,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralizationSet getPowertypeExtent(String name) {
 		return getPowertypeExtent(name, false);
 	}
@@ -1241,6 +1274,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralizationSet getPowertypeExtent(String name, boolean ignoreCase) {
 		powertypeExtentLoop : for (GeneralizationSet powertypeExtent : getPowertypeExtents()) {
 			if (name != null && !(ignoreCase
@@ -1257,6 +1291,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<NamedElement> getInheritedMembers() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1278,6 +1313,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getInheritedMember(String name) {
 		return getInheritedMember(name, false, null);
 	}
@@ -1287,6 +1323,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getInheritedMember(String name, boolean ignoreCase,
 			EClass eClass) {
 		inheritedMemberLoop : for (NamedElement inheritedMember : getInheritedMembers()) {
@@ -1306,6 +1343,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Classifier> getRedefinedClassifiers() {
 		if (redefinedClassifiers == null) {
 			redefinedClassifiers = new EObjectResolvingEList<Classifier>(
@@ -1320,6 +1358,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getRedefinedClassifier(String name) {
 		return getRedefinedClassifier(name, false, null);
 	}
@@ -1329,6 +1368,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getRedefinedClassifier(String name, boolean ignoreCase,
 			EClass eClass) {
 		redefinedClassifierLoop : for (Classifier redefinedClassifier : getRedefinedClassifiers()) {
@@ -1348,6 +1388,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Classifier> getGenerals() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1368,6 +1409,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getGeneral(String name) {
 		return getGeneral(name, false, null);
 	}
@@ -1377,6 +1419,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getGeneral(String name, boolean ignoreCase, EClass eClass) {
 		generalLoop : for (Classifier general : getGenerals()) {
 			if (eClass != null && !eClass.isInstance(general))
@@ -1395,6 +1438,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UseCase> getOwnedUseCases() {
 		if (ownedUseCases == null) {
 			ownedUseCases = new EObjectContainmentEList.Resolving<UseCase>(
@@ -1408,6 +1452,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UseCase createOwnedUseCase(String name) {
 		UseCase newOwnedUseCase = (UseCase) create(UMLPackage.Literals.USE_CASE);
 		getOwnedUseCases().add(newOwnedUseCase);
@@ -1421,6 +1466,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UseCase getOwnedUseCase(String name) {
 		return getOwnedUseCase(name, false, false);
 	}
@@ -1430,6 +1476,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UseCase getOwnedUseCase(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		ownedUseCaseLoop : for (UseCase ownedUseCase : getOwnedUseCases()) {
@@ -1449,6 +1496,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<UseCase> getUseCases() {
 		if (useCases == null) {
 			useCases = new EObjectWithInverseResolvingEList.ManyInverse<UseCase>(
@@ -1463,6 +1511,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UseCase getUseCase(String name) {
 		return getUseCase(name, false);
 	}
@@ -1472,6 +1521,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UseCase getUseCase(String name, boolean ignoreCase) {
 		useCaseLoop : for (UseCase useCase : getUseCases()) {
 			if (name != null && !(ignoreCase
@@ -1488,6 +1538,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Substitution> getSubstitutions() {
 		if (substitutions == null) {
 			substitutions = new EObjectContainmentWithInverseEList.Resolving<Substitution>(
@@ -1502,6 +1553,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CollaborationUse getRepresentation() {
 		if (representation != null && representation.eIsProxy()) {
 			InternalEObject oldRepresentation = (InternalEObject) representation;
@@ -1530,6 +1582,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRepresentation(CollaborationUse newRepresentation) {
 		CollaborationUse oldRepresentation = representation;
 		representation = newRepresentation;
@@ -1553,6 +1606,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CollaborationUse createRepresentation(String name) {
 		CollaborationUse newRepresentation = (CollaborationUse) create(UMLPackage.Literals.COLLABORATION_USE);
 		setRepresentation(newRepresentation);
@@ -1566,6 +1620,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRedefinitionContextValid(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return RedefinableElementOperations.validateRedefinitionContextValid(
@@ -1577,6 +1632,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRedefinitionConsistent(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return RedefinableElementOperations.validateRedefinitionConsistent(
@@ -1588,6 +1644,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNonLeafRedefinition(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return RedefinableElementOperations.validateNonLeafRedefinition(this,
@@ -1599,6 +1656,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isRedefinitionContextValid(
 			RedefinableElement redefinedElement) {
 		return RedefinableElementOperations.isRedefinitionContextValid(this,
@@ -1610,6 +1668,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isConsistentWith(RedefinableElement redefiningElement) {
 		return RedefinableElementOperations.isConsistentWith(this,
 			redefiningElement);
@@ -1620,6 +1679,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isCompatibleWith(ParameterableElement p) {
 		return ParameterableElementOperations.isCompatibleWith(this, p);
 	}
@@ -1629,6 +1689,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTemplateParameter() {
 		return ParameterableElementOperations.isTemplateParameter(this);
 	}
@@ -1638,6 +1699,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNamespaceNeedsVisibility(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return PackageableElementOperations.validateNamespaceNeedsVisibility(
@@ -1649,6 +1711,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Association createAssociation(boolean end1IsNavigable,
 			AggregationKind end1Aggregation, String end1Name, int end1Lower,
 			int end1Upper, Type end1Type, boolean end2IsNavigable,
@@ -1664,6 +1727,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Association> getAssociations() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1684,6 +1748,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ParameterableElement> parameterableElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1710,6 +1775,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTemplate() {
 		return ClassifierOperations.isTemplate(this);
 	}
@@ -1719,6 +1785,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoCyclesInGeneralization(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return ClassifierOperations.validateNoCyclesInGeneralization(this,
@@ -1730,6 +1797,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSpecializeType(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ClassifierOperations.validateSpecializeType(this, diagnostics,
@@ -1741,6 +1809,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMapsToGeneralizationSet(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ClassifierOperations.validateMapsToGeneralizationSet(this,
@@ -1752,6 +1821,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNonFinalParents(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ClassifierOperations.validateNonFinalParents(this, diagnostics,
@@ -1763,6 +1833,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Generalization createGeneralization(Classifier general) {
 		Generalization newGeneralization = (Generalization) create(UMLPackage.Literals.GENERALIZATION);
 		getGeneralizations().add(newGeneralization);
@@ -1776,6 +1847,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Generalization getGeneralization(Classifier general) {
 		return getGeneralization(general, false);
 	}
@@ -1785,6 +1857,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Generalization getGeneralization(Classifier general,
 			boolean createOnDemand) {
 		generalizationLoop : for (Generalization generalization : getGeneralizations()) {
@@ -1802,6 +1875,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getAllAttributes() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1823,6 +1897,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Operation> getOperations() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1844,6 +1919,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Operation> getAllOperations() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1865,6 +1941,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation getOperation(String name, EList<String> parameterNames,
 			EList<Type> parameterTypes) {
 		return ClassifierOperations.getOperation(this, name, parameterNames,
@@ -1876,6 +1953,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation getOperation(String name, EList<String> parameterNames,
 			EList<Type> parameterTypes, boolean ignoreCase) {
 		return ClassifierOperations.getOperation(this, name, parameterNames,
@@ -1887,6 +1965,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> getUsedInterfaces() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1908,6 +1987,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> getAllUsedInterfaces() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1929,6 +2009,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean maySpecializeType(Classifier c) {
 		return ClassifierOperations.maySpecializeType(this, c);
 	}
@@ -1938,6 +2019,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Feature> allFeatures() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1958,6 +2040,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Classifier> parents() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1978,6 +2061,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> directlyRealizedInterfaces() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -2002,6 +2086,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> directlyUsedInterfaces() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -2023,6 +2108,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> allRealizedInterfaces() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -2044,6 +2130,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> allUsedInterfaces() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -2065,6 +2152,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSubstitutableFor(Classifier contract) {
 		return ClassifierOperations.isSubstitutableFor(this, contract);
 	}
@@ -2074,6 +2162,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> allAttributes() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -2095,6 +2184,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<StructuralFeature> allSlottableFeatures() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -2117,6 +2207,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<NamedElement> inheritableMembers(Classifier c) {
 		return ClassifierOperations.inheritableMembers(this, c);
 	}
@@ -2126,6 +2217,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean hasVisibilityOf(NamedElement n) {
 		return ClassifierOperations.hasVisibilityOf(this, n);
 	}
@@ -2135,6 +2227,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<NamedElement> inherit(EList<NamedElement> inhs) {
 		return ClassifierOperations.inherit(this, inhs);
 	}
@@ -2144,6 +2237,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Classifier> allParents() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -3184,6 +3278,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RedefinableElement getRedefinedElement(String name) {
 		return getRedefinedElement(name, false, null);
 	}
@@ -3193,6 +3288,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RedefinableElement getRedefinedElement(String name,
 			boolean ignoreCase, EClass eClass) {
 		redefinedElementLoop : for (RedefinableElement redefinedElement : getRedefinedElements()) {
@@ -3314,6 +3410,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Feature getFeature(String name) {
 		return getFeature(name, false, null);
 	}
@@ -3323,6 +3420,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Feature getFeature(String name, boolean ignoreCase, EClass eClass) {
 		featureLoop : for (Feature feature : getFeatures()) {
 			if (eClass != null && !eClass.isInstance(feature))
@@ -3376,6 +3474,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CollaborationUse createCollaborationUse(String name) {
 		CollaborationUse newCollaborationUse = (CollaborationUse) create(UMLPackage.Literals.COLLABORATION_USE);
 		getCollaborationUses().add(newCollaborationUse);
@@ -3389,6 +3488,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CollaborationUse getCollaborationUse(String name) {
 		return getCollaborationUse(name, false, false);
 	}
@@ -3398,6 +3498,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CollaborationUse getCollaborationUse(String name,
 			boolean ignoreCase, boolean createOnDemand) {
 		collaborationUseLoop : for (CollaborationUse collaborationUse : getCollaborationUses()) {
@@ -3417,6 +3518,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Substitution createSubstitution(String name, Classifier contract) {
 		Substitution newSubstitution = (Substitution) create(UMLPackage.Literals.SUBSTITUTION);
 		getSubstitutions().add(newSubstitution);
@@ -3432,6 +3534,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Substitution getSubstitution(String name, Classifier contract) {
 		return getSubstitution(name, contract, false, false);
 	}
@@ -3441,6 +3544,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Substitution getSubstitution(String name, Classifier contract,
 			boolean ignoreCase, boolean createOnDemand) {
 		substitutionLoop : for (Substitution substitution : getSubstitutions()) {
@@ -3503,6 +3607,7 @@ public abstract class ClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean conformsTo(Type other) {
 		return ClassifierOperations.conformsTo(this, other);
 	}

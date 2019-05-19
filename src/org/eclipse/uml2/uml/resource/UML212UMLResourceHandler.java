@@ -244,7 +244,7 @@ public class UML212UMLResourceHandler
 	}
 
 	protected Profile getUML2Profile(Element element) {
-		return getProfile(element, UML212UMLResource.UML2_PROFILE_URI);
+		return getProfile(element, UMLResource.UML2_PROFILE_URI);
 	}
 
 	protected Stereotype getUML2Stereotype(Element element, String name) {
@@ -357,7 +357,7 @@ public class UML212UMLResourceHandler
 				for (ListIterator<ActivityGroup> ownedGroups = activity
 					.getOwnedGroups().listIterator(); ownedGroups.hasNext();) {
 
-					ActivityGroup group = (ActivityGroup) ownedGroups.next();
+					ActivityGroup group = ownedGroups.next();
 
 					if (group instanceof StructuredActivityNode) {
 						ownedGroups.remove();
@@ -372,7 +372,7 @@ public class UML212UMLResourceHandler
 				for (ListIterator<ActivityNode> ownedNodes = activity
 					.getOwnedNodes().listIterator(); ownedNodes.hasNext();) {
 
-					ActivityNode node = (ActivityNode) ownedNodes.next();
+					ActivityNode node = ownedNodes.next();
 
 					if (node instanceof StructuredActivityNode) {
 						ownedNodes.remove();

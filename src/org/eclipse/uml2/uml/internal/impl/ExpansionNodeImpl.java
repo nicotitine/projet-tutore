@@ -114,6 +114,7 @@ public class ExpansionNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpansionRegion getRegionAsOutput() {
 		if (regionAsOutput != null && regionAsOutput.eIsProxy()) {
 			InternalEObject oldRegionAsOutput = (InternalEObject) regionAsOutput;
@@ -163,6 +164,7 @@ public class ExpansionNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRegionAsOutput(ExpansionRegion newRegionAsOutput) {
 		if (newRegionAsOutput != regionAsOutput) {
 			NotificationChain msgs = null;
@@ -188,6 +190,7 @@ public class ExpansionNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRegionAsInputOrOutput(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ExpansionNodeOperations.validateRegionAsInputOrOutput(this,
@@ -199,6 +202,7 @@ public class ExpansionNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpansionRegion getRegionAsInput() {
 		if (regionAsInput != null && regionAsInput.eIsProxy()) {
 			InternalEObject oldRegionAsInput = (InternalEObject) regionAsInput;
@@ -248,6 +252,7 @@ public class ExpansionNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRegionAsInput(ExpansionRegion newRegionAsInput) {
 		if (newRegionAsInput != regionAsInput) {
 			NotificationChain msgs = null;

@@ -109,6 +109,7 @@ public class CommentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getBody() {
 		return body;
 	}
@@ -118,6 +119,7 @@ public class CommentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBody(String newBody) {
 		String oldBody = body;
 		body = newBody;
@@ -133,6 +135,7 @@ public class CommentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetBody() {
 		String oldBody = body;
 		boolean oldBodyESet = (eFlags & BODY_ESETFLAG) != 0;
@@ -148,6 +151,7 @@ public class CommentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetBody() {
 		return (eFlags & BODY_ESETFLAG) != 0;
 	}
@@ -157,6 +161,7 @@ public class CommentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> getAnnotatedElements() {
 		if (annotatedElements == null) {
 			annotatedElements = new EObjectResolvingEList<Element>(

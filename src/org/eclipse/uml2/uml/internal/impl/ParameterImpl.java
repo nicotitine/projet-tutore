@@ -402,6 +402,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOrdered() {
 		return (eFlags & IS_ORDERED_EFLAG) != 0;
 	}
@@ -411,6 +412,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsOrdered(boolean newIsOrdered) {
 		boolean oldIsOrdered = (eFlags & IS_ORDERED_EFLAG) != 0;
 		if (newIsOrdered)
@@ -427,6 +429,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isUnique() {
 		return (eFlags & IS_UNIQUE_EFLAG) != 0;
 	}
@@ -436,6 +439,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsUnique(boolean newIsUnique) {
 		boolean oldIsUnique = (eFlags & IS_UNIQUE_EFLAG) != 0;
 		if (newIsUnique)
@@ -452,6 +456,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getUpper() {
 		return MultiplicityElementOperations.getUpper(this);
 	}
@@ -461,6 +466,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUpper(int newUpper) {
 		MultiplicityElementOperations.setUpper(this, newUpper);
 	}
@@ -470,6 +476,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getLower() {
 		return MultiplicityElementOperations.getLower(this);
 	}
@@ -479,6 +486,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLower(int newLower) {
 		MultiplicityElementOperations.setLower(this, newLower);
 	}
@@ -488,6 +496,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getUpperValue() {
 		if (upperValue != null && upperValue.eIsProxy()) {
 			InternalEObject oldUpperValue = (InternalEObject) upperValue;
@@ -548,6 +557,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUpperValue(ValueSpecification newUpperValue) {
 		if (newUpperValue != upperValue) {
 			NotificationChain msgs = null;
@@ -572,6 +582,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createUpperValue(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newUpperValue = (ValueSpecification) create(eClass);
@@ -615,6 +626,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getLowerValue() {
 		if (lowerValue != null && lowerValue.eIsProxy()) {
 			InternalEObject oldLowerValue = (InternalEObject) lowerValue;
@@ -675,6 +687,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLowerValue(ValueSpecification newLowerValue) {
 		if (newLowerValue != lowerValue) {
 			NotificationChain msgs = null;
@@ -699,6 +712,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createLowerValue(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newLowerValue = (ValueSpecification) create(eClass);
@@ -715,6 +729,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ParameterSet> getParameterSets() {
 		if (parameterSets == null) {
 			parameterSets = new EObjectWithInverseResolvingEList.ManyInverse<ParameterSet>(
@@ -729,6 +744,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterSet getParameterSet(String name) {
 		return getParameterSet(name, false);
 	}
@@ -738,6 +754,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterSet getParameterSet(String name, boolean ignoreCase) {
 		parameterSetLoop : for (ParameterSet parameterSet : getParameterSets()) {
 			if (name != null && !(ignoreCase
@@ -754,6 +771,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation getOperation() {
 		Operation operation = basicGetOperation();
 		return operation != null && operation.eIsProxy()
@@ -804,6 +822,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterDirectionKind getDirection() {
 		return DIRECTION_EFLAG_VALUES[(eFlags & DIRECTION_EFLAG) >>> DIRECTION_EFLAG_OFFSET];
 	}
@@ -813,6 +832,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDirection(ParameterDirectionKind newDirection) {
 		ParameterDirectionKind oldDirection = DIRECTION_EFLAG_VALUES[(eFlags & DIRECTION_EFLAG) >>> DIRECTION_EFLAG_OFFSET];
 		if (newDirection == null)
@@ -829,6 +849,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDefault() {
 		return ParameterOperations.getDefault(this);
 	}
@@ -838,6 +859,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefault(String newDefault) {
 		ParameterOperations.setDefault(this, newDefault);
 	}
@@ -847,6 +869,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetDefault() {
 		ParameterOperations.unsetDefault(this);
 	}
@@ -856,6 +879,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetDefault() {
 		return ParameterOperations.isSetDefault(this);
 	}
@@ -865,6 +889,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getDefaultValue() {
 		if (defaultValue != null && defaultValue.eIsProxy()) {
 			InternalEObject oldDefaultValue = (InternalEObject) defaultValue;
@@ -925,6 +950,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValue(ValueSpecification newDefaultValue) {
 		if (newDefaultValue != defaultValue) {
 			NotificationChain msgs = null;
@@ -950,6 +976,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createDefaultValue(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newDefaultValue = (ValueSpecification) create(eClass);
@@ -966,6 +993,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isException() {
 		return (eFlags & IS_EXCEPTION_EFLAG) != 0;
 	}
@@ -975,6 +1003,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsException(boolean newIsException) {
 		boolean oldIsException = (eFlags & IS_EXCEPTION_EFLAG) != 0;
 		if (newIsException)
@@ -992,6 +1021,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isStream() {
 		return (eFlags & IS_STREAM_EFLAG) != 0;
 	}
@@ -1001,6 +1031,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsStream(boolean newIsStream) {
 		boolean oldIsStream = (eFlags & IS_STREAM_EFLAG) != 0;
 		if (newIsStream)
@@ -1017,6 +1048,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterEffectKind getEffect() {
 		return EFFECT_EFLAG_VALUES[(eFlags & EFFECT_EFLAG) >>> EFFECT_EFLAG_OFFSET];
 	}
@@ -1026,6 +1058,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEffect(ParameterEffectKind newEffect) {
 		ParameterEffectKind oldEffect = EFFECT_EFLAG_VALUES[(eFlags & EFFECT_EFLAG) >>> EFFECT_EFLAG_OFFSET];
 		if (newEffect == null)
@@ -1045,6 +1078,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetEffect() {
 		ParameterEffectKind oldEffect = EFFECT_EFLAG_VALUES[(eFlags & EFFECT_EFLAG) >>> EFFECT_EFLAG_OFFSET];
 		boolean oldEffectESet = (eFlags & EFFECT_ESETFLAG) != 0;
@@ -1061,6 +1095,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetEffect() {
 		return (eFlags & EFFECT_ESETFLAG) != 0;
 	}
@@ -1070,6 +1105,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateLowerGe0(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return MultiplicityElementOperations.validateLowerGe0(this,
@@ -1081,6 +1117,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateUpperGeLower(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return MultiplicityElementOperations.validateUpperGeLower(this,
@@ -1092,6 +1129,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateValueSpecificationNoSideEffects(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return MultiplicityElementOperations
@@ -1103,6 +1141,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateValueSpecificationConstant(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return MultiplicityElementOperations
@@ -1114,6 +1153,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateLowerIsInteger(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return MultiplicityElementOperations.validateLowerIsInteger(this,
@@ -1125,6 +1165,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateUpperIsUnlimitedNatural(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return MultiplicityElementOperations.validateUpperIsUnlimitedNatural(
@@ -1136,6 +1177,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isMultivalued() {
 		return MultiplicityElementOperations.isMultivalued(this);
 	}
@@ -1145,6 +1187,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean includesMultiplicity(MultiplicityElement M) {
 		return MultiplicityElementOperations.includesMultiplicity(this, M);
 	}
@@ -1154,6 +1197,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int lowerBound() {
 		return MultiplicityElementOperations.lowerBound(this);
 	}
@@ -1163,6 +1207,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int upperBound() {
 		return MultiplicityElementOperations.upperBound(this);
 	}
@@ -1172,6 +1217,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean compatibleWith(MultiplicityElement other) {
 		return MultiplicityElementOperations.compatibleWith(this, other);
 	}
@@ -1181,6 +1227,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean is(int lowerbound, int upperbound) {
 		return MultiplicityElementOperations.is(this, lowerbound, upperbound);
 	}
@@ -1190,6 +1237,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateConnectorEnd(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ParameterOperations.validateConnectorEnd(this, diagnostics,
@@ -1201,6 +1249,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateStreamAndException(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ParameterOperations.validateStreamAndException(this,
@@ -1212,6 +1261,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateObjectEffect(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ParameterOperations.validateObjectEffect(this, diagnostics,
@@ -1223,6 +1273,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNotException(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ParameterOperations.validateNotException(this, diagnostics,
@@ -1234,6 +1285,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateReentrantBehaviors(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ParameterOperations.validateReentrantBehaviors(this,
@@ -1245,6 +1297,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInAndOut(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ParameterOperations.validateInAndOut(this, diagnostics, context);
@@ -1255,6 +1308,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBooleanDefaultValue(boolean value) {
 		ParameterOperations.setBooleanDefaultValue(this, value);
 	}
@@ -1264,6 +1318,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIntegerDefaultValue(int value) {
 		ParameterOperations.setIntegerDefaultValue(this, value);
 	}
@@ -1273,6 +1328,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStringDefaultValue(String value) {
 		ParameterOperations.setStringDefaultValue(this, value);
 	}
@@ -1282,6 +1338,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnlimitedNaturalDefaultValue(int value) {
 		ParameterOperations.setUnlimitedNaturalDefaultValue(this, value);
 	}
@@ -1291,6 +1348,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNullDefaultValue() {
 		ParameterOperations.setNullDefaultValue(this);
 	}
@@ -1300,6 +1358,7 @@ public class ParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRealDefaultValue(double value) {
 		ParameterOperations.setRealDefaultValue(this, value);
 	}

@@ -150,6 +150,7 @@ public class ClauseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExecutableNode> getTests() {
 		if (tests == null) {
 			tests = new EObjectResolvingEList<ExecutableNode>(
@@ -163,6 +164,7 @@ public class ClauseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExecutableNode getTest(String name) {
 		return getTest(name, false, null);
 	}
@@ -172,6 +174,7 @@ public class ClauseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExecutableNode getTest(String name, boolean ignoreCase, EClass eClass) {
 		testLoop : for (ExecutableNode test : getTests()) {
 			if (eClass != null && !eClass.isInstance(test))
@@ -190,6 +193,7 @@ public class ClauseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExecutableNode> getBodies() {
 		if (bodies == null) {
 			bodies = new EObjectResolvingEList<ExecutableNode>(
@@ -203,6 +207,7 @@ public class ClauseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExecutableNode getBody(String name) {
 		return getBody(name, false, null);
 	}
@@ -212,6 +217,7 @@ public class ClauseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExecutableNode getBody(String name, boolean ignoreCase, EClass eClass) {
 		bodyLoop : for (ExecutableNode body : getBodies()) {
 			if (eClass != null && !eClass.isInstance(body))
@@ -230,6 +236,7 @@ public class ClauseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Clause> getPredecessorClauses() {
 		if (predecessorClauses == null) {
 			predecessorClauses = new EObjectWithInverseResolvingEList.ManyInverse<Clause>(
@@ -244,6 +251,7 @@ public class ClauseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Clause> getSuccessorClauses() {
 		if (successorClauses == null) {
 			successorClauses = new EObjectWithInverseResolvingEList.ManyInverse<Clause>(
@@ -258,6 +266,7 @@ public class ClauseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getDecider() {
 		if (decider != null && decider.eIsProxy()) {
 			InternalEObject oldDecider = (InternalEObject) decider;
@@ -285,6 +294,7 @@ public class ClauseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDecider(OutputPin newDecider) {
 		OutputPin oldDecider = decider;
 		decider = newDecider;
@@ -298,6 +308,7 @@ public class ClauseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<OutputPin> getBodyOutputs() {
 		if (bodyOutputs == null) {
 			bodyOutputs = new EObjectResolvingEList<OutputPin>(OutputPin.class,
@@ -311,6 +322,7 @@ public class ClauseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getBodyOutput(String name, Type type) {
 		return getBodyOutput(name, type, false);
 	}
@@ -320,6 +332,7 @@ public class ClauseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getBodyOutput(String name, Type type, boolean ignoreCase) {
 		bodyOutputLoop : for (OutputPin bodyOutput : getBodyOutputs()) {
 			if (name != null && !(ignoreCase
@@ -338,6 +351,7 @@ public class ClauseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDeciderOutput(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ClauseOperations.validateDeciderOutput(this, diagnostics,
@@ -349,6 +363,7 @@ public class ClauseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTestAndBody(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ClauseOperations.validateTestAndBody(this, diagnostics, context);
@@ -359,6 +374,7 @@ public class ClauseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateBodyOutputPins(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ClauseOperations.validateBodyOutputPins(this, diagnostics,

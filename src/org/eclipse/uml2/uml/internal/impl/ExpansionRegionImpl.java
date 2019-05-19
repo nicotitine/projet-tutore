@@ -164,6 +164,7 @@ public class ExpansionRegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpansionKind getMode() {
 		return MODE_EFLAG_VALUES[(eFlags & MODE_EFLAG) >>> MODE_EFLAG_OFFSET];
 	}
@@ -173,6 +174,7 @@ public class ExpansionRegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMode(ExpansionKind newMode) {
 		ExpansionKind oldMode = MODE_EFLAG_VALUES[(eFlags & MODE_EFLAG) >>> MODE_EFLAG_OFFSET];
 		if (newMode == null)
@@ -188,6 +190,7 @@ public class ExpansionRegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExpansionNode> getInputElements() {
 		if (inputElements == null) {
 			inputElements = new EObjectWithInverseResolvingEList<ExpansionNode>(
@@ -203,6 +206,7 @@ public class ExpansionRegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpansionNode getInputElement(String name, Type type) {
 		return getInputElement(name, type, false);
 	}
@@ -212,6 +216,7 @@ public class ExpansionRegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpansionNode getInputElement(String name, Type type,
 			boolean ignoreCase) {
 		inputElementLoop : for (ExpansionNode inputElement : getInputElements()) {
@@ -231,6 +236,7 @@ public class ExpansionRegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExpansionNode> getOutputElements() {
 		if (outputElements == null) {
 			outputElements = new EObjectWithInverseResolvingEList<ExpansionNode>(
@@ -246,6 +252,7 @@ public class ExpansionRegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpansionNode getOutputElement(String name, Type type) {
 		return getOutputElement(name, type, false);
 	}
@@ -255,6 +262,7 @@ public class ExpansionRegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExpansionNode getOutputElement(String name, Type type,
 			boolean ignoreCase) {
 		outputElementLoop : for (ExpansionNode outputElement : getOutputElements()) {

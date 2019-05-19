@@ -196,6 +196,7 @@ public class OperationTemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMatchDefaultSignature(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return OperationTemplateParameterOperations

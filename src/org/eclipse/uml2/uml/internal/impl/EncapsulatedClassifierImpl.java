@@ -84,6 +84,7 @@ public abstract class EncapsulatedClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Port getOwnedPort(String name, Type type) {
 		return getOwnedPort(name, type, false);
 	}
@@ -93,6 +94,7 @@ public abstract class EncapsulatedClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public Port getOwnedPort(String name, Type type, boolean ignoreCase) {
 		return getOwnedPort(name, type, ignoreCase, false);
 	}
@@ -136,6 +138,7 @@ public abstract class EncapsulatedClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public EList<Port> getOwnedPorts() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -163,6 +166,7 @@ public abstract class EncapsulatedClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public Port createOwnedPort(String name, Type type) {
 		Port newOwnedPort = (Port) create(UMLPackage.Literals.PORT);
 		getOwnedPorts().add(newOwnedPort);
@@ -178,6 +182,7 @@ public abstract class EncapsulatedClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public Port getOwnedPort(String name, Type type, boolean ignoreCase,
 			boolean createOnDemand) {
 		ownedPortLoop : for (Port ownedPort : getOwnedPorts()) {

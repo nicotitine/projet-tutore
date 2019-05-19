@@ -142,6 +142,7 @@ public class CollaborationUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Collaboration getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject) type;
@@ -169,6 +170,7 @@ public class CollaborationUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(Collaboration newType) {
 		Collaboration oldType = type;
 		type = newType;
@@ -182,6 +184,7 @@ public class CollaborationUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Dependency> getRoleBindings() {
 		if (roleBindings == null) {
 			roleBindings = new EObjectContainmentEList.Resolving<Dependency>(
@@ -196,6 +199,7 @@ public class CollaborationUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Dependency createRoleBinding(String name, EClass eClass) {
 		Dependency newRoleBinding = (Dependency) create(eClass);
 		getRoleBindings().add(newRoleBinding);
@@ -209,6 +213,7 @@ public class CollaborationUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Dependency createRoleBinding(String name) {
 		return createRoleBinding(name, UMLPackage.Literals.DEPENDENCY);
 	}
@@ -218,6 +223,7 @@ public class CollaborationUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Dependency getRoleBinding(String name) {
 		return getRoleBinding(name, false, null, false);
 	}
@@ -227,6 +233,7 @@ public class CollaborationUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Dependency getRoleBinding(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		roleBindingLoop : for (Dependency roleBinding : getRoleBindings()) {
@@ -248,6 +255,7 @@ public class CollaborationUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateClientElements(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return CollaborationUseOperations.validateClientElements(this,
@@ -259,6 +267,7 @@ public class CollaborationUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateEveryRole(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return CollaborationUseOperations.validateEveryRole(this, diagnostics,
@@ -270,6 +279,7 @@ public class CollaborationUseImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateConnectors(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return CollaborationUseOperations.validateConnectors(this, diagnostics,

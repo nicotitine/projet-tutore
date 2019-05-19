@@ -295,6 +295,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFileName() {
 		return fileName;
 	}
@@ -304,6 +305,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFileName(String newFileName) {
 		String oldFileName = fileName;
 		fileName = newFileName;
@@ -320,6 +322,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetFileName() {
 		String oldFileName = fileName;
 		boolean oldFileNameESet = (eFlags & FILE_NAME_ESETFLAG) != 0;
@@ -336,6 +339,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetFileName() {
 		return (eFlags & FILE_NAME_ESETFLAG) != 0;
 	}
@@ -345,6 +349,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Artifact> getNestedArtifacts() {
 		if (nestedArtifacts == null) {
 			nestedArtifacts = new EObjectContainmentEList.Resolving<Artifact>(
@@ -358,6 +363,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Artifact createNestedArtifact(String name, EClass eClass) {
 		Artifact newNestedArtifact = (Artifact) create(eClass);
 		getNestedArtifacts().add(newNestedArtifact);
@@ -371,6 +377,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Artifact createNestedArtifact(String name) {
 		return createNestedArtifact(name, UMLPackage.Literals.ARTIFACT);
 	}
@@ -380,6 +387,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Artifact getNestedArtifact(String name) {
 		return getNestedArtifact(name, false, null, false);
 	}
@@ -389,6 +397,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Artifact getNestedArtifact(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		nestedArtifactLoop : for (Artifact nestedArtifact : getNestedArtifacts()) {
@@ -410,6 +419,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Manifestation> getManifestations() {
 		if (manifestations == null) {
 			manifestations = new EObjectContainmentEList.Resolving<Manifestation>(
@@ -423,6 +433,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Operation> getOwnedOperations() {
 		if (ownedOperations == null) {
 			ownedOperations = new EObjectContainmentEList.Resolving<Operation>(
@@ -436,6 +447,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation createOwnedOperation(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes) {
 		Operation newOwnedOperation = (Operation) create(UMLPackage.Literals.OPERATION);
@@ -468,6 +480,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation getOwnedOperation(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes) {
 		return getOwnedOperation(name, ownedParameterNames,
@@ -479,6 +492,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation getOwnedOperation(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes,
 			boolean ignoreCase, boolean createOnDemand) {
@@ -521,6 +535,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getOwnedAttributes() {
 		if (ownedAttributes == null) {
 			ownedAttributes = new EObjectContainmentEList.Resolving<Property>(
@@ -534,6 +549,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createOwnedAttribute(String name, Type type, EClass eClass) {
 		Property newOwnedAttribute = (Property) create(eClass);
 		getOwnedAttributes().add(newOwnedAttribute);
@@ -549,6 +565,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createOwnedAttribute(String name, Type type) {
 		return createOwnedAttribute(name, type, UMLPackage.Literals.PROPERTY);
 	}
@@ -558,6 +575,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getOwnedAttribute(String name, Type type) {
 		return getOwnedAttribute(name, type, false, null, false);
 	}
@@ -567,6 +585,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getOwnedAttribute(String name, Type type,
 			boolean ignoreCase, EClass eClass, boolean createOnDemand) {
 		ownedAttributeLoop : for (Property ownedAttribute : getOwnedAttributes()) {
@@ -590,6 +609,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation createOwnedOperation(String name,
 			EList<String> parameterNames, EList<Type> parameterTypes,
 			Type returnType) {
@@ -602,6 +622,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createOwnedAttribute(String name, Type type, int lower,
 			int upper) {
 		return ArtifactOperations.createOwnedAttribute(this, name, type, lower,
@@ -1532,6 +1553,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Manifestation createManifestation(String name,
 			PackageableElement utilizedElement) {
 		Manifestation newManifestation = (Manifestation) create(UMLPackage.Literals.MANIFESTATION);
@@ -1548,6 +1570,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Manifestation getManifestation(String name,
 			PackageableElement utilizedElement) {
 		return getManifestation(name, utilizedElement, false, false);
@@ -1558,6 +1581,7 @@ public class ArtifactImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Manifestation getManifestation(String name,
 			PackageableElement utilizedElement, boolean ignoreCase,
 			boolean createOnDemand) {

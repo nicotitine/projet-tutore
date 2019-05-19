@@ -149,6 +149,7 @@ public abstract class StructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructuralFeature getStructuralFeature() {
 		if (structuralFeature != null && structuralFeature.eIsProxy()) {
 			InternalEObject oldStructuralFeature = (InternalEObject) structuralFeature;
@@ -179,6 +180,7 @@ public abstract class StructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStructuralFeature(StructuralFeature newStructuralFeature) {
 		StructuralFeature oldStructuralFeature = structuralFeature;
 		structuralFeature = newStructuralFeature;
@@ -193,6 +195,7 @@ public abstract class StructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getObject() {
 		if (object != null && object.eIsProxy()) {
 			InternalEObject oldObject = (InternalEObject) object;
@@ -254,6 +257,7 @@ public abstract class StructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setObject(InputPin newObject) {
 		if (newObject != object) {
 			NotificationChain msgs = null;
@@ -281,6 +285,7 @@ public abstract class StructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createObject(String name, Type type, EClass eClass) {
 		InputPin newObject = (InputPin) create(eClass);
 		setObject(newObject);
@@ -296,6 +301,7 @@ public abstract class StructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createObject(String name, Type type) {
 		return createObject(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -305,6 +311,7 @@ public abstract class StructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNotStatic(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StructuralFeatureActionOperations.validateNotStatic(this,
@@ -316,6 +323,7 @@ public abstract class StructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StructuralFeatureActionOperations.validateMultiplicity(this,
@@ -327,6 +335,7 @@ public abstract class StructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateObjectType(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StructuralFeatureActionOperations.validateObjectType(this,
@@ -338,6 +347,7 @@ public abstract class StructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateVisibility(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StructuralFeatureActionOperations.validateVisibility(this,
@@ -349,6 +359,7 @@ public abstract class StructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOneFeaturingClassifier(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StructuralFeatureActionOperations

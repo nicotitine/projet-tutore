@@ -153,6 +153,7 @@ public class CallOperationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation getOperation() {
 		if (operation != null && operation.eIsProxy()) {
 			InternalEObject oldOperation = (InternalEObject) operation;
@@ -181,6 +182,7 @@ public class CallOperationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOperation(Operation newOperation) {
 		Operation oldOperation = operation;
 		operation = newOperation;
@@ -195,6 +197,7 @@ public class CallOperationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject) target;
@@ -254,6 +257,7 @@ public class CallOperationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTarget(InputPin newTarget) {
 		if (newTarget != target) {
 			NotificationChain msgs = null;
@@ -278,6 +282,7 @@ public class CallOperationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createTarget(String name, Type type, EClass eClass) {
 		InputPin newTarget = (InputPin) create(eClass);
 		setTarget(newTarget);
@@ -293,6 +298,7 @@ public class CallOperationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createTarget(String name, Type type) {
 		return createTarget(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -302,6 +308,7 @@ public class CallOperationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeTargetPin(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return CallOperationActionOperations.validateTypeTargetPin(this,

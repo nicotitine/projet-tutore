@@ -154,6 +154,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public EList<NamedElement> getOwnedMembers() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -180,6 +181,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<NamedElement> getMembers() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -205,6 +207,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ElementImport> getElementImports() {
 		if (elementImports == null) {
 			elementImports = new EObjectContainmentWithInverseEList.Resolving<ElementImport>(
@@ -220,6 +223,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementImport createElementImport(PackageableElement importedElement) {
 		ElementImport newElementImport = (ElementImport) create(UMLPackage.Literals.ELEMENT_IMPORT);
 		getElementImports().add(newElementImport);
@@ -233,6 +237,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementImport getElementImport(PackageableElement importedElement) {
 		return getElementImport(importedElement, false);
 	}
@@ -242,6 +247,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementImport getElementImport(PackageableElement importedElement,
 			boolean createOnDemand) {
 		elementImportLoop : for (ElementImport elementImport : getElementImports()) {
@@ -260,6 +266,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageImport> getPackageImports() {
 		if (packageImports == null) {
 			packageImports = new EObjectContainmentWithInverseEList.Resolving<PackageImport>(
@@ -275,6 +282,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageImport createPackageImport(
 			org.eclipse.uml2.uml.Package importedPackage) {
 		PackageImport newPackageImport = (PackageImport) create(UMLPackage.Literals.PACKAGE_IMPORT);
@@ -289,6 +297,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageImport getPackageImport(
 			org.eclipse.uml2.uml.Package importedPackage) {
 		return getPackageImport(importedPackage, false);
@@ -299,6 +308,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageImport getPackageImport(
 			org.eclipse.uml2.uml.Package importedPackage, boolean createOnDemand) {
 		packageImportLoop : for (PackageImport packageImport : getPackageImports()) {
@@ -317,6 +327,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Constraint> getOwnedRules() {
 		if (ownedRules == null) {
 			ownedRules = new EObjectContainmentWithInverseEList.Resolving<Constraint>(
@@ -331,6 +342,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createOwnedRule(String name, EClass eClass) {
 		Constraint newOwnedRule = (Constraint) create(eClass);
 		getOwnedRules().add(newOwnedRule);
@@ -344,6 +356,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createOwnedRule(String name) {
 		return createOwnedRule(name, UMLPackage.Literals.CONSTRAINT);
 	}
@@ -353,6 +366,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getOwnedRule(String name) {
 		return getOwnedRule(name, false, null, false);
 	}
@@ -362,6 +376,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getOwnedRule(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		ownedRuleLoop : for (Constraint ownedRule : getOwnedRules()) {
@@ -383,6 +398,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageableElement> getImportedMembers() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -403,6 +419,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageableElement getImportedMember(String name) {
 		return getImportedMember(name, false, null);
 	}
@@ -412,6 +429,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageableElement getImportedMember(String name,
 			boolean ignoreCase, EClass eClass) {
 		importedMemberLoop : for (PackageableElement importedMember : getImportedMembers()) {
@@ -431,6 +449,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMembersDistinguishable(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return NamespaceOperations.validateMembersDistinguishable(this,
@@ -442,6 +461,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateCannotImportSelf(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return NamespaceOperations.validateCannotImportSelf(this, diagnostics,
@@ -453,6 +473,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateCannotImportOwnedMembers(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return NamespaceOperations.validateCannotImportOwnedMembers(this,
@@ -464,6 +485,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementImport createElementImport(PackageableElement element,
 			VisibilityKind visibility) {
 		return NamespaceOperations.createElementImport(this, element,
@@ -475,6 +497,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageImport createPackageImport(
 			org.eclipse.uml2.uml.Package package_, VisibilityKind visibility) {
 		return NamespaceOperations.createPackageImport(this, package_,
@@ -486,6 +509,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageableElement> getImportedElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -508,6 +532,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.eclipse.uml2.uml.Package> getImportedPackages() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -530,6 +555,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getNamesOfMember(NamedElement element) {
 		return NamespaceOperations.getNamesOfMember(this, element);
 	}
@@ -539,6 +565,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean membersAreDistinguishable() {
 		return NamespaceOperations.membersAreDistinguishable(this);
 	}
@@ -548,6 +575,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageableElement> importMembers(
 			EList<PackageableElement> imps) {
 		return NamespaceOperations.importMembers(this, imps);
@@ -558,6 +586,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageableElement> excludeCollisions(
 			EList<PackageableElement> imps) {
 		return NamespaceOperations.excludeCollisions(this, imps);
@@ -1010,6 +1039,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getOwnedMember(String name) {
 		return getOwnedMember(name, false, null);
 	}
@@ -1019,6 +1049,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getOwnedMember(String name, boolean ignoreCase,
 			EClass eClass) {
 		ownedMemberLoop : for (NamedElement ownedMember : getOwnedMembers()) {
@@ -1050,6 +1081,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getMember(String name) {
 		return getMember(name, false, null);
 	}
@@ -1059,6 +1091,7 @@ public abstract class NamespaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getMember(String name, boolean ignoreCase, EClass eClass) {
 		memberLoop : for (NamedElement member : getMembers()) {
 			if (eClass != null && !eClass.isInstance(member))

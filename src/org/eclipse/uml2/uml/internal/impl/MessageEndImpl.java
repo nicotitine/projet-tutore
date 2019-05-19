@@ -89,6 +89,7 @@ public abstract class MessageEndImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Message getMessage() {
 		if (message != null && message.eIsProxy()) {
 			InternalEObject oldMessage = (InternalEObject) message;
@@ -116,6 +117,7 @@ public abstract class MessageEndImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMessage(Message newMessage) {
 		Message oldMessage = message;
 		message = newMessage;
@@ -129,6 +131,7 @@ public abstract class MessageEndImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MessageEnd> oppositeEnd() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -149,6 +152,7 @@ public abstract class MessageEndImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSend() {
 		return MessageEndOperations.isSend(this);
 	}
@@ -158,6 +162,7 @@ public abstract class MessageEndImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isReceive() {
 		return MessageEndOperations.isReceive(this);
 	}
@@ -167,6 +172,7 @@ public abstract class MessageEndImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InteractionFragment> enclosingFragment() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {

@@ -139,6 +139,7 @@ public class ReadLinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult() {
 		if (result != null && result.eIsProxy()) {
 			InternalEObject oldResult = (InternalEObject) result;
@@ -197,6 +198,7 @@ public class ReadLinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResult(OutputPin newResult) {
 		if (newResult != result) {
 			NotificationChain msgs = null;
@@ -221,6 +223,7 @@ public class ReadLinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createResult(String name, Type type) {
 		OutputPin newResult = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		setResult(newResult);
@@ -236,6 +239,7 @@ public class ReadLinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOneOpenEnd(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadLinkActionOperations.validateOneOpenEnd(this, diagnostics,
@@ -247,6 +251,7 @@ public class ReadLinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeAndOrdering(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadLinkActionOperations.validateTypeAndOrdering(this,
@@ -258,6 +263,7 @@ public class ReadLinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateCompatibleMultiplicity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadLinkActionOperations.validateCompatibleMultiplicity(this,
@@ -269,6 +275,7 @@ public class ReadLinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNavigableOpenEnd(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadLinkActionOperations.validateNavigableOpenEnd(this,
@@ -280,6 +287,7 @@ public class ReadLinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> openEnd() {
 		return ReadLinkActionOperations.openEnd(this);
 	}
@@ -289,6 +297,7 @@ public class ReadLinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateVisibility(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadLinkActionOperations.validateVisibility(this, diagnostics,

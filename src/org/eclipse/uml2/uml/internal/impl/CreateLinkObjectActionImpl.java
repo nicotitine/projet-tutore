@@ -139,6 +139,7 @@ public class CreateLinkObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult() {
 		if (result != null && result.eIsProxy()) {
 			InternalEObject oldResult = (InternalEObject) result;
@@ -200,6 +201,7 @@ public class CreateLinkObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResult(OutputPin newResult) {
 		if (newResult != result) {
 			NotificationChain msgs = null;
@@ -227,6 +229,7 @@ public class CreateLinkObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createResult(String name, Type type) {
 		OutputPin newResult = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		setResult(newResult);
@@ -242,6 +245,7 @@ public class CreateLinkObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateAssociationClass(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return CreateLinkObjectActionOperations.validateAssociationClass(this,
@@ -253,6 +257,7 @@ public class CreateLinkObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeOfResult(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return CreateLinkObjectActionOperations.validateTypeOfResult(this,
@@ -264,6 +269,7 @@ public class CreateLinkObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return CreateLinkObjectActionOperations.validateMultiplicity(this,

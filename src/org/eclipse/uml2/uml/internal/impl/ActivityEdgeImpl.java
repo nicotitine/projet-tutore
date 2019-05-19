@@ -184,6 +184,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityGroup> getInGroups() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -269,6 +270,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Activity getActivity() {
 		if (eContainerFeatureID() != UMLPackage.ACTIVITY_EDGE__ACTIVITY)
 			return null;
@@ -303,6 +305,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActivity(Activity newActivity) {
 		if (newActivity != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.ACTIVITY_EDGE__ACTIVITY && newActivity != null)) {
@@ -328,6 +331,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityPartition> getInPartitions() {
 		if (inPartitions == null) {
 			inPartitions = new EObjectWithInverseResolvingEList.ManyInverse<ActivityPartition>(
@@ -343,6 +347,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityPartition getInPartition(String name) {
 		return getInPartition(name, false);
 	}
@@ -352,6 +357,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityPartition getInPartition(String name, boolean ignoreCase) {
 		inPartitionLoop : for (ActivityPartition inPartition : getInPartitions()) {
 			if (name != null && !(ignoreCase
@@ -368,6 +374,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructuredActivityNode getInStructuredNode() {
 		if (eContainerFeatureID() != UMLPackage.ACTIVITY_EDGE__IN_STRUCTURED_NODE)
 			return null;
@@ -402,6 +409,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInStructuredNode(StructuredActivityNode newInStructuredNode) {
 		if (newInStructuredNode != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.ACTIVITY_EDGE__IN_STRUCTURED_NODE && newInStructuredNode != null)) {
@@ -429,6 +437,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject) target;
@@ -477,6 +486,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTarget(ActivityNode newTarget) {
 		if (newTarget != target) {
 			NotificationChain msgs = null;
@@ -501,6 +511,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityEdge> getRedefinedEdges() {
 		if (redefinedEdges == null) {
 			redefinedEdges = new EObjectResolvingEList<ActivityEdge>(
@@ -515,6 +526,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getRedefinedEdge(String name) {
 		return getRedefinedEdge(name, false, null);
 	}
@@ -524,6 +536,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getRedefinedEdge(String name, boolean ignoreCase,
 			EClass eClass) {
 		redefinedEdgeLoop : for (ActivityEdge redefinedEdge : getRedefinedEdges()) {
@@ -543,6 +556,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getGuard() {
 		if (guard != null && guard.eIsProxy()) {
 			InternalEObject oldGuard = (InternalEObject) guard;
@@ -601,6 +615,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGuard(ValueSpecification newGuard) {
 		if (newGuard != guard) {
 			NotificationChain msgs = null;
@@ -625,6 +640,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createGuard(String name, Type type, EClass eClass) {
 		ValueSpecification newGuard = (ValueSpecification) create(eClass);
 		setGuard(newGuard);
@@ -640,6 +656,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getWeight() {
 		if (weight != null && weight.eIsProxy()) {
 			InternalEObject oldWeight = (InternalEObject) weight;
@@ -698,6 +715,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setWeight(ValueSpecification newWeight) {
 		if (newWeight != weight) {
 			NotificationChain msgs = null;
@@ -722,6 +740,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createWeight(String name, Type type, EClass eClass) {
 		ValueSpecification newWeight = (ValueSpecification) create(eClass);
 		setWeight(newWeight);
@@ -737,6 +756,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterruptibleActivityRegion getInterrupts() {
 		if (interrupts != null && interrupts.eIsProxy()) {
 			InternalEObject oldInterrupts = (InternalEObject) interrupts;
@@ -786,6 +806,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInterrupts(InterruptibleActivityRegion newInterrupts) {
 		if (newInterrupts != interrupts) {
 			NotificationChain msgs = null;
@@ -815,6 +836,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject) source;
@@ -863,6 +885,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSource(ActivityNode newSource) {
 		if (newSource != source) {
 			NotificationChain msgs = null;
@@ -887,6 +910,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSourceAndTarget(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActivityEdgeOperations.validateSourceAndTarget(this,
@@ -1504,6 +1528,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityGroup getInGroup(String name) {
 		return getInGroup(name, false, null);
 	}
@@ -1513,6 +1538,7 @@ public abstract class ActivityEdgeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityGroup getInGroup(String name, boolean ignoreCase,
 			EClass eClass) {
 		inGroupLoop : for (ActivityGroup inGroup : getInGroups()) {

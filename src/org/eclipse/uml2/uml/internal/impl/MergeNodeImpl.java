@@ -67,6 +67,7 @@ public class MergeNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOneOutgoingEdge(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return MergeNodeOperations.validateOneOutgoingEdge(this, diagnostics,
@@ -78,6 +79,7 @@ public class MergeNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return MergeNodeOperations.validateEdges(this, diagnostics, context);

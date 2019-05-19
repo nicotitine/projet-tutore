@@ -121,6 +121,7 @@ public abstract class DeploymentTargetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Deployment> getDeployments() {
 		if (deployments == null) {
 			deployments = new EObjectContainmentWithInverseEList.Resolving<Deployment>(
@@ -136,6 +137,7 @@ public abstract class DeploymentTargetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageableElement> getDeployedElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -160,6 +162,7 @@ public abstract class DeploymentTargetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageableElement getDeployedElement(String name) {
 		return getDeployedElement(name, false, null);
 	}
@@ -169,6 +172,7 @@ public abstract class DeploymentTargetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageableElement getDeployedElement(String name,
 			boolean ignoreCase, EClass eClass) {
 		deployedElementLoop : for (PackageableElement deployedElement : getDeployedElements()) {
@@ -392,6 +396,7 @@ public abstract class DeploymentTargetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Deployment createDeployment(String name) {
 		Deployment newDeployment = (Deployment) create(UMLPackage.Literals.DEPLOYMENT);
 		getDeployments().add(newDeployment);
@@ -405,6 +410,7 @@ public abstract class DeploymentTargetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Deployment getDeployment(String name) {
 		return getDeployment(name, false, false);
 	}
@@ -414,6 +420,7 @@ public abstract class DeploymentTargetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Deployment getDeployment(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		deploymentLoop : for (Deployment deployment : getDeployments()) {

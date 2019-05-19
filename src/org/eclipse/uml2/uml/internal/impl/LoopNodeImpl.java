@@ -264,6 +264,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTestedFirst() {
 		return (eFlags & IS_TESTED_FIRST_EFLAG) != 0;
 	}
@@ -273,6 +274,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsTestedFirst(boolean newIsTestedFirst) {
 		boolean oldIsTestedFirst = (eFlags & IS_TESTED_FIRST_EFLAG) != 0;
 		if (newIsTestedFirst)
@@ -290,6 +292,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExecutableNode> getBodyParts() {
 		if (bodyParts == null) {
 			bodyParts = new EObjectResolvingEList<ExecutableNode>(
@@ -303,6 +306,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExecutableNode getBodyPart(String name) {
 		return getBodyPart(name, false, null);
 	}
@@ -312,6 +316,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExecutableNode getBodyPart(String name, boolean ignoreCase,
 			EClass eClass) {
 		bodyPartLoop : for (ExecutableNode bodyPart : getBodyParts()) {
@@ -331,6 +336,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExecutableNode> getSetupParts() {
 		if (setupParts == null) {
 			setupParts = new EObjectResolvingEList<ExecutableNode>(
@@ -344,6 +350,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExecutableNode getSetupPart(String name) {
 		return getSetupPart(name, false, null);
 	}
@@ -353,6 +360,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExecutableNode getSetupPart(String name, boolean ignoreCase,
 			EClass eClass) {
 		setupPartLoop : for (ExecutableNode setupPart : getSetupParts()) {
@@ -372,6 +380,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getDecider() {
 		if (decider != null && decider.eIsProxy()) {
 			InternalEObject oldDecider = (InternalEObject) decider;
@@ -399,6 +408,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDecider(OutputPin newDecider) {
 		OutputPin oldDecider = decider;
 		decider = newDecider;
@@ -412,6 +422,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExecutableNode> getTests() {
 		if (tests == null) {
 			tests = new EObjectResolvingEList<ExecutableNode>(
@@ -425,6 +436,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExecutableNode getTest(String name) {
 		return getTest(name, false, null);
 	}
@@ -434,6 +446,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExecutableNode getTest(String name, boolean ignoreCase, EClass eClass) {
 		testLoop : for (ExecutableNode test : getTests()) {
 			if (eClass != null && !eClass.isInstance(test))
@@ -452,6 +465,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<OutputPin> getResults() {
 		if (results == null) {
 			results = new EObjectContainmentEList.Resolving<OutputPin>(
@@ -465,6 +479,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createResult(String name, Type type) {
 		OutputPin newResult = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		getResults().add(newResult);
@@ -480,6 +495,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult(String name, Type type) {
 		return getResult(name, type, false, false);
 	}
@@ -489,6 +505,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult(String name, Type type, boolean ignoreCase,
 			boolean createOnDemand) {
 		resultLoop : for (OutputPin result : getResults()) {
@@ -519,6 +536,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<OutputPin> getLoopVariables() {
 		if (loopVariables == null) {
 			loopVariables = new EObjectContainmentEList.Resolving<OutputPin>(
@@ -532,6 +550,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createLoopVariable(String name, Type type) {
 		OutputPin newLoopVariable = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		getLoopVariables().add(newLoopVariable);
@@ -547,6 +566,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getLoopVariable(String name, Type type) {
 		return getLoopVariable(name, type, false, false);
 	}
@@ -556,6 +576,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public OutputPin getLoopVariable(String name, Type type, boolean ignoreCase) {
 		return getLoopVariable(name, type, ignoreCase, false);
 	}
@@ -565,6 +586,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getLoopVariable(String name, Type type,
 			boolean ignoreCase, boolean createOnDemand) {
 		loopVariableLoop : for (OutputPin loopVariable : getLoopVariables()) {
@@ -586,6 +608,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<OutputPin> getBodyOutputs() {
 		if (bodyOutputs == null) {
 			bodyOutputs = new EObjectResolvingEList<OutputPin>(OutputPin.class,
@@ -599,6 +622,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getBodyOutput(String name, Type type) {
 		return getBodyOutput(name, type, false);
 	}
@@ -608,6 +632,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getBodyOutput(String name, Type type, boolean ignoreCase) {
 		bodyOutputLoop : for (OutputPin bodyOutput : getBodyOutputs()) {
 			if (name != null && !(ignoreCase
@@ -626,6 +651,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InputPin> getLoopVariableInputs() {
 		if (loopVariableInputs == null) {
 			loopVariableInputs = new EObjectContainmentEList.Resolving<InputPin>(
@@ -639,6 +665,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createLoopVariableInput(String name, Type type,
 			EClass eClass) {
 		InputPin newLoopVariableInput = (InputPin) create(eClass);
@@ -655,6 +682,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createLoopVariableInput(String name, Type type) {
 		return createLoopVariableInput(name, type,
 			UMLPackage.Literals.INPUT_PIN);
@@ -665,6 +693,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getLoopVariableInput(String name, Type type) {
 		return getLoopVariableInput(name, type, false, null, false);
 	}
@@ -674,6 +703,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getLoopVariableInput(String name, Type type,
 			boolean ignoreCase, EClass eClass, boolean createOnDemand) {
 		loopVariableInputLoop : for (InputPin loopVariableInput : getLoopVariableInputs()) {
@@ -706,6 +736,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInputEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LoopNodeOperations
@@ -717,6 +748,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateExecutableNodes(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LoopNodeOperations.validateExecutableNodes(this, diagnostics,
@@ -728,6 +760,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateBodyOutputPins(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LoopNodeOperations.validateBodyOutputPins(this, diagnostics,
@@ -739,6 +772,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSetupTestAndBody(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LoopNodeOperations.validateSetupTestAndBody(this, diagnostics,
@@ -750,6 +784,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMatchingOutputPins(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LoopNodeOperations.validateMatchingOutputPins(this, diagnostics,
@@ -761,6 +796,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMatchingLoopVariables(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LoopNodeOperations.validateMatchingLoopVariables(this,
@@ -772,6 +808,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMatchingResultPins(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LoopNodeOperations.validateMatchingResultPins(this, diagnostics,
@@ -783,6 +820,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateLoopVariableOutgoing(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LoopNodeOperations.validateLoopVariableOutgoing(this,
@@ -825,6 +863,7 @@ public class LoopNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateResultNoIncoming(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LoopNodeOperations.validateResultNoIncoming(this, diagnostics,

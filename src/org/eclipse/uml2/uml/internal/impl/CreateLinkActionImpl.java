@@ -128,6 +128,7 @@ public class CreateLinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateAssociationNotAbstract(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return CreateLinkActionOperations.validateAssociationNotAbstract(this,

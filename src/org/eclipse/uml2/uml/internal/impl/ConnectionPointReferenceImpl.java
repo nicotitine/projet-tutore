@@ -125,6 +125,7 @@ public class ConnectionPointReferenceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Pseudostate> getEntries() {
 		if (entries == null) {
 			entries = new EObjectResolvingEList<Pseudostate>(Pseudostate.class,
@@ -138,6 +139,7 @@ public class ConnectionPointReferenceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pseudostate getEntry(String name) {
 		return getEntry(name, false);
 	}
@@ -147,6 +149,7 @@ public class ConnectionPointReferenceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pseudostate getEntry(String name, boolean ignoreCase) {
 		entryLoop : for (Pseudostate entry : getEntries()) {
 			if (name != null && !(ignoreCase
@@ -163,6 +166,7 @@ public class ConnectionPointReferenceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Pseudostate> getExits() {
 		if (exits == null) {
 			exits = new EObjectResolvingEList<Pseudostate>(Pseudostate.class,
@@ -176,6 +180,7 @@ public class ConnectionPointReferenceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pseudostate getExit(String name) {
 		return getExit(name, false);
 	}
@@ -185,6 +190,7 @@ public class ConnectionPointReferenceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pseudostate getExit(String name, boolean ignoreCase) {
 		exitLoop : for (Pseudostate exit : getExits()) {
 			if (name != null && !(ignoreCase
@@ -201,6 +207,7 @@ public class ConnectionPointReferenceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public State getState() {
 		if (eContainerFeatureID() != UMLPackage.CONNECTION_POINT_REFERENCE__STATE)
 			return null;
@@ -235,6 +242,7 @@ public class ConnectionPointReferenceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setState(State newState) {
 		if (newState != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.CONNECTION_POINT_REFERENCE__STATE && newState != null)) {
@@ -261,6 +269,7 @@ public class ConnectionPointReferenceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateEntryPseudostates(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ConnectionPointReferenceOperations.validateEntryPseudostates(
@@ -272,6 +281,7 @@ public class ConnectionPointReferenceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateExitPseudostates(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ConnectionPointReferenceOperations.validateExitPseudostates(

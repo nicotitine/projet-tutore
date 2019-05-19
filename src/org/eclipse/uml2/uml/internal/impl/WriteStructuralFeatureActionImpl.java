@@ -151,6 +151,7 @@ public abstract class WriteStructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getValue() {
 		if (value != null && value.eIsProxy()) {
 			InternalEObject oldValue = (InternalEObject) value;
@@ -213,6 +214,7 @@ public abstract class WriteStructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(InputPin newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
@@ -240,6 +242,7 @@ public abstract class WriteStructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createValue(String name, Type type, EClass eClass) {
 		InputPin newValue = (InputPin) create(eClass);
 		setValue(newValue);
@@ -255,6 +258,7 @@ public abstract class WriteStructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createValue(String name, Type type) {
 		return createValue(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -264,6 +268,7 @@ public abstract class WriteStructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult() {
 		if (result != null && result.eIsProxy()) {
 			InternalEObject oldResult = (InternalEObject) result;
@@ -326,6 +331,7 @@ public abstract class WriteStructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResult(OutputPin newResult) {
 		if (newResult != result) {
 			NotificationChain msgs = null;
@@ -353,6 +359,7 @@ public abstract class WriteStructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createResult(String name, Type type) {
 		OutputPin newResult = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		setResult(newResult);
@@ -368,6 +375,7 @@ public abstract class WriteStructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeOfResult(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return WriteStructuralFeatureActionOperations.validateTypeOfResult(
@@ -379,6 +387,7 @@ public abstract class WriteStructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicityOfResult(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return WriteStructuralFeatureActionOperations
@@ -390,6 +399,7 @@ public abstract class WriteStructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeOfValue(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return WriteStructuralFeatureActionOperations.validateTypeOfValue(this,
@@ -401,6 +411,7 @@ public abstract class WriteStructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicityOfValue(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return WriteStructuralFeatureActionOperations

@@ -122,6 +122,7 @@ public abstract class ExecutableNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExceptionHandler> getHandlers() {
 		if (handlers == null) {
 			handlers = new EObjectContainmentWithInverseEList.Resolving<ExceptionHandler>(
@@ -137,6 +138,7 @@ public abstract class ExecutableNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExceptionHandler createHandler() {
 		ExceptionHandler newHandler = (ExceptionHandler) create(UMLPackage.Literals.EXCEPTION_HANDLER);
 		getHandlers().add(newHandler);

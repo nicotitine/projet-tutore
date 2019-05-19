@@ -171,6 +171,7 @@ public class RedefinableTemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TemplateParameter> getParameters() {
 		if (parameters == null) {
 			parameters = new SubsetSupersetEObjectResolvingEList<TemplateParameter>(
@@ -186,6 +187,7 @@ public class RedefinableTemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateableElement getTemplate() {
 		return getClassifier();
 	}
@@ -227,6 +229,7 @@ public class RedefinableTemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public void setTemplate(TemplateableElement newTemplate) {
 
 		if (newTemplate != null && !(newTemplate instanceof Classifier)) {
@@ -269,6 +272,7 @@ public class RedefinableTemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TemplateParameter> getOwnedParameters() {
 		if (ownedParameters == null) {
 			ownedParameters = new SubsetSupersetEObjectContainmentWithInverseEList.Resolving<TemplateParameter>(
@@ -285,6 +289,7 @@ public class RedefinableTemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameter createOwnedParameter(EClass eClass) {
 		TemplateParameter newOwnedParameter = (TemplateParameter) create(eClass);
 		getOwnedParameters().add(newOwnedParameter);
@@ -296,6 +301,7 @@ public class RedefinableTemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameter createOwnedParameter() {
 		return createOwnedParameter(UMLPackage.Literals.TEMPLATE_PARAMETER);
 	}
@@ -374,6 +380,7 @@ public class RedefinableTemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RedefinableTemplateSignature> getExtendedSignatures() {
 		if (extendedSignatures == null) {
 			extendedSignatures = new EObjectResolvingEList<RedefinableTemplateSignature>(
@@ -388,6 +395,7 @@ public class RedefinableTemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RedefinableTemplateSignature getExtendedSignature(String name) {
 		return getExtendedSignature(name, false);
 	}
@@ -397,6 +405,7 @@ public class RedefinableTemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RedefinableTemplateSignature getExtendedSignature(String name,
 			boolean ignoreCase) {
 		extendedSignatureLoop : for (RedefinableTemplateSignature extendedSignature : getExtendedSignatures()) {
@@ -414,6 +423,7 @@ public class RedefinableTemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TemplateParameter> getInheritedParameters() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -441,6 +451,7 @@ public class RedefinableTemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getClassifier() {
 		Classifier classifier = basicGetClassifier();
 		return classifier != null && classifier.eIsProxy()
@@ -473,6 +484,7 @@ public class RedefinableTemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOwnElements(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TemplateSignatureOperations.validateOwnElements(this,
@@ -484,6 +496,7 @@ public class RedefinableTemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateUniqueParameters(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TemplateSignatureOperations.validateUniqueParameters(this,
@@ -495,6 +508,7 @@ public class RedefinableTemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRedefinesParents(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return RedefinableTemplateSignatureOperations.validateRedefinesParents(
@@ -562,6 +576,7 @@ public class RedefinableTemplateSignatureImpl
 		return eDynamicInverseRemove(otherEnd, featureID, msgs);
 	}
 
+	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(
 			NotificationChain msgs) {
 		switch (eContainerFeatureID()) {

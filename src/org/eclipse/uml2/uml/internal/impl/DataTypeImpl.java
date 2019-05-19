@@ -209,6 +209,7 @@ public class DataTypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getOwnedAttributes() {
 		if (ownedAttributes == null) {
 			ownedAttributes = new EObjectContainmentWithInverseEList.Resolving<Property>(
@@ -223,6 +224,7 @@ public class DataTypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createOwnedAttribute(String name, Type type, EClass eClass) {
 		Property newOwnedAttribute = (Property) create(eClass);
 		getOwnedAttributes().add(newOwnedAttribute);
@@ -238,6 +240,7 @@ public class DataTypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createOwnedAttribute(String name, Type type) {
 		return createOwnedAttribute(name, type, UMLPackage.Literals.PROPERTY);
 	}
@@ -247,6 +250,7 @@ public class DataTypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getOwnedAttribute(String name, Type type) {
 		return getOwnedAttribute(name, type, false, null, false);
 	}
@@ -256,6 +260,7 @@ public class DataTypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getOwnedAttribute(String name, Type type,
 			boolean ignoreCase, EClass eClass, boolean createOnDemand) {
 		ownedAttributeLoop : for (Property ownedAttribute : getOwnedAttributes()) {
@@ -279,6 +284,7 @@ public class DataTypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Operation> getOwnedOperations() {
 		if (ownedOperations == null) {
 			ownedOperations = new EObjectContainmentWithInverseEList.Resolving<Operation>(
@@ -293,6 +299,7 @@ public class DataTypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation createOwnedOperation(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes) {
 		Operation newOwnedOperation = (Operation) create(UMLPackage.Literals.OPERATION);
@@ -325,6 +332,7 @@ public class DataTypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation getOwnedOperation(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes) {
 		return getOwnedOperation(name, ownedParameterNames,
@@ -336,6 +344,7 @@ public class DataTypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation getOwnedOperation(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes,
 			boolean ignoreCase, boolean createOnDemand) {
@@ -378,6 +387,7 @@ public class DataTypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation createOwnedOperation(String name,
 			EList<String> parameterNames, EList<Type> parameterTypes,
 			Type returnType) {
@@ -390,6 +400,7 @@ public class DataTypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createOwnedAttribute(String name, Type type, int lower,
 			int upper) {
 		return DataTypeOperations.createOwnedAttribute(this, name, type, lower,

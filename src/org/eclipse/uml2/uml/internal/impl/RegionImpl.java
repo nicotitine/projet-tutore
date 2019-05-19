@@ -164,6 +164,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RedefinableElement> getRedefinedElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -195,6 +196,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public EList<Classifier> getRedefinitionContexts() {
 		CacheAdapter cache = getCacheAdapter();
 
@@ -236,6 +238,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getRedefinitionContext(String name) {
 		return getRedefinitionContext(name, false, null);
 	}
@@ -245,6 +248,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getRedefinitionContext(String name, boolean ignoreCase,
 			EClass eClass) {
 		redefinitionContextLoop : for (Classifier redefinitionContext : getRedefinitionContexts()) {
@@ -273,6 +277,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isLeaf() {
 		return (eFlags & IS_LEAF_EFLAG) != 0;
 	}
@@ -282,6 +287,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsLeaf(boolean newIsLeaf) {
 		boolean oldIsLeaf = (eFlags & IS_LEAF_EFLAG) != 0;
 		if (newIsLeaf)
@@ -328,6 +334,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Vertex> getSubvertices() {
 		if (subvertices == null) {
 			subvertices = new EObjectContainmentWithInverseEList.Resolving<Vertex>(
@@ -342,6 +349,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Vertex createSubvertex(String name, EClass eClass) {
 		Vertex newSubvertex = (Vertex) create(eClass);
 		getSubvertices().add(newSubvertex);
@@ -355,6 +363,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Vertex getSubvertex(String name) {
 		return getSubvertex(name, false, null, false);
 	}
@@ -364,6 +373,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Vertex getSubvertex(String name, boolean ignoreCase, EClass eClass,
 			boolean createOnDemand) {
 		subvertexLoop : for (Vertex subvertex : getSubvertices()) {
@@ -385,6 +395,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Transition> getTransitions() {
 		if (transitions == null) {
 			transitions = new EObjectContainmentWithInverseEList.Resolving<Transition>(
@@ -399,6 +410,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transition createTransition(String name, EClass eClass) {
 		Transition newTransition = (Transition) create(eClass);
 		getTransitions().add(newTransition);
@@ -412,6 +424,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transition createTransition(String name) {
 		return createTransition(name, UMLPackage.Literals.TRANSITION);
 	}
@@ -421,6 +434,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transition getTransition(String name) {
 		return getTransition(name, false, null, false);
 	}
@@ -430,6 +444,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transition getTransition(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		transitionLoop : for (Transition transition : getTransitions()) {
@@ -451,6 +466,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public State getState() {
 		if (eContainerFeatureID() != UMLPackage.REGION__STATE)
 			return null;
@@ -485,6 +501,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setState(State newState) {
 		if (newState != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.REGION__STATE && newState != null)) {
@@ -510,6 +527,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Region getExtendedRegion() {
 		if (extendedRegion != null && extendedRegion.eIsProxy()) {
 			InternalEObject oldExtendedRegion = (InternalEObject) extendedRegion;
@@ -538,6 +556,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExtendedRegion(Region newExtendedRegion) {
 		Region oldExtendedRegion = extendedRegion;
 		extendedRegion = newExtendedRegion;
@@ -552,6 +571,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StateMachine getStateMachine() {
 		if (eContainerFeatureID() != UMLPackage.REGION__STATE_MACHINE)
 			return null;
@@ -586,6 +606,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStateMachine(StateMachine newStateMachine) {
 		if (newStateMachine != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.REGION__STATE_MACHINE && newStateMachine != null)) {
@@ -612,6 +633,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRedefinitionContextValid(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return RedefinableElementOperations.validateRedefinitionContextValid(
@@ -623,6 +645,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRedefinitionConsistent(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return RedefinableElementOperations.validateRedefinitionConsistent(
@@ -634,6 +657,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNonLeafRedefinition(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return RedefinableElementOperations.validateNonLeafRedefinition(this,
@@ -645,6 +669,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isRedefinitionContextValid(
 			RedefinableElement redefinedElement) {
 		return RegionOperations.isRedefinitionContextValid(this,
@@ -656,6 +681,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isConsistentWith(RedefinableElement redefiningElement) {
 		return RegionOperations.isConsistentWith(this, redefiningElement);
 	}
@@ -665,6 +691,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInitialVertex(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return RegionOperations.validateInitialVertex(this, diagnostics,
@@ -676,6 +703,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDeepHistoryVertex(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return RegionOperations.validateDeepHistoryVertex(this, diagnostics,
@@ -687,6 +715,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateShallowHistoryVertex(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return RegionOperations.validateShallowHistoryVertex(this, diagnostics,
@@ -698,6 +727,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOwned(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return RegionOperations.validateOwned(this, diagnostics, context);
@@ -708,6 +738,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier redefinitionContext() {
 		return RegionOperations.redefinitionContext(this);
 	}
@@ -717,6 +748,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StateMachine containingStateMachine() {
 		return RegionOperations.containingStateMachine(this);
 	}
@@ -726,6 +758,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean belongsToPSM() {
 		return RegionOperations.belongsToPSM(this);
 	}
@@ -1395,6 +1428,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RedefinableElement getRedefinedElement(String name) {
 		return getRedefinedElement(name, false, null);
 	}
@@ -1404,6 +1438,7 @@ public class RegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RedefinableElement getRedefinedElement(String name,
 			boolean ignoreCase, EClass eClass) {
 		redefinedElementLoop : for (RedefinableElement redefinedElement : getRedefinedElements()) {

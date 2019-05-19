@@ -111,6 +111,7 @@ public class LinkEndCreationDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isReplaceAll() {
 		return (eFlags & IS_REPLACE_ALL_EFLAG) != 0;
 	}
@@ -120,6 +121,7 @@ public class LinkEndCreationDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsReplaceAll(boolean newIsReplaceAll) {
 		boolean oldIsReplaceAll = (eFlags & IS_REPLACE_ALL_EFLAG) != 0;
 		if (newIsReplaceAll)
@@ -137,6 +139,7 @@ public class LinkEndCreationDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInsertAtPin(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LinkEndCreationDataOperations.validateInsertAtPin(this,
@@ -169,6 +172,7 @@ public class LinkEndCreationDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getInsertAt() {
 		if (insertAt != null && insertAt.eIsProxy()) {
 			InternalEObject oldInsertAt = (InternalEObject) insertAt;
@@ -197,6 +201,7 @@ public class LinkEndCreationDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInsertAt(InputPin newInsertAt) {
 		InputPin oldInsertAt = insertAt;
 		insertAt = newInsertAt;

@@ -221,6 +221,7 @@ public abstract class ObjectNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject) type;
@@ -248,6 +249,7 @@ public abstract class ObjectNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(Type newType) {
 		Type oldType = type;
 		type = newType;
@@ -288,6 +290,7 @@ public abstract class ObjectNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObjectNodeOrderingKind getOrdering() {
 		return ORDERING_EFLAG_VALUES[(eFlags & ORDERING_EFLAG) >>> ORDERING_EFLAG_OFFSET];
 	}
@@ -297,6 +300,7 @@ public abstract class ObjectNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOrdering(ObjectNodeOrderingKind newOrdering) {
 		ObjectNodeOrderingKind oldOrdering = ORDERING_EFLAG_VALUES[(eFlags & ORDERING_EFLAG) >>> ORDERING_EFLAG_OFFSET];
 		if (newOrdering == null)
@@ -313,6 +317,7 @@ public abstract class ObjectNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isControlType() {
 		return (eFlags & IS_CONTROL_TYPE_EFLAG) != 0;
 	}
@@ -322,6 +327,7 @@ public abstract class ObjectNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsControlType(boolean newIsControlType) {
 		boolean oldIsControlType = (eFlags & IS_CONTROL_TYPE_EFLAG) != 0;
 		if (newIsControlType)
@@ -339,6 +345,7 @@ public abstract class ObjectNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getUpperBound() {
 		if (upperBound != null && upperBound.eIsProxy()) {
 			InternalEObject oldUpperBound = (InternalEObject) upperBound;
@@ -399,6 +406,7 @@ public abstract class ObjectNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUpperBound(ValueSpecification newUpperBound) {
 		if (newUpperBound != upperBound) {
 			NotificationChain msgs = null;
@@ -424,6 +432,7 @@ public abstract class ObjectNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createUpperBound(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newUpperBound = (ValueSpecification) create(eClass);
@@ -440,6 +449,7 @@ public abstract class ObjectNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<State> getInStates() {
 		if (inStates == null) {
 			inStates = new EObjectResolvingEList<State>(State.class, this,
@@ -453,6 +463,7 @@ public abstract class ObjectNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public State getInState(String name) {
 		return getInState(name, false, null);
 	}
@@ -462,6 +473,7 @@ public abstract class ObjectNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public State getInState(String name, boolean ignoreCase, EClass eClass) {
 		inStateLoop : for (State inState : getInStates()) {
 			if (eClass != null && !eClass.isInstance(inState))
@@ -480,6 +492,7 @@ public abstract class ObjectNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getSelection() {
 		if (selection != null && selection.eIsProxy()) {
 			InternalEObject oldSelection = (InternalEObject) selection;
@@ -508,6 +521,7 @@ public abstract class ObjectNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSelection(Behavior newSelection) {
 		Behavior oldSelection = selection;
 		selection = newSelection;
@@ -521,6 +535,7 @@ public abstract class ObjectNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateObjectFlowEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ObjectNodeOperations.validateObjectFlowEdges(this, diagnostics,
@@ -532,6 +547,7 @@ public abstract class ObjectNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSelectionBehavior(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ObjectNodeOperations.validateSelectionBehavior(this,
@@ -543,6 +559,7 @@ public abstract class ObjectNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInputOutputParameter(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ObjectNodeOperations.validateInputOutputParameter(this,

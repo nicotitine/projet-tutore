@@ -102,6 +102,7 @@ public class BroadcastSignalActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Signal getSignal() {
 		if (signal != null && signal.eIsProxy()) {
 			InternalEObject oldSignal = (InternalEObject) signal;
@@ -130,6 +131,7 @@ public class BroadcastSignalActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSignal(Signal newSignal) {
 		Signal oldSignal = signal;
 		signal = newSignal;
@@ -143,6 +145,7 @@ public class BroadcastSignalActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNumberOfArguments(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return BroadcastSignalActionOperations.validateNumberOfArguments(this,
@@ -154,6 +157,7 @@ public class BroadcastSignalActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeOrderingMultiplicity(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return BroadcastSignalActionOperations
@@ -165,6 +169,7 @@ public class BroadcastSignalActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoOnport(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return BroadcastSignalActionOperations.validateNoOnport(this,

@@ -68,6 +68,7 @@ public class OutputPinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateIncomingEdgesStructuredOnly(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return OutputPinOperations.validateIncomingEdgesStructuredOnly(this,

@@ -165,6 +165,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameter getTemplateParameter() {
 		if (templateParameter != null && templateParameter.eIsProxy()) {
 			InternalEObject oldTemplateParameter = (InternalEObject) templateParameter;
@@ -223,6 +224,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTemplateParameter(TemplateParameter newTemplateParameter) {
 		if (newTemplateParameter != templateParameter) {
 			NotificationChain msgs = null;
@@ -248,6 +250,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameter getOwningTemplateParameter() {
 		if (eContainerFeatureID() != UMLPackage.INSTANCE_SPECIFICATION__OWNING_TEMPLATE_PARAMETER)
 			return null;
@@ -290,6 +293,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwningTemplateParameter(
 			TemplateParameter newOwningTemplateParameter) {
 		if (newOwningTemplateParameter != eInternalContainer()
@@ -349,6 +353,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetVisibility() {
 		return (eFlags & VISIBILITY_EFLAG) != VISIBILITY_EFLAG_DEFAULT;
 	}
@@ -386,6 +391,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Classifier> getClassifiers() {
 		if (classifiers == null) {
 			classifiers = new EObjectResolvingEList<Classifier>(
@@ -400,6 +406,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getClassifier(String name) {
 		return getClassifier(name, false, null);
 	}
@@ -409,6 +416,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getClassifier(String name, boolean ignoreCase,
 			EClass eClass) {
 		classifierLoop : for (Classifier classifier : getClassifiers()) {
@@ -428,6 +436,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getSpecification() {
 		if (specification != null && specification.eIsProxy()) {
 			InternalEObject oldSpecification = (InternalEObject) specification;
@@ -491,6 +500,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSpecification(ValueSpecification newSpecification) {
 		if (newSpecification != specification) {
 			NotificationChain msgs = null;
@@ -518,6 +528,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createSpecification(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newSpecification = (ValueSpecification) create(eClass);
@@ -534,6 +545,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Slot> getSlots() {
 		if (slots == null) {
 			slots = new EObjectContainmentWithInverseEList.Resolving<Slot>(
@@ -548,6 +560,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Slot createSlot() {
 		Slot newSlot = (Slot) create(UMLPackage.Literals.SLOT);
 		getSlots().add(newSlot);
@@ -559,6 +572,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isCompatibleWith(ParameterableElement p) {
 		return ParameterableElementOperations.isCompatibleWith(this, p);
 	}
@@ -568,6 +582,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTemplateParameter() {
 		return ParameterableElementOperations.isTemplateParameter(this);
 	}
@@ -577,6 +592,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNamespaceNeedsVisibility(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return PackageableElementOperations.validateNamespaceNeedsVisibility(
@@ -588,6 +604,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDefiningFeature(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InstanceSpecificationOperations.validateDefiningFeature(this,
@@ -599,6 +616,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateStructuralFeature(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InstanceSpecificationOperations.validateStructuralFeature(this,
@@ -610,6 +628,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDeploymentTarget(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InstanceSpecificationOperations.validateDeploymentTarget(this,
@@ -621,6 +640,7 @@ public class InstanceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDeploymentArtifact(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InstanceSpecificationOperations.validateDeploymentArtifact(this,

@@ -66,6 +66,7 @@ public class PartDecompositionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validatePartsOfInternalStructures(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return PartDecompositionOperations.validatePartsOfInternalStructures(
@@ -77,6 +78,7 @@ public class PartDecompositionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateAssume(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PartDecompositionOperations.validateAssume(this, diagnostics,
@@ -88,6 +90,7 @@ public class PartDecompositionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateCommutativityOfDecomposition(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return PartDecompositionOperations

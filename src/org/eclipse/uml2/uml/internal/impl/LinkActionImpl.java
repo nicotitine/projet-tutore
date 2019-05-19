@@ -192,6 +192,7 @@ public abstract class LinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<LinkEndData> getEndData() {
 		if (endData == null) {
 			endData = new EObjectContainmentEList.Resolving<LinkEndData>(
@@ -205,6 +206,7 @@ public abstract class LinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LinkEndData createEndData(EClass eClass) {
 		LinkEndData newEndData = (LinkEndData) create(eClass);
 		getEndData().add(newEndData);
@@ -216,6 +218,7 @@ public abstract class LinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public LinkEndData createEndData() {
 		return createEndData(UMLPackage.Literals.LINK_END_DATA);
 	}
@@ -225,6 +228,7 @@ public abstract class LinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InputPin> getInputValues() {
 		if (inputValues == null) {
 			inputValues = new EObjectContainmentEList.Resolving<InputPin>(
@@ -238,6 +242,7 @@ public abstract class LinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createInputValue(String name, Type type, EClass eClass) {
 		InputPin newInputValue = (InputPin) create(eClass);
 		getInputValues().add(newInputValue);
@@ -253,6 +258,7 @@ public abstract class LinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createInputValue(String name, Type type) {
 		return createInputValue(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -262,6 +268,7 @@ public abstract class LinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getInputValue(String name, Type type) {
 		return getInputValue(name, type, false, null, false);
 	}
@@ -271,6 +278,7 @@ public abstract class LinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getInputValue(String name, Type type, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		inputValueLoop : for (InputPin inputValue : getInputValues()) {
@@ -294,6 +302,7 @@ public abstract class LinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSameAssociation(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LinkActionOperations.validateSameAssociation(this, diagnostics,
@@ -305,6 +314,7 @@ public abstract class LinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNotStatic(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LinkActionOperations.validateNotStatic(this, diagnostics,
@@ -316,6 +326,7 @@ public abstract class LinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSamePins(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LinkActionOperations
@@ -327,6 +338,7 @@ public abstract class LinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Association association() {
 		return LinkActionOperations.association(this);
 	}

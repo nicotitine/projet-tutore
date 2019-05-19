@@ -103,6 +103,7 @@ public abstract class VertexImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Transition> getOutgoings() {
 		return VertexOperations.getOutgoings(this);
 	}
@@ -112,6 +113,7 @@ public abstract class VertexImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transition getOutgoing(String name) {
 		return getOutgoing(name, false, null);
 	}
@@ -121,6 +123,7 @@ public abstract class VertexImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transition getOutgoing(String name, boolean ignoreCase, EClass eClass) {
 		outgoingLoop : for (Transition outgoing : getOutgoings()) {
 			if (eClass != null && !eClass.isInstance(outgoing))
@@ -139,6 +142,7 @@ public abstract class VertexImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Transition> getIncomings() {
 		return VertexOperations.getIncomings(this);
 	}
@@ -148,6 +152,7 @@ public abstract class VertexImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transition getIncoming(String name) {
 		return getIncoming(name, false, null);
 	}
@@ -157,6 +162,7 @@ public abstract class VertexImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transition getIncoming(String name, boolean ignoreCase, EClass eClass) {
 		incomingLoop : for (Transition incoming : getIncomings()) {
 			if (eClass != null && !eClass.isInstance(incoming))
@@ -175,6 +181,7 @@ public abstract class VertexImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Region getContainer() {
 		if (eContainerFeatureID() != UMLPackage.VERTEX__CONTAINER)
 			return null;
@@ -209,6 +216,7 @@ public abstract class VertexImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContainer(Region newContainer) {
 		if (newContainer != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.VERTEX__CONTAINER && newContainer != null)) {
@@ -234,6 +242,7 @@ public abstract class VertexImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StateMachine containingStateMachine() {
 		return VertexOperations.containingStateMachine(this);
 	}
@@ -243,6 +252,7 @@ public abstract class VertexImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isContainedInState(State s) {
 		return VertexOperations.isContainedInState(this, s);
 	}
@@ -252,6 +262,7 @@ public abstract class VertexImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isContainedInRegion(Region r) {
 		return VertexOperations.isContainedInRegion(this, r);
 	}

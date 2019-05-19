@@ -102,6 +102,7 @@ public class DurationConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Boolean> getFirstEvents() {
 		if (firstEvents == null) {
 			firstEvents = new EDataTypeUniqueEList<Boolean>(Boolean.class,
@@ -219,6 +220,7 @@ public class DurationConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createSpecification(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newSpecification = (ValueSpecification) create(eClass);
@@ -245,6 +247,7 @@ public class DurationConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateFirstEventMultiplicity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return DurationConstraintOperations.validateFirstEventMultiplicity(
@@ -256,6 +259,7 @@ public class DurationConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateHasOneOrTwoConstrainedElements(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return DurationConstraintOperations

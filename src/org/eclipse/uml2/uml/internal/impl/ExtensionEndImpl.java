@@ -178,6 +178,7 @@ public class ExtensionEndImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ExtensionEndOperations.validateMultiplicity(this, diagnostics,
@@ -189,6 +190,7 @@ public class ExtensionEndImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateAggregation(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ExtensionEndOperations.validateAggregation(this, diagnostics,

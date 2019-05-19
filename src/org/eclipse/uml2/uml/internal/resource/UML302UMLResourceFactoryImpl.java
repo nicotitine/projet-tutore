@@ -52,7 +52,7 @@ public class UML302UMLResourceFactoryImpl
 	@Override
 	public Resource createResourceGen(URI uri) {
 		UML302UMLResource result = new UML302UMLResourceImpl(uri);
-		result.setEncoding(UML302UMLResource.DEFAULT_ENCODING);
+		result.setEncoding(UMLResource.DEFAULT_ENCODING);
 		return result;
 	}
 

@@ -153,6 +153,7 @@ public class PseudostateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PseudostateKind getKind() {
 		return KIND_EFLAG_VALUES[(eFlags & KIND_EFLAG) >>> KIND_EFLAG_OFFSET];
 	}
@@ -162,6 +163,7 @@ public class PseudostateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setKind(PseudostateKind newKind) {
 		PseudostateKind oldKind = KIND_EFLAG_VALUES[(eFlags & KIND_EFLAG) >>> KIND_EFLAG_OFFSET];
 		if (newKind == null)
@@ -177,6 +179,7 @@ public class PseudostateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StateMachine getStateMachine() {
 		if (eContainerFeatureID() != UMLPackage.PSEUDOSTATE__STATE_MACHINE)
 			return null;
@@ -211,6 +214,7 @@ public class PseudostateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStateMachine(StateMachine newStateMachine) {
 		if (newStateMachine != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.PSEUDOSTATE__STATE_MACHINE && newStateMachine != null)) {
@@ -238,6 +242,7 @@ public class PseudostateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public State getState() {
 		if (eContainerFeatureID() != UMLPackage.PSEUDOSTATE__STATE)
 			return null;
@@ -272,6 +277,7 @@ public class PseudostateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setState(State newState) {
 		if (newState != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.PSEUDOSTATE__STATE && newState != null)) {
@@ -297,6 +303,7 @@ public class PseudostateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInitialVertex(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PseudostateOperations.validateInitialVertex(this, diagnostics,
@@ -308,6 +315,7 @@ public class PseudostateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateHistoryVertices(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PseudostateOperations.validateHistoryVertices(this, diagnostics,
@@ -319,6 +327,7 @@ public class PseudostateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateJoinVertex(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PseudostateOperations.validateJoinVertex(this, diagnostics,
@@ -330,6 +339,7 @@ public class PseudostateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTransitionsIncoming(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PseudostateOperations.validateTransitionsIncoming(this,
@@ -341,6 +351,7 @@ public class PseudostateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateForkVertex(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PseudostateOperations.validateForkVertex(this, diagnostics,
@@ -352,6 +363,7 @@ public class PseudostateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTransitionsOutgoing(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PseudostateOperations.validateTransitionsOutgoing(this,
@@ -363,6 +375,7 @@ public class PseudostateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateJunctionVertex(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PseudostateOperations.validateJunctionVertex(this, diagnostics,
@@ -374,6 +387,7 @@ public class PseudostateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateChoiceVertex(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PseudostateOperations.validateChoiceVertex(this, diagnostics,
@@ -385,6 +399,7 @@ public class PseudostateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOutgoingFromInitial(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PseudostateOperations.validateOutgoingFromInitial(this,

@@ -136,6 +136,7 @@ public class ReadSelfActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult() {
 		if (result != null && result.eIsProxy()) {
 			InternalEObject oldResult = (InternalEObject) result;
@@ -194,6 +195,7 @@ public class ReadSelfActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResult(OutputPin newResult) {
 		if (newResult != result) {
 			NotificationChain msgs = null;
@@ -218,6 +220,7 @@ public class ReadSelfActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createResult(String name, Type type) {
 		OutputPin newResult = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		setResult(newResult);
@@ -233,6 +236,7 @@ public class ReadSelfActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateContained(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadSelfActionOperations.validateContained(this, diagnostics,
@@ -244,6 +248,7 @@ public class ReadSelfActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNotStatic(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadSelfActionOperations.validateNotStatic(this, diagnostics,
@@ -255,6 +260,7 @@ public class ReadSelfActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateType(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadSelfActionOperations
@@ -266,6 +272,7 @@ public class ReadSelfActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadSelfActionOperations.validateMultiplicity(this, diagnostics,

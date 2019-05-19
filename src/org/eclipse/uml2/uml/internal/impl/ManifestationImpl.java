@@ -114,6 +114,7 @@ public class ManifestationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageableElement getUtilizedElement() {
 		if (utilizedElement != null && utilizedElement.eIsProxy()) {
 			InternalEObject oldUtilizedElement = (InternalEObject) utilizedElement;
@@ -142,6 +143,7 @@ public class ManifestationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUtilizedElement(PackageableElement newUtilizedElement) {
 		PackageableElement oldUtilizedElement = utilizedElement;
 		utilizedElement = newUtilizedElement;

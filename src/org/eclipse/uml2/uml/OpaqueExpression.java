@@ -64,6 +64,7 @@ public interface OpaqueExpression
 	 *        extendedMetaData="kind='element'"
 	 * @generated
 	 */
+	@Override
 	EList<String> getBodies();
 
 	/**
@@ -103,6 +104,7 @@ public interface OpaqueExpression
 	 * @model unsettable="true" dataType="org.eclipse.uml2.types.String"
 	 * @generated
 	 */
+	@Override
 	EList<String> getLanguages();
 
 	/**

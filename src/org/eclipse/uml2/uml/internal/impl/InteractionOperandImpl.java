@@ -179,6 +179,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Lifeline> getCovereds() {
 		if (covereds == null) {
 			covereds = new EObjectWithInverseResolvingEList.ManyInverse<Lifeline>(
@@ -193,6 +194,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Lifeline getCovered(String name) {
 		return getCovered(name, false);
 	}
@@ -202,6 +204,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Lifeline getCovered(String name, boolean ignoreCase) {
 		coveredLoop : for (Lifeline covered : getCovereds()) {
 			if (name != null && !(ignoreCase
@@ -218,6 +221,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<GeneralOrdering> getGeneralOrderings() {
 		if (generalOrderings == null) {
 			generalOrderings = new EObjectContainmentEList.Resolving<GeneralOrdering>(
@@ -232,6 +236,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralOrdering createGeneralOrdering(String name) {
 		GeneralOrdering newGeneralOrdering = (GeneralOrdering) create(UMLPackage.Literals.GENERAL_ORDERING);
 		getGeneralOrderings().add(newGeneralOrdering);
@@ -245,6 +250,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralOrdering getGeneralOrdering(String name) {
 		return getGeneralOrdering(name, false, false);
 	}
@@ -254,6 +260,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralOrdering getGeneralOrdering(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		generalOrderingLoop : for (GeneralOrdering generalOrdering : getGeneralOrderings()) {
@@ -273,6 +280,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interaction getEnclosingInteraction() {
 		if (eContainerFeatureID() != UMLPackage.INTERACTION_OPERAND__ENCLOSING_INTERACTION)
 			return null;
@@ -307,6 +315,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnclosingInteraction(Interaction newEnclosingInteraction) {
 		if (newEnclosingInteraction != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.INTERACTION_OPERAND__ENCLOSING_INTERACTION && newEnclosingInteraction != null)) {
@@ -334,6 +343,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionOperand getEnclosingOperand() {
 		if (eContainerFeatureID() != UMLPackage.INTERACTION_OPERAND__ENCLOSING_OPERAND)
 			return null;
@@ -368,6 +378,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnclosingOperand(InteractionOperand newEnclosingOperand) {
 		if (newEnclosingOperand != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.INTERACTION_OPERAND__ENCLOSING_OPERAND && newEnclosingOperand != null)) {
@@ -423,6 +434,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionConstraint getGuard() {
 		if (guard != null && guard.eIsProxy()) {
 			InternalEObject oldGuard = (InternalEObject) guard;
@@ -481,6 +493,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGuard(InteractionConstraint newGuard) {
 		if (newGuard != guard) {
 			NotificationChain msgs = null;
@@ -505,6 +518,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionConstraint createGuard(String name) {
 		InteractionConstraint newGuard = (InteractionConstraint) create(UMLPackage.Literals.INTERACTION_CONSTRAINT);
 		setGuard(newGuard);
@@ -518,6 +532,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InteractionFragment> getFragments() {
 		if (fragments == null) {
 			fragments = new EObjectContainmentWithInverseEList.Resolving<InteractionFragment>(
@@ -533,6 +548,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionFragment createFragment(String name, EClass eClass) {
 		InteractionFragment newFragment = (InteractionFragment) create(eClass);
 		getFragments().add(newFragment);
@@ -546,6 +562,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionFragment getFragment(String name) {
 		return getFragment(name, false, null, false);
 	}
@@ -555,6 +572,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionFragment getFragment(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		fragmentLoop : for (InteractionFragment fragment : getFragments()) {
@@ -576,6 +594,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateGuardDirectlyPrior(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InteractionOperandOperations.validateGuardDirectlyPrior(this,
@@ -587,6 +606,7 @@ public class InteractionOperandImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateGuardContainReferences(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InteractionOperandOperations.validateGuardContainReferences(

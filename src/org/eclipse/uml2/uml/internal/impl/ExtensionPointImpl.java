@@ -114,6 +114,7 @@ public class ExtensionPointImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UseCase getUseCase() {
 		if (eContainerFeatureID() != UMLPackage.EXTENSION_POINT__USE_CASE)
 			return null;
@@ -148,6 +149,7 @@ public class ExtensionPointImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUseCase(UseCase newUseCase) {
 		if (newUseCase != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.EXTENSION_POINT__USE_CASE && newUseCase != null)) {
@@ -173,6 +175,7 @@ public class ExtensionPointImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMustHaveName(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ExtensionPointOperations.validateMustHaveName(this, diagnostics,

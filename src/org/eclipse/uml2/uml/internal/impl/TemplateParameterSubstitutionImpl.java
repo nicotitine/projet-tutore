@@ -158,6 +158,7 @@ public class TemplateParameterSubstitutionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameter getFormal() {
 		if (formal != null && formal.eIsProxy()) {
 			InternalEObject oldFormal = (InternalEObject) formal;
@@ -186,6 +187,7 @@ public class TemplateParameterSubstitutionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFormal(TemplateParameter newFormal) {
 		TemplateParameter oldFormal = formal;
 		formal = newFormal;
@@ -200,6 +202,7 @@ public class TemplateParameterSubstitutionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterableElement getOwnedActual() {
 		if (ownedActual != null && ownedActual.eIsProxy()) {
 			InternalEObject oldOwnedActual = (InternalEObject) ownedActual;
@@ -277,6 +280,7 @@ public class TemplateParameterSubstitutionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwnedActual(ParameterableElement newOwnedActual) {
 		if (newOwnedActual != ownedActual) {
 			NotificationChain msgs = null;
@@ -308,6 +312,7 @@ public class TemplateParameterSubstitutionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterableElement createOwnedActual(EClass eClass) {
 		ParameterableElement newOwnedActual = (ParameterableElement) create(eClass);
 		setOwnedActual(newOwnedActual);
@@ -319,6 +324,7 @@ public class TemplateParameterSubstitutionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateBinding getTemplateBinding() {
 		if (eContainerFeatureID() != UMLPackage.TEMPLATE_PARAMETER_SUBSTITUTION__TEMPLATE_BINDING)
 			return null;
@@ -353,6 +359,7 @@ public class TemplateParameterSubstitutionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTemplateBinding(TemplateBinding newTemplateBinding) {
 		if (newTemplateBinding != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.TEMPLATE_PARAMETER_SUBSTITUTION__TEMPLATE_BINDING && newTemplateBinding != null)) {
@@ -380,6 +387,7 @@ public class TemplateParameterSubstitutionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMustBeCompatible(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TemplateParameterSubstitutionOperations
@@ -733,6 +741,7 @@ public class TemplateParameterSubstitutionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterableElement getActual() {
 		if (actual != null && actual.eIsProxy()) {
 			InternalEObject oldActual = (InternalEObject) actual;
@@ -761,6 +770,7 @@ public class TemplateParameterSubstitutionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActual(ParameterableElement newActual) {
 		ParameterableElement oldActual = actual;
 		actual = newActual;

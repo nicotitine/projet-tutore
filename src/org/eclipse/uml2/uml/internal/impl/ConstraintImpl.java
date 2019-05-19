@@ -147,6 +147,7 @@ public class ConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> getConstrainedElements() {
 		if (constrainedElements == null) {
 			constrainedElements = new EObjectResolvingEList<Element>(
@@ -160,6 +161,7 @@ public class ConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getSpecification() {
 		if (specification != null && specification.eIsProxy()) {
 			InternalEObject oldSpecification = (InternalEObject) specification;
@@ -220,6 +222,7 @@ public class ConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSpecification(ValueSpecification newSpecification) {
 		if (newSpecification != specification) {
 			NotificationChain msgs = null;
@@ -245,6 +248,7 @@ public class ConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createSpecification(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newSpecification = (ValueSpecification) create(eClass);
@@ -261,6 +265,7 @@ public class ConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Namespace getContext() {
 		if (eContainerFeatureID() != UMLPackage.CONSTRAINT__CONTEXT)
 			return null;
@@ -295,6 +300,7 @@ public class ConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContext(Namespace newContext) {
 		if (newContext != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.CONSTRAINT__CONTEXT && newContext != null)) {
@@ -320,6 +326,7 @@ public class ConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNotApplyToSelf(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ConstraintOperations.validateNotApplyToSelf(this, diagnostics,
@@ -331,6 +338,7 @@ public class ConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateBooleanValue(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ConstraintOperations.validateBooleanValue(this, diagnostics,
@@ -342,6 +350,7 @@ public class ConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoSideEffects(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ConstraintOperations.validateNoSideEffects(this, diagnostics,

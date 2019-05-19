@@ -36,7 +36,7 @@ import org.eclipse.uml2.uml.State;
 import org.eclipse.uml2.uml.StateMachine;
 import org.eclipse.uml2.uml.Transition;
 import org.eclipse.uml2.uml.UMLFactory;
-import org.eclipse.uml2.uml.TransitionKind;
+import org.eclipse.uml2.uml.Vertex;
 import org.eclipse.uml2.uml.internal.impl.UMLFactoryImpl;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -45,7 +45,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 public class SCXMLInterpretor {
-    private Set<State> states = new HashSet<State>();
+    private Set<Vertex> states = new HashSet<Vertex>();
     private List<String> nameOfInitialStates = new ArrayList<String>();
     private XPath path;
     private UMLFactory umlFactory;
@@ -54,12 +54,12 @@ public class SCXMLInterpretor {
     private Region mainRegion;
     private Element root;
 
-    public State getStateByName(String name) {
-    	Iterator<State> it = this.states.iterator();
+    public Vertex getStateByName(String name) {
+    	Iterator<Vertex> it = this.states.iterator();
     	while(it.hasNext()) {
-    		State state = (State) it.next();
-    		if(state.getName().equals(name)) {
-    			return state;
+    		Vertex vt = it.next();
+    		if(vt.getName() != null && vt.getName().equals(name)) {
+    			return vt;
     		}
     	}
     	return null;
@@ -71,8 +71,7 @@ public class SCXMLInterpretor {
 
     		if(element.getTagName().equals("scxml")) {
     			this.nameOfInitialStates.add(element.getAttribute("initial"));
-    		}
-    		else if(element.getTagName().equals("state")){
+    		} else if(element.getTagName().equals("state")){
     			if(!element.getAttribute("initial").equals("")) {
     				this.nameOfInitialStates.add(element.getAttribute("initial"));
     			}
@@ -109,21 +108,23 @@ public class SCXMLInterpretor {
 	        this.model = umlFactory.createModel();
 	        this.stateMachine = umlFactory.createStateMachine();
 	        this.mainRegion = umlFactory.createRegion();
+	        this.mainRegion.setName("Main");
 	        
 	        //Get Initial States Names
 	        this.getInitialStates(this.root, this.mainRegion);
+	        this.createStates();
 
-	        // Create all states
-	        this.createStates(this.root, this.mainRegion);
+	        // Create the body of the main container
+	        System.out.println("Generating body...");
+	        this.generateBody(this.root, this.mainRegion);
+	        System.out.println("Generation of body has successfully ended.\n");
 
 	        this.stateMachine.getRegions().add(this.mainRegion);
 	        this.model.getPackagedElements().add(this.stateMachine);
 
-	        // Create all transitions
-	        this.createTransitions(this.mainRegion);
 	        
 	        System.out.println("Starting writing to " + output + "...");
-	        if(saveXMI((EObject) this.model, output)) {
+	        if(saveXMI(this.model, output)) {
 	        	System.out.println("Successfully exported to .xmi (Saved to " + output + ") !");
 	        }
 
@@ -138,7 +139,7 @@ public class SCXMLInterpretor {
 			URI uriUri = URI.createURI(uri);
 			Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put("xmi", new XMIResourceFactoryImpl());
 			resource = (new ResourceSetImpl()).createResource(uriUri);
-			resource.getContents().add((EObject)root);
+			resource.getContents().add(root);
 			resource.save(null);
 			return true;
 		} catch (Exception e) {
@@ -146,112 +147,83 @@ public class SCXMLInterpretor {
 			return false;
 		}
 	}
-
-    public void createTransitions(Region umlRegion) throws XPathExpressionException{
-
-    	String expression = "//transition";
+    
+    /**
+     * 
+     * Populate the states Set with all the states of the scxml file
+     */
+    public void createStates() throws XPathExpressionException {
+    	
+    	System.out.println("Generating all states...");
+    	String expression = "//state | //parallel";
     	NodeList list = (NodeList)this.path.evaluate(expression, this.root, XPathConstants.NODESET);
-
     	for(int i = 0; i < list.getLength(); i++) {
-
     		if(list.item(i) instanceof Element) {
     			Element el = (Element)list.item(i);
-    			Transition tr = this.umlFactory.createTransition();
-
-    			// Target attribute
-    			String target = el.getAttribute("target");
-    			if(!target.equals("")) {
-    				tr.setTarget(this.getStateByName(target));
-    			} else {
-    				target = el.getParentNode().getAttributes().getNamedItem("id").getNodeValue();
-    				tr.setTarget(this.getStateByName(target));
-    				tr.setKind(TransitionKind.INTERNAL_LITERAL);
-    			}
-
-    			// Source attribute
-    			String source = el.getAttribute("source");
-    			if(!source.equals("")) {
-    				tr.setSource(this.getStateByName(source));
-    			} else {
-    				source = el.getParentNode().getAttributes().getNamedItem("id").getNodeValue();
-    				tr.setSource(this.getStateByName(source));
-    			}
+    			Vertex state;
     			
-    			// Event attribute
-    			String event = el.getAttribute("event");
-    			if(!event.equals("")) {
-    				tr.createTrigger(event);
+    			System.out.println("\tGenerating " + el.getAttribute("id"));
+    			
+    			//Initial state
+    			if(this.nameOfInitialStates.contains(el.getAttribute("id"))) {
+    				state = this.umlFactory.createPseudostate();
+    			} else {
+    				state = this.umlFactory.createState();
     			}
 
-    			umlRegion.getTransitions().add(tr);
+    			// Name attribute
+    			String name = el.getAttribute("id");
+    			if(!name.equals("")) {
+    				state.setName(name);
+    			}
+    			this.states.add(state);
     		}
     	}
+    	System.out.println("Generation of all states has successfully ended.\n");
     }
 
-    public void createStates(Node n, Region mainRegion){
-    	Boolean isInitial = false;
+
+
+    public void generateBody(Node n, Region mainRegion){
     	if(n instanceof Element){
     		Element element = (Element)n;
-    		if(element.getTagName().equals("state") || element.getTagName().equals("parallel")) {
-    			
-    			//Check if this element is an initial state
-    			for(int i = 0; i < this.nameOfInitialStates.size(); i++) {
-    				if(element.getAttribute("id").equals(this.nameOfInitialStates.get(i))) {
-    					isInitial = true;
-    				}
-				}
-    			
-    			if(isInitial) {
-    				Pseudostate newPseudoState = umlFactory.createPseudostate();
-    				newPseudoState.setName(element.getAttribute("id"));
-    				newPseudoState.setContainer(mainRegion);
-
-            		// Look if there is any child
-            		int nbChild = n.getChildNodes().getLength();
-            		NodeList list = n.getChildNodes();
-            		if(nbChild > 0) {
-            			Region localRegion = this.umlFactory.createRegion();
-            			localRegion.createSubvertex(newPseudoState.getName(), newPseudoState.eClass());
-            			//How to add pseudoState into a region ???
-            			//localRegion.setState(newState);
-            			for(int i = 0; i < nbChild; i++){
-            				Node n2 = list.item(i);
-            				if (n2 instanceof Element){
-            					createStates(n2, localRegion);
-            				}
-            			}
-            		}
+    		if(element.getTagName().equals("state") || element.getTagName().equals("parallel")) {	
+    			State newState = null;
+    			Pseudostate newPseudostate = null;
+    			Vertex resultState = this.getStateByName(element.getAttribute("id"));
+    			if(resultState instanceof State) {
+    				newState = (State)resultState;
+    				System.out.println("\tGenerating state " + element.getAttribute("id"));
+    			} else if(resultState instanceof Pseudostate) {
+    				System.out.println("\tGenerating initial state " + element.getAttribute("id"));
+    				newPseudostate = (Pseudostate)resultState;
     			}
-    			else {
-    				State newState = umlFactory.createState();
-            		newState.setName(element.getAttribute("id"));
-            		newState.setContainer(mainRegion);
-            		this.states.add(newState);
+            	this.getStateByName(element.getAttribute("id")).setContainer(mainRegion);
 
-            		// Look if there is any child
-            		int nbChild = n.getChildNodes().getLength();
-            		NodeList list = n.getChildNodes();
-            		if(nbChild > 0) {
-            			Region localRegion = this.umlFactory.createRegion();
-            			localRegion.setState(newState);
-            			for(int i = 0; i < nbChild; i++){
-            				Node n2 = list.item(i);
-            				if (n2 instanceof Element){
-            					createStates(n2, localRegion);
-            				}
+            	// Look if there is any child
+            	int nbChild = n.getChildNodes().getLength();
+            	NodeList list = n.getChildNodes();
+            	if(nbChild > 0) {
+            		Region localRegion = this.umlFactory.createRegion();
+            		if(resultState instanceof State) {
+        				localRegion.setState(newState);
+        			} else if(resultState instanceof Pseudostate) {
+        				localRegion.setState(newPseudostate.getState());
+        			}
+            		for(int i = 0; i < nbChild; i++){
+            			Node n2 = list.item(i);
+            			if (n2 instanceof Element){
+            				generateBody(n2, localRegion);
             			}
-            		}
+            		}	
     			}
-
-    			
     		} else if(element.getTagName().equals("scxml")) {
-    			//String idInitialState = element.getAttribute("initial");
     			NodeList list = n.getChildNodes();
     			if(list.getLength() > 0) {
     				for(int i = 0; i < list.getLength(); i++){
     					Node n2 = list.item(i);
     					if (n2 instanceof Element){
-    						createStates(n2, mainRegion);
+    						generateBody(n2, mainRegion);
     					}
     				}
     			}
@@ -259,13 +231,49 @@ public class SCXMLInterpretor {
     			FinalState finalState = this.umlFactory.createFinalState();
     			finalState.setName(element.getAttribute("id"));
     			finalState.setContainer(mainRegion);
-    			
+    			System.out.println("\tGenerating final state " + element.getAttribute("id"));
     			NodeList list = n.getChildNodes();
     			if(list.getLength() > 0 ) {
     				for(int i = 0; i < list.getLength(); i++) {
     					Node n2 = list.item(i);
     					if(n2 instanceof Element) {
-    						createStates(n2, mainRegion);
+    						generateBody(n2, mainRegion);
+    					}
+    				}
+    			}
+    		} else if(element.getTagName().equals("transition")) {
+    			Transition tr = this.umlFactory.createTransition();
+    			tr.setContainer(mainRegion);
+    			
+    			tr.setName(element.getAttribute("event"));
+    			tr.createTrigger(element.getAttribute("event"));
+    			    			    			
+    			// Attribute source
+    			String source = element.getAttribute("source");
+    			if(!source.equals("")) {
+    				tr.setSource(this.getStateByName(source));
+    			} else {
+    				source = element.getParentNode().getAttributes().getNamedItem("id").getNodeValue();
+    				tr.setSource(this.getStateByName(source));
+    			}
+    			
+    			// Attribute target
+    			String target = element.getAttribute("target");
+    			if(!target.equals("")) {
+    				tr.setTarget(this.getStateByName(target));
+    			} else {
+    				target = element.getParentNode().getAttributes().getNamedItem("id").getNodeValue();
+    				tr.setTarget(this.getStateByName(target));
+    			}
+    			
+    			System.out.println("\tGenerating transition from " + source + " to " + target);
+    			
+    			NodeList list = n.getChildNodes();
+    			if(list.getLength() > 0) {
+    				for(int i = 0; i < list.getLength(); i++) {
+    					Node n2 = list.item(i);
+    					if(n2 instanceof Element) {
+    						generateBody(n2, mainRegion);
     					}
     				}
     			}
@@ -293,7 +301,7 @@ public class SCXMLInterpretor {
     		String inputFilePath = cmd.getOptionValue("path");
             String outputFilePath = cmd.getOptionValue("output");
 
-            //TO DO : Gï¿½rer le cas ou l'utilisateur donne un output autre que .xmi
+            //TO DO : G�rer le cas ou l'utilisateur donne un output autre que .xmi
             if(outputFilePath == null) {
             	outputFilePath = inputFilePath.substring(0, inputFilePath.indexOf(".xml")) + ".xmi";
             }

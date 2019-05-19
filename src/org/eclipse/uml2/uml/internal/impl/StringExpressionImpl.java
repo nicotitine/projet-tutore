@@ -161,6 +161,7 @@ public class StringExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TemplateBinding> getTemplateBindings() {
 		if (templateBindings == null) {
 			templateBindings = new EObjectContainmentWithInverseEList.Resolving<TemplateBinding>(
@@ -176,6 +177,7 @@ public class StringExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateBinding createTemplateBinding(TemplateSignature signature) {
 		TemplateBinding newTemplateBinding = (TemplateBinding) create(UMLPackage.Literals.TEMPLATE_BINDING);
 		getTemplateBindings().add(newTemplateBinding);
@@ -189,6 +191,7 @@ public class StringExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateBinding getTemplateBinding(TemplateSignature signature) {
 		return getTemplateBinding(signature, false);
 	}
@@ -198,6 +201,7 @@ public class StringExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateBinding getTemplateBinding(TemplateSignature signature,
 			boolean createOnDemand) {
 		templateBindingLoop : for (TemplateBinding templateBinding : getTemplateBindings()) {
@@ -216,6 +220,7 @@ public class StringExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateSignature getOwnedTemplateSignature() {
 		if (ownedTemplateSignature != null && ownedTemplateSignature.eIsProxy()) {
 			InternalEObject oldOwnedTemplateSignature = (InternalEObject) ownedTemplateSignature;
@@ -278,6 +283,7 @@ public class StringExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwnedTemplateSignature(
 			TemplateSignature newOwnedTemplateSignature) {
 		if (newOwnedTemplateSignature != ownedTemplateSignature) {
@@ -306,6 +312,7 @@ public class StringExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateSignature createOwnedTemplateSignature(EClass eClass) {
 		TemplateSignature newOwnedTemplateSignature = (TemplateSignature) create(eClass);
 		setOwnedTemplateSignature(newOwnedTemplateSignature);
@@ -317,6 +324,7 @@ public class StringExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateSignature createOwnedTemplateSignature() {
 		return createOwnedTemplateSignature(UMLPackage.Literals.TEMPLATE_SIGNATURE);
 	}
@@ -339,6 +347,7 @@ public class StringExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<StringExpression> getSubExpressions() {
 		if (subExpressions == null) {
 			subExpressions = new EObjectContainmentWithInverseEList.Resolving<StringExpression>(
@@ -354,6 +363,7 @@ public class StringExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StringExpression createSubExpression(String name, Type type) {
 		StringExpression newSubExpression = (StringExpression) create(UMLPackage.Literals.STRING_EXPRESSION);
 		getSubExpressions().add(newSubExpression);
@@ -369,6 +379,7 @@ public class StringExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StringExpression getSubExpression(String name, Type type) {
 		return getSubExpression(name, type, false, false);
 	}
@@ -378,6 +389,7 @@ public class StringExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StringExpression getSubExpression(String name, Type type,
 			boolean ignoreCase, boolean createOnDemand) {
 		subExpressionLoop : for (StringExpression subExpression : getSubExpressions()) {
@@ -399,6 +411,7 @@ public class StringExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StringExpression getOwningExpression() {
 		if (eContainerFeatureID() != UMLPackage.STRING_EXPRESSION__OWNING_EXPRESSION)
 			return null;
@@ -433,6 +446,7 @@ public class StringExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwningExpression(StringExpression newOwningExpression) {
 		if (newOwningExpression != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.STRING_EXPRESSION__OWNING_EXPRESSION && newOwningExpression != null)) {
@@ -460,6 +474,7 @@ public class StringExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ParameterableElement> parameterableElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -486,6 +501,7 @@ public class StringExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTemplate() {
 		return TemplateableElementOperations.isTemplate(this);
 	}
@@ -495,6 +511,7 @@ public class StringExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOperands(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StringExpressionOperations.validateOperands(this, diagnostics,
@@ -506,6 +523,7 @@ public class StringExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSubexpressions(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StringExpressionOperations.validateSubexpressions(this,

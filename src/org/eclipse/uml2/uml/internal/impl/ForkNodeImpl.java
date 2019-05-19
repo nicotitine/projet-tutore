@@ -67,6 +67,7 @@ public class ForkNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOneIncomingEdge(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ForkNodeOperations.validateOneIncomingEdge(this, diagnostics,
@@ -78,6 +79,7 @@ public class ForkNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ForkNodeOperations.validateEdges(this, diagnostics, context);

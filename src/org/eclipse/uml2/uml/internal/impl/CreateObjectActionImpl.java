@@ -149,6 +149,7 @@ public class CreateObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getClassifier() {
 		if (classifier != null && classifier.eIsProxy()) {
 			InternalEObject oldClassifier = (InternalEObject) classifier;
@@ -177,6 +178,7 @@ public class CreateObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClassifier(Classifier newClassifier) {
 		Classifier oldClassifier = classifier;
 		classifier = newClassifier;
@@ -191,6 +193,7 @@ public class CreateObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult() {
 		if (result != null && result.eIsProxy()) {
 			InternalEObject oldResult = (InternalEObject) result;
@@ -250,6 +253,7 @@ public class CreateObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResult(OutputPin newResult) {
 		if (newResult != result) {
 			NotificationChain msgs = null;
@@ -274,6 +278,7 @@ public class CreateObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createResult(String name, Type type) {
 		OutputPin newResult = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		setResult(newResult);
@@ -289,6 +294,7 @@ public class CreateObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateClassifierNotAbstract(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return CreateObjectActionOperations.validateClassifierNotAbstract(this,
@@ -300,6 +306,7 @@ public class CreateObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateClassifierNotAssociationClass(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return CreateObjectActionOperations
@@ -311,6 +318,7 @@ public class CreateObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSameType(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return CreateObjectActionOperations.validateSameType(this, diagnostics,
@@ -322,6 +330,7 @@ public class CreateObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return CreateObjectActionOperations.validateMultiplicity(this,

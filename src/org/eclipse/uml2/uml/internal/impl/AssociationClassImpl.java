@@ -179,6 +179,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> getRelatedElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -289,6 +290,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getMemberEnds() {
 		if (memberEnds == null) {
 			memberEnds = new SubsetSupersetEObjectWithInverseResolvingEList<Property>(
@@ -303,6 +305,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getOwnedEnds() {
 		if (ownedEnds == null) {
 			ownedEnds = new SubsetSupersetEObjectContainmentWithInverseEList.Resolving<Property>(
@@ -318,6 +321,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDerived() {
 		return (eFlags & IS_DERIVED_EFLAG) != 0;
 	}
@@ -327,6 +331,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsDerived(boolean newIsDerived) {
 		boolean oldIsDerived = (eFlags & IS_DERIVED_EFLAG) != 0;
 		if (newIsDerived)
@@ -344,6 +349,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Type> getEndTypes() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -364,6 +370,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getEndType(String name) {
 		return getEndType(name, false, null);
 	}
@@ -373,6 +380,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getEndType(String name, boolean ignoreCase, EClass eClass) {
 		endTypeLoop : for (Type endType : getEndTypes()) {
 			if (eClass != null && !eClass.isInstance(endType))
@@ -391,6 +399,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getNavigableOwnedEnds() {
 		if (navigableOwnedEnds == null) {
 			navigableOwnedEnds = new SubsetSupersetEObjectResolvingEList<Property>(
@@ -406,6 +415,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSpecializedEndNumber(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return AssociationOperations.validateSpecializedEndNumber(this,
@@ -417,6 +427,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSpecializedEndTypes(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return AssociationOperations.validateSpecializedEndTypes(this,
@@ -428,6 +439,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateBinaryAssociations(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return AssociationOperations.validateBinaryAssociations(this,
@@ -439,6 +451,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateAssociationEnds(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return AssociationOperations.validateAssociationEnds(this, diagnostics,
@@ -450,6 +463,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateEndsMustBeTyped(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return AssociationOperations.validateEndsMustBeTyped(this, diagnostics,
@@ -461,6 +475,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isBinary() {
 		return AssociationOperations.isBinary(this);
 	}
@@ -470,6 +485,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateCannotBeDefined(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return AssociationClassOperations.validateCannotBeDefined(this,
@@ -481,6 +497,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDisjointAttributesEnds(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return AssociationClassOperations.validateDisjointAttributesEnds(this,
@@ -1815,6 +1832,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getMemberEnd(String name, Type type) {
 		return getMemberEnd(name, type, false, null);
 	}
@@ -1824,6 +1842,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getMemberEnd(String name, Type type, boolean ignoreCase,
 			EClass eClass) {
 		memberEndLoop : for (Property memberEnd : getMemberEnds()) {
@@ -1865,6 +1884,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createOwnedEnd(String name, Type type, EClass eClass) {
 		Property newOwnedEnd = (Property) create(eClass);
 		getOwnedEnds().add(newOwnedEnd);
@@ -1880,6 +1900,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createOwnedEnd(String name, Type type) {
 		return createOwnedEnd(name, type, UMLPackage.Literals.PROPERTY);
 	}
@@ -1889,6 +1910,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getOwnedEnd(String name, Type type) {
 		return getOwnedEnd(name, type, false, null, false);
 	}
@@ -1898,6 +1920,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getOwnedEnd(String name, Type type, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		ownedEndLoop : for (Property ownedEnd : getOwnedEnds()) {
@@ -1931,6 +1954,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createNavigableOwnedEnd(String name, Type type,
 			EClass eClass) {
 		Property newNavigableOwnedEnd = (Property) create(eClass);
@@ -1947,6 +1971,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createNavigableOwnedEnd(String name, Type type) {
 		return createNavigableOwnedEnd(name, type, UMLPackage.Literals.PROPERTY);
 	}
@@ -1956,6 +1981,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getNavigableOwnedEnd(String name, Type type) {
 		return getNavigableOwnedEnd(name, type, false, null, false);
 	}
@@ -1965,6 +1991,7 @@ public class AssociationClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getNavigableOwnedEnd(String name, Type type,
 			boolean ignoreCase, EClass eClass, boolean createOnDemand) {
 		navigableOwnedEndLoop : for (Property navigableOwnedEnd : getNavigableOwnedEnds()) {

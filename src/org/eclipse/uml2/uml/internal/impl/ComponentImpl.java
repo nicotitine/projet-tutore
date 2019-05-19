@@ -219,6 +219,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isIndirectlyInstantiated() {
 		return (eFlags & IS_INDIRECTLY_INSTANTIATED_EFLAG) != 0;
 	}
@@ -228,6 +229,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsIndirectlyInstantiated(boolean newIsIndirectlyInstantiated) {
 		boolean oldIsIndirectlyInstantiated = (eFlags & IS_INDIRECTLY_INSTANTIATED_EFLAG) != 0;
 		if (newIsIndirectlyInstantiated)
@@ -245,6 +247,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> getRequireds() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -265,6 +268,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interface getRequired(String name) {
 		return getRequired(name, false);
 	}
@@ -274,6 +278,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interface getRequired(String name, boolean ignoreCase) {
 		requiredLoop : for (Interface required : getRequireds()) {
 			if (name != null && !(ignoreCase
@@ -290,6 +295,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoNestedClassifiers(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ComponentOperations.validateNoNestedClassifiers(this,
@@ -301,6 +307,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoPackagedElements(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ComponentOperations.validateNoPackagedElements(this,
@@ -312,6 +319,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> getProvideds() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -332,6 +340,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interface getProvided(String name) {
 		return getProvided(name, false);
 	}
@@ -341,6 +350,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interface getProvided(String name, boolean ignoreCase) {
 		providedLoop : for (Interface provided : getProvideds()) {
 			if (name != null && !(ignoreCase
@@ -357,6 +367,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageableElement> getPackagedElements() {
 		if (packagedElements == null) {
 			packagedElements = new EObjectContainmentEList.Resolving<PackageableElement>(
@@ -371,6 +382,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageableElement createPackagedElement(String name, EClass eClass) {
 		PackageableElement newPackagedElement = (PackageableElement) create(eClass);
 		getPackagedElements().add(newPackagedElement);
@@ -384,6 +396,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageableElement getPackagedElement(String name) {
 		return getPackagedElement(name, false, null, false);
 	}
@@ -393,6 +406,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageableElement getPackagedElement(String name,
 			boolean ignoreCase, EClass eClass, boolean createOnDemand) {
 		packagedElementLoop : for (PackageableElement packagedElement : getPackagedElements()) {
@@ -414,6 +428,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ComponentRealization> getRealizations() {
 		if (realizations == null) {
 			realizations = new EObjectContainmentWithInverseEList.Resolving<ComponentRealization>(
@@ -429,6 +444,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ComponentRealization createRealization(String name) {
 		ComponentRealization newRealization = (ComponentRealization) create(UMLPackage.Literals.COMPONENT_REALIZATION);
 		getRealizations().add(newRealization);
@@ -442,6 +458,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ComponentRealization getRealization(String name) {
 		return getRealization(name, false, false);
 	}
@@ -451,6 +468,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ComponentRealization getRealization(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		realizationLoop : for (ComponentRealization realization : getRealizations()) {
@@ -470,6 +488,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Class createOwnedClass(String name,
 			boolean isAbstract) {
 		return ComponentOperations.createOwnedClass(this, name, isAbstract);
@@ -480,6 +499,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Enumeration createOwnedEnumeration(String name) {
 		return ComponentOperations.createOwnedEnumeration(this, name);
 	}
@@ -489,6 +509,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PrimitiveType createOwnedPrimitiveType(String name) {
 		return ComponentOperations.createOwnedPrimitiveType(this, name);
 	}
@@ -498,6 +519,7 @@ public class ComponentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interface createOwnedInterface(String name) {
 		return ComponentOperations.createOwnedInterface(this, name);
 	}

@@ -104,6 +104,7 @@ public class ActivityParameterNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter getParameter() {
 		if (parameter != null && parameter.eIsProxy()) {
 			InternalEObject oldParameter = (InternalEObject) parameter;
@@ -132,6 +133,7 @@ public class ActivityParameterNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameter(Parameter newParameter) {
 		Parameter oldParameter = parameter;
 		parameter = newParameter;
@@ -146,6 +148,7 @@ public class ActivityParameterNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateHasParameters(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActivityParameterNodeOperations.validateHasParameters(this,
@@ -157,6 +160,7 @@ public class ActivityParameterNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSameType(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActivityParameterNodeOperations.validateSameType(this,
@@ -168,6 +172,7 @@ public class ActivityParameterNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActivityParameterNodeOperations.validateNoEdges(this,
@@ -179,6 +184,7 @@ public class ActivityParameterNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoIncomingEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActivityParameterNodeOperations.validateNoIncomingEdges(this,
@@ -190,6 +196,7 @@ public class ActivityParameterNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoOutgoingEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActivityParameterNodeOperations.validateNoOutgoingEdges(this,

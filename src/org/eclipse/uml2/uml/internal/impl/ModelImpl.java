@@ -118,6 +118,7 @@ public class ModelImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getViewpoint() {
 		return viewpoint;
 	}
@@ -127,6 +128,7 @@ public class ModelImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setViewpoint(String newViewpoint) {
 		String oldViewpoint = viewpoint;
 		viewpoint = newViewpoint;
@@ -143,6 +145,7 @@ public class ModelImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetViewpoint() {
 		String oldViewpoint = viewpoint;
 		boolean oldViewpointESet = (eFlags & VIEWPOINT_ESETFLAG) != 0;
@@ -159,6 +162,7 @@ public class ModelImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetViewpoint() {
 		return (eFlags & VIEWPOINT_ESETFLAG) != 0;
 	}
@@ -168,6 +172,7 @@ public class ModelImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isMetamodel() {
 		return ModelOperations.isMetamodel(this);
 	}

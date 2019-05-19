@@ -139,6 +139,7 @@ public abstract class StructuredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ConnectableElement> getRoles() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -275,6 +276,7 @@ public abstract class StructuredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getOwnedAttributes() {
 		if (ownedAttributes == null) {
 			ownedAttributes = new EObjectContainmentEList.Resolving<Property>(
@@ -289,6 +291,7 @@ public abstract class StructuredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createOwnedAttribute(String name, Type type, EClass eClass) {
 		Property newOwnedAttribute = (Property) create(eClass);
 		getOwnedAttributes().add(newOwnedAttribute);
@@ -304,6 +307,7 @@ public abstract class StructuredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createOwnedAttribute(String name, Type type) {
 		return createOwnedAttribute(name, type, UMLPackage.Literals.PROPERTY);
 	}
@@ -313,6 +317,7 @@ public abstract class StructuredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getOwnedAttribute(String name, Type type) {
 		return getOwnedAttribute(name, type, false, null, false);
 	}
@@ -322,6 +327,7 @@ public abstract class StructuredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getOwnedAttribute(String name, Type type,
 			boolean ignoreCase, EClass eClass, boolean createOnDemand) {
 		ownedAttributeLoop : for (Property ownedAttribute : getOwnedAttributes()) {
@@ -383,6 +389,7 @@ public abstract class StructuredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public EList<Property> getParts() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -409,6 +416,7 @@ public abstract class StructuredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getPart(String name, Type type) {
 		return getPart(name, type, false, null);
 	}
@@ -418,6 +426,7 @@ public abstract class StructuredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getPart(String name, Type type, boolean ignoreCase,
 			EClass eClass) {
 		partLoop : for (Property part : getParts()) {
@@ -439,6 +448,7 @@ public abstract class StructuredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Connector> getOwnedConnectors() {
 		if (ownedConnectors == null) {
 			ownedConnectors = new EObjectContainmentEList.Resolving<Connector>(
@@ -453,6 +463,7 @@ public abstract class StructuredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Connector createOwnedConnector(String name) {
 		Connector newOwnedConnector = (Connector) create(UMLPackage.Literals.CONNECTOR);
 		getOwnedConnectors().add(newOwnedConnector);
@@ -466,6 +477,7 @@ public abstract class StructuredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Connector getOwnedConnector(String name) {
 		return getOwnedConnector(name, false, false);
 	}
@@ -475,6 +487,7 @@ public abstract class StructuredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Connector getOwnedConnector(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		ownedConnectorLoop : for (Connector ownedConnector : getOwnedConnectors()) {
@@ -494,6 +507,7 @@ public abstract class StructuredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createOwnedAttribute(String name, Type type, int lower,
 			int upper) {
 		return StructuredClassifierOperations.createOwnedAttribute(this, name,
@@ -505,6 +519,7 @@ public abstract class StructuredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ConnectableElement> allRoles() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1336,6 +1351,7 @@ public abstract class StructuredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConnectableElement getRole(String name, Type type) {
 		return getRole(name, type, false, null);
 	}
@@ -1345,6 +1361,7 @@ public abstract class StructuredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConnectableElement getRole(String name, Type type,
 			boolean ignoreCase, EClass eClass) {
 		roleLoop : for (ConnectableElement role : getRoles()) {

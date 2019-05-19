@@ -105,6 +105,7 @@ public class CallBehaviorActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getBehavior() {
 		if (behavior != null && behavior.eIsProxy()) {
 			InternalEObject oldBehavior = (InternalEObject) behavior;
@@ -133,6 +134,7 @@ public class CallBehaviorActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBehavior(Behavior newBehavior) {
 		Behavior oldBehavior = behavior;
 		behavior = newBehavior;
@@ -147,6 +149,7 @@ public class CallBehaviorActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoOnport(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return CallBehaviorActionOperations.validateNoOnport(this, diagnostics,

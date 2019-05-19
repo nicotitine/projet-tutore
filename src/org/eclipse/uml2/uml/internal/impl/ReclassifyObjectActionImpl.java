@@ -183,6 +183,7 @@ public class ReclassifyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isReplaceAll() {
 		return (eFlags & IS_REPLACE_ALL_EFLAG) != 0;
 	}
@@ -192,6 +193,7 @@ public class ReclassifyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsReplaceAll(boolean newIsReplaceAll) {
 		boolean oldIsReplaceAll = (eFlags & IS_REPLACE_ALL_EFLAG) != 0;
 		if (newIsReplaceAll)
@@ -209,6 +211,7 @@ public class ReclassifyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Classifier> getOldClassifiers() {
 		if (oldClassifiers == null) {
 			oldClassifiers = new EObjectResolvingEList<Classifier>(
@@ -223,6 +226,7 @@ public class ReclassifyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getOldClassifier(String name) {
 		return getOldClassifier(name, false, null);
 	}
@@ -232,6 +236,7 @@ public class ReclassifyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getOldClassifier(String name, boolean ignoreCase,
 			EClass eClass) {
 		oldClassifierLoop : for (Classifier oldClassifier : getOldClassifiers()) {
@@ -251,6 +256,7 @@ public class ReclassifyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Classifier> getNewClassifiers() {
 		if (newClassifiers == null) {
 			newClassifiers = new EObjectResolvingEList<Classifier>(
@@ -265,6 +271,7 @@ public class ReclassifyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getNewClassifier(String name) {
 		return getNewClassifier(name, false, null);
 	}
@@ -274,6 +281,7 @@ public class ReclassifyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getNewClassifier(String name, boolean ignoreCase,
 			EClass eClass) {
 		newClassifierLoop : for (Classifier newClassifier : getNewClassifiers()) {
@@ -293,6 +301,7 @@ public class ReclassifyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getObject() {
 		if (object != null && object.eIsProxy()) {
 			InternalEObject oldObject = (InternalEObject) object;
@@ -354,6 +363,7 @@ public class ReclassifyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setObject(InputPin newObject) {
 		if (newObject != object) {
 			NotificationChain msgs = null;
@@ -381,6 +391,7 @@ public class ReclassifyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createObject(String name, Type type, EClass eClass) {
 		InputPin newObject = (InputPin) create(eClass);
 		setObject(newObject);
@@ -396,6 +407,7 @@ public class ReclassifyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createObject(String name, Type type) {
 		return createObject(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -405,6 +417,7 @@ public class ReclassifyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateClassifierNotAbstract(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReclassifyObjectActionOperations.validateClassifierNotAbstract(
@@ -416,6 +429,7 @@ public class ReclassifyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReclassifyObjectActionOperations.validateMultiplicity(this,
@@ -427,6 +441,7 @@ public class ReclassifyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInputPin(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReclassifyObjectActionOperations.validateInputPin(this,

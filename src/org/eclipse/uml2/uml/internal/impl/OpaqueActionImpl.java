@@ -193,6 +193,7 @@ public class OpaqueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getBodies() {
 		if (bodies == null) {
 			bodies = new EDataTypeEList.Unsettable<String>(String.class, this,
@@ -206,6 +207,7 @@ public class OpaqueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetBodies() {
 		if (bodies != null)
 			((InternalEList.Unsettable<?>) bodies).unset();
@@ -216,6 +218,7 @@ public class OpaqueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetBodies() {
 		return bodies != null && ((InternalEList.Unsettable<?>) bodies).isSet();
 	}
@@ -225,6 +228,7 @@ public class OpaqueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getLanguages() {
 		if (languages == null) {
 			languages = new EDataTypeUniqueEList.Unsettable<String>(
@@ -238,6 +242,7 @@ public class OpaqueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetLanguages() {
 		if (languages != null)
 			((InternalEList.Unsettable<?>) languages).unset();
@@ -248,6 +253,7 @@ public class OpaqueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetLanguages() {
 		return languages != null
 			&& ((InternalEList.Unsettable<?>) languages).isSet();
@@ -258,6 +264,7 @@ public class OpaqueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InputPin> getInputValues() {
 		if (inputValues == null) {
 			inputValues = new EObjectContainmentEList.Resolving<InputPin>(
@@ -271,6 +278,7 @@ public class OpaqueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createInputValue(String name, Type type, EClass eClass) {
 		InputPin newInputValue = (InputPin) create(eClass);
 		getInputValues().add(newInputValue);
@@ -286,6 +294,7 @@ public class OpaqueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createInputValue(String name, Type type) {
 		return createInputValue(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -295,6 +304,7 @@ public class OpaqueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getInputValue(String name, Type type) {
 		return getInputValue(name, type, false, null, false);
 	}
@@ -304,6 +314,7 @@ public class OpaqueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getInputValue(String name, Type type, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		inputValueLoop : for (InputPin inputValue : getInputValues()) {
@@ -327,6 +338,7 @@ public class OpaqueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public InputPin getInputValue(String name, Type type, boolean ignoreCase,
 			EClass eClass) {
 		return getInputValue(name, type, ignoreCase, eClass, false);
@@ -337,6 +349,7 @@ public class OpaqueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<OutputPin> getOutputValues() {
 		if (outputValues == null) {
 			outputValues = new EObjectContainmentEList.Resolving<OutputPin>(
@@ -350,6 +363,7 @@ public class OpaqueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createOutputValue(String name, Type type) {
 		OutputPin newOutputValue = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		getOutputValues().add(newOutputValue);
@@ -365,6 +379,7 @@ public class OpaqueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getOutputValue(String name, Type type) {
 		return getOutputValue(name, type, false, false);
 	}
@@ -374,6 +389,7 @@ public class OpaqueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getOutputValue(String name, Type type, boolean ignoreCase,
 			boolean createOnDemand) {
 		outputValueLoop : for (OutputPin outputValue : getOutputValues()) {
@@ -395,6 +411,7 @@ public class OpaqueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateLanguageBodySize(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return OpaqueActionOperations.validateLanguageBodySize(this,
@@ -406,6 +423,7 @@ public class OpaqueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public OutputPin getOutputValue(String name, Type type, boolean ignoreCase) {
 		return getOutputValue(name, type, ignoreCase, false);
 	}

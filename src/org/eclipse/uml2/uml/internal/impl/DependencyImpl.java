@@ -102,6 +102,7 @@ public class DependencyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> getRelatedElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -129,6 +130,7 @@ public class DependencyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> getSources() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -154,6 +156,7 @@ public class DependencyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> getTargets() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -179,6 +182,7 @@ public class DependencyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<NamedElement> getSuppliers() {
 		if (suppliers == null) {
 			suppliers = new EObjectResolvingEList<NamedElement>(
@@ -192,6 +196,7 @@ public class DependencyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getSupplier(String name) {
 		return getSupplier(name, false, null);
 	}
@@ -201,6 +206,7 @@ public class DependencyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getSupplier(String name, boolean ignoreCase,
 			EClass eClass) {
 		supplierLoop : for (NamedElement supplier : getSuppliers()) {
@@ -220,6 +226,7 @@ public class DependencyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<NamedElement> getClients() {
 		if (clients == null) {
 			clients = new EObjectResolvingEList<NamedElement>(
@@ -233,6 +240,7 @@ public class DependencyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getClient(String name) {
 		return getClient(name, false, null);
 	}
@@ -242,6 +250,7 @@ public class DependencyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getClient(String name, boolean ignoreCase, EClass eClass) {
 		clientLoop : for (NamedElement client : getClients()) {
 			if (eClass != null && !eClass.isInstance(client))

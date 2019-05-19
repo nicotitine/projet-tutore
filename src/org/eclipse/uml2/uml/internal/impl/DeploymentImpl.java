@@ -170,6 +170,7 @@ public class DeploymentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DeployedArtifact> getDeployedArtifacts() {
 		if (deployedArtifacts == null) {
 			deployedArtifacts = new SubsetSupersetEObjectResolvingEList<DeployedArtifact>(
@@ -185,6 +186,7 @@ public class DeploymentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<DeploymentSpecification> getConfigurations() {
 		if (configurations == null) {
 			configurations = new EObjectContainmentWithInverseEList.Resolving<DeploymentSpecification>(
@@ -200,6 +202,7 @@ public class DeploymentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeploymentSpecification createConfiguration(String name) {
 		DeploymentSpecification newConfiguration = (DeploymentSpecification) create(UMLPackage.Literals.DEPLOYMENT_SPECIFICATION);
 		getConfigurations().add(newConfiguration);
@@ -213,6 +216,7 @@ public class DeploymentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeploymentSpecification getConfiguration(String name) {
 		return getConfiguration(name, false, false);
 	}
@@ -222,6 +226,7 @@ public class DeploymentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeploymentSpecification getConfiguration(String name,
 			boolean ignoreCase, boolean createOnDemand) {
 		configurationLoop : for (DeploymentSpecification configuration : getConfigurations()) {
@@ -241,6 +246,7 @@ public class DeploymentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeploymentTarget getLocation() {
 		if (eContainerFeatureID() != UMLPackage.DEPLOYMENT__LOCATION)
 			return null;
@@ -284,6 +290,7 @@ public class DeploymentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLocation(DeploymentTarget newLocation) {
 		if (newLocation != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.DEPLOYMENT__LOCATION && newLocation != null)) {
@@ -696,6 +703,7 @@ public class DeploymentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeployedArtifact getDeployedArtifact(String name) {
 		return getDeployedArtifact(name, false, null);
 	}
@@ -705,6 +713,7 @@ public class DeploymentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DeployedArtifact getDeployedArtifact(String name,
 			boolean ignoreCase, EClass eClass) {
 		deployedArtifactLoop : for (DeployedArtifact deployedArtifact : getDeployedArtifacts()) {

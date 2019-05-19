@@ -110,6 +110,7 @@ public class DecisionNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getDecisionInput() {
 		if (decisionInput != null && decisionInput.eIsProxy()) {
 			InternalEObject oldDecisionInput = (InternalEObject) decisionInput;
@@ -138,6 +139,7 @@ public class DecisionNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDecisionInput(Behavior newDecisionInput) {
 		Behavior oldDecisionInput = decisionInput;
 		decisionInput = newDecisionInput;
@@ -152,6 +154,7 @@ public class DecisionNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObjectFlow getDecisionInputFlow() {
 		if (decisionInputFlow != null && decisionInputFlow.eIsProxy()) {
 			InternalEObject oldDecisionInputFlow = (InternalEObject) decisionInputFlow;
@@ -180,6 +183,7 @@ public class DecisionNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDecisionInputFlow(ObjectFlow newDecisionInputFlow) {
 		ObjectFlow oldDecisionInputFlow = decisionInputFlow;
 		decisionInputFlow = newDecisionInputFlow;
@@ -194,6 +198,7 @@ public class DecisionNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateIncomingOutgoingEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return DecisionNodeOperations.validateIncomingOutgoingEdges(this,
@@ -205,6 +210,7 @@ public class DecisionNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return DecisionNodeOperations.validateEdges(this, diagnostics, context);
@@ -215,6 +221,7 @@ public class DecisionNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDecisionInputFlowIncoming(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return DecisionNodeOperations.validateDecisionInputFlowIncoming(this,
@@ -226,6 +233,7 @@ public class DecisionNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateParameters(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return DecisionNodeOperations.validateParameters(this, diagnostics,
@@ -237,6 +245,7 @@ public class DecisionNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateZeroInputParameters(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return DecisionNodeOperations.validateZeroInputParameters(this,
@@ -248,6 +257,7 @@ public class DecisionNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateIncomingObjectOneInputParameter(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return DecisionNodeOperations.validateIncomingObjectOneInputParameter(
@@ -259,6 +269,7 @@ public class DecisionNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateIncomingControlOneInputParameter(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return DecisionNodeOperations.validateIncomingControlOneInputParameter(
@@ -270,6 +281,7 @@ public class DecisionNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTwoInputParameters(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return DecisionNodeOperations.validateTwoInputParameters(this,

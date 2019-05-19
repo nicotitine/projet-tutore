@@ -279,6 +279,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDimension() {
 		return (eFlags & IS_DIMENSION_EFLAG) != 0;
 	}
@@ -288,6 +289,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsDimension(boolean newIsDimension) {
 		boolean oldIsDimension = (eFlags & IS_DIMENSION_EFLAG) != 0;
 		if (newIsDimension)
@@ -305,6 +307,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isExternal() {
 		return (eFlags & IS_EXTERNAL_EFLAG) != 0;
 	}
@@ -314,6 +317,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsExternal(boolean newIsExternal) {
 		boolean oldIsExternal = (eFlags & IS_EXTERNAL_EFLAG) != 0;
 		if (newIsExternal)
@@ -331,6 +335,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityEdge> getEdges() {
 		if (edges == null) {
 			edges = new EObjectWithInverseResolvingEList.ManyInverse<ActivityEdge>(
@@ -345,6 +350,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getEdge(String name) {
 		return getEdge(name, false, null);
 	}
@@ -354,6 +360,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getEdge(String name, boolean ignoreCase, EClass eClass) {
 		edgeLoop : for (ActivityEdge edge : getEdges()) {
 			if (eClass != null && !eClass.isInstance(edge))
@@ -372,6 +379,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityNode> getNodes() {
 		if (nodes == null) {
 			nodes = new EObjectWithInverseResolvingEList.ManyInverse<ActivityNode>(
@@ -386,6 +394,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode getNode(String name) {
 		return getNode(name, false, null);
 	}
@@ -395,6 +404,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode getNode(String name, boolean ignoreCase, EClass eClass) {
 		nodeLoop : for (ActivityNode node : getNodes()) {
 			if (eClass != null && !eClass.isInstance(node))
@@ -413,6 +423,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityPartition> getSubpartitions() {
 		if (subpartitions == null) {
 			subpartitions = new EObjectContainmentWithInverseEList.Resolving<ActivityPartition>(
@@ -428,6 +439,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityPartition createSubpartition(String name) {
 		ActivityPartition newSubpartition = (ActivityPartition) create(UMLPackage.Literals.ACTIVITY_PARTITION);
 		getSubpartitions().add(newSubpartition);
@@ -441,6 +453,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityPartition getSubpartition(String name) {
 		return getSubpartition(name, false, false);
 	}
@@ -450,6 +463,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityPartition getSubpartition(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		subpartitionLoop : for (ActivityPartition subpartition : getSubpartitions()) {
@@ -469,6 +483,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityPartition getSuperPartition() {
 		if (eContainerFeatureID() != UMLPackage.ACTIVITY_PARTITION__SUPER_PARTITION)
 			return null;
@@ -503,6 +518,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSuperPartition(ActivityPartition newSuperPartition) {
 		if (newSuperPartition != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.ACTIVITY_PARTITION__SUPER_PARTITION && newSuperPartition != null)) {
@@ -530,6 +546,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Element getRepresents() {
 		if (represents != null && represents.eIsProxy()) {
 			InternalEObject oldRepresents = (InternalEObject) represents;
@@ -558,6 +575,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRepresents(Element newRepresents) {
 		Element oldRepresents = represents;
 		represents = newRepresents;
@@ -572,6 +590,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDimensionNotContained(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActivityPartitionOperations.validateDimensionNotContained(this,
@@ -583,6 +602,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRepresentsClassifier(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActivityPartitionOperations.validateRepresentsClassifier(this,
@@ -594,6 +614,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRepresentsPropertyAndIsContained(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return ActivityPartitionOperations
@@ -606,6 +627,7 @@ public class ActivityPartitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRepresentsProperty(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActivityPartitionOperations.validateRepresentsProperty(this,

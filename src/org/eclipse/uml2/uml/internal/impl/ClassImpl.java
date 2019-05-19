@@ -273,6 +273,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Behavior> getOwnedBehaviors() {
 		if (ownedBehaviors == null) {
 			ownedBehaviors = new SubsetSupersetEObjectContainmentEList.Resolving<Behavior>(
@@ -287,6 +288,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getClassifierBehavior() {
 		if (classifierBehavior != null && classifierBehavior.eIsProxy()) {
 			InternalEObject oldClassifierBehavior = (InternalEObject) classifierBehavior;
@@ -315,6 +317,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClassifierBehavior(Behavior newClassifierBehavior) {
 		Behavior oldClassifierBehavior = classifierBehavior;
 		classifierBehavior = newClassifierBehavior;
@@ -338,6 +341,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior createClassifierBehavior(String name, EClass eClass) {
 		Behavior newClassifierBehavior = (Behavior) create(eClass);
 		setClassifierBehavior(newClassifierBehavior);
@@ -351,6 +355,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InterfaceRealization> getInterfaceRealizations() {
 		if (interfaceRealizations == null) {
 			interfaceRealizations = new EObjectContainmentWithInverseEList.Resolving<InterfaceRealization>(
@@ -418,6 +423,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Operation> getOwnedOperations() {
 		if (ownedOperations == null) {
 			ownedOperations = new EObjectContainmentWithInverseEList.Resolving<Operation>(
@@ -432,6 +438,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation createOwnedOperation(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes) {
 		Operation newOwnedOperation = (Operation) create(UMLPackage.Literals.OPERATION);
@@ -464,6 +471,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation getOwnedOperation(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes) {
 		return getOwnedOperation(name, ownedParameterNames,
@@ -475,6 +483,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation getOwnedOperation(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes,
 			boolean ignoreCase, boolean createOnDemand) {
@@ -517,6 +526,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Classifier> getNestedClassifiers() {
 		if (nestedClassifiers == null) {
 			nestedClassifiers = new EObjectContainmentEList.Resolving<Classifier>(
@@ -530,6 +540,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier createNestedClassifier(String name, EClass eClass) {
 		Classifier newNestedClassifier = (Classifier) create(eClass);
 		getNestedClassifiers().add(newNestedClassifier);
@@ -543,6 +554,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getNestedClassifier(String name) {
 		return getNestedClassifier(name, false, null, false);
 	}
@@ -552,6 +564,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getNestedClassifier(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		nestedClassifierLoop : for (Classifier nestedClassifier : getNestedClassifiers()) {
@@ -620,6 +633,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	@SuppressWarnings("unchecked")
 	public EList<org.eclipse.uml2.uml.Class> getSuperClasses() {
 		CacheAdapter cache = getCacheAdapter();
@@ -650,6 +664,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Class getSuperClass(String name) {
 		return getSuperClass(name, false, null);
 	}
@@ -659,6 +674,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Class getSuperClass(String name,
 			boolean ignoreCase, EClass eClass) {
 		superClassLoop : for (org.eclipse.uml2.uml.Class superClass : getSuperClasses()) {
@@ -687,6 +703,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isActive() {
 		return (eFlags & IS_ACTIVE_EFLAG) != 0;
 	}
@@ -696,6 +713,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsActive(boolean newIsActive) {
 		boolean oldIsActive = (eFlags & IS_ACTIVE_EFLAG) != 0;
 		if (newIsActive)
@@ -712,6 +730,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reception> getOwnedReceptions() {
 		if (ownedReceptions == null) {
 			ownedReceptions = new EObjectContainmentEList.Resolving<Reception>(
@@ -725,6 +744,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reception createOwnedReception(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes) {
 		Reception newOwnedReception = (Reception) create(UMLPackage.Literals.RECEPTION);
@@ -757,6 +777,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reception getOwnedReception(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes) {
 		return getOwnedReception(name, ownedParameterNames,
@@ -768,6 +789,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reception getOwnedReception(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes,
 			boolean ignoreCase, boolean createOnDemand) {
@@ -810,6 +832,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Extension> getExtensions() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -830,6 +853,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Extension getExtension(String name) {
 		return getExtension(name, false);
 	}
@@ -839,6 +863,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Extension getExtension(String name, boolean ignoreCase) {
 		extensionLoop : for (Extension extension : getExtensions()) {
 			if (name != null && !(ignoreCase
@@ -869,6 +894,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createOwnedAttribute(String name, Type type, EClass eClass) {
 		Property newOwnedAttribute = (Property) create(eClass);
 		getOwnedAttributes().add(newOwnedAttribute);
@@ -884,6 +910,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createOwnedAttribute(String name, Type type) {
 		return createOwnedAttribute(name, type, UMLPackage.Literals.PROPERTY);
 	}
@@ -893,6 +920,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getOwnedAttribute(String name, Type type) {
 		return getOwnedAttribute(name, type, false, null, false);
 	}
@@ -902,6 +930,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getOwnedAttribute(String name, Type type,
 			boolean ignoreCase, EClass eClass, boolean createOnDemand) {
 		ownedAttributeLoop : for (Property ownedAttribute : getOwnedAttributes()) {
@@ -970,6 +999,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateClassBehavior(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return BehavioredClassifierOperations.validateClassBehavior(this,
@@ -981,6 +1011,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> getImplementedInterfaces() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1007,6 +1038,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> getAllImplementedInterfaces() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1033,6 +1065,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validatePassiveClass(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ClassOperations.validatePassiveClass(this, diagnostics, context);
@@ -1043,6 +1076,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation createOwnedOperation(String name,
 			EList<String> parameterNames, EList<Type> parameterTypes,
 			Type returnType) {
@@ -1055,6 +1089,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isMetaclass() {
 		return ClassOperations.isMetaclass(this);
 	}
@@ -2190,6 +2225,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior createOwnedBehavior(String name, EClass eClass) {
 		Behavior newOwnedBehavior = (Behavior) create(eClass);
 		getOwnedBehaviors().add(newOwnedBehavior);
@@ -2203,6 +2239,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getOwnedBehavior(String name) {
 		return getOwnedBehavior(name, false, null, false);
 	}
@@ -2212,6 +2249,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getOwnedBehavior(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		ownedBehaviorLoop : for (Behavior ownedBehavior : getOwnedBehaviors()) {
@@ -2233,6 +2271,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceRealization createInterfaceRealization(String name,
 			Interface contract) {
 		InterfaceRealization newInterfaceRealization = (InterfaceRealization) create(UMLPackage.Literals.INTERFACE_REALIZATION);
@@ -2249,6 +2288,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceRealization getInterfaceRealization(String name,
 			Interface contract) {
 		return getInterfaceRealization(name, contract, false, false);
@@ -2259,6 +2299,7 @@ public class ClassImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceRealization getInterfaceRealization(String name,
 			Interface contract, boolean ignoreCase, boolean createOnDemand) {
 		interfaceRealizationLoop : for (InterfaceRealization interfaceRealization : getInterfaceRealizations()) {

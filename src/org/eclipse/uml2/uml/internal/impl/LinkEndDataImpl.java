@@ -160,6 +160,7 @@ public class LinkEndDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getValue() {
 		if (value != null && value.eIsProxy()) {
 			InternalEObject oldValue = (InternalEObject) value;
@@ -187,6 +188,7 @@ public class LinkEndDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(InputPin newValue) {
 		InputPin oldValue = value;
 		value = newValue;
@@ -200,6 +202,7 @@ public class LinkEndDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getEnd() {
 		if (end != null && end.eIsProxy()) {
 			InternalEObject oldEnd = (InternalEObject) end;
@@ -227,6 +230,7 @@ public class LinkEndDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnd(Property newEnd) {
 		Property oldEnd = end;
 		end = newEnd;
@@ -240,6 +244,7 @@ public class LinkEndDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<QualifierValue> getQualifiers() {
 		if (qualifiers == null) {
 			qualifiers = new EObjectContainmentEList.Resolving<QualifierValue>(
@@ -253,6 +258,7 @@ public class LinkEndDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public QualifierValue createQualifier() {
 		QualifierValue newQualifier = (QualifierValue) create(UMLPackage.Literals.QUALIFIER_VALUE);
 		getQualifiers().add(newQualifier);
@@ -264,6 +270,7 @@ public class LinkEndDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validatePropertyIsAssociationEnd(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return LinkEndDataOperations.validatePropertyIsAssociationEnd(this,
@@ -275,6 +282,7 @@ public class LinkEndDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSameType(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LinkEndDataOperations.validateSameType(this, diagnostics,
@@ -286,6 +294,7 @@ public class LinkEndDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LinkEndDataOperations.validateMultiplicity(this, diagnostics,
@@ -297,6 +306,7 @@ public class LinkEndDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateQualifiers(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LinkEndDataOperations.validateQualifiers(this, diagnostics,
@@ -308,6 +318,7 @@ public class LinkEndDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InputPin> allPins() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -328,6 +339,7 @@ public class LinkEndDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateEndObjectInputPin(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LinkEndDataOperations.validateEndObjectInputPin(this,

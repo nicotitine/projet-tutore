@@ -163,6 +163,7 @@ public abstract class CallActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSynchronous() {
 		return (eFlags & IS_SYNCHRONOUS_EFLAG) != 0;
 	}
@@ -172,6 +173,7 @@ public abstract class CallActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsSynchronous(boolean newIsSynchronous) {
 		boolean oldIsSynchronous = (eFlags & IS_SYNCHRONOUS_EFLAG) != 0;
 		if (newIsSynchronous)
@@ -189,6 +191,7 @@ public abstract class CallActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<OutputPin> getResults() {
 		if (results == null) {
 			results = new EObjectContainmentEList.Resolving<OutputPin>(
@@ -202,6 +205,7 @@ public abstract class CallActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createResult(String name, Type type) {
 		OutputPin newResult = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		getResults().add(newResult);
@@ -217,6 +221,7 @@ public abstract class CallActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult(String name, Type type) {
 		return getResult(name, type, false, false);
 	}
@@ -226,6 +231,7 @@ public abstract class CallActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult(String name, Type type, boolean ignoreCase,
 			boolean createOnDemand) {
 		resultLoop : for (OutputPin result : getResults()) {
@@ -247,6 +253,7 @@ public abstract class CallActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateArgumentPins(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return CallActionOperations.validateArgumentPins(this, diagnostics,
@@ -258,6 +265,7 @@ public abstract class CallActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateResultPins(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return CallActionOperations.validateResultPins(this, diagnostics,
@@ -269,6 +277,7 @@ public abstract class CallActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSynchronousCall(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return CallActionOperations.validateSynchronousCall(this, diagnostics,
@@ -280,6 +289,7 @@ public abstract class CallActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Parameter> inputParameters() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -301,6 +311,7 @@ public abstract class CallActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Parameter> outputParameters() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {

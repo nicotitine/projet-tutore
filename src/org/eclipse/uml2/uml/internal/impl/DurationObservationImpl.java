@@ -101,6 +101,7 @@ public class DurationObservationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<NamedElement> getEvents() {
 		if (events == null) {
 			events = new EObjectResolvingEList<NamedElement>(
@@ -115,6 +116,7 @@ public class DurationObservationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getEvent(String name) {
 		return getEvent(name, false, null);
 	}
@@ -124,6 +126,7 @@ public class DurationObservationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getEvent(String name, boolean ignoreCase, EClass eClass) {
 		eventLoop : for (NamedElement event : getEvents()) {
 			if (eClass != null && !eClass.isInstance(event))
@@ -142,6 +145,7 @@ public class DurationObservationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Boolean> getFirstEvents() {
 		if (firstEvents == null) {
 			firstEvents = new EDataTypeUniqueEList<Boolean>(Boolean.class,
@@ -155,6 +159,7 @@ public class DurationObservationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateFirstEventMultiplicity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return DurationObservationOperations.validateFirstEventMultiplicity(

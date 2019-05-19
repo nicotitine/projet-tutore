@@ -174,6 +174,7 @@ public class SubstitutionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getContract() {
 		if (contract != null && contract.eIsProxy()) {
 			InternalEObject oldContract = (InternalEObject) contract;
@@ -202,6 +203,7 @@ public class SubstitutionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContract(Classifier newContract) {
 		Classifier oldContract = contract;
 		contract = newContract;
@@ -224,6 +226,7 @@ public class SubstitutionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getSubstitutingClassifier() {
 		if (eContainerFeatureID() != UMLPackage.SUBSTITUTION__SUBSTITUTING_CLASSIFIER)
 			return null;
@@ -267,6 +270,7 @@ public class SubstitutionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSubstitutingClassifier(Classifier newSubstitutingClassifier) {
 		if (newSubstitutingClassifier != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.SUBSTITUTION__SUBSTITUTING_CLASSIFIER && newSubstitutingClassifier != null)) {

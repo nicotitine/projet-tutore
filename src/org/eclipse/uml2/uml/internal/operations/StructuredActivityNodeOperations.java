@@ -74,7 +74,7 @@ public class StructuredActivityNodeOperations
 	 */
 	public static Activity containingActivity(
 			StructuredActivityNode structuredActivityNode) {
-		return ActionOperations.containingActivity(structuredActivityNode);
+		return ActivityNodeOperations.containingActivity(structuredActivityNode);
 	}
 
 	/**

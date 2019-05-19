@@ -146,6 +146,7 @@ public class SendObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject) target;
@@ -205,6 +206,7 @@ public class SendObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTarget(InputPin newTarget) {
 		if (newTarget != target) {
 			NotificationChain msgs = null;
@@ -229,6 +231,7 @@ public class SendObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createTarget(String name, Type type, EClass eClass) {
 		InputPin newTarget = (InputPin) create(eClass);
 		setTarget(newTarget);
@@ -244,6 +247,7 @@ public class SendObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createTarget(String name, Type type) {
 		return createTarget(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -253,6 +257,7 @@ public class SendObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeTargetPin(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return SendObjectActionOperations.validateTypeTargetPin(this,
@@ -264,6 +269,7 @@ public class SendObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getRequest() {
 		if (request != null && request.eIsProxy()) {
 			InternalEObject oldRequest = (InternalEObject) request;
@@ -323,6 +329,7 @@ public class SendObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRequest(InputPin newRequest) {
 		if (newRequest != request) {
 			NotificationChain msgs = null;
@@ -347,6 +354,7 @@ public class SendObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createRequest(String name, Type type, EClass eClass) {
 		InputPin newRequest = (InputPin) create(eClass);
 		setRequest(newRequest);
@@ -362,6 +370,7 @@ public class SendObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createRequest(String name, Type type) {
 		return createRequest(name, type, UMLPackage.Literals.INPUT_PIN);
 	}

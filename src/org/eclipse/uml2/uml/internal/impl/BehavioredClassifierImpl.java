@@ -202,6 +202,7 @@ public abstract class BehavioredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Behavior> getOwnedBehaviors() {
 		if (ownedBehaviors == null) {
 			ownedBehaviors = new SubsetSupersetEObjectContainmentEList.Resolving<Behavior>(
@@ -217,6 +218,7 @@ public abstract class BehavioredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getClassifierBehavior() {
 		if (classifierBehavior != null && classifierBehavior.eIsProxy()) {
 			InternalEObject oldClassifierBehavior = (InternalEObject) classifierBehavior;
@@ -245,6 +247,7 @@ public abstract class BehavioredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClassifierBehavior(Behavior newClassifierBehavior) {
 		Behavior oldClassifierBehavior = classifierBehavior;
 		classifierBehavior = newClassifierBehavior;
@@ -268,6 +271,7 @@ public abstract class BehavioredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior createClassifierBehavior(String name, EClass eClass) {
 		Behavior newClassifierBehavior = (Behavior) create(eClass);
 		setClassifierBehavior(newClassifierBehavior);
@@ -281,6 +285,7 @@ public abstract class BehavioredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InterfaceRealization> getInterfaceRealizations() {
 		if (interfaceRealizations == null) {
 			interfaceRealizations = new EObjectContainmentWithInverseEList.Resolving<InterfaceRealization>(
@@ -296,6 +301,7 @@ public abstract class BehavioredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateClassBehavior(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return BehavioredClassifierOperations.validateClassBehavior(this,
@@ -307,6 +313,7 @@ public abstract class BehavioredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> getImplementedInterfaces() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -333,6 +340,7 @@ public abstract class BehavioredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> getAllImplementedInterfaces() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1264,6 +1272,7 @@ public abstract class BehavioredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior createOwnedBehavior(String name, EClass eClass) {
 		Behavior newOwnedBehavior = (Behavior) create(eClass);
 		getOwnedBehaviors().add(newOwnedBehavior);
@@ -1277,6 +1286,7 @@ public abstract class BehavioredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getOwnedBehavior(String name) {
 		return getOwnedBehavior(name, false, null, false);
 	}
@@ -1286,6 +1296,7 @@ public abstract class BehavioredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getOwnedBehavior(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		ownedBehaviorLoop : for (Behavior ownedBehavior : getOwnedBehaviors()) {
@@ -1307,6 +1318,7 @@ public abstract class BehavioredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceRealization createInterfaceRealization(String name,
 			Interface contract) {
 		InterfaceRealization newInterfaceRealization = (InterfaceRealization) create(UMLPackage.Literals.INTERFACE_REALIZATION);
@@ -1323,6 +1335,7 @@ public abstract class BehavioredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceRealization getInterfaceRealization(String name,
 			Interface contract) {
 		return getInterfaceRealization(name, contract, false, false);
@@ -1333,6 +1346,7 @@ public abstract class BehavioredClassifierImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceRealization getInterfaceRealization(String name,
 			Interface contract, boolean ignoreCase, boolean createOnDemand) {
 		interfaceRealizationLoop : for (InterfaceRealization interfaceRealization : getInterfaceRealizations()) {

@@ -147,6 +147,7 @@ public class ProtocolConformanceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProtocolStateMachine getGeneralMachine() {
 		if (generalMachine != null && generalMachine.eIsProxy()) {
 			InternalEObject oldGeneralMachine = (InternalEObject) generalMachine;
@@ -175,6 +176,7 @@ public class ProtocolConformanceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGeneralMachine(ProtocolStateMachine newGeneralMachine) {
 		ProtocolStateMachine oldGeneralMachine = generalMachine;
 		generalMachine = newGeneralMachine;
@@ -189,6 +191,7 @@ public class ProtocolConformanceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProtocolStateMachine getSpecificMachine() {
 		if (eContainerFeatureID() != UMLPackage.PROTOCOL_CONFORMANCE__SPECIFIC_MACHINE)
 			return null;
@@ -223,6 +226,7 @@ public class ProtocolConformanceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSpecificMachine(ProtocolStateMachine newSpecificMachine) {
 		if (newSpecificMachine != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.PROTOCOL_CONFORMANCE__SPECIFIC_MACHINE && newSpecificMachine != null)) {

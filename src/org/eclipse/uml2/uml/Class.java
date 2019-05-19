@@ -75,6 +75,7 @@ public interface Class
 	 * @model opposite="class" containment="true" resolveProxies="true"
 	 * @generated
 	 */
+	@Override
 	EList<Operation> getOwnedOperations();
 
 	/**
@@ -88,6 +89,7 @@ public interface Class
 	 * @see #getOwnedOperations()
 	 * @generated
 	 */
+	@Override
 	Operation createOwnedOperation(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes);
 
@@ -102,6 +104,7 @@ public interface Class
 	 * @see #getOwnedOperations()
 	 * @generated
 	 */
+	@Override
 	Operation getOwnedOperation(String name, EList<String> ownedParameterNames,
 			EList<Type> ownedParameterTypes);
 
@@ -118,6 +121,7 @@ public interface Class
 	 * @see #getOwnedOperations()
 	 * @generated
 	 */
+	@Override
 	Operation getOwnedOperation(String name, EList<String> ownedParameterNames,
 			EList<Type> ownedParameterTypes, boolean ignoreCase,
 			boolean createOnDemand);
@@ -392,6 +396,7 @@ public interface Class
 	 * @model required="true" ordered="false" nameDataType="org.eclipse.uml2.types.String" nameOrdered="false" parameterNamesDataType="org.eclipse.uml2.types.String" parameterNamesMany="true" parameterNamesOrdered="false" parameterTypesMany="true" parameterTypesOrdered="false" returnTypeOrdered="false"
 	 * @generated
 	 */
+	@Override
 	Operation createOwnedOperation(String name, EList<String> parameterNames,
 			EList<Type> parameterTypes, Type returnType);
 

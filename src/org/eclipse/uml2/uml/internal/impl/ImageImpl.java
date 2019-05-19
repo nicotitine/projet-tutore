@@ -156,6 +156,7 @@ public class ImageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getContent() {
 		return content;
 	}
@@ -165,6 +166,7 @@ public class ImageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContent(String newContent) {
 		String oldContent = content;
 		content = newContent;
@@ -180,6 +182,7 @@ public class ImageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetContent() {
 		String oldContent = content;
 		boolean oldContentESet = (eFlags & CONTENT_ESETFLAG) != 0;
@@ -196,6 +199,7 @@ public class ImageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetContent() {
 		return (eFlags & CONTENT_ESETFLAG) != 0;
 	}
@@ -205,6 +209,7 @@ public class ImageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getLocation() {
 		return location;
 	}
@@ -214,6 +219,7 @@ public class ImageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLocation(String newLocation) {
 		String oldLocation = location;
 		location = newLocation;
@@ -230,6 +236,7 @@ public class ImageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetLocation() {
 		String oldLocation = location;
 		boolean oldLocationESet = (eFlags & LOCATION_ESETFLAG) != 0;
@@ -246,6 +253,7 @@ public class ImageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetLocation() {
 		return (eFlags & LOCATION_ESETFLAG) != 0;
 	}
@@ -255,6 +263,7 @@ public class ImageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getFormat() {
 		return format;
 	}
@@ -264,6 +273,7 @@ public class ImageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFormat(String newFormat) {
 		String oldFormat = format;
 		format = newFormat;
@@ -279,6 +289,7 @@ public class ImageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetFormat() {
 		String oldFormat = format;
 		boolean oldFormatESet = (eFlags & FORMAT_ESETFLAG) != 0;
@@ -295,6 +306,7 @@ public class ImageImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetFormat() {
 		return (eFlags & FORMAT_ESETFLAG) != 0;
 	}

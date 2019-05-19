@@ -92,6 +92,7 @@ public abstract class ValueSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Type getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject) type;
@@ -119,6 +120,7 @@ public abstract class ValueSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setType(Type newType) {
 		Type oldType = type;
 		type = newType;
@@ -132,6 +134,7 @@ public abstract class ValueSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isComputable() {
 		return ValueSpecificationOperations.isComputable(this);
 	}
@@ -141,6 +144,7 @@ public abstract class ValueSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int integerValue() {
 		return ValueSpecificationOperations.integerValue(this);
 	}
@@ -150,6 +154,7 @@ public abstract class ValueSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean booleanValue() {
 		return ValueSpecificationOperations.booleanValue(this);
 	}
@@ -159,6 +164,7 @@ public abstract class ValueSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String stringValue() {
 		return ValueSpecificationOperations.stringValue(this);
 	}
@@ -168,6 +174,7 @@ public abstract class ValueSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int unlimitedValue() {
 		return ValueSpecificationOperations.unlimitedValue(this);
 	}
@@ -177,6 +184,7 @@ public abstract class ValueSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isNull() {
 		return ValueSpecificationOperations.isNull(this);
 	}
@@ -186,6 +194,7 @@ public abstract class ValueSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public double realValue() {
 		return ValueSpecificationOperations.realValue(this);
 	}

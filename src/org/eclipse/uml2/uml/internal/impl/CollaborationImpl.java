@@ -271,6 +271,7 @@ public class CollaborationImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public EList<Property> getParts() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -296,6 +297,7 @@ public class CollaborationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ConnectableElement> getCollaborationRoles() {
 		if (collaborationRoles == null) {
 			collaborationRoles = new EObjectResolvingEList<ConnectableElement>(
@@ -310,6 +312,7 @@ public class CollaborationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConnectableElement getCollaborationRole(String name, Type type) {
 		return getCollaborationRole(name, type, false, null);
 	}
@@ -319,6 +322,7 @@ public class CollaborationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConnectableElement getCollaborationRole(String name, Type type,
 			boolean ignoreCase, EClass eClass) {
 		collaborationRoleLoop : for (ConnectableElement collaborationRole : getCollaborationRoles()) {
@@ -340,6 +344,7 @@ public class CollaborationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateClassBehavior(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return BehavioredClassifierOperations.validateClassBehavior(this,
@@ -351,6 +356,7 @@ public class CollaborationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> getAllImplementedInterfaces() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -377,6 +383,7 @@ public class CollaborationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> getImplementedInterfaces() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1404,6 +1411,7 @@ public class CollaborationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Behavior> getOwnedBehaviors() {
 		if (ownedBehaviors == null) {
 			ownedBehaviors = new SubsetSupersetEObjectContainmentEList.Resolving<Behavior>(
@@ -1428,6 +1436,7 @@ public class CollaborationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior createOwnedBehavior(String name, EClass eClass) {
 		Behavior newOwnedBehavior = (Behavior) create(eClass);
 		getOwnedBehaviors().add(newOwnedBehavior);
@@ -1441,6 +1450,7 @@ public class CollaborationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getOwnedBehavior(String name) {
 		return getOwnedBehavior(name, false, null, false);
 	}
@@ -1450,6 +1460,7 @@ public class CollaborationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getOwnedBehavior(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		ownedBehaviorLoop : for (Behavior ownedBehavior : getOwnedBehaviors()) {
@@ -1471,6 +1482,7 @@ public class CollaborationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getClassifierBehavior() {
 		if (classifierBehavior != null && classifierBehavior.eIsProxy()) {
 			InternalEObject oldClassifierBehavior = (InternalEObject) classifierBehavior;
@@ -1499,6 +1511,7 @@ public class CollaborationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClassifierBehavior(Behavior newClassifierBehavior) {
 		Behavior oldClassifierBehavior = classifierBehavior;
 		classifierBehavior = newClassifierBehavior;
@@ -1522,6 +1535,7 @@ public class CollaborationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior createClassifierBehavior(String name, EClass eClass) {
 		Behavior newClassifierBehavior = (Behavior) create(eClass);
 		setClassifierBehavior(newClassifierBehavior);
@@ -1535,6 +1549,7 @@ public class CollaborationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InterfaceRealization> getInterfaceRealizations() {
 		if (interfaceRealizations == null) {
 			interfaceRealizations = new EObjectContainmentWithInverseEList.Resolving<InterfaceRealization>(
@@ -1550,6 +1565,7 @@ public class CollaborationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceRealization createInterfaceRealization(String name,
 			Interface contract) {
 		InterfaceRealization newInterfaceRealization = (InterfaceRealization) create(UMLPackage.Literals.INTERFACE_REALIZATION);
@@ -1566,6 +1582,7 @@ public class CollaborationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceRealization getInterfaceRealization(String name,
 			Interface contract) {
 		return getInterfaceRealization(name, contract, false, false);
@@ -1576,6 +1593,7 @@ public class CollaborationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterfaceRealization getInterfaceRealization(String name,
 			Interface contract, boolean ignoreCase, boolean createOnDemand) {
 		interfaceRealizationLoop : for (InterfaceRealization interfaceRealization : getInterfaceRealizations()) {

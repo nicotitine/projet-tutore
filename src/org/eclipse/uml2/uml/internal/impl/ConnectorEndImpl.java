@@ -102,6 +102,7 @@ public class ConnectorEndImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getDefiningEnd() {
 		Property definingEnd = basicGetDefiningEnd();
 		return definingEnd != null && definingEnd.eIsProxy()
@@ -123,6 +124,7 @@ public class ConnectorEndImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getPartWithPort() {
 		if (partWithPort != null && partWithPort.eIsProxy()) {
 			InternalEObject oldPartWithPort = (InternalEObject) partWithPort;
@@ -151,6 +153,7 @@ public class ConnectorEndImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPartWithPort(Property newPartWithPort) {
 		Property oldPartWithPort = partWithPort;
 		partWithPort = newPartWithPort;
@@ -165,6 +168,7 @@ public class ConnectorEndImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConnectableElement getRole() {
 		if (role != null && role.eIsProxy()) {
 			InternalEObject oldRole = (InternalEObject) role;
@@ -192,6 +196,7 @@ public class ConnectorEndImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRole(ConnectableElement newRole) {
 		ConnectableElement oldRole = role;
 		role = newRole;
@@ -205,6 +210,7 @@ public class ConnectorEndImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ConnectorEndOperations.validateMultiplicity(this, diagnostics,
@@ -216,6 +222,7 @@ public class ConnectorEndImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validatePartWithPortEmpty(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ConnectorEndOperations.validatePartWithPortEmpty(this,
@@ -227,6 +234,7 @@ public class ConnectorEndImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRoleAndPartWithPort(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ConnectorEndOperations.validateRoleAndPartWithPort(this,
@@ -238,6 +246,7 @@ public class ConnectorEndImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSelfPartWithPort(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ConnectorEndOperations.validateSelfPartWithPort(this,

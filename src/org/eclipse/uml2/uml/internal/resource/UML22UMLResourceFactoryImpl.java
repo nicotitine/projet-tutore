@@ -31,6 +31,7 @@ import org.eclipse.uml2.uml.UMLPackage;
 import org.eclipse.uml2.uml.resource.UML22UMLExtendedMetaData;
 import org.eclipse.uml2.uml.resource.UML22UMLResource;
 import org.eclipse.uml2.uml.resource.UML22UMLResourceHandler;
+import org.eclipse.uml2.uml.resource.UMLResource;
 
 public class UML22UMLResourceFactoryImpl
 		extends UMLResourceFactoryImpl
@@ -43,7 +44,7 @@ public class UML22UMLResourceFactoryImpl
 	@Override
 	public Resource createResourceGen(URI uri) {
 		UML22UMLResource result = new UML22UMLResourceImpl(uri);
-		result.setEncoding(UML22UMLResource.DEFAULT_ENCODING);
+		result.setEncoding(UMLResource.DEFAULT_ENCODING);
 		return result;
 	}
 

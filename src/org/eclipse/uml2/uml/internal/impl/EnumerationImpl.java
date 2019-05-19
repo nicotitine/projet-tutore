@@ -141,6 +141,7 @@ public class EnumerationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<EnumerationLiteral> getOwnedLiterals() {
 		if (ownedLiterals == null) {
 			ownedLiterals = new EObjectContainmentWithInverseEList.Resolving<EnumerationLiteral>(
@@ -156,6 +157,7 @@ public class EnumerationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EnumerationLiteral createOwnedLiteral(String name) {
 		EnumerationLiteral newOwnedLiteral = (EnumerationLiteral) create(UMLPackage.Literals.ENUMERATION_LITERAL);
 		getOwnedLiterals().add(newOwnedLiteral);
@@ -169,6 +171,7 @@ public class EnumerationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EnumerationLiteral getOwnedLiteral(String name) {
 		return getOwnedLiteral(name, false, false);
 	}
@@ -178,6 +181,7 @@ public class EnumerationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EnumerationLiteral getOwnedLiteral(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		ownedLiteralLoop : for (EnumerationLiteral ownedLiteral : getOwnedLiterals()) {
@@ -197,6 +201,7 @@ public class EnumerationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateImmutable(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return EnumerationOperations.validateImmutable(this, diagnostics,

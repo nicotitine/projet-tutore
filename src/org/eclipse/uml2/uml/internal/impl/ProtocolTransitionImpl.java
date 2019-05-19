@@ -218,6 +218,7 @@ public class ProtocolTransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getPostCondition() {
 		if (postCondition != null && postCondition.eIsProxy()) {
 			InternalEObject oldPostCondition = (InternalEObject) postCondition;
@@ -246,6 +247,7 @@ public class ProtocolTransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPostCondition(Constraint newPostCondition) {
 		Constraint oldPostCondition = postCondition;
 		postCondition = newPostCondition;
@@ -269,6 +271,7 @@ public class ProtocolTransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createPostCondition(String name, EClass eClass) {
 		Constraint newPostCondition = (Constraint) create(eClass);
 		setPostCondition(newPostCondition);
@@ -282,6 +285,7 @@ public class ProtocolTransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createPostCondition(String name) {
 		return createPostCondition(name, UMLPackage.Literals.CONSTRAINT);
 	}
@@ -332,6 +336,7 @@ public class ProtocolTransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public EList<Operation> getReferreds() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -358,6 +363,7 @@ public class ProtocolTransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation getReferred(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes) {
 		return getReferred(name, ownedParameterNames, ownedParameterTypes,
@@ -369,6 +375,7 @@ public class ProtocolTransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation getReferred(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes,
 			boolean ignoreCase) {
@@ -407,6 +414,7 @@ public class ProtocolTransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getPreCondition() {
 		if (preCondition != null && preCondition.eIsProxy()) {
 			InternalEObject oldPreCondition = (InternalEObject) preCondition;
@@ -435,6 +443,7 @@ public class ProtocolTransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setPreCondition(Constraint newPreCondition) {
 		Constraint oldPreCondition = preCondition;
 		preCondition = newPreCondition;
@@ -457,6 +466,7 @@ public class ProtocolTransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateBelongsToPsm(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ProtocolTransitionOperations.validateBelongsToPsm(this,
@@ -468,6 +478,7 @@ public class ProtocolTransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateAssociatedActions(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ProtocolTransitionOperations.validateAssociatedActions(this,
@@ -479,6 +490,7 @@ public class ProtocolTransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRefersToOperation(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ProtocolTransitionOperations.validateRefersToOperation(this,

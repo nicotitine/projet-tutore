@@ -94,6 +94,7 @@ public class MessageOccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Message getMessage() {
 		if (message != null && message.eIsProxy()) {
 			InternalEObject oldMessage = (InternalEObject) message;
@@ -122,6 +123,7 @@ public class MessageOccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMessage(Message newMessage) {
 		Message oldMessage = message;
 		message = newMessage;
@@ -136,6 +138,7 @@ public class MessageOccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<MessageEnd> oppositeEnd() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -156,6 +159,7 @@ public class MessageOccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSend() {
 		return MessageEndOperations.isSend(this);
 	}
@@ -165,6 +169,7 @@ public class MessageOccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isReceive() {
 		return MessageEndOperations.isReceive(this);
 	}
@@ -174,6 +179,7 @@ public class MessageOccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InteractionFragment> enclosingFragment() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {

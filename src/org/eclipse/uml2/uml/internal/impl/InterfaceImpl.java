@@ -263,6 +263,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getOwnedAttributes() {
 		if (ownedAttributes == null) {
 			ownedAttributes = new EObjectContainmentWithInverseEList.Resolving<Property>(
@@ -277,6 +278,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createOwnedAttribute(String name, Type type, EClass eClass) {
 		Property newOwnedAttribute = (Property) create(eClass);
 		getOwnedAttributes().add(newOwnedAttribute);
@@ -292,6 +294,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createOwnedAttribute(String name, Type type) {
 		return createOwnedAttribute(name, type, UMLPackage.Literals.PROPERTY);
 	}
@@ -301,6 +304,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getOwnedAttribute(String name, Type type) {
 		return getOwnedAttribute(name, type, false, null, false);
 	}
@@ -310,6 +314,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getOwnedAttribute(String name, Type type,
 			boolean ignoreCase, EClass eClass, boolean createOnDemand) {
 		ownedAttributeLoop : for (Property ownedAttribute : getOwnedAttributes()) {
@@ -333,6 +338,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Classifier> getNestedClassifiers() {
 		if (nestedClassifiers == null) {
 			nestedClassifiers = new EObjectContainmentEList.Resolving<Classifier>(
@@ -346,6 +352,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier createNestedClassifier(String name, EClass eClass) {
 		Classifier newNestedClassifier = (Classifier) create(eClass);
 		getNestedClassifiers().add(newNestedClassifier);
@@ -359,6 +366,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getNestedClassifier(String name) {
 		return getNestedClassifier(name, false, null, false);
 	}
@@ -368,6 +376,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getNestedClassifier(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		nestedClassifierLoop : for (Classifier nestedClassifier : getNestedClassifiers()) {
@@ -389,6 +398,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Interface> getRedefinedInterfaces() {
 		if (redefinedInterfaces == null) {
 			redefinedInterfaces = new SubsetSupersetEObjectResolvingEList<Interface>(
@@ -404,6 +414,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Reception> getOwnedReceptions() {
 		if (ownedReceptions == null) {
 			ownedReceptions = new EObjectContainmentEList.Resolving<Reception>(
@@ -417,6 +428,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reception createOwnedReception(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes) {
 		Reception newOwnedReception = (Reception) create(UMLPackage.Literals.RECEPTION);
@@ -449,6 +461,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reception getOwnedReception(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes) {
 		return getOwnedReception(name, ownedParameterNames,
@@ -460,6 +473,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Reception getOwnedReception(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes,
 			boolean ignoreCase, boolean createOnDemand) {
@@ -502,6 +516,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProtocolStateMachine getProtocol() {
 		if (protocol != null && protocol.eIsProxy()) {
 			InternalEObject oldProtocol = (InternalEObject) protocol;
@@ -560,6 +575,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProtocol(ProtocolStateMachine newProtocol) {
 		if (newProtocol != protocol) {
 			NotificationChain msgs = null;
@@ -584,6 +600,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProtocolStateMachine createProtocol(String name) {
 		ProtocolStateMachine newProtocol = (ProtocolStateMachine) create(UMLPackage.Literals.PROTOCOL_STATE_MACHINE);
 		setProtocol(newProtocol);
@@ -597,6 +614,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Operation> getOwnedOperations() {
 		if (ownedOperations == null) {
 			ownedOperations = new EObjectContainmentWithInverseEList.Resolving<Operation>(
@@ -611,6 +629,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation createOwnedOperation(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes) {
 		Operation newOwnedOperation = (Operation) create(UMLPackage.Literals.OPERATION);
@@ -643,6 +662,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation getOwnedOperation(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes) {
 		return getOwnedOperation(name, ownedParameterNames,
@@ -654,6 +674,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation getOwnedOperation(String name,
 			EList<String> ownedParameterNames, EList<Type> ownedParameterTypes,
 			boolean ignoreCase, boolean createOnDemand) {
@@ -696,6 +717,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateVisibility(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InterfaceOperations.validateVisibility(this, diagnostics,
@@ -707,6 +729,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Operation createOwnedOperation(String name,
 			EList<String> parameterNames, EList<Type> parameterTypes,
 			Type returnType) {
@@ -719,6 +742,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createOwnedAttribute(String name, Type type, int lower,
 			int upper) {
 		return InterfaceOperations.createOwnedAttribute(this, name, type,
@@ -1728,6 +1752,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interface getRedefinedInterface(String name) {
 		return getRedefinedInterface(name, false);
 	}
@@ -1737,6 +1762,7 @@ public class InterfaceImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interface getRedefinedInterface(String name, boolean ignoreCase) {
 		redefinedInterfaceLoop : for (Interface redefinedInterface : getRedefinedInterfaces()) {
 			if (name != null && !(ignoreCase

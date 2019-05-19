@@ -140,6 +140,7 @@ public class AcceptCallActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getReturnInformation() {
 		if (returnInformation != null && returnInformation.eIsProxy()) {
 			InternalEObject oldReturnInformation = (InternalEObject) returnInformation;
@@ -205,6 +206,7 @@ public class AcceptCallActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setReturnInformation(OutputPin newReturnInformation) {
 		if (newReturnInformation != returnInformation) {
 			NotificationChain msgs = null;
@@ -232,6 +234,7 @@ public class AcceptCallActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createReturnInformation(String name, Type type) {
 		OutputPin newReturnInformation = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		setReturnInformation(newReturnInformation);
@@ -247,6 +250,7 @@ public class AcceptCallActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateResultPins(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return AcceptCallActionOperations.validateResultPins(this, diagnostics,
@@ -258,6 +262,7 @@ public class AcceptCallActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTriggerCallEvent(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return AcceptCallActionOperations.validateTriggerCallEvent(this,
@@ -269,6 +274,7 @@ public class AcceptCallActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateUnmarshall(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return AcceptCallActionOperations.validateUnmarshall(this, diagnostics,

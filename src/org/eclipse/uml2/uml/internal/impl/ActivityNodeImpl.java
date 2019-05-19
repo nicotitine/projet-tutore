@@ -160,6 +160,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityGroup> getInGroups() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -218,6 +219,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityEdge> getOutgoings() {
 		if (outgoings == null) {
 			outgoings = new EObjectWithInverseResolvingEList<ActivityEdge>(
@@ -232,6 +234,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getOutgoing(String name) {
 		return getOutgoing(name, false, null);
 	}
@@ -241,6 +244,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getOutgoing(String name, boolean ignoreCase,
 			EClass eClass) {
 		outgoingLoop : for (ActivityEdge outgoing : getOutgoings()) {
@@ -260,6 +264,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityPartition> getInPartitions() {
 		if (inPartitions == null) {
 			inPartitions = new EObjectWithInverseResolvingEList.ManyInverse<ActivityPartition>(
@@ -275,6 +280,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityPartition getInPartition(String name) {
 		return getInPartition(name, false);
 	}
@@ -284,6 +290,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityPartition getInPartition(String name, boolean ignoreCase) {
 		inPartitionLoop : for (ActivityPartition inPartition : getInPartitions()) {
 			if (name != null && !(ignoreCase
@@ -300,6 +307,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Activity containingActivity() {
 		return ActivityNodeOperations.containingActivity(this);
 	}
@@ -319,6 +327,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructuredActivityNode getInStructuredNode() {
 		if (eContainerFeatureID() != UMLPackage.ACTIVITY_NODE__IN_STRUCTURED_NODE)
 			return null;
@@ -353,6 +362,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInStructuredNode(StructuredActivityNode newInStructuredNode) {
 		if (newInStructuredNode != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.ACTIVITY_NODE__IN_STRUCTURED_NODE && newInStructuredNode != null)) {
@@ -380,6 +390,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Activity getActivity() {
 		Activity activity = basicGetActivity();
 		return activity != null && activity.eIsProxy()
@@ -399,6 +410,7 @@ public abstract class ActivityNodeImpl
 			: null;
 	}
 
+	@Override
 	public NotificationChain eBasicRemoveFromContainer(NotificationChain msgs) {
 		InternalEObject eInternalContainer = eInternalContainer();
 		if (eInternalContainer instanceof Activity) {
@@ -413,6 +425,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public void setActivity(Activity newActivity) {
 		if (newActivity != eInternalContainer()) {
 			if (EcoreUtil.isAncestor(this, newActivity))
@@ -439,6 +452,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityEdge> getIncomings() {
 		if (incomings == null) {
 			incomings = new EObjectWithInverseResolvingEList<ActivityEdge>(
@@ -453,6 +467,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getIncoming(String name) {
 		return getIncoming(name, false, null);
 	}
@@ -462,6 +477,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getIncoming(String name, boolean ignoreCase,
 			EClass eClass) {
 		incomingLoop : for (ActivityEdge incoming : getIncomings()) {
@@ -481,6 +497,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InterruptibleActivityRegion> getInInterruptibleRegions() {
 		if (inInterruptibleRegions == null) {
 			inInterruptibleRegions = new EObjectWithInverseResolvingEList.ManyInverse<InterruptibleActivityRegion>(
@@ -496,6 +513,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterruptibleActivityRegion getInInterruptibleRegion(String name) {
 		return getInInterruptibleRegion(name, false);
 	}
@@ -505,6 +523,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InterruptibleActivityRegion getInInterruptibleRegion(String name,
 			boolean ignoreCase) {
 		inInterruptibleRegionLoop : for (InterruptibleActivityRegion inInterruptibleRegion : getInInterruptibleRegions()) {
@@ -522,6 +541,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityNode> getRedefinedNodes() {
 		if (redefinedNodes == null) {
 			redefinedNodes = new EObjectResolvingEList<ActivityNode>(
@@ -536,6 +556,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode getRedefinedNode(String name) {
 		return getRedefinedNode(name, false, null);
 	}
@@ -545,6 +566,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode getRedefinedNode(String name, boolean ignoreCase,
 			EClass eClass) {
 		redefinedNodeLoop : for (ActivityNode redefinedNode : getRedefinedNodes()) {
@@ -1070,6 +1092,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityGroup getInGroup(String name) {
 		return getInGroup(name, false, null);
 	}
@@ -1079,6 +1102,7 @@ public abstract class ActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityGroup getInGroup(String name, boolean ignoreCase,
 			EClass eClass) {
 		inGroupLoop : for (ActivityGroup inGroup : getInGroups()) {

@@ -252,6 +252,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<RedefinableElement> getRedefinedElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -326,6 +327,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public EList<Classifier> getRedefinitionContexts() {
 		CacheAdapter cache = getCacheAdapter();
 
@@ -368,6 +370,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getRedefinitionContext(String name) {
 		return getRedefinitionContext(name, false, null);
 	}
@@ -377,6 +380,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getRedefinitionContext(String name, boolean ignoreCase,
 			EClass eClass) {
 		redefinitionContextLoop : for (Classifier redefinitionContext : getRedefinitionContexts()) {
@@ -405,6 +409,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isLeaf() {
 		return (eFlags & IS_LEAF_EFLAG) != 0;
 	}
@@ -414,6 +419,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsLeaf(boolean newIsLeaf) {
 		boolean oldIsLeaf = (eFlags & IS_LEAF_EFLAG) != 0;
 		if (newIsLeaf)
@@ -443,6 +449,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TransitionKind getKind() {
 		return KIND_EFLAG_VALUES[(eFlags & KIND_EFLAG) >>> KIND_EFLAG_OFFSET];
 	}
@@ -452,6 +459,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setKind(TransitionKind newKind) {
 		TransitionKind oldKind = KIND_EFLAG_VALUES[(eFlags & KIND_EFLAG) >>> KIND_EFLAG_OFFSET];
 		if (newKind == null)
@@ -467,6 +475,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Region getContainer() {
 		if (eContainerFeatureID() != UMLPackage.TRANSITION__CONTAINER)
 			return null;
@@ -501,6 +510,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setContainer(Region newContainer) {
 		if (newContainer != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.TRANSITION__CONTAINER && newContainer != null)) {
@@ -526,6 +536,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Vertex getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject) target;
@@ -553,6 +564,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTarget(Vertex newTarget) {
 		Vertex oldTarget = target;
 		target = newTarget;
@@ -566,6 +578,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Transition getRedefinedTransition() {
 		if (redefinedTransition != null && redefinedTransition.eIsProxy()) {
 			InternalEObject oldRedefinedTransition = (InternalEObject) redefinedTransition;
@@ -594,6 +607,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRedefinedTransition(Transition newRedefinedTransition) {
 		Transition oldRedefinedTransition = redefinedTransition;
 		redefinedTransition = newRedefinedTransition;
@@ -608,6 +622,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getGuard() {
 		if (guard != null && guard.eIsProxy()) {
 			InternalEObject oldGuard = (InternalEObject) guard;
@@ -635,6 +650,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setGuard(Constraint newGuard) {
 		Constraint oldGuard = guard;
 		guard = newGuard;
@@ -657,6 +673,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createGuard(String name, EClass eClass) {
 		Constraint newGuard = (Constraint) create(eClass);
 		setGuard(newGuard);
@@ -670,6 +687,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createGuard(String name) {
 		return createGuard(name, UMLPackage.Literals.CONSTRAINT);
 	}
@@ -679,6 +697,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getEffect() {
 		if (effect != null && effect.eIsProxy()) {
 			InternalEObject oldEffect = (InternalEObject) effect;
@@ -737,6 +756,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEffect(Behavior newEffect) {
 		if (newEffect != effect) {
 			NotificationChain msgs = null;
@@ -761,6 +781,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior createEffect(String name, EClass eClass) {
 		Behavior newEffect = (Behavior) create(eClass);
 		setEffect(newEffect);
@@ -774,6 +795,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Trigger> getTriggers() {
 		if (triggers == null) {
 			triggers = new EObjectContainmentEList.Resolving<Trigger>(
@@ -787,6 +809,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Trigger createTrigger(String name) {
 		Trigger newTrigger = (Trigger) create(UMLPackage.Literals.TRIGGER);
 		getTriggers().add(newTrigger);
@@ -800,6 +823,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Trigger getTrigger(String name) {
 		return getTrigger(name, false, false);
 	}
@@ -809,6 +833,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Trigger getTrigger(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		triggerLoop : for (Trigger trigger : getTriggers()) {
@@ -828,6 +853,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Vertex getSource() {
 		if (source != null && source.eIsProxy()) {
 			InternalEObject oldSource = (InternalEObject) source;
@@ -855,6 +881,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSource(Vertex newSource) {
 		Vertex oldSource = source;
 		source = newSource;
@@ -868,6 +895,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRedefinitionContextValid(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return RedefinableElementOperations.validateRedefinitionContextValid(
@@ -879,6 +907,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRedefinitionConsistent(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return RedefinableElementOperations.validateRedefinitionConsistent(
@@ -890,6 +919,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNonLeafRedefinition(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return RedefinableElementOperations.validateNonLeafRedefinition(this,
@@ -901,6 +931,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateForkSegmentGuards(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TransitionOperations.validateForkSegmentGuards(this,
@@ -912,6 +943,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateJoinSegmentGuards(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TransitionOperations.validateJoinSegmentGuards(this,
@@ -923,6 +955,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateStateIsInternal(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TransitionOperations.validateStateIsInternal(this, diagnostics,
@@ -934,6 +967,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateForkSegmentState(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TransitionOperations.validateForkSegmentState(this, diagnostics,
@@ -945,6 +979,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateJoinSegmentState(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TransitionOperations.validateJoinSegmentState(this, diagnostics,
@@ -956,6 +991,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOutgoingPseudostates(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TransitionOperations.validateOutgoingPseudostates(this,
@@ -967,6 +1003,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInitialTransition(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TransitionOperations.validateInitialTransition(this,
@@ -978,6 +1015,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateStateIsLocal(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TransitionOperations.validateStateIsLocal(this, diagnostics,
@@ -989,6 +1027,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier redefinitionContext() {
 		return TransitionOperations.redefinitionContext(this);
 	}
@@ -998,6 +1037,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StateMachine containingStateMachine() {
 		return TransitionOperations.containingStateMachine(this);
 	}
@@ -1007,6 +1047,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isConsistentWith(RedefinableElement redefiningElement) {
 		return TransitionOperations.isConsistentWith(this, redefiningElement);
 	}
@@ -1016,6 +1057,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isRedefinitionContextValid(
 			RedefinableElement redefinedElement) {
 		return RedefinableElementOperations.isRedefinitionContextValid(this,
@@ -1027,6 +1069,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateStateIsExternal(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TransitionOperations.validateStateIsExternal(this, diagnostics,
@@ -1736,6 +1779,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RedefinableElement getRedefinedElement(String name) {
 		return getRedefinedElement(name, false, null);
 	}
@@ -1745,6 +1789,7 @@ public class TransitionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public RedefinableElement getRedefinedElement(String name,
 			boolean ignoreCase, EClass eClass) {
 		redefinedElementLoop : for (RedefinableElement redefinedElement : getRedefinedElements()) {

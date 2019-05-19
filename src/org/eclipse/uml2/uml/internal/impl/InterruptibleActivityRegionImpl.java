@@ -145,6 +145,7 @@ public class InterruptibleActivityRegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityNode> getNodes() {
 		if (nodes == null) {
 			nodes = new EObjectWithInverseResolvingEList.ManyInverse<ActivityNode>(
@@ -160,6 +161,7 @@ public class InterruptibleActivityRegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode getNode(String name) {
 		return getNode(name, false, null);
 	}
@@ -169,6 +171,7 @@ public class InterruptibleActivityRegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode getNode(String name, boolean ignoreCase, EClass eClass) {
 		nodeLoop : for (ActivityNode node : getNodes()) {
 			if (eClass != null && !eClass.isInstance(node))
@@ -187,6 +190,7 @@ public class InterruptibleActivityRegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityEdge> getInterruptingEdges() {
 		if (interruptingEdges == null) {
 			interruptingEdges = new EObjectWithInverseResolvingEList<ActivityEdge>(
@@ -202,6 +206,7 @@ public class InterruptibleActivityRegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getInterruptingEdge(String name) {
 		return getInterruptingEdge(name, false, null);
 	}
@@ -211,6 +216,7 @@ public class InterruptibleActivityRegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getInterruptingEdge(String name, boolean ignoreCase,
 			EClass eClass) {
 		interruptingEdgeLoop : for (ActivityEdge interruptingEdge : getInterruptingEdges()) {
@@ -230,6 +236,7 @@ public class InterruptibleActivityRegionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInterruptingEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InterruptibleActivityRegionOperations.validateInterruptingEdges(

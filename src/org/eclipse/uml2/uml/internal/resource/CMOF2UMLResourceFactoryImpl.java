@@ -31,6 +31,7 @@ import org.eclipse.uml2.uml.UMLPackage;
 import org.eclipse.uml2.uml.resource.CMOF2UMLExtendedMetaData;
 import org.eclipse.uml2.uml.resource.CMOF2UMLResource;
 import org.eclipse.uml2.uml.resource.CMOF2UMLResourceHandler;
+import org.eclipse.uml2.uml.resource.UMLResource;
 
 public class CMOF2UMLResourceFactoryImpl
 		extends UMLResourceFactoryImpl
@@ -43,7 +44,7 @@ public class CMOF2UMLResourceFactoryImpl
 	@Override
 	public Resource createResourceGen(URI uri) {
 		CMOF2UMLResource result = new CMOF2UMLResourceImpl(uri);
-		result.setEncoding(CMOF2UMLResource.DEFAULT_ENCODING);
+		result.setEncoding(UMLResource.DEFAULT_ENCODING);
 		return result;
 	}
 

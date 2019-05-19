@@ -162,6 +162,7 @@ public class ComponentRealizationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Component getAbstraction() {
 		if (eContainerFeatureID() != UMLPackage.COMPONENT_REALIZATION__ABSTRACTION)
 			return null;
@@ -205,6 +206,7 @@ public class ComponentRealizationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAbstraction(Component newAbstraction) {
 		if (newAbstraction != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.COMPONENT_REALIZATION__ABSTRACTION && newAbstraction != null)) {
@@ -231,6 +233,7 @@ public class ComponentRealizationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Classifier> getRealizingClassifiers() {
 		if (realizingClassifiers == null) {
 			realizingClassifiers = new SubsetSupersetEObjectResolvingEList<Classifier>(
@@ -256,6 +259,7 @@ public class ComponentRealizationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getRealizingClassifier(String name) {
 		return getRealizingClassifier(name, false, null);
 	}
@@ -265,6 +269,7 @@ public class ComponentRealizationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getRealizingClassifier(String name, boolean ignoreCase,
 			EClass eClass) {
 		realizingClassifierLoop : for (Classifier realizingClassifier : getRealizingClassifiers()) {

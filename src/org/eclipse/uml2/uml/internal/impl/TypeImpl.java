@@ -113,6 +113,7 @@ public abstract class TypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Package getPackage() {
 		org.eclipse.uml2.uml.Package package_ = basicGetPackage();
 		return package_ != null && package_.eIsProxy()
@@ -137,6 +138,7 @@ public abstract class TypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public void setPackage(org.eclipse.uml2.uml.Package newPackage) {
 		if (newPackage != eInternalContainer()) {
 			if (EcoreUtil.isAncestor(this, newPackage))
@@ -163,6 +165,7 @@ public abstract class TypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Association createAssociation(boolean end1IsNavigable,
 			AggregationKind end1Aggregation, String end1Name, int end1Lower,
 			int end1Upper, Type end1Type, boolean end2IsNavigable,
@@ -178,6 +181,7 @@ public abstract class TypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Association> getAssociations() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -198,6 +202,7 @@ public abstract class TypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean conformsTo(Type other) {
 		return TypeOperations.conformsTo(this, other);
 	}

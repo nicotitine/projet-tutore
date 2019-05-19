@@ -138,6 +138,7 @@ public class ExtensionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createOwnedEnd(String name, Type type) {
 		ExtensionEnd newOwnedEnd = (ExtensionEnd) create(UMLPackage.Literals.EXTENSION_END);
 		getOwnedEnds().add(newOwnedEnd);
@@ -153,6 +154,7 @@ public class ExtensionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getOwnedEnd(String name, Type type) {
 		return getOwnedEnd(name, type, false, false);
 	}
@@ -192,6 +194,7 @@ public class ExtensionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isRequired() {
 		return ExtensionOperations.isRequired(this);
 	}
@@ -201,6 +204,7 @@ public class ExtensionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Class getMetaclass() {
 		org.eclipse.uml2.uml.Class metaclass = basicGetMetaclass();
 		return metaclass != null && metaclass.eIsProxy()
@@ -222,6 +226,7 @@ public class ExtensionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNonOwnedEnd(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ExtensionOperations.validateNonOwnedEnd(this, diagnostics,
@@ -233,6 +238,7 @@ public class ExtensionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateIsBinary(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ExtensionOperations.validateIsBinary(this, diagnostics, context);
@@ -243,6 +249,7 @@ public class ExtensionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getStereotypeEnd() {
 		return ExtensionOperations.getStereotypeEnd(this);
 	}
@@ -252,6 +259,7 @@ public class ExtensionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Stereotype getStereotype() {
 		return ExtensionOperations.getStereotype(this);
 	}
@@ -261,6 +269,7 @@ public class ExtensionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property metaclassEnd() {
 		return ExtensionOperations.metaclassEnd(this);
 	}

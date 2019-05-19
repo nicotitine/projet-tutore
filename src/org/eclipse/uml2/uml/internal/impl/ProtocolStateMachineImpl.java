@@ -159,6 +159,7 @@ public class ProtocolStateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ProtocolConformance> getConformances() {
 		if (conformances == null) {
 			conformances = new EObjectContainmentWithInverseEList.Resolving<ProtocolConformance>(
@@ -174,6 +175,7 @@ public class ProtocolStateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProtocolConformance createConformance(
 			ProtocolStateMachine generalMachine) {
 		ProtocolConformance newConformance = (ProtocolConformance) create(UMLPackage.Literals.PROTOCOL_CONFORMANCE);
@@ -188,6 +190,7 @@ public class ProtocolStateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProtocolConformance getConformance(
 			ProtocolStateMachine generalMachine) {
 		return getConformance(generalMachine, false);
@@ -198,6 +201,7 @@ public class ProtocolStateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ProtocolConformance getConformance(
 			ProtocolStateMachine generalMachine, boolean createOnDemand) {
 		conformanceLoop : for (ProtocolConformance conformance : getConformances()) {
@@ -216,6 +220,7 @@ public class ProtocolStateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateProtocolTransitions(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ProtocolStateMachineOperations.validateProtocolTransitions(this,
@@ -227,6 +232,7 @@ public class ProtocolStateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateEntryExitDo(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ProtocolStateMachineOperations.validateEntryExitDo(this,
@@ -238,6 +244,7 @@ public class ProtocolStateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDeepOrShallowHistory(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ProtocolStateMachineOperations.validateDeepOrShallowHistory(

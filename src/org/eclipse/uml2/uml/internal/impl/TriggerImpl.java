@@ -103,6 +103,7 @@ public class TriggerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Event getEvent() {
 		if (event != null && event.eIsProxy()) {
 			InternalEObject oldEvent = (InternalEObject) event;
@@ -130,6 +131,7 @@ public class TriggerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEvent(Event newEvent) {
 		Event oldEvent = event;
 		event = newEvent;
@@ -143,6 +145,7 @@ public class TriggerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Port> getPorts() {
 		if (ports == null) {
 			ports = new EObjectResolvingEList<Port>(Port.class, this,
@@ -156,6 +159,7 @@ public class TriggerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Port getPort(String name, Type type) {
 		return getPort(name, type, false);
 	}
@@ -165,6 +169,7 @@ public class TriggerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Port getPort(String name, Type type, boolean ignoreCase) {
 		portLoop : for (Port port : getPorts()) {
 			if (name != null && !(ignoreCase
@@ -183,6 +188,7 @@ public class TriggerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTriggerWithPorts(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TriggerOperations.validateTriggerWithPorts(this, diagnostics,

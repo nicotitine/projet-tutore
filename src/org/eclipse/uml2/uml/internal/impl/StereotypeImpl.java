@@ -173,6 +173,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Image> getIcons() {
 		if (icons == null) {
 			icons = new EObjectContainmentEList.Resolving<Image>(Image.class,
@@ -186,6 +187,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Image createIcon() {
 		Image newIcon = (Image) create(UMLPackage.Literals.IMAGE);
 		getIcons().add(newIcon);
@@ -197,6 +199,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNameNotClash(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StereotypeOperations.validateNameNotClash(this, diagnostics,
@@ -208,6 +211,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateAssociationEndOwnership(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StereotypeOperations.validateAssociationEndOwnership(this,
@@ -219,6 +223,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateBasePropertyUpperBound(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StereotypeOperations.validateBasePropertyUpperBound(this,
@@ -230,6 +235,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateBasePropertyMultiplicitySingleExtension(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return StereotypeOperations
@@ -242,6 +248,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateBasePropertyMultiplicityMultipleExtension(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return StereotypeOperations
@@ -254,6 +261,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateGeneralize(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StereotypeOperations.validateGeneralize(this, diagnostics,
@@ -265,6 +273,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Extension createExtension(org.eclipse.uml2.uml.Class metaclass,
 			boolean isRequired) {
 		return StereotypeOperations
@@ -276,6 +285,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Profile getProfile() {
 		Profile profile = basicGetProfile();
 		return profile != null && profile.eIsProxy()
@@ -297,6 +307,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateBinaryAssociationsOnly(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StereotypeOperations.validateBinaryAssociationsOnly(this,
@@ -308,6 +319,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getKeyword() {
 		return StereotypeOperations.getKeyword(this);
 	}
@@ -317,6 +329,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getKeyword(boolean localize) {
 		return StereotypeOperations.getKeyword(this, localize);
 	}
@@ -326,6 +339,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Profile containingProfile() {
 		return StereotypeOperations.containingProfile(this);
 	}
@@ -335,6 +349,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.eclipse.uml2.uml.Class> getExtendedMetaclasses() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -357,6 +372,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.eclipse.uml2.uml.Class> getAllExtendedMetaclasses() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -383,6 +399,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EClass getDefinition() {
 		return StereotypeOperations.getDefinition(this);
 	}
@@ -392,6 +409,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Image createIcon(String location) {
 		return StereotypeOperations.createIcon(this, location);
 	}
@@ -401,6 +419,7 @@ public class StereotypeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Image createIcon(String format, String content) {
 		return StereotypeOperations.createIcon(this, format, content);
 	}

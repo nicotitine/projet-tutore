@@ -167,6 +167,7 @@ public class NodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Deployment> getDeployments() {
 		if (deployments == null) {
 			deployments = new EObjectContainmentWithInverseEList.Resolving<Deployment>(
@@ -181,6 +182,7 @@ public class NodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageableElement> getDeployedElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -205,6 +207,7 @@ public class NodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageableElement getDeployedElement(String name) {
 		return getDeployedElement(name, false, null);
 	}
@@ -214,6 +217,7 @@ public class NodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageableElement getDeployedElement(String name,
 			boolean ignoreCase, EClass eClass) {
 		deployedElementLoop : for (PackageableElement deployedElement : getDeployedElements()) {
@@ -259,6 +263,7 @@ public class NodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Node> getNestedNodes() {
 		if (nestedNodes == null) {
 			nestedNodes = new EObjectContainmentEList.Resolving<Node>(
@@ -272,6 +277,7 @@ public class NodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Node createNestedNode(String name, EClass eClass) {
 		Node newNestedNode = (Node) create(eClass);
 		getNestedNodes().add(newNestedNode);
@@ -285,6 +291,7 @@ public class NodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Node createNestedNode(String name) {
 		return createNestedNode(name, UMLPackage.Literals.NODE);
 	}
@@ -294,6 +301,7 @@ public class NodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Node getNestedNode(String name) {
 		return getNestedNode(name, false, null, false);
 	}
@@ -303,6 +311,7 @@ public class NodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Node getNestedNode(String name, boolean ignoreCase, EClass eClass,
 			boolean createOnDemand) {
 		nestedNodeLoop : for (Node nestedNode : getNestedNodes()) {
@@ -324,6 +333,7 @@ public class NodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInternalStructure(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return NodeOperations.validateInternalStructure(this, diagnostics,
@@ -335,6 +345,7 @@ public class NodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public CommunicationPath createCommunicationPath(boolean end1IsNavigable,
 			AggregationKind end1Aggregation, String end1Name, int end1Lower,
 			int end1Upper, Node end1Node, boolean end2IsNavigable,
@@ -350,6 +361,7 @@ public class NodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<CommunicationPath> getCommunicationPaths() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1470,6 +1482,7 @@ public class NodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Deployment createDeployment(String name) {
 		Deployment newDeployment = (Deployment) create(UMLPackage.Literals.DEPLOYMENT);
 		getDeployments().add(newDeployment);
@@ -1483,6 +1496,7 @@ public class NodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Deployment getDeployment(String name) {
 		return getDeployment(name, false, false);
 	}
@@ -1492,6 +1506,7 @@ public class NodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Deployment getDeployment(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		deploymentLoop : for (Deployment deployment : getDeployments()) {

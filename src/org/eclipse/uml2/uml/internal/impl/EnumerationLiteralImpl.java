@@ -103,6 +103,7 @@ public class EnumerationLiteralImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Enumeration getEnumeration() {
 		if (eContainerFeatureID() != UMLPackage.ENUMERATION_LITERAL__ENUMERATION)
 			return null;
@@ -137,6 +138,7 @@ public class EnumerationLiteralImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnumeration(Enumeration newEnumeration) {
 		if (newEnumeration != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.ENUMERATION_LITERAL__ENUMERATION && newEnumeration != null)) {
@@ -186,6 +188,7 @@ public class EnumerationLiteralImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getClassifier(String name) {
 		return getClassifier(name, false);
 	}
@@ -220,6 +223,7 @@ public class EnumerationLiteralImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Enumeration getClassifier() {
 		return EnumerationLiteralOperations.getClassifier(this);
 	}

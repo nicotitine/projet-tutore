@@ -146,6 +146,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<OutputPin> getOutputs() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -171,6 +172,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getOutput(String name, Type type) {
 		return getOutput(name, type, false);
 	}
@@ -180,6 +182,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getOutput(String name, Type type, boolean ignoreCase) {
 		outputLoop : for (OutputPin output : getOutputs()) {
 			if (name != null && !(ignoreCase
@@ -238,6 +241,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InputPin> getInputs() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -261,6 +265,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getInput(String name, Type type) {
 		return getInput(name, type, false, null);
 	}
@@ -270,6 +275,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getInput(String name, Type type, boolean ignoreCase,
 			EClass eClass) {
 		inputLoop : for (InputPin input : getInputs()) {
@@ -291,6 +297,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getContext() {
 		Classifier context = basicGetContext();
 		return context != null && context.eIsProxy()
@@ -312,6 +319,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isLocallyReentrant() {
 		return (eFlags & IS_LOCALLY_REENTRANT_EFLAG) != 0;
 	}
@@ -321,6 +329,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsLocallyReentrant(boolean newIsLocallyReentrant) {
 		boolean oldIsLocallyReentrant = (eFlags & IS_LOCALLY_REENTRANT_EFLAG) != 0;
 		if (newIsLocallyReentrant)
@@ -338,6 +347,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Constraint> getLocalPreconditions() {
 		if (localPreconditions == null) {
 			localPreconditions = new EObjectContainmentEList.Resolving<Constraint>(
@@ -351,6 +361,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createLocalPrecondition(String name, EClass eClass) {
 		Constraint newLocalPrecondition = (Constraint) create(eClass);
 		getLocalPreconditions().add(newLocalPrecondition);
@@ -364,6 +375,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createLocalPrecondition(String name) {
 		return createLocalPrecondition(name, UMLPackage.Literals.CONSTRAINT);
 	}
@@ -373,6 +385,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getLocalPrecondition(String name) {
 		return getLocalPrecondition(name, false, null, false);
 	}
@@ -382,6 +395,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getLocalPrecondition(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		localPreconditionLoop : for (Constraint localPrecondition : getLocalPreconditions()) {
@@ -403,6 +417,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Action> allActions() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -423,6 +438,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityNode> allOwnedNodes() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -443,6 +459,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior containingBehavior() {
 		return ActionOperations.containingBehavior(this);
 	}
@@ -452,6 +469,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Constraint> getLocalPostconditions() {
 		if (localPostconditions == null) {
 			localPostconditions = new EObjectContainmentEList.Resolving<Constraint>(
@@ -465,6 +483,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createLocalPostcondition(String name, EClass eClass) {
 		Constraint newLocalPostcondition = (Constraint) create(eClass);
 		getLocalPostconditions().add(newLocalPostcondition);
@@ -478,6 +497,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createLocalPostcondition(String name) {
 		return createLocalPostcondition(name, UMLPackage.Literals.CONSTRAINT);
 	}
@@ -487,6 +507,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getLocalPostcondition(String name) {
 		return getLocalPostcondition(name, false, null, false);
 	}
@@ -496,6 +517,7 @@ public abstract class ActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getLocalPostcondition(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		localPostconditionLoop : for (Constraint localPostcondition : getLocalPostconditions()) {

@@ -250,6 +250,7 @@ public class UMLDerivedUnionAdapter
 	 * @param notification a description of the change.
 	 * @generated
 	 */
+	@Override
 	public void notifyChanged(Notification notification) {
 		Object notifier = notification.getNotifier();
 		if (notifier instanceof EObject) {

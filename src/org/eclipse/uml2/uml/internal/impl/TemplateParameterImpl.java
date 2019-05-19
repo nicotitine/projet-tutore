@@ -176,6 +176,7 @@ public class TemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterableElement getParameteredElement() {
 		if (parameteredElement != null && parameteredElement.eIsProxy()) {
 			InternalEObject oldParameteredElement = (InternalEObject) parameteredElement;
@@ -233,6 +234,7 @@ public class TemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setParameteredElement(ParameterableElement newParameteredElement) {
 		if (newParameteredElement != parameteredElement) {
 			NotificationChain msgs = null;
@@ -258,6 +260,7 @@ public class TemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterableElement getDefault() {
 		if (default_ != null && default_.eIsProxy()) {
 			InternalEObject oldDefault = (InternalEObject) default_;
@@ -286,6 +289,7 @@ public class TemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefault(ParameterableElement newDefault) {
 		ParameterableElement oldDefault = default_;
 		default_ = newDefault;
@@ -305,6 +309,7 @@ public class TemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateSignature getSignature() {
 		if (eContainerFeatureID() != UMLPackage.TEMPLATE_PARAMETER__SIGNATURE)
 			return null;
@@ -339,6 +344,7 @@ public class TemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSignature(TemplateSignature newSignature) {
 		if (newSignature != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.TEMPLATE_PARAMETER__SIGNATURE && newSignature != null)) {
@@ -366,6 +372,7 @@ public class TemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterableElement getOwnedParameteredElement() {
 		if (ownedParameteredElement != null
 			&& ownedParameteredElement.eIsProxy()) {
@@ -443,6 +450,7 @@ public class TemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwnedParameteredElement(
 			ParameterableElement newOwnedParameteredElement) {
 		if (newOwnedParameteredElement != ownedParameteredElement) {
@@ -474,6 +482,7 @@ public class TemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterableElement createOwnedParameteredElement(EClass eClass) {
 		ParameterableElement newOwnedParameteredElement = (ParameterableElement) create(eClass);
 		setOwnedParameteredElement(newOwnedParameteredElement);
@@ -485,6 +494,7 @@ public class TemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterableElement getOwnedDefault() {
 		if (ownedDefault != null && ownedDefault.eIsProxy()) {
 			InternalEObject oldOwnedDefault = (InternalEObject) ownedDefault;
@@ -555,6 +565,7 @@ public class TemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwnedDefault(ParameterableElement newOwnedDefault) {
 		if (newOwnedDefault != ownedDefault) {
 			NotificationChain msgs = null;
@@ -582,6 +593,7 @@ public class TemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterableElement createOwnedDefault(EClass eClass) {
 		ParameterableElement newOwnedDefault = (ParameterableElement) create(eClass);
 		setOwnedDefault(newOwnedDefault);
@@ -593,6 +605,7 @@ public class TemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMustBeCompatible(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TemplateParameterOperations.validateMustBeCompatible(this,

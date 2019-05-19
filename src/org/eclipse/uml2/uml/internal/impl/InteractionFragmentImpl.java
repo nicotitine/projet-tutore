@@ -140,6 +140,7 @@ public abstract class InteractionFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Lifeline> getCovereds() {
 		if (covereds == null) {
 			covereds = new EObjectWithInverseResolvingEList.ManyInverse<Lifeline>(
@@ -154,6 +155,7 @@ public abstract class InteractionFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Lifeline getCovered(String name) {
 		return getCovered(name, false);
 	}
@@ -163,6 +165,7 @@ public abstract class InteractionFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Lifeline getCovered(String name, boolean ignoreCase) {
 		coveredLoop : for (Lifeline covered : getCovereds()) {
 			if (name != null && !(ignoreCase
@@ -179,6 +182,7 @@ public abstract class InteractionFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<GeneralOrdering> getGeneralOrderings() {
 		if (generalOrderings == null) {
 			generalOrderings = new EObjectContainmentEList.Resolving<GeneralOrdering>(
@@ -193,6 +197,7 @@ public abstract class InteractionFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralOrdering createGeneralOrdering(String name) {
 		GeneralOrdering newGeneralOrdering = (GeneralOrdering) create(UMLPackage.Literals.GENERAL_ORDERING);
 		getGeneralOrderings().add(newGeneralOrdering);
@@ -206,6 +211,7 @@ public abstract class InteractionFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralOrdering getGeneralOrdering(String name) {
 		return getGeneralOrdering(name, false, false);
 	}
@@ -215,6 +221,7 @@ public abstract class InteractionFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public GeneralOrdering getGeneralOrdering(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		generalOrderingLoop : for (GeneralOrdering generalOrdering : getGeneralOrderings()) {
@@ -234,6 +241,7 @@ public abstract class InteractionFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interaction getEnclosingInteraction() {
 		if (eContainerFeatureID() != UMLPackage.INTERACTION_FRAGMENT__ENCLOSING_INTERACTION)
 			return null;
@@ -268,6 +276,7 @@ public abstract class InteractionFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnclosingInteraction(Interaction newEnclosingInteraction) {
 		if (newEnclosingInteraction != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.INTERACTION_FRAGMENT__ENCLOSING_INTERACTION && newEnclosingInteraction != null)) {
@@ -295,6 +304,7 @@ public abstract class InteractionFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionOperand getEnclosingOperand() {
 		if (eContainerFeatureID() != UMLPackage.INTERACTION_FRAGMENT__ENCLOSING_OPERAND)
 			return null;
@@ -329,6 +339,7 @@ public abstract class InteractionFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setEnclosingOperand(InteractionOperand newEnclosingOperand) {
 		if (newEnclosingOperand != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.INTERACTION_FRAGMENT__ENCLOSING_OPERAND && newEnclosingOperand != null)) {

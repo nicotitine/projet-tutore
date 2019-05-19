@@ -144,6 +144,7 @@ public class InteractionConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getMinint() {
 		if (minint != null && minint.eIsProxy()) {
 			InternalEObject oldMinint = (InternalEObject) minint;
@@ -205,6 +206,7 @@ public class InteractionConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMinint(ValueSpecification newMinint) {
 		if (newMinint != minint) {
 			NotificationChain msgs = null;
@@ -229,6 +231,7 @@ public class InteractionConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createMinint(String name, Type type, EClass eClass) {
 		ValueSpecification newMinint = (ValueSpecification) create(eClass);
 		setMinint(newMinint);
@@ -244,6 +247,7 @@ public class InteractionConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getMaxint() {
 		if (maxint != null && maxint.eIsProxy()) {
 			InternalEObject oldMaxint = (InternalEObject) maxint;
@@ -305,6 +309,7 @@ public class InteractionConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMaxint(ValueSpecification newMaxint) {
 		if (newMaxint != maxint) {
 			NotificationChain msgs = null;
@@ -329,6 +334,7 @@ public class InteractionConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createMaxint(String name, Type type, EClass eClass) {
 		ValueSpecification newMaxint = (ValueSpecification) create(eClass);
 		setMaxint(newMaxint);
@@ -344,6 +350,7 @@ public class InteractionConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDynamicVariables(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InteractionConstraintOperations.validateDynamicVariables(this,
@@ -355,6 +362,7 @@ public class InteractionConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateGlobalData(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InteractionConstraintOperations.validateGlobalData(this,
@@ -366,6 +374,7 @@ public class InteractionConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMinintMaxint(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InteractionConstraintOperations.validateMinintMaxint(this,
@@ -377,6 +386,7 @@ public class InteractionConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMinintNonNegative(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InteractionConstraintOperations.validateMinintNonNegative(this,
@@ -388,6 +398,7 @@ public class InteractionConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMaxintPositive(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InteractionConstraintOperations.validateMaxintPositive(this,
@@ -399,6 +410,7 @@ public class InteractionConstraintImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMaxintGreaterEqualMinint(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return InteractionConstraintOperations

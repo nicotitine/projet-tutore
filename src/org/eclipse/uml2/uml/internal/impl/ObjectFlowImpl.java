@@ -153,6 +153,7 @@ public class ObjectFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isMulticast() {
 		return (eFlags & IS_MULTICAST_EFLAG) != 0;
 	}
@@ -162,6 +163,7 @@ public class ObjectFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsMulticast(boolean newIsMulticast) {
 		boolean oldIsMulticast = (eFlags & IS_MULTICAST_EFLAG) != 0;
 		if (newIsMulticast)
@@ -179,6 +181,7 @@ public class ObjectFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isMultireceive() {
 		return (eFlags & IS_MULTIRECEIVE_EFLAG) != 0;
 	}
@@ -188,6 +191,7 @@ public class ObjectFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsMultireceive(boolean newIsMultireceive) {
 		boolean oldIsMultireceive = (eFlags & IS_MULTIRECEIVE_EFLAG) != 0;
 		if (newIsMultireceive)
@@ -205,6 +209,7 @@ public class ObjectFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getTransformation() {
 		if (transformation != null && transformation.eIsProxy()) {
 			InternalEObject oldTransformation = (InternalEObject) transformation;
@@ -233,6 +238,7 @@ public class ObjectFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTransformation(Behavior newTransformation) {
 		Behavior oldTransformation = transformation;
 		transformation = newTransformation;
@@ -247,6 +253,7 @@ public class ObjectFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getSelection() {
 		if (selection != null && selection.eIsProxy()) {
 			InternalEObject oldSelection = (InternalEObject) selection;
@@ -275,6 +282,7 @@ public class ObjectFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSelection(Behavior newSelection) {
 		Behavior oldSelection = selection;
 		selection = newSelection;
@@ -288,6 +296,7 @@ public class ObjectFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateCompatibleTypes(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ObjectFlowOperations.validateCompatibleTypes(this, diagnostics,
@@ -299,6 +308,7 @@ public class ObjectFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSameUpperBounds(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ObjectFlowOperations.validateSameUpperBounds(this, diagnostics,
@@ -310,6 +320,7 @@ public class ObjectFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTarget(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ObjectFlowOperations.validateTarget(this, diagnostics, context);
@@ -320,6 +331,7 @@ public class ObjectFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInputAndOutputParameter(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ObjectFlowOperations.validateInputAndOutputParameter(this,
@@ -331,6 +343,7 @@ public class ObjectFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoExecutableNodes(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ObjectFlowOperations.validateNoExecutableNodes(this,
@@ -342,6 +355,7 @@ public class ObjectFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTransformationBehavior(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ObjectFlowOperations.validateTransformationBehavior(this,
@@ -353,6 +367,7 @@ public class ObjectFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSelectionBehavior(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ObjectFlowOperations.validateSelectionBehavior(this,
@@ -364,6 +379,7 @@ public class ObjectFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateIsMulticastOrIsMultireceive(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return ObjectFlowOperations.validateIsMulticastOrIsMultireceive(this,

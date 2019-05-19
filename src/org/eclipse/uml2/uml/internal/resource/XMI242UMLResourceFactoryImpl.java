@@ -24,6 +24,7 @@ import org.eclipse.uml2.uml.resource.CMOF2UMLResource;
 import org.eclipse.uml2.uml.resource.CMOF2UMLResourceHandler;
 import org.eclipse.uml2.uml.resource.UML402UMLExtendedMetaData;
 import org.eclipse.uml2.uml.resource.UML402UMLResourceHandler;
+import org.eclipse.uml2.uml.resource.UMLResource;
 import org.eclipse.uml2.uml.resource.XMI242UMLResource;
 import org.eclipse.uml2.uml.resource.XMI2UMLExtendedMetaData;
 import org.eclipse.uml2.uml.resource.XMI2UMLResource;
@@ -46,7 +47,7 @@ public class XMI242UMLResourceFactoryImpl
 	@Override
 	public Resource createResourceGen(URI uri) {
 		XMI242UMLResource result = new XMI242UMLResourceImpl(uri);
-		result.setEncoding(XMI2UMLResource.DEFAULT_ENCODING);
+		result.setEncoding(UMLResource.DEFAULT_ENCODING);
 		return result;
 	}
 

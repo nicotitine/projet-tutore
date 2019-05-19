@@ -104,6 +104,7 @@ public class ContinuationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetting() {
 		return (eFlags & SETTING_EFLAG) != 0;
 	}
@@ -113,6 +114,7 @@ public class ContinuationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSetting(boolean newSetting) {
 		boolean oldSetting = (eFlags & SETTING_EFLAG) != 0;
 		if (newSetting)
@@ -129,6 +131,7 @@ public class ContinuationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSameName(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ContinuationOperations.validateSameName(this, diagnostics,
@@ -140,6 +143,7 @@ public class ContinuationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateGlobal(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ContinuationOperations
@@ -151,6 +155,7 @@ public class ContinuationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateFirstOrLastInteractionFragment(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return ContinuationOperations.validateFirstOrLastInteractionFragment(

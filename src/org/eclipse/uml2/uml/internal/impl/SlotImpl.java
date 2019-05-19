@@ -134,6 +134,7 @@ public class SlotImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InstanceSpecification getOwningInstance() {
 		if (eContainerFeatureID() != UMLPackage.SLOT__OWNING_INSTANCE)
 			return null;
@@ -168,6 +169,7 @@ public class SlotImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwningInstance(InstanceSpecification newOwningInstance) {
 		if (newOwningInstance != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.SLOT__OWNING_INSTANCE && newOwningInstance != null)) {
@@ -195,6 +197,7 @@ public class SlotImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructuralFeature getDefiningFeature() {
 		if (definingFeature != null && definingFeature.eIsProxy()) {
 			InternalEObject oldDefiningFeature = (InternalEObject) definingFeature;
@@ -223,6 +226,7 @@ public class SlotImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefiningFeature(StructuralFeature newDefiningFeature) {
 		StructuralFeature oldDefiningFeature = definingFeature;
 		definingFeature = newDefiningFeature;
@@ -237,6 +241,7 @@ public class SlotImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ValueSpecification> getValues() {
 		if (values == null) {
 			values = new EObjectContainmentEList.Resolving<ValueSpecification>(
@@ -250,6 +255,7 @@ public class SlotImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createValue(String name, Type type, EClass eClass) {
 		ValueSpecification newValue = (ValueSpecification) create(eClass);
 		getValues().add(newValue);
@@ -265,6 +271,7 @@ public class SlotImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getValue(String name, Type type) {
 		return getValue(name, type, false, null, false);
 	}
@@ -274,6 +281,7 @@ public class SlotImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getValue(String name, Type type,
 			boolean ignoreCase, EClass eClass, boolean createOnDemand) {
 		valueLoop : for (ValueSpecification value : getValues()) {

@@ -111,6 +111,7 @@ public class LinkEndDestructionDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDestroyDuplicates() {
 		return (eFlags & IS_DESTROY_DUPLICATES_EFLAG) != 0;
 	}
@@ -120,6 +121,7 @@ public class LinkEndDestructionDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsDestroyDuplicates(boolean newIsDestroyDuplicates) {
 		boolean oldIsDestroyDuplicates = (eFlags & IS_DESTROY_DUPLICATES_EFLAG) != 0;
 		if (newIsDestroyDuplicates)
@@ -137,6 +139,7 @@ public class LinkEndDestructionDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDestroyAtPin(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LinkEndDestructionDataOperations.validateDestroyAtPin(this,
@@ -169,6 +172,7 @@ public class LinkEndDestructionDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getDestroyAt() {
 		if (destroyAt != null && destroyAt.eIsProxy()) {
 			InternalEObject oldDestroyAt = (InternalEObject) destroyAt;
@@ -197,6 +201,7 @@ public class LinkEndDestructionDataImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDestroyAt(InputPin newDestroyAt) {
 		InputPin oldDestroyAt = destroyAt;
 		destroyAt = newDestroyAt;

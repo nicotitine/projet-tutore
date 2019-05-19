@@ -69,6 +69,7 @@ public class GateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateActualGateMatched(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return GateOperations.validateActualGateMatched(this, diagnostics,
@@ -80,6 +81,7 @@ public class GateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInsideCfMatched(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return GateOperations.validateInsideCfMatched(this, diagnostics,
@@ -91,6 +93,7 @@ public class GateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOutsideCfMatched(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return GateOperations.validateOutsideCfMatched(this, diagnostics,
@@ -102,6 +105,7 @@ public class GateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateFormalGateDistinguishable(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return GateOperations.validateFormalGateDistinguishable(this,
@@ -113,6 +117,7 @@ public class GateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateActualGateDistinguishable(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return GateOperations.validateActualGateDistinguishable(this,
@@ -124,6 +129,7 @@ public class GateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOutsideCfGateDistinguishable(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return GateOperations.validateOutsideCfGateDistinguishable(this,
@@ -135,6 +141,7 @@ public class GateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInsideCfGateDistinguishable(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return GateOperations.validateInsideCfGateDistinguishable(this,
@@ -146,6 +153,7 @@ public class GateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOutsideCF() {
 		return GateOperations.isOutsideCF(this);
 	}
@@ -155,6 +163,7 @@ public class GateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isInsideCF() {
 		return GateOperations.isInsideCF(this);
 	}
@@ -164,6 +173,7 @@ public class GateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isActual() {
 		return GateOperations.isActual(this);
 	}
@@ -173,6 +183,7 @@ public class GateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isFormal() {
 		return GateOperations.isFormal(this);
 	}
@@ -182,6 +193,7 @@ public class GateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean matches(Gate gateToMatch) {
 		return GateOperations.matches(this, gateToMatch);
 	}
@@ -191,6 +203,7 @@ public class GateImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionOperand getOperand() {
 		return GateOperations.getOperand(this);
 	}

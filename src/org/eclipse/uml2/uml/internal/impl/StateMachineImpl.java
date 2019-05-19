@@ -191,6 +191,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Region> getRegions() {
 		if (regions == null) {
 			regions = new EObjectContainmentWithInverseEList.Resolving<Region>(
@@ -205,6 +206,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Region createRegion(String name) {
 		Region newRegion = (Region) create(UMLPackage.Literals.REGION);
 		getRegions().add(newRegion);
@@ -218,6 +220,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Region getRegion(String name) {
 		return getRegion(name, false, false);
 	}
@@ -227,6 +230,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Region getRegion(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		regionLoop : for (Region region : getRegions()) {
@@ -246,6 +250,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<State> getSubmachineStates() {
 		if (submachineStates == null) {
 			submachineStates = new EObjectWithInverseResolvingEList<State>(
@@ -260,6 +265,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public State getSubmachineState(String name) {
 		return getSubmachineState(name, false, null);
 	}
@@ -269,6 +275,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public State getSubmachineState(String name, boolean ignoreCase,
 			EClass eClass) {
 		submachineStateLoop : for (State submachineState : getSubmachineStates()) {
@@ -288,6 +295,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Pseudostate> getConnectionPoints() {
 		if (connectionPoints == null) {
 			connectionPoints = new EObjectContainmentWithInverseEList.Resolving<Pseudostate>(
@@ -303,6 +311,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pseudostate createConnectionPoint(String name) {
 		Pseudostate newConnectionPoint = (Pseudostate) create(UMLPackage.Literals.PSEUDOSTATE);
 		getConnectionPoints().add(newConnectionPoint);
@@ -316,6 +325,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pseudostate getConnectionPoint(String name) {
 		return getConnectionPoint(name, false, false);
 	}
@@ -325,6 +335,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Pseudostate getConnectionPoint(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		connectionPointLoop : for (Pseudostate connectionPoint : getConnectionPoints()) {
@@ -344,6 +355,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<StateMachine> getExtendedStateMachines() {
 		if (extendedStateMachines == null) {
 			extendedStateMachines = new EObjectResolvingEList<StateMachine>(
@@ -358,6 +370,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StateMachine getExtendedStateMachine(String name) {
 		return getExtendedStateMachine(name, false, null);
 	}
@@ -367,6 +380,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StateMachine getExtendedStateMachine(String name,
 			boolean ignoreCase, EClass eClass) {
 		extendedStateMachineLoop : for (StateMachine extendedStateMachine : getExtendedStateMachines()) {
@@ -396,6 +410,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateClassifierContext(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StateMachineOperations.validateClassifierContext(this,
@@ -407,6 +422,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateContextClassifier(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StateMachineOperations.validateContextClassifier(this,
@@ -418,6 +434,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Region LCA(Vertex s1, Vertex s2) {
 		return StateMachineOperations.LCA(this, s1, s2);
 	}
@@ -427,6 +444,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean ancestor(Vertex s1, Vertex s2) {
 		return StateMachineOperations.ancestor(this, s1, s2);
 	}
@@ -436,6 +454,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public State LCAState(Vertex v1, Vertex v2) {
 		return StateMachineOperations.LCAState(this, v1, v2);
 	}
@@ -445,6 +464,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateConnectionPoints(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StateMachineOperations.validateConnectionPoints(this,
@@ -456,6 +476,7 @@ public class StateMachineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMethod(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StateMachineOperations
@@ -1753,7 +1774,7 @@ public class StateMachineImpl
 	@Override
 	public boolean isRedefinitionContextValid(RedefinableElement redefined) {
 		return redefined instanceof StateMachine
-			&& isRedefinitionContextValid((StateMachine) redefined);
+			&& isRedefinitionContextValid(redefined);
 	}
 
 } //StateMachineImpl

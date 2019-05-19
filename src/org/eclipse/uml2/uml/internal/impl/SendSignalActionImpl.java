@@ -149,6 +149,7 @@ public class SendSignalActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject) target;
@@ -208,6 +209,7 @@ public class SendSignalActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTarget(InputPin newTarget) {
 		if (newTarget != target) {
 			NotificationChain msgs = null;
@@ -232,6 +234,7 @@ public class SendSignalActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createTarget(String name, Type type, EClass eClass) {
 		InputPin newTarget = (InputPin) create(eClass);
 		setTarget(newTarget);
@@ -247,6 +250,7 @@ public class SendSignalActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createTarget(String name, Type type) {
 		return createTarget(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -256,6 +260,7 @@ public class SendSignalActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Signal getSignal() {
 		if (signal != null && signal.eIsProxy()) {
 			InternalEObject oldSignal = (InternalEObject) signal;
@@ -284,6 +289,7 @@ public class SendSignalActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSignal(Signal newSignal) {
 		Signal oldSignal = signal;
 		signal = newSignal;
@@ -297,6 +303,7 @@ public class SendSignalActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNumberOrder(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return SendSignalActionOperations.validateNumberOrder(this,
@@ -308,6 +315,7 @@ public class SendSignalActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeTargetPin(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return SendSignalActionOperations.validateTypeTargetPin(this,
@@ -319,6 +327,7 @@ public class SendSignalActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeOrderingMultiplicity(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return SendSignalActionOperations.validateTypeOrderingMultiplicity(

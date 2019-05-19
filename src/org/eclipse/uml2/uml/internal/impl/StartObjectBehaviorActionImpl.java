@@ -152,6 +152,7 @@ public class StartObjectBehaviorActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getObject() {
 		if (object != null && object.eIsProxy()) {
 			InternalEObject oldObject = (InternalEObject) object;
@@ -214,6 +215,7 @@ public class StartObjectBehaviorActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setObject(InputPin newObject) {
 		if (newObject != object) {
 			NotificationChain msgs = null;
@@ -241,6 +243,7 @@ public class StartObjectBehaviorActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createObject(String name, Type type, EClass eClass) {
 		InputPin newObject = (InputPin) create(eClass);
 		setObject(newObject);
@@ -256,6 +259,7 @@ public class StartObjectBehaviorActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createObject(String name, Type type) {
 		return createObject(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -265,6 +269,7 @@ public class StartObjectBehaviorActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeOfObject(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StartObjectBehaviorActionOperations.validateTypeOfObject(this,
@@ -276,6 +281,7 @@ public class StartObjectBehaviorActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoOnport(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StartObjectBehaviorActionOperations.validateNoOnport(this,
@@ -287,6 +293,7 @@ public class StartObjectBehaviorActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior behavior() {
 		return StartObjectBehaviorActionOperations.behavior(this);
 	}
@@ -344,6 +351,7 @@ public class StartObjectBehaviorActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicityOfObject(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StartObjectBehaviorActionOperations

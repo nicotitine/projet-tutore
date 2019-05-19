@@ -83,6 +83,7 @@ public class ExecutionOccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExecutionSpecification getExecution() {
 		if (execution != null && execution.eIsProxy()) {
 			InternalEObject oldExecution = (InternalEObject) execution;
@@ -113,6 +114,7 @@ public class ExecutionOccurrenceSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExecution(ExecutionSpecification newExecution) {
 		ExecutionSpecification oldExecution = execution;
 		execution = newExecution;

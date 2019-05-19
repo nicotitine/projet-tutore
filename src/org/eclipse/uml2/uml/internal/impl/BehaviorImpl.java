@@ -282,6 +282,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isReentrant() {
 		return (eFlags & IS_REENTRANT_EFLAG) != 0;
 	}
@@ -291,6 +292,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsReentrant(boolean newIsReentrant) {
 		boolean oldIsReentrant = (eFlags & IS_REENTRANT_EFLAG) != 0;
 		if (newIsReentrant)
@@ -310,6 +312,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetIsReentrant() {
 		boolean oldIsReentrant = (eFlags & IS_REENTRANT_EFLAG) != 0;
 		boolean oldIsReentrantESet = (eFlags & IS_REENTRANT_ESETFLAG) != 0;
@@ -329,6 +332,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetIsReentrant() {
 		return (eFlags & IS_REENTRANT_ESETFLAG) != 0;
 	}
@@ -338,6 +342,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Behavior> getRedefinedBehaviors() {
 		if (redefinedBehaviors == null) {
 			redefinedBehaviors = new SubsetSupersetEObjectResolvingEList<Behavior>(
@@ -352,6 +357,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Parameter> getOwnedParameters() {
 		if (ownedParameters == null) {
 			ownedParameters = new EObjectContainmentEList.Resolving<Parameter>(
@@ -365,6 +371,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter createOwnedParameter(String name, Type type) {
 		Parameter newOwnedParameter = (Parameter) create(UMLPackage.Literals.PARAMETER);
 		getOwnedParameters().add(newOwnedParameter);
@@ -380,6 +387,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter getOwnedParameter(String name, Type type) {
 		return getOwnedParameter(name, type, false, false);
 	}
@@ -389,6 +397,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter getOwnedParameter(String name, Type type,
 			boolean ignoreCase, boolean createOnDemand) {
 		ownedParameterLoop : for (Parameter ownedParameter : getOwnedParameters()) {
@@ -410,6 +419,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BehavioredClassifier getContext() {
 		BehavioredClassifier context = basicGetContext();
 		return context != null && context.eIsProxy()
@@ -431,6 +441,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	@SuppressWarnings("serial")
 	public EList<Constraint> getPreconditions() {
 		if (preconditions == null) {
@@ -459,6 +470,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	@SuppressWarnings("serial")
 	public EList<Constraint> getPostconditions() {
 		if (postconditions == null) {
@@ -487,6 +499,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ParameterSet> getOwnedParameterSets() {
 		if (ownedParameterSets == null) {
 			ownedParameterSets = new EObjectContainmentEList.Resolving<ParameterSet>(
@@ -501,6 +514,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterSet createOwnedParameterSet(String name) {
 		ParameterSet newOwnedParameterSet = (ParameterSet) create(UMLPackage.Literals.PARAMETER_SET);
 		getOwnedParameterSets().add(newOwnedParameterSet);
@@ -514,6 +528,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterSet getOwnedParameterSet(String name) {
 		return getOwnedParameterSet(name, false, false);
 	}
@@ -523,6 +538,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ParameterSet getOwnedParameterSet(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		ownedParameterSetLoop : for (ParameterSet ownedParameterSet : getOwnedParameterSets()) {
@@ -542,6 +558,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BehavioralFeature getSpecification() {
 		if (specification != null && specification.eIsProxy()) {
 			InternalEObject oldSpecification = (InternalEObject) specification;
@@ -591,6 +608,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSpecification(BehavioralFeature newSpecification) {
 		if (newSpecification != specification) {
 			NotificationChain msgs = null;
@@ -616,6 +634,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateParametersMatch(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return BehaviorOperations.validateParametersMatch(this, diagnostics,
@@ -627,6 +646,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateFeatureOfContextClassifier(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return BehaviorOperations.validateFeatureOfContextClassifier(this,
@@ -638,6 +658,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public BehavioredClassifier behavioredClassifier(Element from) {
 		return BehaviorOperations.behavioredClassifier(this, from);
 	}
@@ -647,6 +668,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Parameter> inputParameters() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -668,6 +690,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Parameter> outputParameters() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1926,6 +1949,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createPostcondition(String name, EClass eClass) {
 		Constraint newPostcondition = (Constraint) create(eClass);
 		getPostconditions().add(newPostcondition);
@@ -1939,6 +1963,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createPostcondition(String name) {
 		return createPostcondition(name, UMLPackage.Literals.CONSTRAINT);
 	}
@@ -1948,6 +1973,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getPostcondition(String name) {
 		return getPostcondition(name, false, null, false);
 	}
@@ -1957,6 +1983,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getPostcondition(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		postconditionLoop : for (Constraint postcondition : getPostconditions()) {
@@ -1988,6 +2015,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createPrecondition(String name, EClass eClass) {
 		Constraint newPrecondition = (Constraint) create(eClass);
 		getPreconditions().add(newPrecondition);
@@ -2001,6 +2029,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createPrecondition(String name) {
 		return createPrecondition(name, UMLPackage.Literals.CONSTRAINT);
 	}
@@ -2010,6 +2039,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getPrecondition(String name) {
 		return getPrecondition(name, false, null, false);
 	}
@@ -2019,6 +2049,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getPrecondition(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		preconditionLoop : for (Constraint precondition : getPreconditions()) {
@@ -2050,6 +2081,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getRedefinedBehavior(String name) {
 		return getRedefinedBehavior(name, false, null);
 	}
@@ -2059,6 +2091,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getRedefinedBehavior(String name, boolean ignoreCase,
 			EClass eClass) {
 		redefinedBehaviorLoop : for (Behavior redefinedBehavior : getRedefinedBehaviors()) {
@@ -2078,6 +2111,7 @@ public abstract class BehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMostOneBehavior(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return BehaviorOperations.validateMostOneBehavior(this, diagnostics,

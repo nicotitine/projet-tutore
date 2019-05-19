@@ -184,6 +184,7 @@ public class LifelineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ConnectableElement getRepresents() {
 		if (represents != null && represents.eIsProxy()) {
 			InternalEObject oldRepresents = (InternalEObject) represents;
@@ -212,6 +213,7 @@ public class LifelineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRepresents(ConnectableElement newRepresents) {
 		ConnectableElement oldRepresents = represents;
 		represents = newRepresents;
@@ -225,6 +227,7 @@ public class LifelineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interaction getInteraction() {
 		if (eContainerFeatureID() != UMLPackage.LIFELINE__INTERACTION)
 			return null;
@@ -259,6 +262,7 @@ public class LifelineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInteraction(Interaction newInteraction) {
 		if (newInteraction != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.LIFELINE__INTERACTION && newInteraction != null)) {
@@ -285,6 +289,7 @@ public class LifelineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getSelector() {
 		if (selector != null && selector.eIsProxy()) {
 			InternalEObject oldSelector = (InternalEObject) selector;
@@ -343,6 +348,7 @@ public class LifelineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSelector(ValueSpecification newSelector) {
 		if (newSelector != selector) {
 			NotificationChain msgs = null;
@@ -367,6 +373,7 @@ public class LifelineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createSelector(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newSelector = (ValueSpecification) create(eClass);
@@ -383,6 +390,7 @@ public class LifelineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PartDecomposition getDecomposedAs() {
 		if (decomposedAs != null && decomposedAs.eIsProxy()) {
 			InternalEObject oldDecomposedAs = (InternalEObject) decomposedAs;
@@ -411,6 +419,7 @@ public class LifelineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDecomposedAs(PartDecomposition newDecomposedAs) {
 		PartDecomposition oldDecomposedAs = decomposedAs;
 		decomposedAs = newDecomposedAs;
@@ -425,6 +434,7 @@ public class LifelineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InteractionFragment> getCoveredBys() {
 		if (coveredBys == null) {
 			coveredBys = new EObjectWithInverseResolvingEList.ManyInverse<InteractionFragment>(
@@ -440,6 +450,7 @@ public class LifelineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionFragment getCoveredBy(String name) {
 		return getCoveredBy(name, false, null);
 	}
@@ -449,6 +460,7 @@ public class LifelineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionFragment getCoveredBy(String name, boolean ignoreCase,
 			EClass eClass) {
 		coveredByLoop : for (InteractionFragment coveredBy : getCoveredBys()) {
@@ -468,6 +480,7 @@ public class LifelineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInteractionUsesShareLifeline(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return LifelineOperations.validateInteractionUsesShareLifeline(this,
@@ -479,6 +492,7 @@ public class LifelineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSelectorSpecified(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LifelineOperations.validateSelectorSpecified(this, diagnostics,
@@ -490,6 +504,7 @@ public class LifelineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSameClassifier(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LifelineOperations.validateSameClassifier(this, diagnostics,
@@ -501,6 +516,7 @@ public class LifelineImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSelectorIntOrString(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return LifelineOperations.validateSelectorIntOrString(this,

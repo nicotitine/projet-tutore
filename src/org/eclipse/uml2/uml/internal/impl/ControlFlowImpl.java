@@ -67,6 +67,7 @@ public class ControlFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateObjectNodes(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ControlFlowOperations.validateObjectNodes(this, diagnostics,

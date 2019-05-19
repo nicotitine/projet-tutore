@@ -102,6 +102,7 @@ public class ReceptionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Signal getSignal() {
 		if (signal != null && signal.eIsProxy()) {
 			InternalEObject oldSignal = (InternalEObject) signal;
@@ -129,6 +130,7 @@ public class ReceptionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setSignal(Signal newSignal) {
 		Signal oldSignal = signal;
 		signal = newSignal;
@@ -142,6 +144,7 @@ public class ReceptionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSameNameAsSignal(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReceptionOperations.validateSameNameAsSignal(this, diagnostics,
@@ -153,6 +156,7 @@ public class ReceptionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSameStructureAsSignal(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReceptionOperations.validateSameStructureAsSignal(this,

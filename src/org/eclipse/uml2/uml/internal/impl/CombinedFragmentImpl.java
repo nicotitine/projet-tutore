@@ -197,6 +197,7 @@ public class CombinedFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionOperatorKind getInteractionOperator() {
 		return INTERACTION_OPERATOR_EFLAG_VALUES[(eFlags & INTERACTION_OPERATOR_EFLAG) >>> INTERACTION_OPERATOR_EFLAG_OFFSET];
 	}
@@ -206,6 +207,7 @@ public class CombinedFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInteractionOperator(
 			InteractionOperatorKind newInteractionOperator) {
 		InteractionOperatorKind oldInteractionOperator = INTERACTION_OPERATOR_EFLAG_VALUES[(eFlags & INTERACTION_OPERATOR_EFLAG) >>> INTERACTION_OPERATOR_EFLAG_OFFSET];
@@ -225,6 +227,7 @@ public class CombinedFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InteractionOperand> getOperands() {
 		if (operands == null) {
 			operands = new EObjectContainmentEList.Resolving<InteractionOperand>(
@@ -239,6 +242,7 @@ public class CombinedFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionOperand createOperand(String name) {
 		InteractionOperand newOperand = (InteractionOperand) create(UMLPackage.Literals.INTERACTION_OPERAND);
 		getOperands().add(newOperand);
@@ -252,6 +256,7 @@ public class CombinedFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionOperand getOperand(String name) {
 		return getOperand(name, false, false);
 	}
@@ -261,6 +266,7 @@ public class CombinedFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InteractionOperand getOperand(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		operandLoop : for (InteractionOperand operand : getOperands()) {
@@ -280,6 +286,7 @@ public class CombinedFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Gate> getCfragmentGates() {
 		if (cfragmentGates == null) {
 			cfragmentGates = new EObjectContainmentEList.Resolving<Gate>(
@@ -293,6 +300,7 @@ public class CombinedFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Gate createCfragmentGate(String name) {
 		Gate newCfragmentGate = (Gate) create(UMLPackage.Literals.GATE);
 		getCfragmentGates().add(newCfragmentGate);
@@ -306,6 +314,7 @@ public class CombinedFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Gate getCfragmentGate(String name) {
 		return getCfragmentGate(name, false, false);
 	}
@@ -315,6 +324,7 @@ public class CombinedFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Gate getCfragmentGate(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		cfragmentGateLoop : for (Gate cfragmentGate : getCfragmentGates()) {
@@ -334,6 +344,7 @@ public class CombinedFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOptLoopBreakNeg(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return CombinedFragmentOperations.validateOptLoopBreakNeg(this,
@@ -345,6 +356,7 @@ public class CombinedFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateBreak(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return CombinedFragmentOperations.validateBreak(this, diagnostics,
@@ -356,6 +368,7 @@ public class CombinedFragmentImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateConsiderAndIgnore(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return CombinedFragmentOperations.validateConsiderAndIgnore(this,

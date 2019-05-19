@@ -151,6 +151,7 @@ public class ValueSpecificationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getValue() {
 		if (value != null && value.eIsProxy()) {
 			InternalEObject oldValue = (InternalEObject) value;
@@ -212,6 +213,7 @@ public class ValueSpecificationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(ValueSpecification newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
@@ -239,6 +241,7 @@ public class ValueSpecificationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createValue(String name, Type type, EClass eClass) {
 		ValueSpecification newValue = (ValueSpecification) create(eClass);
 		setValue(newValue);
@@ -254,6 +257,7 @@ public class ValueSpecificationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult() {
 		if (result != null && result.eIsProxy()) {
 			InternalEObject oldResult = (InternalEObject) result;
@@ -316,6 +320,7 @@ public class ValueSpecificationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResult(OutputPin newResult) {
 		if (newResult != result) {
 			NotificationChain msgs = null;
@@ -343,6 +348,7 @@ public class ValueSpecificationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createResult(String name, Type type) {
 		OutputPin newResult = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		setResult(newResult);
@@ -358,6 +364,7 @@ public class ValueSpecificationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateCompatibleType(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ValueSpecificationActionOperations.validateCompatibleType(this,
@@ -369,6 +376,7 @@ public class ValueSpecificationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ValueSpecificationActionOperations.validateMultiplicity(this,

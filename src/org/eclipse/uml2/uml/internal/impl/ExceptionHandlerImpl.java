@@ -133,6 +133,7 @@ public class ExceptionHandlerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExecutableNode getHandlerBody() {
 		if (handlerBody != null && handlerBody.eIsProxy()) {
 			InternalEObject oldHandlerBody = (InternalEObject) handlerBody;
@@ -161,6 +162,7 @@ public class ExceptionHandlerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setHandlerBody(ExecutableNode newHandlerBody) {
 		ExecutableNode oldHandlerBody = handlerBody;
 		handlerBody = newHandlerBody;
@@ -175,6 +177,7 @@ public class ExceptionHandlerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ObjectNode getExceptionInput() {
 		if (exceptionInput != null && exceptionInput.eIsProxy()) {
 			InternalEObject oldExceptionInput = (InternalEObject) exceptionInput;
@@ -203,6 +206,7 @@ public class ExceptionHandlerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExceptionInput(ObjectNode newExceptionInput) {
 		ObjectNode oldExceptionInput = exceptionInput;
 		exceptionInput = newExceptionInput;
@@ -217,6 +221,7 @@ public class ExceptionHandlerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Classifier> getExceptionTypes() {
 		if (exceptionTypes == null) {
 			exceptionTypes = new EObjectResolvingEList<Classifier>(
@@ -231,6 +236,7 @@ public class ExceptionHandlerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getExceptionType(String name) {
 		return getExceptionType(name, false, null);
 	}
@@ -240,6 +246,7 @@ public class ExceptionHandlerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getExceptionType(String name, boolean ignoreCase,
 			EClass eClass) {
 		exceptionTypeLoop : for (Classifier exceptionType : getExceptionTypes()) {
@@ -259,6 +266,7 @@ public class ExceptionHandlerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExecutableNode getProtectedNode() {
 		if (eContainerFeatureID() != UMLPackage.EXCEPTION_HANDLER__PROTECTED_NODE)
 			return null;
@@ -293,6 +301,7 @@ public class ExceptionHandlerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setProtectedNode(ExecutableNode newProtectedNode) {
 		if (newProtectedNode != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.EXCEPTION_HANDLER__PROTECTED_NODE && newProtectedNode != null)) {
@@ -320,6 +329,7 @@ public class ExceptionHandlerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateHandlerBodyEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ExceptionHandlerOperations.validateHandlerBodyEdges(this,
@@ -331,6 +341,7 @@ public class ExceptionHandlerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOutputPins(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ExceptionHandlerOperations.validateOutputPins(this, diagnostics,
@@ -342,6 +353,7 @@ public class ExceptionHandlerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOneInput(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ExceptionHandlerOperations.validateOneInput(this, diagnostics,
@@ -353,6 +365,7 @@ public class ExceptionHandlerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateEdgeSourceTarget(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ExceptionHandlerOperations.validateEdgeSourceTarget(this,
@@ -364,6 +377,7 @@ public class ExceptionHandlerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateHandlerBodyOwner(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ExceptionHandlerOperations.validateHandlerBodyOwner(this,
@@ -375,6 +389,7 @@ public class ExceptionHandlerImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateExceptionInputType(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ExceptionHandlerOperations.validateExceptionInputType(this,

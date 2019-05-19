@@ -211,6 +211,7 @@ public class ReadIsClassifiedObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDirect() {
 		return (eFlags & IS_DIRECT_EFLAG) != 0;
 	}
@@ -220,6 +221,7 @@ public class ReadIsClassifiedObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsDirect(boolean newIsDirect) {
 		boolean oldIsDirect = (eFlags & IS_DIRECT_EFLAG) != 0;
 		if (newIsDirect)
@@ -237,6 +239,7 @@ public class ReadIsClassifiedObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getClassifier() {
 		if (classifier != null && classifier.eIsProxy()) {
 			InternalEObject oldClassifier = (InternalEObject) classifier;
@@ -267,6 +270,7 @@ public class ReadIsClassifiedObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClassifier(Classifier newClassifier) {
 		Classifier oldClassifier = classifier;
 		classifier = newClassifier;
@@ -281,6 +285,7 @@ public class ReadIsClassifiedObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult() {
 		if (result != null && result.eIsProxy()) {
 			InternalEObject oldResult = (InternalEObject) result;
@@ -343,6 +348,7 @@ public class ReadIsClassifiedObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResult(OutputPin newResult) {
 		if (newResult != result) {
 			NotificationChain msgs = null;
@@ -370,6 +376,7 @@ public class ReadIsClassifiedObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createResult(String name, Type type) {
 		OutputPin newResult = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		setResult(newResult);
@@ -385,6 +392,7 @@ public class ReadIsClassifiedObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getObject() {
 		if (object != null && object.eIsProxy()) {
 			InternalEObject oldObject = (InternalEObject) object;
@@ -447,6 +455,7 @@ public class ReadIsClassifiedObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setObject(InputPin newObject) {
 		if (newObject != object) {
 			NotificationChain msgs = null;
@@ -474,6 +483,7 @@ public class ReadIsClassifiedObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createObject(String name, Type type, EClass eClass) {
 		InputPin newObject = (InputPin) create(eClass);
 		setObject(newObject);
@@ -489,6 +499,7 @@ public class ReadIsClassifiedObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createObject(String name, Type type) {
 		return createObject(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -498,6 +509,7 @@ public class ReadIsClassifiedObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicityOfInput(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadIsClassifiedObjectActionOperations
@@ -509,6 +521,7 @@ public class ReadIsClassifiedObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoType(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadIsClassifiedObjectActionOperations.validateNoType(this,
@@ -520,6 +533,7 @@ public class ReadIsClassifiedObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicityOfOutput(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadIsClassifiedObjectActionOperations
@@ -531,6 +545,7 @@ public class ReadIsClassifiedObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateBooleanResult(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadIsClassifiedObjectActionOperations.validateBooleanResult(

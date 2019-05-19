@@ -101,6 +101,7 @@ public abstract class ActivityGroupImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityGroup> getSubgroups() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -126,6 +127,7 @@ public abstract class ActivityGroupImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityGroup getSubgroup(String name) {
 		return getSubgroup(name, false, null);
 	}
@@ -135,6 +137,7 @@ public abstract class ActivityGroupImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityGroup getSubgroup(String name, boolean ignoreCase,
 			EClass eClass) {
 		subgroupLoop : for (ActivityGroup subgroup : getSubgroups()) {
@@ -181,6 +184,7 @@ public abstract class ActivityGroupImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityNode> getContainedNodes() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -210,6 +214,7 @@ public abstract class ActivityGroupImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode getContainedNode(String name) {
 		return getContainedNode(name, false, null);
 	}
@@ -219,6 +224,7 @@ public abstract class ActivityGroupImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode getContainedNode(String name, boolean ignoreCase,
 			EClass eClass) {
 		containedNodeLoop : for (ActivityNode containedNode : getContainedNodes()) {
@@ -238,6 +244,7 @@ public abstract class ActivityGroupImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityEdge> getContainedEdges() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -267,6 +274,7 @@ public abstract class ActivityGroupImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getContainedEdge(String name) {
 		return getContainedEdge(name, false, null);
 	}
@@ -276,6 +284,7 @@ public abstract class ActivityGroupImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getContainedEdge(String name, boolean ignoreCase,
 			EClass eClass) {
 		containedEdgeLoop : for (ActivityEdge containedEdge : getContainedEdges()) {
@@ -295,6 +304,7 @@ public abstract class ActivityGroupImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Activity getInActivity() {
 		Activity inActivity = basicGetInActivity();
 		return inActivity != null && inActivity.eIsProxy()
@@ -314,6 +324,7 @@ public abstract class ActivityGroupImpl
 			: null;
 	}
 
+	@Override
 	public NotificationChain eBasicRemoveFromContainer(NotificationChain msgs) {
 		InternalEObject eInternalContainer = eInternalContainer();
 		if (eInternalContainer instanceof Activity) {
@@ -328,6 +339,7 @@ public abstract class ActivityGroupImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public void setInActivity(Activity newInActivity) {
 		if (newInActivity != eInternalContainer()) {
 			if (EcoreUtil.isAncestor(this, newInActivity))
@@ -355,6 +367,7 @@ public abstract class ActivityGroupImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Activity containingActivity() {
 		return ActivityGroupOperations.containingActivity(this);
 	}
@@ -364,6 +377,7 @@ public abstract class ActivityGroupImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNodesAndEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActivityGroupOperations.validateNodesAndEdges(this, diagnostics,
@@ -375,6 +389,7 @@ public abstract class ActivityGroupImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNotContained(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActivityGroupOperations.validateNotContained(this, diagnostics,
@@ -759,6 +774,7 @@ public abstract class ActivityGroupImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityGroup getSuperGroup() {
 		ActivityGroup superGroup = basicGetSuperGroup();
 		return superGroup != null && superGroup.eIsProxy()

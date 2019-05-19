@@ -153,6 +153,7 @@ public class DurationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getExpr() {
 		if (expr != null && expr.eIsProxy()) {
 			InternalEObject oldExpr = (InternalEObject) expr;
@@ -210,6 +211,7 @@ public class DurationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExpr(ValueSpecification newExpr) {
 		if (newExpr != expr) {
 			NotificationChain msgs = null;
@@ -234,6 +236,7 @@ public class DurationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createExpr(String name, Type type, EClass eClass) {
 		ValueSpecification newExpr = (ValueSpecification) create(eClass);
 		setExpr(newExpr);
@@ -249,6 +252,7 @@ public class DurationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Observation> getObservations() {
 		if (observations == null) {
 			observations = new EObjectResolvingEList<Observation>(
@@ -262,6 +266,7 @@ public class DurationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Observation getObservation(String name) {
 		return getObservation(name, false, null);
 	}
@@ -271,6 +276,7 @@ public class DurationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Observation getObservation(String name, boolean ignoreCase,
 			EClass eClass) {
 		observationLoop : for (Observation observation : getObservations()) {
@@ -290,6 +296,7 @@ public class DurationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoExprRequiresObservation(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return DurationOperations.validateNoExprRequiresObservation(this,

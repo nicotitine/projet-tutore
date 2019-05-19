@@ -181,6 +181,7 @@ public class ProfileApplicationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Profile getAppliedProfile() {
 		if (appliedProfile != null && appliedProfile.eIsProxy()) {
 			InternalEObject oldAppliedProfile = (InternalEObject) appliedProfile;
@@ -209,6 +210,7 @@ public class ProfileApplicationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAppliedProfile(Profile newAppliedProfile) {
 		Profile oldAppliedProfile = appliedProfile;
 		appliedProfile = newAppliedProfile;
@@ -223,6 +225,7 @@ public class ProfileApplicationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isStrict() {
 		return (eFlags & IS_STRICT_EFLAG) != 0;
 	}
@@ -232,6 +235,7 @@ public class ProfileApplicationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsStrict(boolean newIsStrict) {
 		boolean oldIsStrict = (eFlags & IS_STRICT_EFLAG) != 0;
 		if (newIsStrict)
@@ -249,6 +253,7 @@ public class ProfileApplicationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Package getApplyingPackage() {
 		if (eContainerFeatureID() != UMLPackage.PROFILE_APPLICATION__APPLYING_PACKAGE)
 			return null;
@@ -284,6 +289,7 @@ public class ProfileApplicationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setApplyingPackage(
 			org.eclipse.uml2.uml.Package newApplyingPackage) {
 		if (newApplyingPackage != eInternalContainer()
@@ -312,6 +318,7 @@ public class ProfileApplicationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EPackage getAppliedDefinition() {
 		return ProfileApplicationOperations.getAppliedDefinition(this);
 	}
@@ -321,6 +328,7 @@ public class ProfileApplicationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ENamedElement getAppliedDefinition(NamedElement namedElement) {
 		return ProfileApplicationOperations.getAppliedDefinition(this,
 			namedElement);

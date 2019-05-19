@@ -99,6 +99,7 @@ public class QualifierValueImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getQualifier() {
 		if (qualifier != null && qualifier.eIsProxy()) {
 			InternalEObject oldQualifier = (InternalEObject) qualifier;
@@ -127,6 +128,7 @@ public class QualifierValueImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setQualifier(Property newQualifier) {
 		Property oldQualifier = qualifier;
 		qualifier = newQualifier;
@@ -140,6 +142,7 @@ public class QualifierValueImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getValue() {
 		if (value != null && value.eIsProxy()) {
 			InternalEObject oldValue = (InternalEObject) value;
@@ -167,6 +170,7 @@ public class QualifierValueImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(InputPin newValue) {
 		InputPin oldValue = value;
 		value = newValue;
@@ -180,6 +184,7 @@ public class QualifierValueImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateQualifierAttribute(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return QualifierValueOperations.validateQualifierAttribute(this,
@@ -191,6 +196,7 @@ public class QualifierValueImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeOfQualifier(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return QualifierValueOperations.validateTypeOfQualifier(this,
@@ -202,6 +208,7 @@ public class QualifierValueImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicityOfQualifier(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return QualifierValueOperations.validateMultiplicityOfQualifier(this,

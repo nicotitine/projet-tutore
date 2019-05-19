@@ -67,6 +67,7 @@ public class InitialNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoIncomingEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InitialNodeOperations.validateNoIncomingEdges(this, diagnostics,
@@ -78,6 +79,7 @@ public class InitialNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateControlEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InitialNodeOperations.validateControlEdges(this, diagnostics,

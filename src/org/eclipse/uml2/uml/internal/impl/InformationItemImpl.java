@@ -104,6 +104,7 @@ public class InformationItemImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Classifier> getRepresenteds() {
 		if (representeds == null) {
 			representeds = new EObjectResolvingEList<Classifier>(
@@ -118,6 +119,7 @@ public class InformationItemImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getRepresented(String name) {
 		return getRepresented(name, false, null);
 	}
@@ -127,6 +129,7 @@ public class InformationItemImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getRepresented(String name, boolean ignoreCase,
 			EClass eClass) {
 		representedLoop : for (Classifier represented : getRepresenteds()) {
@@ -146,6 +149,7 @@ public class InformationItemImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSourcesAndTargets(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InformationItemOperations.validateSourcesAndTargets(this,
@@ -157,6 +161,7 @@ public class InformationItemImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateHasNo(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InformationItemOperations.validateHasNo(this, diagnostics,
@@ -168,6 +173,7 @@ public class InformationItemImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNotInstantiable(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InformationItemOperations.validateNotInstantiable(this,

@@ -181,6 +181,7 @@ public class DestroyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDestroyLinks() {
 		return (eFlags & IS_DESTROY_LINKS_EFLAG) != 0;
 	}
@@ -190,6 +191,7 @@ public class DestroyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsDestroyLinks(boolean newIsDestroyLinks) {
 		boolean oldIsDestroyLinks = (eFlags & IS_DESTROY_LINKS_EFLAG) != 0;
 		if (newIsDestroyLinks)
@@ -207,6 +209,7 @@ public class DestroyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDestroyOwnedObjects() {
 		return (eFlags & IS_DESTROY_OWNED_OBJECTS_EFLAG) != 0;
 	}
@@ -216,6 +219,7 @@ public class DestroyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsDestroyOwnedObjects(boolean newIsDestroyOwnedObjects) {
 		boolean oldIsDestroyOwnedObjects = (eFlags & IS_DESTROY_OWNED_OBJECTS_EFLAG) != 0;
 		if (newIsDestroyOwnedObjects)
@@ -233,6 +237,7 @@ public class DestroyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getTarget() {
 		if (target != null && target.eIsProxy()) {
 			InternalEObject oldTarget = (InternalEObject) target;
@@ -292,6 +297,7 @@ public class DestroyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTarget(InputPin newTarget) {
 		if (newTarget != target) {
 			NotificationChain msgs = null;
@@ -316,6 +322,7 @@ public class DestroyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createTarget(String name, Type type, EClass eClass) {
 		InputPin newTarget = (InputPin) create(eClass);
 		setTarget(newTarget);
@@ -331,6 +338,7 @@ public class DestroyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createTarget(String name, Type type) {
 		return createTarget(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -340,6 +348,7 @@ public class DestroyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return DestroyObjectActionOperations.validateMultiplicity(this,
@@ -351,6 +360,7 @@ public class DestroyObjectActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoType(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return DestroyObjectActionOperations.validateNoType(this, diagnostics,

@@ -261,6 +261,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
+	@Override
 	public EList<NamedElement> getOwnedMembers() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -288,6 +289,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<NamedElement> getMembers() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -314,6 +316,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ElementImport> getElementImports() {
 		if (elementImports == null) {
 			elementImports = new EObjectContainmentWithInverseEList.Resolving<ElementImport>(
@@ -329,6 +332,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementImport createElementImport(PackageableElement importedElement) {
 		ElementImport newElementImport = (ElementImport) create(UMLPackage.Literals.ELEMENT_IMPORT);
 		getElementImports().add(newElementImport);
@@ -342,6 +346,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementImport getElementImport(PackageableElement importedElement) {
 		return getElementImport(importedElement, false);
 	}
@@ -351,6 +356,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementImport getElementImport(PackageableElement importedElement,
 			boolean createOnDemand) {
 		elementImportLoop : for (ElementImport elementImport : getElementImports()) {
@@ -369,6 +375,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageImport> getPackageImports() {
 		if (packageImports == null) {
 			packageImports = new EObjectContainmentWithInverseEList.Resolving<PackageImport>(
@@ -384,6 +391,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageImport createPackageImport(
 			org.eclipse.uml2.uml.Package importedPackage) {
 		PackageImport newPackageImport = (PackageImport) create(UMLPackage.Literals.PACKAGE_IMPORT);
@@ -398,6 +406,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageImport getPackageImport(
 			org.eclipse.uml2.uml.Package importedPackage) {
 		return getPackageImport(importedPackage, false);
@@ -408,6 +417,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageImport getPackageImport(
 			org.eclipse.uml2.uml.Package importedPackage, boolean createOnDemand) {
 		packageImportLoop : for (PackageImport packageImport : getPackageImports()) {
@@ -426,6 +436,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Constraint> getOwnedRules() {
 		if (ownedRules == null) {
 			ownedRules = new EObjectContainmentWithInverseEList.Resolving<Constraint>(
@@ -441,6 +452,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createOwnedRule(String name, EClass eClass) {
 		Constraint newOwnedRule = (Constraint) create(eClass);
 		getOwnedRules().add(newOwnedRule);
@@ -454,6 +466,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createOwnedRule(String name) {
 		return createOwnedRule(name, UMLPackage.Literals.CONSTRAINT);
 	}
@@ -463,6 +476,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getOwnedRule(String name) {
 		return getOwnedRule(name, false, null, false);
 	}
@@ -472,6 +486,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getOwnedRule(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		ownedRuleLoop : for (Constraint ownedRule : getOwnedRules()) {
@@ -493,6 +508,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageableElement> getImportedMembers() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -513,6 +529,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageableElement getImportedMember(String name) {
 		return getImportedMember(name, false, null);
 	}
@@ -522,6 +539,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageableElement getImportedMember(String name,
 			boolean ignoreCase, EClass eClass) {
 		importedMemberLoop : for (PackageableElement importedMember : getImportedMembers()) {
@@ -541,6 +559,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityGroup> getSubgroups() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -566,6 +585,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityGroup getSubgroup(String name) {
 		return getSubgroup(name, false, null);
 	}
@@ -575,6 +595,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityGroup getSubgroup(String name, boolean ignoreCase,
 			EClass eClass) {
 		subgroupLoop : for (ActivityGroup subgroup : getSubgroups()) {
@@ -594,6 +615,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityNode> getContainedNodes() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -626,6 +648,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityEdge> getContainedEdges() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -658,6 +681,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Variable> getVariables() {
 		if (variables == null) {
 			variables = new EObjectContainmentWithInverseEList.Resolving<Variable>(
@@ -673,6 +697,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Variable createVariable(String name, Type type) {
 		Variable newVariable = (Variable) create(UMLPackage.Literals.VARIABLE);
 		getVariables().add(newVariable);
@@ -688,6 +713,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Variable getVariable(String name, Type type) {
 		return getVariable(name, type, false, false);
 	}
@@ -697,6 +723,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Variable getVariable(String name, Type type, boolean ignoreCase,
 			boolean createOnDemand) {
 		variableLoop : for (Variable variable : getVariables()) {
@@ -718,6 +745,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityNode> getNodes() {
 		if (nodes == null) {
 			nodes = new EObjectContainmentWithInverseEList.Resolving<ActivityNode>(
@@ -733,6 +761,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode createNode(String name, EClass eClass) {
 		ActivityNode newNode = (ActivityNode) create(eClass);
 		getNodes().add(newNode);
@@ -746,6 +775,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode getNode(String name) {
 		return getNode(name, false, null, false);
 	}
@@ -755,6 +785,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode getNode(String name, boolean ignoreCase, EClass eClass,
 			boolean createOnDemand) {
 		nodeLoop : for (ActivityNode node : getNodes()) {
@@ -776,6 +807,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InputPin> getStructuredNodeInputs() {
 		if (structuredNodeInputs == null) {
 			structuredNodeInputs = new EObjectContainmentEList.Resolving<InputPin>(
@@ -790,6 +822,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createStructuredNodeInput(String name, Type type,
 			EClass eClass) {
 		InputPin newStructuredNodeInput = (InputPin) create(eClass);
@@ -806,6 +839,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createStructuredNodeInput(String name, Type type) {
 		return createStructuredNodeInput(name, type,
 			UMLPackage.Literals.INPUT_PIN);
@@ -816,6 +850,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getStructuredNodeInput(String name, Type type) {
 		return getStructuredNodeInput(name, type, false, null, false);
 	}
@@ -825,6 +860,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getStructuredNodeInput(String name, Type type,
 			boolean ignoreCase, EClass eClass, boolean createOnDemand) {
 		structuredNodeInputLoop : for (InputPin structuredNodeInput : getStructuredNodeInputs()) {
@@ -848,6 +884,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<OutputPin> getStructuredNodeOutputs() {
 		if (structuredNodeOutputs == null) {
 			structuredNodeOutputs = new EObjectContainmentEList.Resolving<OutputPin>(
@@ -862,6 +899,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createStructuredNodeOutput(String name, Type type) {
 		OutputPin newStructuredNodeOutput = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		getStructuredNodeOutputs().add(newStructuredNodeOutput);
@@ -877,6 +915,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getStructuredNodeOutput(String name, Type type) {
 		return getStructuredNodeOutput(name, type, false, false);
 	}
@@ -886,6 +925,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getStructuredNodeOutput(String name, Type type,
 			boolean ignoreCase, boolean createOnDemand) {
 		structuredNodeOutputLoop : for (OutputPin structuredNodeOutput : getStructuredNodeOutputs()) {
@@ -907,6 +947,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isMustIsolate() {
 		return (eFlags & MUST_ISOLATE_EFLAG) != 0;
 	}
@@ -916,6 +957,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setMustIsolate(boolean newMustIsolate) {
 		boolean oldMustIsolate = (eFlags & MUST_ISOLATE_EFLAG) != 0;
 		if (newMustIsolate)
@@ -933,6 +975,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityEdge> getEdges() {
 		if (edges == null) {
 			edges = new EObjectContainmentWithInverseEList.Resolving<ActivityEdge>(
@@ -948,6 +991,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge createEdge(String name, EClass eClass) {
 		ActivityEdge newEdge = (ActivityEdge) create(eClass);
 		getEdges().add(newEdge);
@@ -961,6 +1005,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getEdge(String name) {
 		return getEdge(name, false, null, false);
 	}
@@ -970,6 +1015,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getEdge(String name, boolean ignoreCase, EClass eClass,
 			boolean createOnDemand) {
 		edgeLoop : for (ActivityEdge edge : getEdges()) {
@@ -1009,6 +1055,7 @@ public class StructuredActivityNodeImpl
 		return super.basicGetActivity();
 	}
 
+	@Override
 	public NotificationChain eBasicRemoveFromContainer(NotificationChain msgs) {
 		InternalEObject eInternalContainer = eInternalContainer();
 		if (eInternalContainer instanceof Activity) {
@@ -1063,6 +1110,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMembersDistinguishable(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return NamespaceOperations.validateMembersDistinguishable(this,
@@ -1074,6 +1122,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateCannotImportSelf(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return NamespaceOperations.validateCannotImportSelf(this, diagnostics,
@@ -1085,6 +1134,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateCannotImportOwnedMembers(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return NamespaceOperations.validateCannotImportOwnedMembers(this,
@@ -1096,6 +1146,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ElementImport createElementImport(PackageableElement element,
 			VisibilityKind visibility) {
 		return NamespaceOperations.createElementImport(this, element,
@@ -1107,6 +1158,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageImport createPackageImport(
 			org.eclipse.uml2.uml.Package package_, VisibilityKind visibility) {
 		return NamespaceOperations.createPackageImport(this, package_,
@@ -1118,6 +1170,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageableElement> getImportedElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1140,6 +1193,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<org.eclipse.uml2.uml.Package> getImportedPackages() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1162,6 +1216,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getNamesOfMember(NamedElement element) {
 		return NamespaceOperations.getNamesOfMember(this, element);
 	}
@@ -1171,6 +1226,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean membersAreDistinguishable() {
 		return NamespaceOperations.membersAreDistinguishable(this);
 	}
@@ -1180,6 +1236,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageableElement> importMembers(
 			EList<PackageableElement> imps) {
 		return NamespaceOperations.importMembers(this, imps);
@@ -1190,6 +1247,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageableElement> excludeCollisions(
 			EList<PackageableElement> imps) {
 		return NamespaceOperations.excludeCollisions(this, imps);
@@ -1200,6 +1258,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNodesAndEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActivityGroupOperations.validateNodesAndEdges(this, diagnostics,
@@ -1211,6 +1270,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNotContained(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ActivityGroupOperations.validateNotContained(this, diagnostics,
@@ -1222,6 +1282,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Activity containingActivity() {
 		return StructuredActivityNodeOperations.containingActivity(this);
 	}
@@ -1231,6 +1292,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOutputPinEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StructuredActivityNodeOperations.validateOutputPinEdges(this,
@@ -1242,6 +1304,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StructuredActivityNodeOperations.validateEdges(this,
@@ -1253,6 +1316,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInputPinEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return StructuredActivityNodeOperations.validateInputPinEdges(this,
@@ -1264,6 +1328,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityNode> sourceNodes() {
 		return StructuredActivityNodeOperations.sourceNodes(this);
 	}
@@ -1273,6 +1338,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityNode> targetNodes() {
 		return StructuredActivityNodeOperations.targetNodes(this);
 	}
@@ -2326,6 +2392,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getOwnedMember(String name) {
 		return getOwnedMember(name, false, null);
 	}
@@ -2335,6 +2402,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getOwnedMember(String name, boolean ignoreCase,
 			EClass eClass) {
 		ownedMemberLoop : for (NamedElement ownedMember : getOwnedMembers()) {
@@ -2366,6 +2434,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getMember(String name) {
 		return getMember(name, false, null);
 	}
@@ -2375,6 +2444,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getMember(String name, boolean ignoreCase, EClass eClass) {
 		memberLoop : for (NamedElement member : getMembers()) {
 			if (eClass != null && !eClass.isInstance(member))
@@ -2444,6 +2514,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityGroup getSuperGroup() {
 		ActivityGroup superGroup = basicGetSuperGroup();
 		return superGroup != null && superGroup.eIsProxy()
@@ -2543,6 +2614,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode getContainedNode(String name) {
 		return getContainedNode(name, false, null);
 	}
@@ -2552,6 +2624,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityNode getContainedNode(String name, boolean ignoreCase,
 			EClass eClass) {
 		containedNodeLoop : for (ActivityNode containedNode : getContainedNodes()) {
@@ -2591,6 +2664,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getContainedEdge(String name) {
 		return getContainedEdge(name, false, null);
 	}
@@ -2600,6 +2674,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getContainedEdge(String name, boolean ignoreCase,
 			EClass eClass) {
 		containedEdgeLoop : for (ActivityEdge containedEdge : getContainedEdges()) {
@@ -2679,6 +2754,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Activity getInActivity() {
 		return getActivity();
 	}
@@ -2697,6 +2773,7 @@ public class StructuredActivityNodeImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInActivity(Activity newInActivity) {
 		setActivity(newInActivity);
 	}

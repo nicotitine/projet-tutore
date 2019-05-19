@@ -150,6 +150,7 @@ public class ReadExtentActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult() {
 		if (result != null && result.eIsProxy()) {
 			InternalEObject oldResult = (InternalEObject) result;
@@ -209,6 +210,7 @@ public class ReadExtentActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResult(OutputPin newResult) {
 		if (newResult != result) {
 			NotificationChain msgs = null;
@@ -233,6 +235,7 @@ public class ReadExtentActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createResult(String name, Type type) {
 		OutputPin newResult = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		setResult(newResult);
@@ -248,6 +251,7 @@ public class ReadExtentActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getClassifier() {
 		if (classifier != null && classifier.eIsProxy()) {
 			InternalEObject oldClassifier = (InternalEObject) classifier;
@@ -276,6 +280,7 @@ public class ReadExtentActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setClassifier(Classifier newClassifier) {
 		Classifier oldClassifier = classifier;
 		classifier = newClassifier;
@@ -290,6 +295,7 @@ public class ReadExtentActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeIsClassifier(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadExtentActionOperations.validateTypeIsClassifier(this,
@@ -301,6 +307,7 @@ public class ReadExtentActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicityOfResult(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ReadExtentActionOperations.validateMultiplicityOfResult(this,

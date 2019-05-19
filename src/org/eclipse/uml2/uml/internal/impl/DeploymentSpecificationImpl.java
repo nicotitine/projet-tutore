@@ -196,6 +196,7 @@ public class DeploymentSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDeploymentLocation() {
 		return deploymentLocation;
 	}
@@ -205,6 +206,7 @@ public class DeploymentSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeploymentLocation(String newDeploymentLocation) {
 		String oldDeploymentLocation = deploymentLocation;
 		deploymentLocation = newDeploymentLocation;
@@ -222,6 +224,7 @@ public class DeploymentSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetDeploymentLocation() {
 		String oldDeploymentLocation = deploymentLocation;
 		boolean oldDeploymentLocationESet = (eFlags & DEPLOYMENT_LOCATION_ESETFLAG) != 0;
@@ -239,6 +242,7 @@ public class DeploymentSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetDeploymentLocation() {
 		return (eFlags & DEPLOYMENT_LOCATION_ESETFLAG) != 0;
 	}
@@ -248,6 +252,7 @@ public class DeploymentSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getExecutionLocation() {
 		return executionLocation;
 	}
@@ -257,6 +262,7 @@ public class DeploymentSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExecutionLocation(String newExecutionLocation) {
 		String oldExecutionLocation = executionLocation;
 		executionLocation = newExecutionLocation;
@@ -274,6 +280,7 @@ public class DeploymentSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetExecutionLocation() {
 		String oldExecutionLocation = executionLocation;
 		boolean oldExecutionLocationESet = (eFlags & EXECUTION_LOCATION_ESETFLAG) != 0;
@@ -291,6 +298,7 @@ public class DeploymentSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetExecutionLocation() {
 		return (eFlags & EXECUTION_LOCATION_ESETFLAG) != 0;
 	}
@@ -300,6 +308,7 @@ public class DeploymentSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Deployment getDeployment() {
 		if (eContainerFeatureID() != UMLPackage.DEPLOYMENT_SPECIFICATION__DEPLOYMENT)
 			return null;
@@ -334,6 +343,7 @@ public class DeploymentSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDeployment(Deployment newDeployment) {
 		if (newDeployment != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.DEPLOYMENT_SPECIFICATION__DEPLOYMENT && newDeployment != null)) {
@@ -361,6 +371,7 @@ public class DeploymentSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDeployedElements(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return DeploymentSpecificationOperations.validateDeployedElements(this,
@@ -372,6 +383,7 @@ public class DeploymentSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDeploymentTarget(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return DeploymentSpecificationOperations.validateDeploymentTarget(this,

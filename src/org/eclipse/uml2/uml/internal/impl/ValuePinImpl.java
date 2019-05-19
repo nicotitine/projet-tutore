@@ -153,6 +153,7 @@ public class ValuePinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getValue() {
 		if (value != null && value.eIsProxy()) {
 			InternalEObject oldValue = (InternalEObject) value;
@@ -211,6 +212,7 @@ public class ValuePinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(ValueSpecification newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
@@ -235,6 +237,7 @@ public class ValuePinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createValue(String name, Type type, EClass eClass) {
 		ValueSpecification newValue = (ValueSpecification) create(eClass);
 		setValue(newValue);
@@ -250,6 +253,7 @@ public class ValuePinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateCompatibleType(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ValuePinOperations.validateCompatibleType(this, diagnostics,
@@ -261,6 +265,7 @@ public class ValuePinImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateNoIncomingEdges(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ValuePinOperations.validateNoIncomingEdges(this, diagnostics,

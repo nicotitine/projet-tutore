@@ -106,6 +106,7 @@ public abstract class ExecutionSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OccurrenceSpecification getStart() {
 		if (start != null && start.eIsProxy()) {
 			InternalEObject oldStart = (InternalEObject) start;
@@ -134,6 +135,7 @@ public abstract class ExecutionSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStart(OccurrenceSpecification newStart) {
 		OccurrenceSpecification oldStart = start;
 		start = newStart;
@@ -147,6 +149,7 @@ public abstract class ExecutionSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OccurrenceSpecification getFinish() {
 		if (finish != null && finish.eIsProxy()) {
 			InternalEObject oldFinish = (InternalEObject) finish;
@@ -175,6 +178,7 @@ public abstract class ExecutionSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setFinish(OccurrenceSpecification newFinish) {
 		OccurrenceSpecification oldFinish = finish;
 		finish = newFinish;
@@ -188,6 +192,7 @@ public abstract class ExecutionSpecificationImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSameLifeline(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ExecutionSpecificationOperations.validateSameLifeline(this,

@@ -218,6 +218,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isOrdered() {
 		return (eFlags & IS_ORDERED_EFLAG) != 0;
 	}
@@ -227,6 +228,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsOrdered(boolean newIsOrdered) {
 		boolean oldIsOrdered = (eFlags & IS_ORDERED_EFLAG) != 0;
 		if (newIsOrdered)
@@ -243,6 +245,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isUnique() {
 		return (eFlags & IS_UNIQUE_EFLAG) != 0;
 	}
@@ -252,6 +255,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsUnique(boolean newIsUnique) {
 		boolean oldIsUnique = (eFlags & IS_UNIQUE_EFLAG) != 0;
 		if (newIsUnique)
@@ -268,6 +272,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getUpper() {
 		return MultiplicityElementOperations.getUpper(this);
 	}
@@ -277,6 +282,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUpper(int newUpper) {
 		MultiplicityElementOperations.setUpper(this, newUpper);
 	}
@@ -286,6 +292,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int getLower() {
 		return MultiplicityElementOperations.getLower(this);
 	}
@@ -295,6 +302,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLower(int newLower) {
 		MultiplicityElementOperations.setLower(this, newLower);
 	}
@@ -304,6 +312,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getUpperValue() {
 		if (upperValue != null && upperValue.eIsProxy()) {
 			InternalEObject oldUpperValue = (InternalEObject) upperValue;
@@ -364,6 +373,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUpperValue(ValueSpecification newUpperValue) {
 		if (newUpperValue != upperValue) {
 			NotificationChain msgs = null;
@@ -388,6 +398,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createUpperValue(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newUpperValue = (ValueSpecification) create(eClass);
@@ -404,6 +415,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getLowerValue() {
 		if (lowerValue != null && lowerValue.eIsProxy()) {
 			InternalEObject oldLowerValue = (InternalEObject) lowerValue;
@@ -464,6 +476,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setLowerValue(ValueSpecification newLowerValue) {
 		if (newLowerValue != lowerValue) {
 			NotificationChain msgs = null;
@@ -488,6 +501,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createLowerValue(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newLowerValue = (ValueSpecification) create(eClass);
@@ -517,6 +531,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Activity getActivityScope() {
 		if (eContainerFeatureID() != UMLPackage.VARIABLE__ACTIVITY_SCOPE)
 			return null;
@@ -551,6 +566,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setActivityScope(Activity newActivityScope) {
 		if (newActivityScope != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.VARIABLE__ACTIVITY_SCOPE && newActivityScope != null)) {
@@ -577,6 +593,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public StructuredActivityNode getScope() {
 		if (eContainerFeatureID() != UMLPackage.VARIABLE__SCOPE)
 			return null;
@@ -611,6 +628,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setScope(StructuredActivityNode newScope) {
 		if (newScope != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.VARIABLE__SCOPE && newScope != null)) {
@@ -637,6 +655,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateLowerGe0(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return MultiplicityElementOperations.validateLowerGe0(this,
@@ -648,6 +667,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateUpperGeLower(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return MultiplicityElementOperations.validateUpperGeLower(this,
@@ -659,6 +679,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateValueSpecificationNoSideEffects(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return MultiplicityElementOperations
@@ -670,6 +691,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateValueSpecificationConstant(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return MultiplicityElementOperations
@@ -681,6 +703,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateLowerIsInteger(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return MultiplicityElementOperations.validateLowerIsInteger(this,
@@ -692,6 +715,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateUpperIsUnlimitedNatural(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return MultiplicityElementOperations.validateUpperIsUnlimitedNatural(
@@ -703,6 +727,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isMultivalued() {
 		return MultiplicityElementOperations.isMultivalued(this);
 	}
@@ -712,6 +737,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean includesMultiplicity(MultiplicityElement M) {
 		return MultiplicityElementOperations.includesMultiplicity(this, M);
 	}
@@ -721,6 +747,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int lowerBound() {
 		return MultiplicityElementOperations.lowerBound(this);
 	}
@@ -730,6 +757,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int upperBound() {
 		return MultiplicityElementOperations.upperBound(this);
 	}
@@ -739,6 +767,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean compatibleWith(MultiplicityElement other) {
 		return MultiplicityElementOperations.compatibleWith(this, other);
 	}
@@ -748,6 +777,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean is(int lowerbound, int upperbound) {
 		return MultiplicityElementOperations.is(this, lowerbound, upperbound);
 	}
@@ -757,6 +787,7 @@ public class VariableImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isAccessibleBy(Action a) {
 		return VariableOperations.isAccessibleBy(this, a);
 	}

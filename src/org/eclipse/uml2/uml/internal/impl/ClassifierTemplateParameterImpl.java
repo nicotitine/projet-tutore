@@ -116,6 +116,7 @@ public class ClassifierTemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isAllowSubstitutable() {
 		return (eFlags & ALLOW_SUBSTITUTABLE_EFLAG) != 0;
 	}
@@ -125,6 +126,7 @@ public class ClassifierTemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAllowSubstitutable(boolean newAllowSubstitutable) {
 		boolean oldAllowSubstitutable = (eFlags & ALLOW_SUBSTITUTABLE_EFLAG) != 0;
 		if (newAllowSubstitutable)
@@ -142,6 +144,7 @@ public class ClassifierTemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Classifier> getConstrainingClassifiers() {
 		if (constrainingClassifiers == null) {
 			constrainingClassifiers = new EObjectResolvingEList<Classifier>(
@@ -157,6 +160,7 @@ public class ClassifierTemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getConstrainingClassifier(String name) {
 		return getConstrainingClassifier(name, false, null);
 	}
@@ -166,6 +170,7 @@ public class ClassifierTemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getConstrainingClassifier(String name,
 			boolean ignoreCase, EClass eClass) {
 		constrainingClassifierLoop : for (Classifier constrainingClassifier : getConstrainingClassifiers()) {
@@ -303,6 +308,7 @@ public class ClassifierTemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateHasConstrainingClassifier(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return ClassifierTemplateParameterOperations
@@ -314,6 +320,7 @@ public class ClassifierTemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateParameteredElementNoFeatures(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return ClassifierTemplateParameterOperations
@@ -325,6 +332,7 @@ public class ClassifierTemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMatchingAbstract(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ClassifierTemplateParameterOperations.validateMatchingAbstract(
@@ -336,6 +344,7 @@ public class ClassifierTemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateActualIsClassifier(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ClassifierTemplateParameterOperations
@@ -347,6 +356,7 @@ public class ClassifierTemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateConstrainingClassifiersConstrainArgs(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return ClassifierTemplateParameterOperations
@@ -359,6 +369,7 @@ public class ClassifierTemplateParameterImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateConstrainingClassifiersConstrainParameteredElement(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return ClassifierTemplateParameterOperations

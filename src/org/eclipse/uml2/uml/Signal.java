@@ -63,6 +63,7 @@ public interface Signal
 	 * @model containment="true" resolveProxies="true"
 	 * @generated
 	 */
+	@Override
 	EList<Property> getOwnedAttributes();
 
 	/**
@@ -76,6 +77,7 @@ public interface Signal
 	 * @see #getOwnedAttributes()
 	 * @generated
 	 */
+	@Override
 	Property createOwnedAttribute(String name, Type type, EClass eClass);
 
 	/**
@@ -88,6 +90,7 @@ public interface Signal
 	 * @see #getOwnedAttributes()
 	 * @generated
 	 */
+	@Override
 	Property createOwnedAttribute(String name, Type type);
 
 	/**
@@ -100,6 +103,7 @@ public interface Signal
 	 * @see #getOwnedAttributes()
 	 * @generated
 	 */
+	@Override
 	Property getOwnedAttribute(String name, Type type);
 
 	/**
@@ -115,6 +119,7 @@ public interface Signal
 	 * @see #getOwnedAttributes()
 	 * @generated
 	 */
+	@Override
 	Property getOwnedAttribute(String name, Type type, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand);
 

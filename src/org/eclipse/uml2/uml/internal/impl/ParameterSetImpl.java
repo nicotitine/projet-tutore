@@ -141,6 +141,7 @@ public class ParameterSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Parameter> getParameters() {
 		if (parameters == null) {
 			parameters = new EObjectWithInverseResolvingEList.ManyInverse<Parameter>(
@@ -155,6 +156,7 @@ public class ParameterSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter getParameter(String name, Type type) {
 		return getParameter(name, type, false);
 	}
@@ -164,6 +166,7 @@ public class ParameterSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter getParameter(String name, Type type, boolean ignoreCase) {
 		parameterLoop : for (Parameter parameter : getParameters()) {
 			if (name != null && !(ignoreCase
@@ -182,6 +185,7 @@ public class ParameterSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Constraint> getConditions() {
 		if (conditions == null) {
 			conditions = new EObjectContainmentEList.Resolving<Constraint>(
@@ -195,6 +199,7 @@ public class ParameterSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createCondition(String name, EClass eClass) {
 		Constraint newCondition = (Constraint) create(eClass);
 		getConditions().add(newCondition);
@@ -208,6 +213,7 @@ public class ParameterSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createCondition(String name) {
 		return createCondition(name, UMLPackage.Literals.CONSTRAINT);
 	}
@@ -217,6 +223,7 @@ public class ParameterSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getCondition(String name) {
 		return getCondition(name, false, null, false);
 	}
@@ -226,6 +233,7 @@ public class ParameterSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getCondition(String name, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		conditionLoop : for (Constraint condition : getConditions()) {
@@ -247,6 +255,7 @@ public class ParameterSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSameParameterizedEntity(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ParameterSetOperations.validateSameParameterizedEntity(this,
@@ -258,6 +267,7 @@ public class ParameterSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInput(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ParameterSetOperations.validateInput(this, diagnostics, context);
@@ -268,6 +278,7 @@ public class ParameterSetImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTwoParameterSets(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ParameterSetOperations.validateTwoParameterSets(this,

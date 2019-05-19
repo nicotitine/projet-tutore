@@ -140,6 +140,7 @@ public class ClearStructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin getResult() {
 		if (result != null && result.eIsProxy()) {
 			InternalEObject oldResult = (InternalEObject) result;
@@ -202,6 +203,7 @@ public class ClearStructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setResult(OutputPin newResult) {
 		if (newResult != result) {
 			NotificationChain msgs = null;
@@ -229,6 +231,7 @@ public class ClearStructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public OutputPin createResult(String name, Type type) {
 		OutputPin newResult = (OutputPin) create(UMLPackage.Literals.OUTPUT_PIN);
 		setResult(newResult);
@@ -244,6 +247,7 @@ public class ClearStructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeOfResult(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ClearStructuralFeatureActionOperations.validateTypeOfResult(
@@ -255,6 +259,7 @@ public class ClearStructuralFeatureActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicityOfResult(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ClearStructuralFeatureActionOperations

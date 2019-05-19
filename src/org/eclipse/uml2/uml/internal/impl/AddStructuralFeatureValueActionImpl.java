@@ -162,6 +162,7 @@ public class AddStructuralFeatureValueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isReplaceAll() {
 		return (eFlags & IS_REPLACE_ALL_EFLAG) != 0;
 	}
@@ -171,6 +172,7 @@ public class AddStructuralFeatureValueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsReplaceAll(boolean newIsReplaceAll) {
 		boolean oldIsReplaceAll = (eFlags & IS_REPLACE_ALL_EFLAG) != 0;
 		if (newIsReplaceAll)
@@ -188,6 +190,7 @@ public class AddStructuralFeatureValueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRequiredValue(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return AddStructuralFeatureValueActionOperations.validateRequiredValue(
@@ -199,6 +202,7 @@ public class AddStructuralFeatureValueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateInsertAtPin(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return AddStructuralFeatureValueActionOperations.validateInsertAtPin(
@@ -210,6 +214,7 @@ public class AddStructuralFeatureValueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getInsertAt() {
 		if (insertAt != null && insertAt.eIsProxy()) {
 			InternalEObject oldInsertAt = (InternalEObject) insertAt;
@@ -279,6 +284,7 @@ public class AddStructuralFeatureValueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInsertAt(InputPin newInsertAt) {
 		if (newInsertAt != insertAt) {
 			NotificationChain msgs = null;
@@ -310,6 +316,7 @@ public class AddStructuralFeatureValueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createInsertAt(String name, Type type, EClass eClass) {
 		InputPin newInsertAt = (InputPin) create(eClass);
 		setInsertAt(newInsertAt);
@@ -325,6 +332,7 @@ public class AddStructuralFeatureValueActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createInsertAt(String name, Type type) {
 		return createInsertAt(name, type, UMLPackage.Literals.INPUT_PIN);
 	}

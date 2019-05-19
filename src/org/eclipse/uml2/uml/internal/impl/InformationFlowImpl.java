@@ -170,6 +170,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> getRelatedElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -198,6 +199,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> getSources() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -223,6 +225,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> getTargets() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -248,6 +251,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Relationship> getRealizations() {
 		if (realizations == null) {
 			realizations = new EObjectResolvingEList<Relationship>(
@@ -262,6 +266,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Classifier> getConveyeds() {
 		if (conveyeds == null) {
 			conveyeds = new EObjectResolvingEList<Classifier>(Classifier.class,
@@ -275,6 +280,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getConveyed(String name) {
 		return getConveyed(name, false, null);
 	}
@@ -284,6 +290,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Classifier getConveyed(String name, boolean ignoreCase, EClass eClass) {
 		conveyedLoop : for (Classifier conveyed : getConveyeds()) {
 			if (eClass != null && !eClass.isInstance(conveyed))
@@ -302,6 +309,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<NamedElement> getInformationSources() {
 		if (informationSources == null) {
 			informationSources = new EObjectResolvingEList<NamedElement>(
@@ -316,6 +324,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getInformationSource(String name) {
 		return getInformationSource(name, false, null);
 	}
@@ -325,6 +334,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getInformationSource(String name, boolean ignoreCase,
 			EClass eClass) {
 		informationSourceLoop : for (NamedElement informationSource : getInformationSources()) {
@@ -344,6 +354,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<NamedElement> getInformationTargets() {
 		if (informationTargets == null) {
 			informationTargets = new EObjectResolvingEList<NamedElement>(
@@ -358,6 +369,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getInformationTarget(String name) {
 		return getInformationTarget(name, false, null);
 	}
@@ -367,6 +379,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public NamedElement getInformationTarget(String name, boolean ignoreCase,
 			EClass eClass) {
 		informationTargetLoop : for (NamedElement informationTarget : getInformationTargets()) {
@@ -386,6 +399,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ActivityEdge> getRealizingActivityEdges() {
 		if (realizingActivityEdges == null) {
 			realizingActivityEdges = new EObjectResolvingEList<ActivityEdge>(
@@ -400,6 +414,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getRealizingActivityEdge(String name) {
 		return getRealizingActivityEdge(name, false, null);
 	}
@@ -409,6 +424,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ActivityEdge getRealizingActivityEdge(String name,
 			boolean ignoreCase, EClass eClass) {
 		realizingActivityEdgeLoop : for (ActivityEdge realizingActivityEdge : getRealizingActivityEdges()) {
@@ -428,6 +444,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Connector> getRealizingConnectors() {
 		if (realizingConnectors == null) {
 			realizingConnectors = new EObjectResolvingEList<Connector>(
@@ -442,6 +459,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Connector getRealizingConnector(String name) {
 		return getRealizingConnector(name, false);
 	}
@@ -451,6 +469,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Connector getRealizingConnector(String name, boolean ignoreCase) {
 		realizingConnectorLoop : for (Connector realizingConnector : getRealizingConnectors()) {
 			if (name != null && !(ignoreCase
@@ -467,6 +486,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Message> getRealizingMessages() {
 		if (realizingMessages == null) {
 			realizingMessages = new EObjectResolvingEList<Message>(
@@ -481,6 +501,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Message getRealizingMessage(String name) {
 		return getRealizingMessage(name, false);
 	}
@@ -490,6 +511,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Message getRealizingMessage(String name, boolean ignoreCase) {
 		realizingMessageLoop : for (Message realizingMessage : getRealizingMessages()) {
 			if (name != null && !(ignoreCase
@@ -506,6 +528,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSourcesAndTargetsKind(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InformationFlowOperations.validateSourcesAndTargetsKind(this,
@@ -517,6 +540,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMustConform(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InformationFlowOperations.validateMustConform(this, diagnostics,
@@ -528,6 +552,7 @@ public class InformationFlowImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateConveyClassifiers(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return InformationFlowOperations.validateConveyClassifiers(this,

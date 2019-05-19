@@ -123,6 +123,7 @@ public class OpaqueExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getBodies() {
 		if (bodies == null) {
 			bodies = new EDataTypeEList.Unsettable<String>(String.class, this,
@@ -136,6 +137,7 @@ public class OpaqueExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetBodies() {
 		if (bodies != null)
 			((InternalEList.Unsettable<?>) bodies).unset();
@@ -146,6 +148,7 @@ public class OpaqueExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetBodies() {
 		return bodies != null && ((InternalEList.Unsettable<?>) bodies).isSet();
 	}
@@ -155,6 +158,7 @@ public class OpaqueExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<String> getLanguages() {
 		if (languages == null) {
 			languages = new EDataTypeUniqueEList.Unsettable<String>(
@@ -168,6 +172,7 @@ public class OpaqueExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetLanguages() {
 		if (languages != null)
 			((InternalEList.Unsettable<?>) languages).unset();
@@ -178,6 +183,7 @@ public class OpaqueExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetLanguages() {
 		return languages != null
 			&& ((InternalEList.Unsettable<?>) languages).isSet();
@@ -188,6 +194,7 @@ public class OpaqueExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Parameter getResult() {
 		Parameter result = basicGetResult();
 		return result != null && result.eIsProxy()
@@ -209,6 +216,7 @@ public class OpaqueExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Behavior getBehavior() {
 		if (behavior != null && behavior.eIsProxy()) {
 			InternalEObject oldBehavior = (InternalEObject) behavior;
@@ -237,6 +245,7 @@ public class OpaqueExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBehavior(Behavior newBehavior) {
 		Behavior oldBehavior = behavior;
 		behavior = newBehavior;
@@ -250,6 +259,7 @@ public class OpaqueExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateLanguageBodySize(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return OpaqueExpressionOperations.validateLanguageBodySize(this,
@@ -261,6 +271,7 @@ public class OpaqueExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOnlyReturnResultParameters(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return OpaqueExpressionOperations.validateOnlyReturnResultParameters(
@@ -272,6 +283,7 @@ public class OpaqueExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOneReturnResultParameter(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return OpaqueExpressionOperations.validateOneReturnResultParameter(
@@ -283,6 +295,7 @@ public class OpaqueExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public int value() {
 		return OpaqueExpressionOperations.value(this);
 	}
@@ -292,6 +305,7 @@ public class OpaqueExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isIntegral() {
 		return OpaqueExpressionOperations.isIntegral(this);
 	}
@@ -301,6 +315,7 @@ public class OpaqueExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isPositive() {
 		return OpaqueExpressionOperations.isPositive(this);
 	}
@@ -310,6 +325,7 @@ public class OpaqueExpressionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isNonNegative() {
 		return OpaqueExpressionOperations.isNonNegative(this);
 	}

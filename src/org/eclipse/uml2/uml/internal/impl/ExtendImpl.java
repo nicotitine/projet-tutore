@@ -135,6 +135,7 @@ public class ExtendImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> getRelatedElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -162,6 +163,7 @@ public class ExtendImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> getSources() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -187,6 +189,7 @@ public class ExtendImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Element> getTargets() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -238,6 +241,7 @@ public class ExtendImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UseCase getExtendedCase() {
 		if (extendedCase != null && extendedCase.eIsProxy()) {
 			InternalEObject oldExtendedCase = (InternalEObject) extendedCase;
@@ -266,6 +270,7 @@ public class ExtendImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExtendedCase(UseCase newExtendedCase) {
 		UseCase oldExtendedCase = extendedCase;
 		extendedCase = newExtendedCase;
@@ -279,6 +284,7 @@ public class ExtendImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint getCondition() {
 		if (condition != null && condition.eIsProxy()) {
 			InternalEObject oldCondition = (InternalEObject) condition;
@@ -338,6 +344,7 @@ public class ExtendImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setCondition(Constraint newCondition) {
 		if (newCondition != condition) {
 			NotificationChain msgs = null;
@@ -362,6 +369,7 @@ public class ExtendImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createCondition(String name, EClass eClass) {
 		Constraint newCondition = (Constraint) create(eClass);
 		setCondition(newCondition);
@@ -375,6 +383,7 @@ public class ExtendImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Constraint createCondition(String name) {
 		return createCondition(name, UMLPackage.Literals.CONSTRAINT);
 	}
@@ -384,6 +393,7 @@ public class ExtendImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ExtensionPoint> getExtensionLocations() {
 		if (extensionLocations == null) {
 			extensionLocations = new EObjectResolvingEList<ExtensionPoint>(
@@ -398,6 +408,7 @@ public class ExtendImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExtensionPoint getExtensionLocation(String name) {
 		return getExtensionLocation(name, false);
 	}
@@ -407,6 +418,7 @@ public class ExtendImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ExtensionPoint getExtensionLocation(String name, boolean ignoreCase) {
 		extensionLocationLoop : for (ExtensionPoint extensionLocation : getExtensionLocations()) {
 			if (name != null && !(ignoreCase
@@ -423,6 +435,7 @@ public class ExtendImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public UseCase getExtension() {
 		if (eContainerFeatureID() != UMLPackage.EXTEND__EXTENSION)
 			return null;
@@ -457,6 +470,7 @@ public class ExtendImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setExtension(UseCase newExtension) {
 		if (newExtension != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.EXTEND__EXTENSION && newExtension != null)) {
@@ -482,6 +496,7 @@ public class ExtendImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateExtensionPoints(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return ExtendOperations.validateExtensionPoints(this, diagnostics,

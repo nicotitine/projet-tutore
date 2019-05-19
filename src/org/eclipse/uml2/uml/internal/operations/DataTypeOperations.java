@@ -12,17 +12,12 @@
  */
 package org.eclipse.uml2.uml.internal.operations;
 
-import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.common.util.UniqueEList;
 import org.eclipse.uml2.uml.DataType;
-import org.eclipse.uml2.uml.NamedElement;
 import org.eclipse.uml2.uml.Operation;
 import org.eclipse.uml2.uml.Property;
 import org.eclipse.uml2.uml.Type;
-
-import org.eclipse.uml2.uml.RedefinableElement;
 
 /**
  * <!-- begin-user-doc -->

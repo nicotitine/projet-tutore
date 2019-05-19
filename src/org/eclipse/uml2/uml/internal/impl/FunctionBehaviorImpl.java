@@ -75,6 +75,7 @@ public class FunctionBehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOneOutputParameter(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return FunctionBehaviorOperations.validateOneOutputParameter(this,
@@ -86,6 +87,7 @@ public class FunctionBehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypesOfParameters(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return FunctionBehaviorOperations.validateTypesOfParameters(this,
@@ -97,6 +99,7 @@ public class FunctionBehaviorImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean hasAllDataTypeAttributes(DataType d) {
 		return FunctionBehaviorOperations.hasAllDataTypeAttributes(this, d);
 	}

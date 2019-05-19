@@ -67,6 +67,7 @@ public abstract class WriteLinkActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateAllowAccess(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return WriteLinkActionOperations.validateAllowAccess(this, diagnostics,

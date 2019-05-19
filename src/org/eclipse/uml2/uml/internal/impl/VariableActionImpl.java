@@ -100,6 +100,7 @@ public abstract class VariableActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Variable getVariable() {
 		if (variable != null && variable.eIsProxy()) {
 			InternalEObject oldVariable = (InternalEObject) variable;
@@ -128,6 +129,7 @@ public abstract class VariableActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setVariable(Variable newVariable) {
 		Variable oldVariable = variable;
 		variable = newVariable;
@@ -141,6 +143,7 @@ public abstract class VariableActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateScopeOfVariable(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return VariableActionOperations.validateScopeOfVariable(this,

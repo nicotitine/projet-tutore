@@ -92,6 +92,7 @@ public class InstanceValueImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InstanceSpecification getInstance() {
 		if (instance != null && instance.eIsProxy()) {
 			InternalEObject oldInstance = (InternalEObject) instance;
@@ -120,6 +121,7 @@ public class InstanceValueImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInstance(InstanceSpecification newInstance) {
 		InstanceSpecification oldInstance = instance;
 		instance = newInstance;

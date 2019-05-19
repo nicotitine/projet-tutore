@@ -109,6 +109,7 @@ public class LiteralStringImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getValue() {
 		return value;
 	}
@@ -118,6 +119,7 @@ public class LiteralStringImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setValue(String newValue) {
 		String oldValue = value;
 		value = newValue;
@@ -134,6 +136,7 @@ public class LiteralStringImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void unsetValue() {
 		String oldValue = value;
 		boolean oldValueESet = (eFlags & VALUE_ESETFLAG) != 0;
@@ -150,6 +153,7 @@ public class LiteralStringImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isSetValue() {
 		return (eFlags & VALUE_ESETFLAG) != 0;
 	}

@@ -353,6 +353,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameter getTemplateParameter() {
 		if (templateParameter != null && templateParameter.eIsProxy()) {
 			InternalEObject oldTemplateParameter = (InternalEObject) templateParameter;
@@ -426,6 +427,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTemplateParameter(TemplateParameter newTemplateParameter) {
 		if (newTemplateParameter != null
 			&& !(newTemplateParameter instanceof ConnectableElementTemplateParameter)) {
@@ -465,6 +467,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameter getOwningTemplateParameter() {
 		if (eContainerFeatureID() != UMLPackage.PROPERTY__OWNING_TEMPLATE_PARAMETER)
 			return null;
@@ -507,6 +510,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwningTemplateParameter(
 			TemplateParameter newOwningTemplateParameter) {
 		if (newOwningTemplateParameter != eInternalContainer()
@@ -538,6 +542,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<ConnectorEnd> getEnds() {
 		return ConnectableElementOperations.getEnds(this);
 	}
@@ -574,6 +579,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Deployment> getDeployments() {
 		if (deployments == null) {
 			deployments = new EObjectContainmentWithInverseEList.Resolving<Deployment>(
@@ -588,6 +594,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<PackageableElement> getDeployedElements() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -612,6 +619,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageableElement getDeployedElement(String name) {
 		return getDeployedElement(name, false, null);
 	}
@@ -621,6 +629,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public PackageableElement getDeployedElement(String name,
 			boolean ignoreCase, EClass eClass) {
 		deployedElementLoop : for (PackageableElement deployedElement : getDeployedElements()) {
@@ -717,6 +726,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Association getAssociation() {
 		if (association != null && association.eIsProxy()) {
 			InternalEObject oldAssociation = (InternalEObject) association;
@@ -774,6 +784,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAssociation(Association newAssociation) {
 		if (newAssociation != association) {
 			NotificationChain msgs = null;
@@ -799,6 +810,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public DataType getDatatype() {
 		if (eContainerFeatureID() != UMLPackage.PROPERTY__DATATYPE)
 			return null;
@@ -833,6 +845,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDatatype(DataType newDatatype) {
 		if (newDatatype != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.PROPERTY__DATATYPE && newDatatype != null)) {
@@ -859,6 +872,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Interface getInterface() {
 		if (eContainerFeatureID() != UMLPackage.PROPERTY__INTERFACE)
 			return null;
@@ -893,6 +907,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setInterface(Interface newInterface) {
 		if (newInterface != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.PROPERTY__INTERFACE && newInterface != null)) {
@@ -919,6 +934,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDerived() {
 		return (eFlags & IS_DERIVED_EFLAG) != 0;
 	}
@@ -928,6 +944,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsDerived(boolean newIsDerived) {
 		boolean oldIsDerived = (eFlags & IS_DERIVED_EFLAG) != 0;
 		if (newIsDerived)
@@ -944,6 +961,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isDerivedUnion() {
 		return (eFlags & IS_DERIVED_UNION_EFLAG) != 0;
 	}
@@ -953,6 +971,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsDerivedUnion(boolean newIsDerivedUnion) {
 		boolean oldIsDerivedUnion = (eFlags & IS_DERIVED_UNION_EFLAG) != 0;
 		if (newIsDerivedUnion)
@@ -970,6 +989,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isID() {
 		return (eFlags & IS_ID_EFLAG) != 0;
 	}
@@ -979,6 +999,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsID(boolean newIsID) {
 		boolean oldIsID = (eFlags & IS_ID_EFLAG) != 0;
 		if (newIsID)
@@ -995,6 +1016,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public String getDefault() {
 		return PropertyOperations.getDefault(this);
 	}
@@ -1004,6 +1026,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefault(String newDefault) {
 		PropertyOperations.setDefault(this, newDefault);
 	}
@@ -1013,6 +1036,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public AggregationKind getAggregation() {
 		return AGGREGATION_EFLAG_VALUES[(eFlags & AGGREGATION_EFLAG) >>> AGGREGATION_EFLAG_OFFSET];
 	}
@@ -1022,6 +1046,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAggregation(AggregationKind newAggregation) {
 		AggregationKind oldAggregation = AGGREGATION_EFLAG_VALUES[(eFlags & AGGREGATION_EFLAG) >>> AGGREGATION_EFLAG_OFFSET];
 		if (newAggregation == null)
@@ -1039,6 +1064,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isComposite() {
 		return PropertyOperations.isComposite(this);
 	}
@@ -1048,6 +1074,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsComposite(boolean newIsComposite) {
 		PropertyOperations.setIsComposite(this, newIsComposite);
 	}
@@ -1057,6 +1084,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public org.eclipse.uml2.uml.Class getClass_() {
 		org.eclipse.uml2.uml.Class class_ = basicGetClass_();
 		return class_ != null && class_.eIsProxy()
@@ -1107,6 +1135,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getRedefinedProperties() {
 		if (redefinedProperties == null) {
 			redefinedProperties = new EObjectResolvingEList<Property>(
@@ -1120,6 +1149,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getRedefinedProperty(String name, Type type) {
 		return getRedefinedProperty(name, type, false, null);
 	}
@@ -1129,6 +1159,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getRedefinedProperty(String name, Type type,
 			boolean ignoreCase, EClass eClass) {
 		redefinedPropertyLoop : for (Property redefinedProperty : getRedefinedProperties()) {
@@ -1150,6 +1181,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Association getOwningAssociation() {
 		if (eContainerFeatureID() != UMLPackage.PROPERTY__OWNING_ASSOCIATION)
 			return null;
@@ -1192,6 +1224,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOwningAssociation(Association newOwningAssociation) {
 		if (newOwningAssociation != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.PROPERTY__OWNING_ASSOCIATION && newOwningAssociation != null)) {
@@ -1219,6 +1252,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification getDefaultValue() {
 		if (defaultValue != null && defaultValue.eIsProxy()) {
 			InternalEObject oldDefaultValue = (InternalEObject) defaultValue;
@@ -1279,6 +1313,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setDefaultValue(ValueSpecification newDefaultValue) {
 		if (newDefaultValue != defaultValue) {
 			NotificationChain msgs = null;
@@ -1304,6 +1339,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public ValueSpecification createDefaultValue(String name, Type type,
 			EClass eClass) {
 		ValueSpecification newDefaultValue = (ValueSpecification) create(eClass);
@@ -1320,6 +1356,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getOpposite() {
 		Property opposite = basicGetOpposite();
 		return opposite != null && opposite.eIsProxy()
@@ -1341,6 +1378,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOpposite(Property newOpposite) {
 		PropertyOperations.setOpposite(this, newOpposite);
 	}
@@ -1350,6 +1388,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getSubsettedProperties() {
 		if (subsettedProperties == null) {
 			subsettedProperties = new EObjectResolvingEList<Property>(
@@ -1363,6 +1402,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getSubsettedProperty(String name, Type type) {
 		return getSubsettedProperty(name, type, false, null);
 	}
@@ -1372,6 +1412,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getSubsettedProperty(String name, Type type,
 			boolean ignoreCase, EClass eClass) {
 		subsettedPropertyLoop : for (Property subsettedProperty : getSubsettedProperties()) {
@@ -1393,6 +1434,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Property> getQualifiers() {
 		if (qualifiers == null) {
 			qualifiers = new EObjectContainmentWithInverseEList.Resolving<Property>(
@@ -1407,6 +1449,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createQualifier(String name, Type type, EClass eClass) {
 		Property newQualifier = (Property) create(eClass);
 		getQualifiers().add(newQualifier);
@@ -1422,6 +1465,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property createQualifier(String name, Type type) {
 		return createQualifier(name, type, UMLPackage.Literals.PROPERTY);
 	}
@@ -1431,6 +1475,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getQualifier(String name, Type type) {
 		return getQualifier(name, type, false, null, false);
 	}
@@ -1440,6 +1485,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getQualifier(String name, Type type, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		qualifierLoop : for (Property qualifier : getQualifiers()) {
@@ -1463,6 +1509,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getAssociationEnd() {
 		if (eContainerFeatureID() != UMLPackage.PROPERTY__ASSOCIATION_END)
 			return null;
@@ -1497,6 +1544,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setAssociationEnd(Property newAssociationEnd) {
 		if (newAssociationEnd != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.PROPERTY__ASSOCIATION_END && newAssociationEnd != null)) {
@@ -1523,6 +1571,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isCompatibleWith(ParameterableElement p) {
 		return PropertyOperations.isCompatibleWith(this, p);
 	}
@@ -1532,6 +1581,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isTemplateParameter() {
 		return ParameterableElementOperations.isTemplateParameter(this);
 	}
@@ -1541,6 +1591,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateMultiplicityOfComposite(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PropertyOperations.validateMultiplicityOfComposite(this,
@@ -1552,6 +1603,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSubsettingContextConforms(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return PropertyOperations.validateSubsettingContextConforms(this,
@@ -1563,6 +1615,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateRedefinedPropertyInherited(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return PropertyOperations.validateRedefinedPropertyInherited(this,
@@ -1574,6 +1627,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSubsettingRules(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PropertyOperations.validateSubsettingRules(this, diagnostics,
@@ -1585,6 +1639,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDerivedUnionIsDerived(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PropertyOperations.validateDerivedUnionIsDerived(this,
@@ -1596,6 +1651,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDerivedUnionIsReadOnly(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PropertyOperations.validateDerivedUnionIsReadOnly(this,
@@ -1607,6 +1663,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateSubsettedPropertyNames(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PropertyOperations.validateSubsettedPropertyNames(this,
@@ -1618,6 +1675,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateTypeOfOppositeEnd(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PropertyOperations.validateTypeOfOppositeEnd(this, diagnostics,
@@ -1629,6 +1687,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateQualifiedIsAssociationEnd(
 			DiagnosticChain diagnostics, Map<Object, Object> context) {
 		return PropertyOperations.validateQualifiedIsAssociationEnd(this,
@@ -1640,6 +1699,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateDeploymentTarget(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PropertyOperations.validateDeploymentTarget(this, diagnostics,
@@ -1651,6 +1711,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateBindingToAttribute(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return PropertyOperations.validateBindingToAttribute(this, diagnostics,
@@ -1662,6 +1723,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIsNavigable(boolean isNavigable) {
 		PropertyOperations.setIsNavigable(this, isNavigable);
 	}
@@ -1671,6 +1733,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Property getOtherEnd() {
 		return PropertyOperations.getOtherEnd(this);
 	}
@@ -1689,6 +1752,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setBooleanDefaultValue(boolean value) {
 		PropertyOperations.setBooleanDefaultValue(this, value);
 	}
@@ -1698,6 +1762,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setIntegerDefaultValue(int value) {
 		PropertyOperations.setIntegerDefaultValue(this, value);
 	}
@@ -1707,6 +1772,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setStringDefaultValue(String value) {
 		PropertyOperations.setStringDefaultValue(this, value);
 	}
@@ -1716,6 +1782,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setUnlimitedNaturalDefaultValue(int value) {
 		PropertyOperations.setUnlimitedNaturalDefaultValue(this, value);
 	}
@@ -1734,6 +1801,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isAttribute() {
 		return PropertyOperations.isAttribute(this);
 	}
@@ -1743,6 +1811,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setNullDefaultValue() {
 		PropertyOperations.setNullDefaultValue(this);
 	}
@@ -1752,6 +1821,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setRealDefaultValue(double value) {
 		PropertyOperations.setRealDefaultValue(this, value);
 	}
@@ -1761,6 +1831,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<Type> subsettingContext() {
 		CacheAdapter cache = getCacheAdapter();
 		if (cache != null) {
@@ -1782,6 +1853,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean isNavigable() {
 		return PropertyOperations.isNavigable(this);
 	}
@@ -2905,6 +2977,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Deployment createDeployment(String name) {
 		Deployment newDeployment = (Deployment) create(UMLPackage.Literals.DEPLOYMENT);
 		getDeployments().add(newDeployment);
@@ -2918,6 +2991,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Deployment getDeployment(String name) {
 		return getDeployment(name, false, false);
 	}
@@ -2927,6 +3001,7 @@ public class PropertyImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Deployment getDeployment(String name, boolean ignoreCase,
 			boolean createOnDemand) {
 		deploymentLoop : for (Deployment deployment : getDeployments()) {

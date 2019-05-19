@@ -143,6 +143,7 @@ public class TemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TemplateParameter> getParameters() {
 		if (parameters == null) {
 			parameters = new SubsetSupersetEObjectResolvingEList<TemplateParameter>(
@@ -158,6 +159,7 @@ public class TemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateableElement getTemplate() {
 		if (eContainerFeatureID() != UMLPackage.TEMPLATE_SIGNATURE__TEMPLATE)
 			return null;
@@ -192,6 +194,7 @@ public class TemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setTemplate(TemplateableElement newTemplate) {
 		if (newTemplate != eInternalContainer()
 			|| (eContainerFeatureID() != UMLPackage.TEMPLATE_SIGNATURE__TEMPLATE && newTemplate != null)) {
@@ -219,6 +222,7 @@ public class TemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<TemplateParameter> getOwnedParameters() {
 		if (ownedParameters == null) {
 			ownedParameters = new SubsetSupersetEObjectContainmentWithInverseEList.Resolving<TemplateParameter>(
@@ -235,6 +239,7 @@ public class TemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameter createOwnedParameter(EClass eClass) {
 		TemplateParameter newOwnedParameter = (TemplateParameter) create(eClass);
 		getOwnedParameters().add(newOwnedParameter);
@@ -246,6 +251,7 @@ public class TemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public TemplateParameter createOwnedParameter() {
 		return createOwnedParameter(UMLPackage.Literals.TEMPLATE_PARAMETER);
 	}
@@ -255,6 +261,7 @@ public class TemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateOwnElements(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TemplateSignatureOperations.validateOwnElements(this,
@@ -266,6 +273,7 @@ public class TemplateSignatureImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public boolean validateUniqueParameters(DiagnosticChain diagnostics,
 			Map<Object, Object> context) {
 		return TemplateSignatureOperations.validateUniqueParameters(this,

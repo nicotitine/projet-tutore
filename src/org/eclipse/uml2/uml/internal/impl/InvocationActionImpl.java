@@ -139,6 +139,7 @@ public abstract class InvocationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public EList<InputPin> getArguments() {
 		if (arguments == null) {
 			arguments = new EObjectContainmentEList.Resolving<InputPin>(
@@ -152,6 +153,7 @@ public abstract class InvocationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createArgument(String name, Type type, EClass eClass) {
 		InputPin newArgument = (InputPin) create(eClass);
 		getArguments().add(newArgument);
@@ -167,6 +169,7 @@ public abstract class InvocationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin createArgument(String name, Type type) {
 		return createArgument(name, type, UMLPackage.Literals.INPUT_PIN);
 	}
@@ -176,6 +179,7 @@ public abstract class InvocationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getArgument(String name, Type type) {
 		return getArgument(name, type, false, null, false);
 	}
@@ -185,6 +189,7 @@ public abstract class InvocationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public InputPin getArgument(String name, Type type, boolean ignoreCase,
 			EClass eClass, boolean createOnDemand) {
 		argumentLoop : for (InputPin argument : getArguments()) {
@@ -208,6 +213,7 @@ public abstract class InvocationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public Port getOnPort() {
 		if (onPort != null && onPort.eIsProxy()) {
 			InternalEObject oldOnPort = (InternalEObject) onPort;
@@ -236,6 +242,7 @@ public abstract class InvocationActionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	public void setOnPort(Port newOnPort) {
 		Port oldOnPort = onPort;
 		onPort = newOnPort;
