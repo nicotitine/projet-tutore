@@ -161,7 +161,8 @@ public class SCXMLInterpretor {
     public void createStates() throws XPathExpressionException {
     	
     	System.out.println("Generating all states...");
-    	String expression = "//state | //parallel";
+    	// |// FINAL !!
+    	String expression = "//state | //parallel | //final";
     	NodeList list = (NodeList)this.path.evaluate(expression, this.root, XPathConstants.NODESET);
     	for(int i = 0; i < list.getLength(); i++) {
     		if(list.item(i) instanceof Element) {
@@ -173,6 +174,8 @@ public class SCXMLInterpretor {
     			//Initial state
     			if(this.nameOfInitialStates.contains(el.getAttribute("id"))) {
     				state = this.umlFactory.createPseudostate();
+    			} else if(el.getTagName().equals("final")) {
+    				state = this.umlFactory.createFinalState();
     			} else {
     				state = this.umlFactory.createState();
     			}
@@ -234,7 +237,7 @@ public class SCXMLInterpretor {
     				}
     			}
     		} else if(element.getTagName().equals("final")) {
-    			FinalState finalState = this.umlFactory.createFinalState();
+    			FinalState finalState = (FinalState)this.getStateByName(element.getAttribute("id"));
     			finalState.setName(element.getAttribute("id"));
     			finalState.setContainer(mainRegion);
     			System.out.println("\tGenerating final state " + element.getAttribute("id"));
