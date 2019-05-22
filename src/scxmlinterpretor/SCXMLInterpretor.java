@@ -34,6 +34,7 @@ import org.eclipse.uml2.uml.DataType;
 import org.eclipse.uml2.uml.FinalState;
 import org.eclipse.uml2.uml.Model;
 import org.eclipse.uml2.uml.Pseudostate;
+import org.eclipse.uml2.uml.PseudostateKind;
 import org.eclipse.uml2.uml.Region;
 import org.eclipse.uml2.uml.State;
 import org.eclipse.uml2.uml.StateMachine;
@@ -341,6 +342,33 @@ public class SCXMLInterpretor {
     			State parent = (State)this.getStateByName(element.getParentNode().getAttributes().getNamedItem("id").getNodeValue());
 
     			
+    		} else if(element.getTagName().equals("history")) {
+    			String kind = element.getAttribute("type");
+    			Pseudostate history = this.umlFactory.createPseudostate();
+    			
+    			// By default, the kind is "shallow"
+    			// See SCXML doc for further information
+    			if(kind.equals("")) {
+    				kind = "shallow";
+    			}
+    			
+    			if(kind.equals("shallow")) {
+    				history.setKind(PseudostateKind.SHALLOW_HISTORY_LITERAL);
+    			} else {
+    				history.setKind(PseudostateKind.DEEP_HISTORY_LITERAL);
+    			}
+    			history.setContainer(mainRegion);
+    			
+    			NodeList list = n.getChildNodes();
+    			if(list.getLength() > 0) {
+    				Region localRegion = this.umlFactory.createRegion();
+    				for(int i = 0; i < list.getLength(); i++) {
+    					Node n2 = list.item(i);
+    					if(n2 instanceof Element) {
+    						generateBody(n2, localRegion);
+    					}
+    				}
+    			}
     		}
     	}
     }

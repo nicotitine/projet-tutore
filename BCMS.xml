@@ -18,53 +18,19 @@
  * along with SCXML2PauWare.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <scxml xmlns="http://www.w3.org/2005/07/scxml"
-       version="1.0"
-       name="hierarchy"
-       initial="a">
-
-    <state id="a" initial="aa">
-    	<state id="aa" initial="aaa">
-    		<state id="aaa">
-    		</state>
-    		<state id="aab">
-    		</state>
-    		<state id="aac">
-    		</state>
-    	</state>
-    	<state id="ab">
-    	</state>
-    	<state id="ac">
-    	</state>
-    </state>
-    
-    <state id="b">
-    	<state id="ba">
-    	</state>
-    	<state id="bb">
-    		<state id="bba">
-	    	</state>
-    		<state id="bbb">
-    		</state>
-    		<state id="bbc">
-    		</state>
-    	</state>
-    	<state id="bc">
-    	</state>
-    </state>
-    
-    <state id="c">
-    	<state id="ca">
-    	</state>
-    	<state id="cb">
-    	</state>
-    	<state id="cc">
-    		<state id="cca">
-	    	</state>
-    		<state id="ccb">
-    		</state>
-    		<state id="ccc">
-    		</state>
-    	</state>
-    </state>
-
+	version="1.0"
+	name="history"
+	initial="a">
+	<state id="a">
+		<transition event="a to b" target="b" />
+	</state>
+	<state id="b" initial="ba">
+		<history type="deep" />
+		<transition event="b to a" target="a" />
+		<state id="ba">
+			<transition event="ba to bb" target="bb" />
+		</state>
+		<state id="bb">
+		</state>
+	</state>
 </scxml>
