@@ -28,6 +28,9 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
+import org.eclipse.uml2.uml.CallEvent;
+import org.eclipse.uml2.uml.DataStoreNode;
+import org.eclipse.uml2.uml.DataType;
 import org.eclipse.uml2.uml.FinalState;
 import org.eclipse.uml2.uml.Model;
 import org.eclipse.uml2.uml.Pseudostate;
@@ -35,6 +38,7 @@ import org.eclipse.uml2.uml.Region;
 import org.eclipse.uml2.uml.State;
 import org.eclipse.uml2.uml.StateMachine;
 import org.eclipse.uml2.uml.Transition;
+import org.eclipse.uml2.uml.Trigger;
 import org.eclipse.uml2.uml.UMLFactory;
 import org.eclipse.uml2.uml.Vertex;
 import org.eclipse.uml2.uml.internal.impl.UMLFactoryImpl;
@@ -45,8 +49,8 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 public class SCXMLInterpretor {
-    private Set<Vertex> states = new HashSet<Vertex>();
-    private List<String> nameOfInitialStates = new ArrayList<String>();
+    private List<Vertex> states = new ArrayList<Vertex>();
+    private List<Pseudostate> initialStates = new ArrayList<Pseudostate>();
     private XPath path;
     private UMLFactory umlFactory;
     private Model model;
@@ -55,26 +59,32 @@ public class SCXMLInterpretor {
     private Element root;
 
     public Vertex getStateByName(String name) {
-    	Iterator<Vertex> it = this.states.iterator();
-    	while(it.hasNext()) {
-    		Vertex vt = it.next();
-    		if(vt.getName() != null && vt.getName().equals(name)) {
-    			return vt;
+    	for(int i = 0; i < this.states.size(); i++) {
+    		if(this.states.get(i).getName().equals(name)) {
+    			return this.states.get(i);
     		}
     	}
     	return null;
+    }
+    
+    public boolean hasOnlyTextChildren(NodeList list) {
+    	boolean textFounded = true;
+    	for(int i = 0; i < list.getLength(); i++) {
+    		if(!list.item(i).getNodeName().equals("#text")) {
+    			textFounded = false;
+    		}
+    	}
+    	return textFounded;
     }
     
     public void getInitialStates(Node n, Region mainRegion) {
     	if(n instanceof Element) {
     		Element element = (Element)n;
 
-    		if(element.getTagName().equals("scxml")) {
-    			this.nameOfInitialStates.add(element.getAttribute("initial"));
-    		} else if(element.getTagName().equals("state")){
-    			if(!element.getAttribute("initial").equals("")) {
-    				this.nameOfInitialStates.add(element.getAttribute("initial"));
-    			}
+    		if(element.getTagName().equals("scxml") || (element.getTagName().equals("state") && !element.getAttribute("initial").equals(""))) {
+    			Pseudostate newPseudostate = this.umlFactory.createPseudostate();
+    			newPseudostate.setName(element.getAttribute("initial"));
+    			this.initialStates.add(newPseudostate);
     		}
 
     		NodeList list = n.getChildNodes();
@@ -105,11 +115,11 @@ public class SCXMLInterpretor {
 
 	        // UML Init
 	        this.umlFactory = new UMLFactoryImpl();
-	        this.model = umlFactory.createModel();
-	        this.stateMachine = umlFactory.createStateMachine();
-	        this.mainRegion = umlFactory.createRegion();
+	        this.model = this.umlFactory.createModel();
+	        this.stateMachine = this.umlFactory.createStateMachine();
+	        this.mainRegion = this.umlFactory.createRegion();
 	        this.mainRegion.setName("Main");
-	        
+	        	        
 	        //Get Initial States Names
 	        this.getInitialStates(this.root, this.mainRegion);
 	        this.createStates();
@@ -121,7 +131,8 @@ public class SCXMLInterpretor {
 
 	        this.stateMachine.getRegions().add(this.mainRegion);
 	        this.model.getPackagedElements().add(this.stateMachine);
-
+	        
+	        
 	        
 	        System.out.println("Starting writing to " + output + "...");
 	        if(saveXMI(this.model, output)) {
@@ -129,7 +140,7 @@ public class SCXMLInterpretor {
 	        }
 
 	    } catch ( ParserConfigurationException | SAXException | IOException | XPathExpressionException e)  {
-	    	e.printStackTrace();
+	    	System.out.println(e.getMessage() + "\nClosing program...");
 	    }
 	}
 
@@ -159,7 +170,7 @@ public class SCXMLInterpretor {
      * Populate the states Set with all the states of the scxml file
      */
     public void createStates() throws XPathExpressionException {
-    	
+    	System.out.println(this.initialStates);
     	System.out.println("Generating all states...");
     	// |// FINAL !!
     	String expression = "//state | //parallel | //final";
@@ -171,20 +182,27 @@ public class SCXMLInterpretor {
     			
     			System.out.println("\tGenerating " + el.getAttribute("id"));
     			
-    			//Initial state
-    			if(this.nameOfInitialStates.contains(el.getAttribute("id"))) {
-    				state = this.umlFactory.createPseudostate();
-    			} else if(el.getTagName().equals("final")) {
+    			
+    			if(el.getTagName().equals("final")) {
     				state = this.umlFactory.createFinalState();
     			} else {
     				state = this.umlFactory.createState();
     			}
+    			
+    			
 
     			// Name attribute
     			String name = el.getAttribute("id");
     			if(!name.equals("")) {
     				state.setName(name);
     			}
+    			
+    			for(int j = 0; j < this.initialStates.size(); j++) {
+    				if(this.initialStates.get(j).getName().equals(el.getAttribute("id")) && state instanceof State) {
+    					this.initialStates.get(j).setState((State)state);
+    				}
+    			}
+    			
     			this.states.add(state);
     		}
     	}
@@ -196,36 +214,36 @@ public class SCXMLInterpretor {
     public void generateBody(Node n, Region mainRegion){
     	if(n instanceof Element){
     		Element element = (Element)n;
-    		if(element.getTagName().equals("state") || element.getTagName().equals("parallel")) {	
+    		
+    		// STATE
+    		if(element.getTagName().equals("state")) {	
     			State newState = null;
-    			Pseudostate newPseudostate = null;
     			Vertex resultState = this.getStateByName(element.getAttribute("id"));
-    			if(resultState instanceof State) {
-    				newState = (State)resultState;
-    				System.out.println("\tGenerating state " + element.getAttribute("id"));
-    			} else if(resultState instanceof Pseudostate) {
-    				System.out.println("\tGenerating initial state " + element.getAttribute("id"));
-    				newPseudostate = (Pseudostate)resultState;
-    			}
+    			newState = (State)resultState;
+    			
+    			System.out.println("\tGenerating state " + element.getAttribute("id"));
+    			
             	this.getStateByName(element.getAttribute("id")).setContainer(mainRegion);
-
+            	
+            	
+            	
             	// Look if there is any child
             	int nbChild = n.getChildNodes().getLength();
             	NodeList list = n.getChildNodes();
-            	if(nbChild > 0) {
+            	boolean areChildrenOnlyText = this.hasOnlyTextChildren(list);
+            	if(nbChild > 0 && !areChildrenOnlyText) {
             		Region localRegion = this.umlFactory.createRegion();
-            		if(resultState instanceof State) {
-        				localRegion.setState(newState);
-        			} else if(resultState instanceof Pseudostate) {
-        				localRegion.setState(newPseudostate.getState());
-        			}
-            		for(int i = 0; i < nbChild; i++){
-            			Node n2 = list.item(i);
-            			if (n2 instanceof Element){
-            				generateBody(n2, localRegion);
-            			}
-            		}	
+                	localRegion.setState(newState);
+                	for(int i = 0; i < nbChild; i++){
+                		Node n2 = list.item(i);
+                		
+                		if (n2 instanceof Element && !n2.getNodeName().equals("#text")){
+                			generateBody(n2, localRegion);
+                		}
+                	}	
     			}
+            	
+            // SCXML 
     		} else if(element.getTagName().equals("scxml")) {
     			NodeList list = n.getChildNodes();
     			if(list.getLength() > 0) {
@@ -255,7 +273,8 @@ public class SCXMLInterpretor {
     			tr.setContainer(mainRegion);
     			
     			tr.setName(element.getAttribute("event"));
-    			tr.createTrigger(element.getAttribute("event"));
+    			
+    			
     			    			    			
     			// Attribute source
     			String source = element.getAttribute("source");
@@ -286,6 +305,42 @@ public class SCXMLInterpretor {
     					}
     				}
     			}
+    		} else if(element.getTagName().equals("parallel")) {
+    			// TO DO : check for multiple parallel. Does it work ?
+    			// TO DO : check for parallel inside parallel.
+    			Vertex vt = this.getStateByName(element.getAttribute("id"));
+    			State state = null;
+    			Pseudostate pseudostate = null;
+    			Region localRegion = this.umlFactory.createRegion();
+    			StateMachine subStateMachine = this.umlFactory.createStateMachine();
+    			subStateMachine.getRegions().add(localRegion);
+    			subStateMachine.setName(element.getAttribute("id"));
+    			
+    			this.model.getPackagedElements().add(subStateMachine);
+    			
+    			if(vt instanceof State) {
+    				state = (State)vt;
+    				state.setContainer(mainRegion);
+    				state.setSubmachine(subStateMachine);
+    			} else {
+    				pseudostate = (Pseudostate)vt;
+    				pseudostate.setContainer(mainRegion);
+    			}
+    			
+    			NodeList list = n.getChildNodes();
+    			if(list.getLength() > 0) {
+    				for(int i = 0; i < list.getLength(); i++) {
+    					Node n2 = list.item(i);
+    					if(n2 instanceof Element) {
+    						generateBody(n2, localRegion);
+    					}
+    				}
+    			}
+    		
+    		} else if(element.getTagName().equals("onexit")) {
+    			State parent = (State)this.getStateByName(element.getParentNode().getAttributes().getNamedItem("id").getNodeValue());
+
+    			
     		}
     	}
     }
@@ -310,11 +365,20 @@ public class SCXMLInterpretor {
     		String inputFilePath = cmd.getOptionValue("path");
             String outputFilePath = cmd.getOptionValue("output");
 
-            //TO DO : Gérer le cas ou l'utilisateur donne un output autre que .xmi
-            if(outputFilePath == null) {
+            if(outputFilePath == null && inputFilePath.indexOf(".xml") != -1) {
             	outputFilePath = inputFilePath.substring(0, inputFilePath.indexOf(".xml")) + ".xmi";
             }
+            if(outputFilePath.indexOf(".xmi") == -1) {
+            	System.out.println("Missing .xmi extension for the output file.\nClosing program...");
+            	System.exit(1);
+            }
+            if(inputFilePath.indexOf(".xml") == -1 && inputFilePath.indexOf(".scxml") == -1) {
+            	System.out.println("Missing .xml or .scxml extension for the input file.\nClosing program...");
+            	System.exit(1);
+            }
+            
             new SCXMLInterpretor(inputFilePath, outputFilePath);
+            
     	} catch(ParseException e) {
     		System.out.println(e.getMessage());
     		formatter.printHelp("SCXMLInterpretor", options);
