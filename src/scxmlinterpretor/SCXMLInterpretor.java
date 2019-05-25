@@ -3,10 +3,7 @@ package scxmlinterpretor;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -28,18 +25,18 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.eclipse.uml2.uml.CallEvent;
-import org.eclipse.uml2.uml.DataStoreNode;
-import org.eclipse.uml2.uml.DataType;
+import org.eclipse.uml2.uml.Activity;
+import org.eclipse.uml2.uml.Constraint;
 import org.eclipse.uml2.uml.FinalState;
+import org.eclipse.uml2.uml.LiteralString;
 import org.eclipse.uml2.uml.Model;
+import org.eclipse.uml2.uml.Parameter;
 import org.eclipse.uml2.uml.Pseudostate;
 import org.eclipse.uml2.uml.PseudostateKind;
 import org.eclipse.uml2.uml.Region;
 import org.eclipse.uml2.uml.State;
 import org.eclipse.uml2.uml.StateMachine;
 import org.eclipse.uml2.uml.Transition;
-import org.eclipse.uml2.uml.Trigger;
 import org.eclipse.uml2.uml.UMLFactory;
 import org.eclipse.uml2.uml.Vertex;
 import org.eclipse.uml2.uml.internal.impl.UMLFactoryImpl;
@@ -58,11 +55,21 @@ public class SCXMLInterpretor {
     private StateMachine stateMachine;
     private Region mainRegion;
     private Element root;
+    private Activity activity;   
 
     public Vertex getStateByName(String name) {
     	for(int i = 0; i < this.states.size(); i++) {
     		if(this.states.get(i).getName().equals(name)) {
     			return this.states.get(i);
+    		}
+    	}
+    	return null;
+    }
+    
+    public Parameter getParameterByName(String name, StateMachine actualStateMachine) {
+    	for(int i = 0; i < actualStateMachine.getOwnedParameters().size(); i++) {
+    		if(actualStateMachine.getOwnedParameters().get(i).getName().equals(name)) {
+    			return actualStateMachine.getOwnedParameters().get(i);
     		}
     	}
     	return null;
@@ -120,6 +127,8 @@ public class SCXMLInterpretor {
 	        this.stateMachine = this.umlFactory.createStateMachine();
 	        this.mainRegion = this.umlFactory.createRegion();
 	        this.mainRegion.setName("Main");
+	        
+	        
 	        	        
 	        //Get Initial States Names
 	        this.getInitialStates(this.root, this.mainRegion);
@@ -127,7 +136,7 @@ public class SCXMLInterpretor {
 
 	        // Create the body of the main container
 	        System.out.println("Generating body...");
-	        this.generateBody(this.root, this.mainRegion);
+	        this.generateBody(this.root, this.mainRegion, this.stateMachine);
 	        System.out.println("Generation of body has successfully ended.\n");
 
 	        this.stateMachine.getRegions().add(this.mainRegion);
@@ -168,9 +177,10 @@ public class SCXMLInterpretor {
     
     /**
      * 
-     * Populate the states Set with all the states of the scxml file
+     * Populate the states List with all the states from the scxml file
      */
     public void createStates() throws XPathExpressionException {
+    	
     	System.out.println(this.initialStates);
     	System.out.println("Generating all states...");
     	// |// FINAL !!
@@ -212,7 +222,7 @@ public class SCXMLInterpretor {
 
 
 
-    public void generateBody(Node n, Region mainRegion){
+    public void generateBody(Node n, Region mainRegion, StateMachine actualStateMachine){
     	if(n instanceof Element){
     		Element element = (Element)n;
     		
@@ -239,7 +249,7 @@ public class SCXMLInterpretor {
                 		Node n2 = list.item(i);
                 		
                 		if (n2 instanceof Element && !n2.getNodeName().equals("#text")){
-                			generateBody(n2, localRegion);
+                			generateBody(n2, localRegion, actualStateMachine);
                 		}
                 	}	
     			}
@@ -251,7 +261,7 @@ public class SCXMLInterpretor {
     				for(int i = 0; i < list.getLength(); i++){
     					Node n2 = list.item(i);
     					if (n2 instanceof Element){
-    						generateBody(n2, mainRegion);
+    						generateBody(n2, mainRegion, actualStateMachine);
     					}
     				}
     			}
@@ -265,7 +275,7 @@ public class SCXMLInterpretor {
     				for(int i = 0; i < list.getLength(); i++) {
     					Node n2 = list.item(i);
     					if(n2 instanceof Element) {
-    						generateBody(n2, mainRegion);
+    						generateBody(n2, mainRegion, actualStateMachine);
     					}
     				}
     			}
@@ -295,6 +305,23 @@ public class SCXMLInterpretor {
     				tr.setTarget(this.getStateByName(target));
     			}
     			
+    			// Attribute cond
+    			String cond = element.getAttribute("cond");
+    			if(!cond.equals("")) {
+    				Constraint c = this.umlFactory.createConstraint();
+        			LiteralString s = this.umlFactory.createLiteralString();
+        			
+        			s.setValue(cond);
+        			c.setSpecification(s);
+        			System.out.println(c.getSpecification().stringValue());
+        			tr.setGuard(c);
+        			//State st = (State)tr.getSource();
+        			
+        			
+    			}
+    			
+    			
+    			
     			System.out.println("\tGenerating transition from " + source + " to " + target);
     			
     			NodeList list = n.getChildNodes();
@@ -302,13 +329,11 @@ public class SCXMLInterpretor {
     				for(int i = 0; i < list.getLength(); i++) {
     					Node n2 = list.item(i);
     					if(n2 instanceof Element) {
-    						generateBody(n2, mainRegion);
+    						generateBody(n2, mainRegion, actualStateMachine);
     					}
     				}
     			}
     		} else if(element.getTagName().equals("parallel")) {
-    			// TO DO : check for multiple parallel. Does it work ?
-    			// TO DO : check for parallel inside parallel.
     			Vertex vt = this.getStateByName(element.getAttribute("id"));
     			State state = null;
     			Pseudostate pseudostate = null;
@@ -333,21 +358,16 @@ public class SCXMLInterpretor {
     				for(int i = 0; i < list.getLength(); i++) {
     					Node n2 = list.item(i);
     					if(n2 instanceof Element) {
-    						generateBody(n2, localRegion);
+    						generateBody(n2, localRegion, subStateMachine);
     					}
     				}
     			}
     		
-    		} else if(element.getTagName().equals("onexit")) {
-    			State parent = (State)this.getStateByName(element.getParentNode().getAttributes().getNamedItem("id").getNodeValue());
-
-    			
     		} else if(element.getTagName().equals("history")) {
     			String kind = element.getAttribute("type");
     			Pseudostate history = this.umlFactory.createPseudostate();
     			
     			// By default, the kind is "shallow"
-    			// See SCXML doc for further information
     			if(kind.equals("")) {
     				kind = "shallow";
     			}
@@ -357,6 +377,7 @@ public class SCXMLInterpretor {
     			} else {
     				history.setKind(PseudostateKind.DEEP_HISTORY_LITERAL);
     			}
+    			
     			history.setContainer(mainRegion);
     			
     			NodeList list = n.getChildNodes();
@@ -365,8 +386,68 @@ public class SCXMLInterpretor {
     				for(int i = 0; i < list.getLength(); i++) {
     					Node n2 = list.item(i);
     					if(n2 instanceof Element) {
-    						generateBody(n2, localRegion);
+    						generateBody(n2, localRegion, actualStateMachine);
     					}
+    				}
+    			}
+    		} else if(element.getNodeName().equals("datamodel")) {
+    			this.activity = this.umlFactory.createActivity();
+    			this.activity.setPackage(mainRegion.getNearestPackage());
+    			
+    			NodeList list = n.getChildNodes();
+    			if(list.getLength() > 0) {
+    				for(int i = 0; i < list.getLength(); i++) {
+    					Node n2 = list.item(i);
+    					if(n2 instanceof Element) {
+    						generateBody(n2, mainRegion, actualStateMachine);
+    					}
+    				}
+    			}
+    			
+    		} else if(element.getNodeName().equals("data")) {
+    			if(this.activity != null) {
+    				Parameter param = this.umlFactory.createParameter();
+    				param.setName(element.getAttribute("id"));
+    				String value = element.getAttribute("expr");
+    				System.out.println("\tGenerating parameter " + param.getName());
+    				if(value != "") {
+    					if(value.charAt(0) == '\'' && value.charAt(value.length()-1) == '\'') {
+    						// String case
+    						value = value.substring(1, value.length()-1);
+    						param.setDefault(value);
+
+    					} else if(value.equals("null")) {
+    						// null case
+    						param.setNullDefaultValue();
+    					} else if(value.equals("false") || value.equals("true")) {
+    						// boolean case
+    						param.setBooleanDefaultValue(Boolean.valueOf(value));
+    					} else if(Integer.valueOf(value) != null) {
+    						// integer case
+    						param.setIntegerDefaultValue(Integer.valueOf(value));
+    					} 
+    				} else {
+						param.setDefault("");
+					}
+    				actualStateMachine.getOwnedParameters().add(param);
+    			}
+    		} else if(element.getNodeName().equals("assign")) {
+    			   			
+    		} else if(element.getNodeName().equals("onentry")) {
+    			NodeList list = element.getChildNodes();
+    			if(list.getLength() > 0) {
+    				for(int i = 0; i < list.getLength(); i++) {
+    					Node n2 = list.item(i);
+    					generateBody(n2, mainRegion, actualStateMachine);
+    				}
+    			}
+    		} else if(element.getTagName().equals("onexit")) {
+    			//State parent = (State)this.getStateByName(element.getParentNode().getAttributes().getNamedItem("id").getNodeValue());
+    			NodeList list = element.getChildNodes();
+    			if(list.getLength() > 0) {
+    				for(int i = 0; i < list.getLength(); i++) {
+    					Node n2 = list.item(i);
+    					generateBody(n2, mainRegion, actualStateMachine);
     				}
     			}
     		}
