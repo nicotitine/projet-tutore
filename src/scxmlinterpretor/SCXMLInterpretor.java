@@ -57,6 +57,11 @@ public class SCXMLInterpretor {
     private Element root;
     private Activity activity;   
 
+    /**
+     * 
+     * @param name of the state
+     * @return the state or null if not found
+     */
     public Vertex getStateByName(String name) {
     	for(int i = 0; i < this.states.size(); i++) {
     		if(this.states.get(i).getName().equals(name)) {
@@ -66,6 +71,12 @@ public class SCXMLInterpretor {
     	return null;
     }
     
+    /**
+     * 
+     * @param name of the parameter
+     * @param actualStateMachine the state machine is parameter is into
+     * @return the parameter or null if not found
+     */
     public Parameter getParameterByName(String name, StateMachine actualStateMachine) {
     	for(int i = 0; i < actualStateMachine.getOwnedParameters().size(); i++) {
     		if(actualStateMachine.getOwnedParameters().get(i).getName().equals(name)) {
@@ -75,6 +86,11 @@ public class SCXMLInterpretor {
     	return null;
     }
     
+    /**
+     * 
+     * @param list of nodes
+     * @return true if every node of the list if a Text node, return false otherwise
+     */
     public boolean hasOnlyTextChildren(NodeList list) {
     	boolean textFounded = true;
     	for(int i = 0; i < list.getLength(); i++) {
@@ -84,6 +100,7 @@ public class SCXMLInterpretor {
     	}
     	return textFounded;
     }
+    
     
     public void getInitialStates(Node n, Region mainRegion) {
     	if(n instanceof Element) {
@@ -107,6 +124,11 @@ public class SCXMLInterpretor {
     	}
     }
 
+    /**
+     * 
+     * @param input the .xml or .scxml file name
+     * @param output the .xmi file name
+     */
     public SCXMLInterpretor(String input, String output) {
     	DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
     	factory.setIgnoringComments(true);
@@ -199,8 +221,6 @@ public class SCXMLInterpretor {
     			} else {
     				state = this.umlFactory.createState();
     			}
-    			
-    			
 
     			// Name attribute
     			String name = el.getAttribute("id");
@@ -221,7 +241,12 @@ public class SCXMLInterpretor {
     }
 
 
-
+    /**
+     * 
+     * @param n the actual node
+     * @param mainRegion the containing region
+     * @param actualStateMachine the containing state machine
+     */
     public void generateBody(Node n, Region mainRegion, StateMachine actualStateMachine){
     	if(n instanceof Element){
     		Element element = (Element)n;
@@ -235,8 +260,6 @@ public class SCXMLInterpretor {
     			System.out.println("\tGenerating state " + element.getAttribute("id"));
     			
             	this.getStateByName(element.getAttribute("id")).setContainer(mainRegion);
-            	
-            	
             	
             	// Look if there is any child
             	int nbChild = n.getChildNodes().getLength();
@@ -314,13 +337,8 @@ public class SCXMLInterpretor {
         			s.setValue(cond);
         			c.setSpecification(s);
         			System.out.println(c.getSpecification().stringValue());
-        			tr.setGuard(c);
-        			//State st = (State)tr.getSource();
-        			
-        			
+        			tr.setGuard(c);     			
     			}
-    			
-    			
     			
     			System.out.println("\tGenerating transition from " + source + " to " + target);
     			
