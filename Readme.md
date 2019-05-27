@@ -11,6 +11,8 @@ Ouvrable et exécutable avec Eclipse Luna (<a href="https://www.eclipse.org/down
 
 Pour l'exécution, le paramètre `-p` (`--path`, le chemin vers le fichier .scxml) est obligatoire. 
 
+Le projet utilise toujours la fonction saveXMI.
+
 ## Code source
 
 Disponible sur <a href="https://github.com/nicotitine/projet-tutore">GitHub</a>.
