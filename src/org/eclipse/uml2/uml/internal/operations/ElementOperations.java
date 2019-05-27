@@ -1730,7 +1730,7 @@ public class ElementOperations
 		EcoreUtil.remove(ancestorEObject);
 	}
 
-	protected static void destroyAll(Collection<EObject> eObjects) {
+	protected static void destroyAlls(Collection<EObject> eObjects) {
 
 		for (Iterator<EObject> o = eObjects.iterator(); o.hasNext();) {
 			destroy(o.next());
