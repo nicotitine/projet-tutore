@@ -14,3 +14,22 @@ Pour l'exécution, le paramètre `-p` (`--path`, le chemin vers le fichier .scxm
 ## Code source
 
 Disponible sur <a href="https://github.com/nicotitine/projet-tutore">GitHub</a>.
+
+## Balises traitées
+
+- `<scxml>`
+- `<state>`
+- `<parallel>`
+- `<transition>`
+- `<final>`
+- `<history`>
+- `<datamodel>`
+- `<data>`
+
+## Balises manquantes 
+
+Les balises liées au comportement, principalement des états. Ces balises (`<onentry>`, `<onexit>`, `<assign>`, `<send>` et `<cancel`>)  correspondent à la partie entourée en rouge ci-dessous.
+
+![](C:\Users\nhinc\Desktop\Sans titre 3.jpg)
+
+Nous n'avons pas été capables de paramétrer correctement les comportements en fonction du contenu SCXML
