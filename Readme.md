@@ -28,7 +28,7 @@ Disponible sur <a href="https://github.com/nicotitine/projet-tutore">GitHub</a>.
 
 ## Balises manquantes 
 
-Les balises liées au comportement, principalement des états. Ces balises (`<onentry>`, `<onexit>`, `<assign>`, `<send>` et `<cancel`>)  correspondent à la partie entourée en rouge ci-dessous.
+Les balises liées au comportement, principalement des états. Ces balises (`<onentry>`, `<onexit>`, `<assign>`, `<send>` et `<cancel>`)  correspondent à la partie entourée en rouge ci-dessous.
 
 ![](./classDiagram_stateMachines.jpg)
 
