@@ -22,7 +22,7 @@ Disponible sur <a href="https://github.com/nicotitine/projet-tutore">GitHub</a>.
 - `<parallel>`
 - `<transition>`
 - `<final>`
-- `<history`>
+- `<history>`
 - `<datamodel>`
 - `<data>`
 
