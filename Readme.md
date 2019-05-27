@@ -30,6 +30,6 @@ Disponible sur <a href="https://github.com/nicotitine/projet-tutore">GitHub</a>.
 
 Les balises liées au comportement, principalement des états. Ces balises (`<onentry>`, `<onexit>`, `<assign>`, `<send>` et `<cancel`>)  correspondent à la partie entourée en rouge ci-dessous.
 
-![](C:\Users\nhinc\Desktop\Sans titre 3.jpg)
+![](./classDiagram_stateMachines.jpg)
 
 Nous n'avons pas été capables de paramétrer correctement les comportements en fonction du contenu SCXML
